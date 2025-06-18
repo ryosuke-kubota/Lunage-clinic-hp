@@ -55,7 +55,7 @@ export default function MenuNavigation() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => handleCategoryClick(category.id, category.anchor)}
-                className={`px-4 py-3 rounded-full font-shippori text-sm transition-all duration-300 ${
+                className={`px-4 py-3 rounded-full font-shippori text-sm ${
                   activeCategory === category.id
                     ? 'bg-[#caa9af] text-white shadow-lg'
                     : 'bg-[#faf3ef] text-[#8a6d62] hover:bg-[#caa9af]/20 hover:text-[#54585f]'
@@ -80,7 +80,7 @@ export default function MenuNavigation() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => handleCategoryClick(category.id, category.anchor)}
-                className={`p-3 rounded-xl font-shippori text-xs transition-all duration-300 ${
+                className={`p-3 rounded-xl font-shippori text-xs ${
                   activeCategory === category.id
                     ? 'bg-[#caa9af] text-white shadow-lg'
                     : 'bg-[#faf3ef] text-[#8a6d62] hover:bg-[#caa9af]/20'

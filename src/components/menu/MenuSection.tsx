@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useState, useEffect, useRef } from "react";
 
 // スプレッドシートの各シートと施術サブカテゴリをトップレベルに配置
 const menuData = {
@@ -112,19 +112,57 @@ interface Treatment {
 
 // カードコンポーネント
 const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: number }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.3,
-    triggerOnce: true,
-    rootMargin: '-50px 0px'
-  });
-  
+  const [animationState, setAnimationState] = useState<'hidden' | 'visible'>('hidden');
+  const cardRef = useRef<HTMLDivElement>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    // Safari対応のためのより堅牢な実装
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && animationState === 'hidden') {
+          // 遅延を追加してSafariの問題を回避
+          setTimeout(() => {
+            setAnimationState('visible');
+          }, index * 100 + 50);
+          
+          // 一度トリガーされたらObserverを切断
+          if (observerRef.current) {
+            observerRef.current.disconnect();
+          }
+        }
+      });
+    };
+
+    observerRef.current = new IntersectionObserver(handleIntersection, {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    });
+
+    if (cardRef.current) {
+      observerRef.current.observe(cardRef.current);
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [index, animationState]);
+
   return (
     <motion.div
-      ref={ref}
+      ref={cardRef}
       initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
-      transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
-      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#dacacf]/20"
+      animate={animationState === 'visible' ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      style={{
+        // Safari対応のためのスタイル強制
+        willChange: 'opacity, transform',
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden'
+      }}
+      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl border border-[#dacacf]/20"
     >
       <h3 className="text-xl font-shippori font-medium text-[#54585f] mb-2">{treatment.name}</h3>
       {treatment.duration && <p className="text-sm text-[#8a6d62] mb-1">施術時間: {treatment.duration}</p>}
