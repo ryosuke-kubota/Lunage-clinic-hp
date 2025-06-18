@@ -158,7 +158,7 @@ export default function MenuSection() {
           </div>
         ))}
         {/* お支払い情報 */}
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="mt-20 bg-white rounded-2xl p-8 shadow-lg">
+        {/* <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="mt-20 bg-white rounded-2xl p-8 shadow-lg">
           <h3 className="text-2xl font-medium text-center text-[#54585f] mb-6">お支払い方法</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
@@ -174,7 +174,7 @@ export default function MenuSection() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
