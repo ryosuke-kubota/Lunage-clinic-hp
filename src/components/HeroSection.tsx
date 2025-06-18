@@ -50,7 +50,7 @@ export default function HeroSection() {
   ];
 
   // モバイルでは表示する画像数を制限
-  const bubbleImages = isMobile ? allBubbleImages.slice(0, 5) : allBubbleImages;
+  const bubbleImages = allBubbleImages;
 
   // サイズのマッピング（一回り大きく）
   const getSizeClasses = (size: string) => {
