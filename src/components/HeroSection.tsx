@@ -2,20 +2,34 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import nextConfig from "../../next.config.mjs";
 
 const BASE_PATH = nextConfig.basePath || "";
 
 export default function HeroSection() {
   const containerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // モバイル判定
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
   });
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  // モバイルではパララックス効果を軽減
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, isMobile ? -50 : -100]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, isMobile ? -100 : -200]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const [ref, inView] = useInView({
@@ -23,8 +37,8 @@ export default function HeroSection() {
     triggerOnce: true
   });
 
-  // 各シャボン玉のデータ（中央テキストを避けて配置）
-  const bubbleImages = [
+  // 各シャボン玉のデータ（モバイルでは数を減らす）
+  const allBubbleImages = [
     { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "large", delay: 0, x: "0", y: "5%" },
     { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "medium", delay: 0.3, x: "70%", y: "15%" },
     { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "small", delay: 0.6, x: "15%", y: "60%" },
@@ -34,6 +48,9 @@ export default function HeroSection() {
     { src: `${BASE_PATH}/images/hero/hero7.jpg`, size: "medium", delay: 1.8, x: "85%", y: "45%" },
     { src: `${BASE_PATH}/images/hero/hero8.jpg`, size: "small", delay: 2.1, x: "0", y: "70%" }
   ];
+
+  // モバイルでは表示する画像数を制限
+  const bubbleImages = isMobile ? allBubbleImages.slice(0, 5) : allBubbleImages;
 
   // サイズのマッピング（一回り大きく）
   const getSizeClasses = (size: string) => {
@@ -58,15 +75,15 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           style={{ opacity }}
-          className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center justify-center"
+          className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center justify-center gpu-accelerated"
         >
-          {/* 背景の装飾要素 */}
+          {/* 背景の装飾要素（モバイルでは簡素化） */}
           <motion.div
             style={{ y: y1 }}
             className="absolute inset-0 overflow-hidden"
           >
             <motion.div
-              animate={{
+              animate={isMobile ? {} : {
                 scale: [1, 1.1, 1],
                 rotate: [0, 5, 0]
               }}
@@ -75,10 +92,11 @@ export default function HeroSection() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="absolute top-10 sm:top-20 left-10 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-[#caa9af]/20 to-[#d6c6b5]/20 blur-2xl sm:blur-3xl"
+              className={`absolute top-10 sm:top-20 left-10 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-[#caa9af]/20 to-[#d6c6b5]/20 ${isMobile ? 'blur-xl' : 'blur-2xl sm:blur-3xl'}`}
+              style={{ willChange: 'transform' }}
             />
             <motion.div
-              animate={{
+              animate={isMobile ? {} : {
                 scale: [1, 1.2, 1],
                 rotate: [0, -3, 0]
               }}
@@ -88,7 +106,8 @@ export default function HeroSection() {
                 ease: "easeInOut",
                 delay: 2
               }}
-              className="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-40 h-40 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-[#c2ac94]/20 to-[#dacacf]/20 blur-2xl sm:blur-3xl"
+              className={`absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-40 h-40 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-[#c2ac94]/20 to-[#dacacf]/20 ${isMobile ? 'blur-xl' : 'blur-2xl sm:blur-3xl'}`}
+              style={{ willChange: 'transform' }}
             />
           </motion.div>
 
@@ -99,7 +118,7 @@ export default function HeroSection() {
             animate={inView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 1, staggerChildren: 0.15 }}
             style={{ y: y2 }}
-            className="relative z-10 w-full max-w-6xl h-[420px] sm:h-[500px] lg:h-[600px]"
+            className="relative z-10 w-full max-w-6xl h-[420px] sm:h-[500px] lg:h-[600px] contain-layout"
           >
             {/* シャボン玉画像群 */}
             {bubbleImages.map((bubble, index) => (
@@ -135,21 +154,27 @@ export default function HeroSection() {
               >
                 {/* 浮遊するシャボン玉コンテナ */}
                 <motion.div
-                  animate={{
+                  animate={isMobile ? {
+                    y: [0, -15, 0],
+                  } : {
                     y: [0, -30, 0],
                     x: [0, 15, -10, 0],
                     rotate: [0, 5, -3, 0]
                   }}
                   transition={{
-                    duration: 8 + index,
+                    duration: isMobile ? 6 : 8 + index,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: bubble.delay + 1.2
                   }}
-                  className={`${getSizeClasses(bubble.size)} rounded-full overflow-hidden shadow-2xl cursor-pointer group`}
-                  whileHover={{
+                  className={`${getSizeClasses(bubble.size)} rounded-full overflow-hidden shadow-2xl cursor-pointer group gpu-accelerated smooth-animation ${isMobile ? 'mobile-optimized' : ''}`}
+                  whileHover={isMobile ? {} : {
                     scale: 1.1,
                     transition: { duration: 0.3 }
+                  }}
+                  style={{
+                    willChange: 'transform',
+                    transform: 'translate3d(0, 0, 0)' // GPUアクセラレーション強制
                   }}
                 >
                   {/* シャボン玉のグラデーション背景 */}
@@ -159,12 +184,11 @@ export default function HeroSection() {
                   <img
                     src={bubble.src}
                     alt={`Beauty Portrait ${index + 1}`}
-                    className="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500 filter brightness-110 contrast-90 saturate-80"
+                    className={`w-full h-full object-cover rounded-full ${isMobile ? '' : 'group-hover:scale-110'} transition-transform duration-500 filter brightness-110 contrast-90 saturate-80`}
+                    loading="lazy"
+                    style={{ willChange: 'transform' }}
                   />
                   
-                  {/* シャボン玉の光沢効果 */}
-                  <div className="absolute top-2 left-2 w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 bg-white/60 rounded-full blur-sm" />
-                  <div className="absolute top-1 left-1 w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 bg-white/80 rounded-full" />
                   
                   {/* ホバー時のオーバーレイ */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#caa9af]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
@@ -172,27 +196,32 @@ export default function HeroSection() {
               </motion.div>
             ))}
 
-            {/* 追加の装飾シャボン玉（画像なし） */}
-            {[...Array(6)].map((_, index) => (
+            {/* 追加の装飾シャボン玉（モバイルでは数を減らす） */}
+            {[...Array(isMobile ? 3 : 6)].map((_, index) => (
               <motion.div
                 key={`decoration-${index}`}
                 initial={{ opacity: 0, scale: 0 }}
-                animate={{
+                animate={isMobile ? {
+                  opacity: [0.3, 0.5, 0.3],
+                  scale: [0.9, 1.1, 0.9],
+                } : {
                   opacity: [0.3, 0.7, 0.3],
                   scale: [0.8, 1.2, 0.8],
                   y: [0, -20, 0],
                   x: [0, 10, -5, 0]
                 }}
                 transition={{
-                  duration: 6 + index,
+                  duration: isMobile ? 4 : 6 + index,
                   repeat: Infinity,
                   ease: "easeInOut",
                   delay: index * 0.5
                 }}
-                className={`absolute w-4 h-4 sm:w-6 sm:h-6 lg:w-10 lg:h-10 rounded-full bg-gradient-to-br from-[#caa9af]/30 to-[#dacacf]/30 backdrop-blur-sm`}
+                className={`absolute w-4 h-4 sm:w-6 sm:h-6 lg:w-10 lg:h-10 rounded-full bg-gradient-to-br from-[#caa9af]/30 to-[#dacacf]/30 ${isMobile ? '' : 'backdrop-blur-sm'}`}
                 style={{
                   left: `${5 + index * 15}%`,
-                  top: `${15 + index * 12}%`
+                  top: `${15 + index * 12}%`,
+                  willChange: 'transform',
+                  transform: 'translate3d(0, 0, 0)'
                 }}
               />
             ))}
@@ -216,7 +245,7 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* 浮遊テキスト要素 */}
+          {/* 浮遊テキスト要素（モバイルでは簡素化） */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -224,7 +253,7 @@ export default function HeroSection() {
             className="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-[#54585f]/30 font-shippori text-3xl sm:text-6xl font-light transform -rotate-12 select-none"
           >
             <motion.div
-              animate={{
+              animate={isMobile ? {} : {
                 y: [0, -10, 0],
                 rotate: [0, 2, 0]
               }}
@@ -233,6 +262,7 @@ export default function HeroSection() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
+              style={{ willChange: 'transform' }}
             >
               Beauty
             </motion.div>
@@ -245,7 +275,7 @@ export default function HeroSection() {
             className="absolute top-10 sm:top-20 right-10 sm:right-20 text-[#54585f]/20 font-shippori text-2xl sm:text-4xl font-light transform rotate-12 select-none"
           >
             <motion.div
-              animate={{
+              animate={isMobile ? {} : {
                 y: [0, 15, 0],
                 rotate: [0, -2, 0]
               }}
@@ -255,39 +285,46 @@ export default function HeroSection() {
                 ease: "easeInOut",
                 delay: 1
               }}
+              style={{ willChange: 'transform' }}
             >
               LUNAGE
             </motion.div>
           </motion.div>
 
-          {/* 追加の浮遊要素 */}
-          <motion.div
-            animate={{
-              x: [0, 30, 0],
-              y: [0, -20, 0],
-              opacity: [0.3, 0.7, 0.3]
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute top-1/2 left-1/4 w-2 h-2 sm:w-4 sm:h-4 bg-[#caa9af]/40 rounded-full"
-          />
-          <motion.div
-            animate={{
-              x: [0, -40, 0],
-              y: [0, 25, 0],
-              opacity: [0.2, 0.6, 0.2]
-            }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2
-            }}
-            className="absolute bottom-1/3 right-1/4 w-3 h-3 sm:w-6 sm:h-6 bg-[#d6c6b5]/40 rounded-full"
-          />
+          {/* 追加の浮遊要素（モバイルでは非表示） */}
+          {!isMobile && (
+            <>
+              <motion.div
+                animate={{
+                  x: [0, 30, 0],
+                  y: [0, -20, 0],
+                  opacity: [0.3, 0.7, 0.3]
+                }}
+                transition={{
+                  duration: 10,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute top-1/2 left-1/4 w-2 h-2 sm:w-4 sm:h-4 bg-[#caa9af]/40 rounded-full"
+                style={{ willChange: 'transform' }}
+              />
+              <motion.div
+                animate={{
+                  x: [0, -40, 0],
+                  y: [0, 25, 0],
+                  opacity: [0.2, 0.6, 0.2]
+                }}
+                transition={{
+                  duration: 12,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 2
+                }}
+                className="absolute bottom-1/3 right-1/4 w-3 h-3 sm:w-6 sm:h-6 bg-[#d6c6b5]/40 rounded-full"
+                style={{ willChange: 'transform' }}
+              />
+            </>
+          )}
         </motion.div>
       </div>
     </section>

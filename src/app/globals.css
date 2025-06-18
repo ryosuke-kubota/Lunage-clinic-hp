@@ -116,4 +116,57 @@
   .preserve-3d {
     transform-style: preserve-3d;
   }
+
+  /* モバイル最適化用のGPUアクセラレーション */
+  .gpu-accelerated {
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .smooth-animation {
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* モバイル用の軽量アニメーション */
+  @media (max-width: 768px) {
+    .mobile-optimized {
+      animation-duration: 0.8s !important;
+      transition-duration: 0.3s !important;
+    }
+    
+    /* モバイルでblur効果を軽減 */
+    .mobile-blur-light {
+      backdrop-filter: blur(4px) !important;
+      -webkit-backdrop-filter: blur(4px) !important;
+    }
+    
+    /* モバイルで複雑なアニメーションを無効化 */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  }
+
+  /* パフォーマンス向上のためのCSS最適化 */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  .contain-layout {
+    contain: layout;
+  }
+
+  .contain-paint {
+    contain: paint;
+  }
 }
