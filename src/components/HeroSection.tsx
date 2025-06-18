@@ -234,7 +234,7 @@ export default function HeroSection() {
             transition={{ delay: 2, duration: 0.8 }}
             className="absolute inset-0 flex items-center justify-center z-20"
           >
-            <div className="text-center bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6 border border-white/20">
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-3xl px-8 py-6 border border-white/20">
               <p className="text-[#8a6d62] font-shippori text-sm sm:text-base mb-2">
                 銀座の美容クリニック
               </p>
