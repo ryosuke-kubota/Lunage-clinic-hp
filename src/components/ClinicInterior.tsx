@@ -7,7 +7,7 @@ export default function ClinicInterior() {
           <div className="absolute inset-0">
             <img
               src="https://ext.same-assets.com/390596101/868030216.png"
-              alt="Bijou Clinic Interior"
+              alt="LUNAGE Clinic Interior"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/30 sm:from-black/20 to-transparent" />
@@ -19,10 +19,10 @@ export default function ClinicInterior() {
               <div className="bg-white/90 backdrop-blur-sm p-4 sm:p-6 lg:p-8 rounded-lg max-w-sm sm:max-w-md">
                 <div className="mb-4">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#caa9af] rounded-full flex items-center justify-center mb-3 sm:mb-4">
-                    <span className="text-white font-shippori text-lg sm:text-2xl font-bold">B</span>
+                    <span className="text-white font-shippori text-lg sm:text-2xl font-bold">L</span>
                   </div>
                   <h3 className="text-lg sm:text-2xl font-shippori font-medium text-[#54585f] mb-2">
-                    BIJOU CLINIC
+                    LUNAGE CLINIC
                   </h3>
                   <p className="text-[#8a6d62] font-shippori text-sm sm:text-base">
                     上質な空間で、心地よいひとときを

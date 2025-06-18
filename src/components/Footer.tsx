@@ -9,13 +9,13 @@ export default function Footer() {
           {/* Clinic Logo and Info */}
           <div className="lg:col-span-2">
             <h3 className="text-3xl font-shippori font-bold mb-6">
-              BIJOU CLINIC
+              LUNAGE CLINIC
             </h3>
             <div className="space-y-2 text-[#dacacf] font-shippori">
-              <p>〒104-0061</p>
-              <p>東京都中央区銀座4丁目6-18 ギンザアクトビル9階</p>
+              <p>〒100-0001</p>
+              <p>東京都〇〇</p>
               <p className="mt-4">
-                TEL: <a href="tel:03-5915-4888" className="text-[#caa9af] hover:text-white transition-colors">03-5915-4888</a>
+                TEL: <a href="tel:03-0000-0000" className="text-[#caa9af] hover:text-white transition-colors">03-0000-0000</a>
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function Footer() {
         <div className="border-t border-[#8a6d62] mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-[#dacacf] font-shippori text-sm">
-              © 2025 BIJOU CLINIC All Rights Reserved.
+              © 2025 LUNAGE CLINIC All Rights Reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="#" className="text-[#dacacf] hover:text-white transition-colors font-shippori text-sm">

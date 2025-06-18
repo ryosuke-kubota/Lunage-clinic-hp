@@ -293,14 +293,14 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
                         </p>
                       </div>
 
-                      <div className="space-y-2 sm:space-y-3">
+                      {/* <div className="space-y-2 sm:space-y-3">
                         <h4 className="font-shippori font-medium text-[#54585f] text-sm sm:text-base">お支払い方法</h4>
                         <div className="text-[#8a6d62] font-shippori text-xs sm:text-sm space-y-1">
                           <p>・現金</p>
                           <p>・各種クレジットカード</p>
                           <p>・医療ローン（最大60回分割可能）</p>
                         </div>
-                      </div>
+                      </div> */}
                     </motion.div>
                   )}
                 </AnimatePresence>

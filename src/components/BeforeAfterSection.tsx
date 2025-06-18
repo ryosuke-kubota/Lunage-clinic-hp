@@ -9,24 +9,24 @@ const beforeAfterData = [
     id: 1,
     treatment: "ヒアルロン酸注射",
     area: "ほうれい線",
-    before: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=500&fit=crop",
-    after: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=500&fit=crop",
+    before: "/images/gallery/382791_B.jpg",
+    after: "/images/gallery/382791_A.jpg",
     description: "自然なボリュームアップで、ほうれい線が目立たなくなりました。"
   },
   {
     id: 2,
     treatment: "ボトックス注射",
     area: "目尻のシワ",
-    before: "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?w=400&h=500&fit=crop",
-    after: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop",
+    before: "/images/gallery/390946_B.png",
+    after: "/images/gallery/390946_A.png",
     description: "表情ジワが改善され、若々しい印象になりました。"
   },
   {
     id: 3,
     treatment: "肌管理メニュー",
     area: "肌質改善",
-    before: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=500&fit=crop",
-    after: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop",
+    before: "/images/gallery/390875_B.png",
+    after: "/images/gallery/390875_A.png",
     description: "毛穴が目立たなくなり、肌のキメが整いました。"
   }
 ];

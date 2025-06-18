@@ -48,10 +48,10 @@ export default function ContactSection() {
               お電話でご予約
             </h4>
             <a
-              href="tel:03-5915-4888"
+              href="tel:03-0000-0000"
               className="text-4xl font-shippori font-medium text-[#caa9af] hover:text-[#8a6d62] transition-colors block mb-2"
             >
-              03-5915-4888
+              03-0000-0000
             </a>
             <p className="text-[#8a6d62] font-shippori text-sm">
               平日・土日：9:00〜18:00
@@ -64,17 +64,11 @@ export default function ContactSection() {
               LINEからもご予約いただけます
             </h4>
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-white p-2 rounded-lg">
-                <img
-                  src="https://ext.same-assets.com/390596101/849713345.png"
-                  alt="LINE QR Code"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+              <a href="#" className="underline text-2xl">ご予約はこちら</a>
             </div>
-            <p className="text-[#8a6d62] font-shippori text-sm">
+            {/* <p className="text-[#8a6d62] font-shippori text-sm">
               未成年者治療同意書はこちら
-            </p>
+            </p> */}
           </div>
         </div>
 

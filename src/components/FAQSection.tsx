@@ -240,14 +240,14 @@ export default function FAQSection() {
               whileTap={{ scale: 0.95 }}
               className="bg-[#caa9af] hover:bg-[#c2ac94] text-white font-shippori px-6 py-3 rounded-full transition-all"
             >
-              📞 電話で相談する
+              電話で相談する
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-[#d6c6b5] hover:bg-[#c2ac94] text-white font-shippori px-6 py-3 rounded-full transition-all"
             >
-              💬 LINEで相談する
+              LINEで相談する
             </motion.button>
           </div>
         </motion.div>

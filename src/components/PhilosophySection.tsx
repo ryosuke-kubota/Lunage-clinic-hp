@@ -41,18 +41,14 @@ export default function PhilosophySection() {
         {/* Background Text */}
         <div className="relative">
           <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-            <div className="text-[#54585f]/5 font-shippori text-[12rem] md:text-[20rem] font-bold select-none whitespace-nowrap">
-              TEAM OF BIJOU CLINIC
+            <div className="text-[#54585f]/5 font-shippori text-[12rem] md:text-[12rem] font-bold select-none whitespace-nowrap">
+              LUNAGE
             </div>
           </div>
 
           {/* Decorative Elements */}
           <div className="relative z-10 py-20">
-            <div className="flex justify-center space-x-12 md:space-x-20">
-              <div className="w-2 h-2 bg-[#caa9af] rounded-full animate-pulse" />
-              <div className="w-3 h-3 bg-[#c2ac94] rounded-full animate-pulse delay-100" />
-              <div className="w-2 h-2 bg-[#dacacf] rounded-full animate-pulse delay-200" />
-            </div>
+            
           </div>
         </div>
       </div>

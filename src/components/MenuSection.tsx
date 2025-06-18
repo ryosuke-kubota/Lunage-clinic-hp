@@ -6,30 +6,17 @@ import Link from "next/link";
 
 // Simple menu items based on the original site
 const menuItems = [
-  { name: "二重埋没", href: "/menu#double-eyelid" },
-  { name: "クマ取り", href: "/menu#double-eyelid" },
-  { name: "切開法", href: "/menu#double-eyelid" },
-  { name: "顔脂肪吸引", href: "/menu#face-shaping" },
-  { name: "脂肪注入", href: "/menu#face-shaping" },
-  { name: "脂肪吸引（体）", href: "/menu#body-shaping" },
-  { name: "水光注射(ハイコックス)", href: "/menu#skin-care" },
-  { name: "肌育注射手打ち", href: "/menu#skin-care" },
-  { name: "ハイドラジェントル", href: "/menu#skin-care" },
-  { name: "エレクトロポーション(ケアシス)", href: "/menu#skin-care" },
-  { name: "ターゲットクール", href: "/menu#skin-care" },
-  { name: "ピーリング各種", href: "/menu#skin-care" },
-  { name: "肌管理メニュー", href: "/menu#skin-care" },
-  { name: "肌管理メニュー (サブスク)", href: "/menu#skin-care" },
-  { name: "韓国製 ボツリヌス注射", href: "/menu#injections" },
-  { name: "アラガン社製 ボトックス注射", href: "/menu#injections" },
-  { name: "マイクロスキンボトックス", href: "/menu#injections" },
-  { name: "韓国製 BIJOUヒアルロン酸", href: "/menu#injections" },
-  { name: "アラガン社製 BIJOUヒアルロン酸", href: "/menu#injections" },
-  { name: "脂肪溶解注射", href: "/menu#injections" },
-  { name: "点滴療法", href: "/menu#injections" },
-  { name: "糸リフト", href: "/menu#threads" },
-  { name: "美容内服", href: "/menu#supplements" },
-  { name: "オプション(針、麻酔など)", href: "/menu#options" }
+  { name: "肌診断", href: "/menu#skin-diagnosis" },
+  { name: "リフトアップ", href: "/menu#lift-up" },
+  { name: "ボディ痩身", href: "/menu#body-slimming" },
+  { name: "フェイシャル・美肌", href: "/menu#facial-beauty" },
+  { name: "多汗症・ワキガ治療", href: "/menu#hyperhidrosis" },
+  { name: "アートメイク", href: "/menu#artmake" },
+  { name: "医療脱毛", href: "/menu#hair-removal" },
+  { name: "点滴治療", href: "/menu#iv-therapy" },
+  { name: "薬剤治療", href: "/menu#medication" },
+  { name: "オプション(針、麻酔など)", href: "/menu#options" },
+  { name: "物販", href: "/menu#products" },
 ];
 
 export default function MenuSection() {

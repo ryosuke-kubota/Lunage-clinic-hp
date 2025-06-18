@@ -19,28 +19,28 @@ export default function InformationSection() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-shippori font-medium text-[#54585f] mb-6">
-                  BIJOU CLINIC
+                  LUNAGE CLINIC
                 </h3>
                 <div className="space-y-4 text-[#54585f] font-shippori">
                   <div className="flex items-start">
                     <span className="w-20 text-[#8a6d62] font-medium">住所</span>
                     <div>
-                      <p>〒104-0061</p>
-                      <p>東京都中央区銀座4丁目6-18 ギンザアクトビル9階</p>
+                      <p>〒100-0000</p>
+                      <p>東京都〇〇</p>
                     </div>
                   </div>
 
                   <div className="flex items-center">
                     <span className="w-20 text-[#8a6d62] font-medium">TEL</span>
-                    <a href="tel:03-5915-4888" className="text-[#caa9af] hover:text-[#8a6d62] transition-colors">
-                      03-5915-4888
+                    <a href="tel:03-0000-0000" className="text-[#caa9af] hover:text-[#8a6d62] transition-colors">
+                      03-0000-0000
                     </a>
                   </div>
 
                   <div className="flex items-start">
                     <span className="w-20 text-[#8a6d62] font-medium">アクセス</span>
                     <div>
-                      <p>銀座線A8 A11出口30秒</p>
+                      <p>〇〇出口徒歩30秒</p>
                     </div>
                   </div>
 
@@ -55,17 +55,11 @@ export default function InformationSection() {
               </div>
 
               {/* QR Code Section */}
-              <div className="bg-[#faf3ef] p-6 rounded-lg">
+              <div className="bg-[#faf3ef] p-6 rounded-lg flex flex-col items-center">
                 <p className="text-[#54585f] font-shippori mb-4">
                   LINEでのお問い合わせ・ご予約も承っております
                 </p>
-                <div className="w-24 h-24 bg-white p-2 rounded-lg">
-                  <img
-                    src="https://ext.same-assets.com/390596101/849713345.png"
-                    alt="LINE QR Code"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+                <a href="#" className="underline text-2xl">ご予約はこちら</a>
               </div>
             </div>
           </div>
@@ -85,16 +79,6 @@ export default function InformationSection() {
               {/* Location Pin */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="w-8 h-8 bg-[#caa9af] rounded-full border-4 border-white shadow-lg animate-pulse" />
-              </div>
-
-              {/* Location Label */}
-              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-lg">
-                <p className="font-shippori text-[#54585f] font-medium text-sm">
-                  ギンザアクト
-                </p>
-                <p className="font-shippori text-[#8a6d62] text-xs">
-                  銀座4丁目6-18
-                </p>
               </div>
             </div>
 
