@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useRef } from "react";
+import { getImagePath } from "@/lib/image-utils";
 
 export default function HeroSection() {
   const containerRef = useRef(null);
@@ -22,14 +23,14 @@ export default function HeroSection() {
 
   // 各シャボン玉のデータ（中央テキストを避けて配置）
   const bubbleImages = [
-    { src: "/images/hero/hero1.jpg", size: "large", delay: 0, x: "0", y: "5%" },
-    { src: "/images/hero/hero2.jpg", size: "medium", delay: 0.3, x: "70%", y: "15%" },
-    { src: "/images/hero/hero3.jpg", size: "small", delay: 0.6, x: "15%", y: "60%" },
-    { src: "/images/hero/hero4.jpg", size: "medium", delay: 0.9, x: "80%", y: "75%" },
-    { src: "/images/hero/hero5.jpg", size: "small", delay: 1.2, x: "35%", y: "10%" },
-    { src: "/images/hero/hero6.jpg", size: "large", delay: 1.5, x: "30%", y: "75%" },
-    { src: "/images/hero/hero7.jpg", size: "medium", delay: 1.8, x: "85%", y: "45%" },
-    { src: "/images/hero/hero8.jpg", size: "small", delay: 2.1, x: "0", y: "70%" }
+    { src: getImagePath("/images/hero/hero1.jpg"), size: "large", delay: 0, x: "0", y: "5%" },
+    { src: getImagePath("/images/hero/hero2.jpg"), size: "medium", delay: 0.3, x: "70%", y: "15%" },
+    { src: getImagePath("/images/hero/hero3.jpg"), size: "small", delay: 0.6, x: "15%", y: "60%" },
+    { src: getImagePath("/images/hero/hero4.jpg"), size: "medium", delay: 0.9, x: "80%", y: "75%" },
+    { src: getImagePath("/images/hero/hero5.jpg"), size: "small", delay: 1.2, x: "35%", y: "10%" },
+    { src: getImagePath("/images/hero/hero6.jpg"), size: "large", delay: 1.5, x: "30%", y: "75%" },
+    { src: getImagePath("/images/hero/hero7.jpg"), size: "medium", delay: 1.8, x: "85%", y: "45%" },
+    { src: getImagePath("/images/hero/hero8.jpg"), size: "small", delay: 2.1, x: "0", y: "70%" }
   ];
 
   // サイズのマッピング（一回り大きく）
