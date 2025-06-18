@@ -4,31 +4,30 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import { easeOut } from "framer-motion";
-import { getImagePath } from "@/lib/image-utils";
 
 const beforeAfterData = [
   {
     id: 1,
     treatment: "ヒアルロン酸注射",
     area: "ほうれい線",
-    before: getImagePath("/images/gallery/382791_B.jpg"),
-    after: getImagePath("/images/gallery/382791_A.jpg"),
+    before: "/images/gallery/382791_B.jpg",
+    after: "/images/gallery/382791_A.jpg",
     description: "自然なボリュームアップで、ほうれい線が目立たなくなりました。"
   },
   {
     id: 2,
     treatment: "ボトックス注射",
     area: "目尻のシワ",
-    before: getImagePath("/images/gallery/390946_B.png"),
-    after: getImagePath("/images/gallery/390946_A.png"),
+    before: "/images/gallery/390946_B.png",
+    after: "/images/gallery/390946_A.png",
     description: "表情ジワが改善され、若々しい印象になりました。"
   },
   {
     id: 3,
     treatment: "肌管理メニュー",
     area: "肌質改善",
-    before: getImagePath("/images/gallery/390875_B.png"),
-    after: getImagePath("/images/gallery/390875_A.png"),
+    before: "/images/gallery/390875_B.png",
+    after: "/images/gallery/390875_A.png",
     description: "毛穴が目立たなくなり、肌のキメが整いました。"
   }
 ];

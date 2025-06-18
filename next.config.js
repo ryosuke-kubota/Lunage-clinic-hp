@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/runaju-clinic' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/runaju-clinic' : '',
   images: {
     unoptimized: true,
     domains: [

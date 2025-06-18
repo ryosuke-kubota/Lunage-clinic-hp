@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0 --turbopack",
     "build": "next build",
-    "build:github": "NODE_ENV=production next build",
     "start": "next start",
     "lint": "bunx biome lint --write && bunx tsc --noEmit",
     "format": "bunx biome format --write"
