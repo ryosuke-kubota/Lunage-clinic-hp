@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import { easeOut } from "framer-motion";
 
 // Simple menu items based on the original site
 const menuItems = [
@@ -46,7 +47,7 @@ export default function MenuSection() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };

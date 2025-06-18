@@ -21,7 +21,7 @@ export default function ContactSection() {
         {/* Reservation Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-16">
           <div className="text-center">
-            <h3 className="text-6xl md:text-8xl font-shippori font-light text-[#caa9af] mb-8">
+            <h3 className="text-3xl md:text-8xl font-shippori font-light text-[#caa9af] mb-8">
               Reservation
             </h3>
             <p className="text-[#54585f] font-shippori text-lg mb-8">

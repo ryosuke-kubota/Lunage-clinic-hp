@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import { ChevronDownIcon } from "lucide-react";
+import { easeOut } from "framer-motion";
 
 const faqData = [
   {
@@ -95,7 +96,7 @@ export default function FAQSection() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };

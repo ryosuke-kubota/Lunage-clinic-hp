@@ -4,14 +4,17 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const menuCategories = [
-  { id: "double-eyelid", name: "二重・目元", icon: "👁️", anchor: "#double-eyelid" },
-  { id: "face-shaping", name: "輪郭形成", icon: "✨", anchor: "#face-shaping" },
-  { id: "body-shaping", name: "ボディケア", icon: "💪", anchor: "#body-shaping" },
-  { id: "skin-care", name: "スキンケア", icon: "🌸", anchor: "#skin-care" },
-  { id: "injections", name: "注射・点滴", icon: "💉", anchor: "#injections" },
-  { id: "threads", name: "糸リフト", icon: "🧵", anchor: "#threads" },
-  { id: "supplements", name: "内服・サプリ", icon: "💊", anchor: "#supplements" },
-  { id: "options", name: "オプション", icon: "⚙️", anchor: "#options" }
+  { id: "skin-diagnosis", name: "肌診断", icon: "🔍", anchor: "#skin-diagnosis" },
+  { id: "lift-up", name: "リフトアップ", icon: "✨", anchor: "#lift-up" },
+  { id: "body-slimming", name: "ボディ痩身", icon: "💪", anchor: "#body-slimming" },
+  { id: "facial-beauty", name: "フェイシャル・美肌", icon: "🌸", anchor: "#facial-beauty" },
+  { id: "hyperhidrosis", name: "多汗症・ワキガ治療", icon: "💧", anchor: "#hyperhidrosis" },
+  { id: "artmake", name: "アートメイク", icon: "🎨", anchor: "#artmake" },
+  { id: "hair-removal", name: "医療脱毛", icon: "⚡", anchor: "#hair-removal" },
+  { id: "iv-therapy", name: "点滴治療", icon: "💉", anchor: "#iv-therapy" },
+  { id: "medication", name: "薬剤治療", icon: "💊", anchor: "#medication" },
+  { id: "options", name: "オプション", icon: "⚙️", anchor: "#options" },
+  { id: "products", name: "物販", icon: "🛍️", anchor: "#products" }
 ];
 
 export default function MenuNavigation() {
@@ -19,9 +22,21 @@ export default function MenuNavigation() {
 
   const handleCategoryClick = (categoryId: string, anchor: string) => {
     setActiveCategory(categoryId);
-    const element = document.querySelector(anchor);
+    const element = document.querySelector(anchor) as HTMLElement;
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // getBoundingClientRectを使用してより正確な位置を計算
+      const elementRect = element.getBoundingClientRect();
+      const currentScrollY = window.scrollY;
+      
+      // 固定要素の高さを考慮したオフセット（より大きく設定）
+      const fixedOffset = 250; // ヘッダー + ナビゲーション + 余白
+      
+      const targetPosition = elementRect.top + currentScrollY - fixedOffset;
+      
+      window.scrollTo({
+        top: Math.max(0, targetPosition),
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -46,7 +61,7 @@ export default function MenuNavigation() {
                     : 'bg-[#faf3ef] text-[#8a6d62] hover:bg-[#caa9af]/20 hover:text-[#54585f]'
                 }`}
               >
-                <span className="mr-2">{category.icon}</span>
+                {/* <span className="mr-2">{category.icon}</span> */}
                 {category.name}
               </motion.button>
             ))}
@@ -71,7 +86,7 @@ export default function MenuNavigation() {
                     : 'bg-[#faf3ef] text-[#8a6d62] hover:bg-[#caa9af]/20'
                 }`}
               >
-                <div className="text-lg mb-1">{category.icon}</div>
+                {/* <div className="text-lg mb-1">{category.icon}</div> */}
                 <div className="leading-tight">{category.name}</div>
               </motion.button>
             ))}

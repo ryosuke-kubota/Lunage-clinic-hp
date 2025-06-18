@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { useState } from "react";
+import { easeOut } from "framer-motion";
 
 interface Treatment {
   name: string;
@@ -43,7 +44,7 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
       y: 0,
       transition: {
         duration: 0.4,
-        ease: "easeOut"
+        ease: easeOut
       }
     },
     exit: {

@@ -110,8 +110,8 @@ export default function MenuHero() {
             <div className="text-[#8a6d62] font-shippori text-sm space-y-2">
               <p>• 表示価格は税込価格です</p>
               <p>• 初回カウンセリング料は無料です</p>
-              <p>• YouTubeフォロワー様特別価格もご用意しております</p>
-              <p>• 医療ローンは最大60回まで分割可能です</p>
+              {/* <p>• YouTubeフォロワー様特別価格もご用意しております</p>
+              <p>• 医療ローンは最大60回まで分割可能です</p> */}
             </div>
           </motion.div>
         </div>

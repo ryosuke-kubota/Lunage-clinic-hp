@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
+import { easeOut } from "framer-motion";
 
 const beforeAfterData = [
   {
@@ -163,7 +164,7 @@ export default function BeforeAfterSection() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };

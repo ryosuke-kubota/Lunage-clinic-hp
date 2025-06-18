@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { easeOut } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function Header() {
       scale: 1,
       transition: {
         duration: 0.3,
-        ease: "easeOut",
+        ease: easeOut,
         staggerChildren: 0.1
       }
     },
