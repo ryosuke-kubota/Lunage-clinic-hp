@@ -53,12 +53,12 @@ export default function HeroSection() {
   const mobileBubbleImages = [
     { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "large", delay: 0, x: "0%", y: "0%" },
     { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "medium", delay: 0.3, x: "75%", y: "10%" },
-    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "small", delay: 0.6, x: "15%", y: "70%" },
+    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "small", delay: 0.6, x: "25%", y: "70%" },
     { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "medium", delay: 0.9, x: "70%", y: "80%" },
-    { src: `${BASE_PATH}/images/hero/hero5.jpg`, size: "small", delay: 1.2, x: "45%", y: "12%" },
-    { src: `${BASE_PATH}/images/hero/hero6.jpg`, size: "large", delay: 1.5, x: "25%", y: "85%" },
+    { src: `${BASE_PATH}/images/hero/hero5.jpg`, size: "small", delay: 1.2, x: "48%", y: "12%" },
+    { src: `${BASE_PATH}/images/hero/hero6.jpg`, size: "large", delay: 1.5, x: "32%", y: "100%" },
     { src: `${BASE_PATH}/images/hero/hero7.jpg`, size: "medium", delay: 1.8, x: "80%", y: "50%" },
-    { src: `${BASE_PATH}/images/hero/hero8.jpg`, size: "small", delay: 2.1, x: "5%", y: "90%" }
+    { src: `${BASE_PATH}/images/hero/hero8.jpg`, size: "small", delay: 2.1, x: "0%", y: "80%" }
   ];
 
   // デバイスに応じて適切な画像配列を選択
@@ -87,7 +87,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           style={{ opacity }}
-          className="relative min-h-[70vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center justify-center gpu-accelerated"
+          className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center justify-center gpu-accelerated"
         >
           {/* 背景の装飾要素（モバイルでは簡素化） */}
           <motion.div

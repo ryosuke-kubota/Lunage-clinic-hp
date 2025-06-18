@@ -67,16 +67,19 @@ export default function Header() {
             <Link href="/" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
               Home
             </Link>
-            <Link href="#about" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+            <Link href="/#about" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
               About
-            </Link>
-            <Link href="#doctor" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
-              Doctor
             </Link>
             <Link href="/menu" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
               Menu・PRICE
             </Link>
-            <Link href="#access" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+            <Link href="/#doctor" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+              Doctor
+            </Link>
+            <Link href="/#faq" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+              FAQ
+            </Link>
+            <Link href="/#access" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
               Access
             </Link>
           </nav>
@@ -130,7 +133,7 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="lg:hidden absolute left-0 right-0 top-full bg-white/98 backdrop-blur-md border-b border-[#d6c6b5]/20 shadow-lg"
+              className="lg:hidden absolute left-0 right-0 top-full bg-white backdrop-blur-md border-b border-[#d6c6b5]/20 shadow-lg"
             >
               <div className="px-4 py-6 space-y-4">
                 <motion.div variants={menuItemVariants}>
@@ -144,20 +147,11 @@ export default function Header() {
                 </motion.div>
                 <motion.div variants={menuItemVariants}>
                   <Link
-                    href="#about"
+                    href="/#about"
                     className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     About
-                  </Link>
-                </motion.div>
-                <motion.div variants={menuItemVariants}>
-                  <Link
-                    href="#doctor"
-                    className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Doctor
                   </Link>
                 </motion.div>
                 <motion.div variants={menuItemVariants}>
@@ -171,7 +165,25 @@ export default function Header() {
                 </motion.div>
                 <motion.div variants={menuItemVariants}>
                   <Link
-                    href="#access"
+                    href="/#doctor"
+                    className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Doctor
+                  </Link>
+                </motion.div>
+                <motion.div variants={menuItemVariants}>
+                  <Link
+                    href="/#faq"
+                    className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    FAQ
+                  </Link>
+                </motion.div>
+                <motion.div variants={menuItemVariants}>
+                  <Link
+                    href="/#access"
                     className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >

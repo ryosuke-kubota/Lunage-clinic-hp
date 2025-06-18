@@ -41,7 +41,7 @@ export default function PhilosophySection() {
         {/* Background Text */}
         <div className="relative">
           <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-            <div className="text-[#54585f]/5 font-shippori text-[5rem] md:text-[12rem] font-bold select-none whitespace-nowrap">
+            <div className="text-[#54585f]/5 font-shippori text-[4rem] md:text-[12rem] font-bold select-none whitespace-nowrap">
               LUNAGE
             </div>
           </div>

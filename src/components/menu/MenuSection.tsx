@@ -112,13 +112,18 @@ interface Treatment {
 
 // カードコンポーネント
 const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: number }) => {
-  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+    rootMargin: '-50px 0px'
+  });
+  
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay: index * 0.1, duration: 0.6 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
+      transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
       className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#dacacf]/20"
     >
       <h3 className="text-xl font-shippori font-medium text-[#54585f] mb-2">{treatment.name}</h3>
@@ -148,7 +153,13 @@ export default function MenuSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {Object.entries(menuData).map(([key, cat]) => (
           <div key={key} id={key} className="mb-20">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-center mb-12"
+            >
               <h2 className="text-3xl sm:text-4xl font-light text-[#54585f] mb-4">{cat.title}</h2>
               {cat.description && <p className="text-lg text-[#8a6d62]">{cat.description}</p>}
             </motion.div>
