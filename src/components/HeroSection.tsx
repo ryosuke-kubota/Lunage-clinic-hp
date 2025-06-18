@@ -37,8 +37,8 @@ export default function HeroSection() {
     triggerOnce: true
   });
 
-  // 各シャボン玉のデータ（モバイルでは数を減らす）
-  const allBubbleImages = [
+  // 各シャボン玉のデータ（デスクトップ用）
+  const desktopBubbleImages = [
     { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "large", delay: 0, x: "0", y: "5%" },
     { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "medium", delay: 0.3, x: "70%", y: "15%" },
     { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "small", delay: 0.6, x: "15%", y: "60%" },
@@ -49,8 +49,20 @@ export default function HeroSection() {
     { src: `${BASE_PATH}/images/hero/hero8.jpg`, size: "small", delay: 2.1, x: "0", y: "70%" }
   ];
 
-  // モバイルでは表示する画像数を制限
-  const bubbleImages = allBubbleImages;
+  // モバイル用の位置調整（画面端からの余裕を持たせ、重なりを避ける）
+  const mobileBubbleImages = [
+    { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "large", delay: 0, x: "0%", y: "0%" },
+    { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "medium", delay: 0.3, x: "75%", y: "10%" },
+    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "small", delay: 0.6, x: "15%", y: "70%" },
+    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "medium", delay: 0.9, x: "70%", y: "80%" },
+    { src: `${BASE_PATH}/images/hero/hero5.jpg`, size: "small", delay: 1.2, x: "45%", y: "12%" },
+    { src: `${BASE_PATH}/images/hero/hero6.jpg`, size: "large", delay: 1.5, x: "25%", y: "85%" },
+    { src: `${BASE_PATH}/images/hero/hero7.jpg`, size: "medium", delay: 1.8, x: "80%", y: "50%" },
+    { src: `${BASE_PATH}/images/hero/hero8.jpg`, size: "small", delay: 2.1, x: "5%", y: "90%" }
+  ];
+
+  // デバイスに応じて適切な画像配列を選択
+  const bubbleImages = isMobile ? mobileBubbleImages : desktopBubbleImages;
 
   // サイズのマッピング（一回り大きく）
   const getSizeClasses = (size: string) => {
@@ -75,7 +87,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           style={{ opacity }}
-          className="relative min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center justify-center gpu-accelerated"
+          className="relative min-h-[70vh] sm:min-h-[65vh] lg:min-h-[70vh] flex items-center justify-center gpu-accelerated"
         >
           {/* 背景の装飾要素（モバイルでは簡素化） */}
           <motion.div
@@ -234,7 +246,7 @@ export default function HeroSection() {
             transition={{ delay: 2, duration: 0.8 }}
             className="absolute inset-0 flex items-center justify-center z-20"
           >
-            <div className="text-center bg-white/10 backdrop-blur-sm rounded-3xl px-8 py-6 border border-white/20">
+            <div className="text-center bg-white/10 backdrop-blur-sm md:backdrop-blur-md rounded-3xl px-8 py-6 border border-white/20">
               <p className="text-[#8a6d62] font-shippori text-sm sm:text-base mb-2">
                 銀座の美容クリニック
               </p>
