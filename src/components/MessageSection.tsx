@@ -37,7 +37,7 @@ export default function MessageSection() {
             </div>
 
             <div className="mt-12 p-6 bg-white rounded-lg shadow-sm">
-              <p className="text-[#8a6d62] font-shippori text-right mb-4">
+              <p className="text-[#8a6d62] font-shippori text-left mb-4">
                 「あなたらしく、少しずつ自分が好きになる」そんな場所でありたい。そう願いながら、スタッフ一同、心を込めてお迎えしています。
               </p>
               <p className="text-[#54585f] font-shippori text-right font-medium">

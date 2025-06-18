@@ -18,7 +18,7 @@ const menuCategories = [
 ];
 
 export default function MenuNavigation() {
-  const [activeCategory, setActiveCategory] = useState("double-eyelid");
+  const [activeCategory, setActiveCategory] = useState("skin-diagnosis");
 
   const handleCategoryClick = (categoryId: string, anchor: string) => {
     setActiveCategory(categoryId);
@@ -41,7 +41,7 @@ export default function MenuNavigation() {
   };
 
   return (
-    <section className="py-8 bg-white sticky top-16 z-40 border-b border-[#dacacf]/20">
+    <section className="py-8 bg-white lg:sticky lg:top-16 z-40 border-b border-[#dacacf]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Desktop Navigation */}
         <div className="hidden lg:block">
