@@ -10,16 +10,19 @@ const BASE_PATH = nextConfig.basePath || "";
 export default function HeroSection() {
   const containerRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   
-  // モバイル判定
+  // デバイス判定
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+    const checkDevice = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+      setIsTablet(width >= 768 && width < 1024);
     };
     
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+    return () => window.removeEventListener('resize', checkDevice);
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -27,9 +30,15 @@ export default function HeroSection() {
     offset: ["start start", "end start"]
   });
 
-  // モバイルではパララックス効果を軽減
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, isMobile ? -50 : -100]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, isMobile ? -100 : -200]);
+  // デバイスに応じてパララックス効果を調整
+  const getParallaxValue = (mobile: number, tablet: number, desktop: number) => {
+    if (isMobile) return mobile;
+    if (isTablet) return tablet;
+    return desktop;
+  };
+  
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, getParallaxValue(-50, -75, -100)]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, getParallaxValue(-100, -150, -200)]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const [ref, inView] = useInView({
@@ -49,29 +58,50 @@ export default function HeroSection() {
     { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "wide-medium", delay: 0.9, x: "58%", y: "8%" },
   ];
 
+  // タブレット用の位置調整（デスクトップ版を参考に調整）
+  const tabletBubbleImages = [
+    // 左側の大きな縦長ポートレート（デスクトップより少し中央寄り）
+    { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "tablet-tall-large", delay: 0, x: "-8%", y: "5%" },
+    // 中央下部の小さなクローズアップ
+    { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "tablet-small-square", delay: 0.3, x: "30%", y: "65%" },
+    // 中央のメイン画像（少し左寄り）
+    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "tablet-main-square", delay: 0.6, x: "65%", y: "35%" },
+    // 右上の横長画像
+    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "tablet-wide-medium", delay: 0.9, x: "55%", y: "12%" },
+  ];
+
   // モバイル用の位置調整
   const mobileBubbleImages = [
     { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "mobile-large", delay: 0, x: "0%", y: "-10%" },
     { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "mobile-small", delay: 0.3, x: "40%", y: "20%" },
-    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "mobile-medium", delay: 0.6, x: "60%", y: "90%" },
-    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "mobile-medium", delay: 0.9, x: "25%", y: "70%" },
+    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "mobile-medium", delay: 0.6, x: "65%", y: "90%" },
+    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "mobile-medium", delay: 0.9, x: "30%", y: "70%" },
   ];
 
   // デバイスに応じて適切な画像配列を選択
-  const bubbleImages = isMobile ? mobileBubbleImages : desktopBubbleImages;
+  const bubbleImages = isMobile ? mobileBubbleImages : isTablet ? tabletBubbleImages : desktopBubbleImages;
 
   // 参考デザインに基づくサイズマッピング
   const getSizeClasses = (size: string) => {
     switch (size) {
       // デスクトップ用サイズ
       case "tall-large":
-        return "w-48 h-72 lg:h-auto lg:w-[500px] lg:h-auto"; // 縦長の大きな画像
+        return "w-48 h-72 lg:w-[500px] lg:h-auto"; // 縦長の大きな画像
       case "main-square":
         return "w-56 h-56 lg:w-[450px] lg:h-auto"; // メインの正方形画像
       case "small-square":
         return "w-24 h-24 lg:w-[200px] lg:h-auto"; // 小さな正方形画像
       case "wide-medium":
         return "w-48 h-32 lg:w-64 lg:h-40"; // 横長の中サイズ画像
+      // タブレット用サイズ（デスクトップとモバイルの中間）
+      case "tablet-tall-large":
+        return "w-40 h-60 md:w-[350px] md:h-auto"; // タブレット用縦長画像
+      case "tablet-main-square":
+        return "w-44 h-44 md:w-[320px] md:h-auto"; // タブレット用メイン画像
+      case "tablet-small-square":
+        return "w-20 h-20 md:w-[150px] md:h-auto"; // タブレット用小画像
+      case "tablet-wide-medium":
+        return "w-40 h-28 md:w-52 md:h-32"; // タブレット用横長画像
       // モバイル用サイズ
       case "mobile-large":
         return "w-32 h-48 sm:w-40 sm:h-60";
@@ -101,7 +131,7 @@ export default function HeroSection() {
             className="absolute inset-0 overflow-hidden"
           >
             <motion.div
-              animate={isMobile ? {} : {
+              animate={(isMobile || isTablet) ? {} : {
                 scale: [1, 1.1, 1],
                 rotate: [0, 5, 0]
               }}
@@ -110,11 +140,11 @@ export default function HeroSection() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className={`absolute top-10 sm:top-20 left-10 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-[#caa9af]/20 to-[#d6c6b5]/20 ${isMobile ? 'blur-xl' : 'blur-2xl sm:blur-3xl'}`}
+              className={`absolute top-10 sm:top-20 left-10 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-[#caa9af]/20 to-[#d6c6b5]/20 ${isMobile ? 'blur-xl' : isTablet ? 'blur-2xl' : 'blur-2xl sm:blur-3xl'}`}
               style={{ willChange: 'transform' }}
             />
             <motion.div
-              animate={isMobile ? {} : {
+              animate={(isMobile || isTablet) ? {} : {
                 scale: [1, 1.2, 1],
                 rotate: [0, -3, 0]
               }}
@@ -124,7 +154,7 @@ export default function HeroSection() {
                 ease: "easeInOut",
                 delay: 2
               }}
-              className={`absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-40 h-40 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-[#c2ac94]/20 to-[#dacacf]/20 ${isMobile ? 'blur-xl' : 'blur-2xl sm:blur-3xl'}`}
+              className={`absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-40 h-40 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-[#c2ac94]/20 to-[#dacacf]/20 ${isMobile ? 'blur-xl' : isTablet ? 'blur-2xl' : 'blur-2xl sm:blur-3xl'}`}
               style={{ willChange: 'transform' }}
             />
           </motion.div>
@@ -136,7 +166,7 @@ export default function HeroSection() {
             animate={inView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 1, staggerChildren: 0.15 }}
             style={{ y: y2 }}
-            className="relative z-10 w-full max-w-6xl h-[420px] sm:h-[500px] lg:h-[600px] contain-layout"
+            className="relative z-10 w-full max-w-6xl h-[420px] sm:h-[500px] md:h-[550px] lg:h-[600px] contain-layout"
           >
             {/* シャボン玉画像群 */}
             {bubbleImages.map((bubble, index) => (
@@ -180,7 +210,7 @@ export default function HeroSection() {
                   //   rotate: [0, 5, -3, 0]
                   // }}
                   transition={{
-                    duration: isMobile ? 6 : 8 + index,
+                    duration: isMobile ? 6 : isTablet ? 7 : 8 + index,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: bubble.delay + 1.2
@@ -199,7 +229,7 @@ export default function HeroSection() {
                   <img
                     src={bubble.src}
                     alt={`Beauty Portrait ${index + 1}`}
-                    className={`w-full h-full object-cover ${isMobile ? '' : 'group-hover:scale-105'} transition-transform duration-500`}
+                    className={`w-full h-full object-cover ${(isMobile || isTablet) ? '' : 'group-hover:scale-105'} transition-transform duration-500`}
                     loading="lazy"
                     style={{ willChange: 'transform' }}
                   />
@@ -211,13 +241,18 @@ export default function HeroSection() {
             ))}
 
             {/* 追加の装飾シャボン玉（モバイルでは数を減らす） */}
-            {[...Array(isMobile ? 3 : 6)].map((_, index) => (
+            {[...Array(isMobile ? 3 : isTablet ? 4 : 6)].map((_, index) => (
               <motion.div
                 key={`decoration-${index}`}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isMobile ? {
                   opacity: [0.3, 0.5, 0.3],
                   scale: [0.9, 1.1, 0.9],
+                } : isTablet ? {
+                  opacity: [0.3, 0.6, 0.3],
+                  scale: [0.85, 1.15, 0.85],
+                  y: [0, -15, 0],
+                  x: [0, 8, -3, 0]
                 } : {
                   opacity: [0.3, 0.7, 0.3],
                   scale: [0.8, 1.2, 0.8],
@@ -225,7 +260,7 @@ export default function HeroSection() {
                   x: [0, 10, -5, 0]
                 }}
                 transition={{
-                  duration: isMobile ? 4 : 6 + index,
+                  duration: isMobile ? 4 : isTablet ? 5 + index : 6 + index,
                   repeat: Infinity,
                   ease: "easeInOut",
                   delay: index * 0.5
@@ -267,7 +302,7 @@ export default function HeroSection() {
             className="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-[#54585f]/30 font-shippori text-3xl sm:text-6xl font-light transform -rotate-12 select-none"
           >
             <motion.div
-              animate={isMobile ? {} : {
+              animate={(isMobile || isTablet) ? {} : {
                 y: [0, -10, 0],
                 rotate: [0, 2, 0]
               }}
@@ -289,7 +324,7 @@ export default function HeroSection() {
             className="absolute top-10 sm:top-20 right-4 sm:right-20 text-[#54585f]/20 font-shippori text-2xl sm:text-4xl font-light transform rotate-12 select-none"
           >
             <motion.div
-              animate={isMobile ? {} : {
+              animate={(isMobile || isTablet) ? {} : {
                 y: [0, 15, 0],
                 rotate: [0, -2, 0]
               }}
@@ -305,8 +340,8 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* 追加の浮遊要素（モバイルでは非表示） */}
-          {!isMobile && (
+          {/* 追加の浮遊要素（モバイルとタブレットでは非表示） */}
+          {!isMobile && !isTablet && (
             <>
               <motion.div
                 animate={{
