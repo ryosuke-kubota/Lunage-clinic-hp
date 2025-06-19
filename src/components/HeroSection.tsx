@@ -73,9 +73,9 @@ export default function HeroSection() {
   // モバイル用の位置調整
   const mobileBubbleImages = [
     { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "mobile-large", delay: 0, x: "0%", y: "-10%" },
-    { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "mobile-small", delay: 0.3, x: "40%", y: "20%" },
-    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "mobile-medium", delay: 0.6, x: "65%", y: "90%" },
-    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "mobile-medium", delay: 0.9, x: "30%", y: "70%" },
+    { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "mobile-small", delay: 0.3, x: "35%", y: "20%" },
+    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "mobile-large", delay: 0.6, x: "65%", y: "85%" },
+    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "mobile-medium", delay: 0.9, x: "35%", y: "68%" },
   ];
 
   // デバイスに応じて適切な画像配列を選択
