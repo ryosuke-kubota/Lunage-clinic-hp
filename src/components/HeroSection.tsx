@@ -37,44 +37,50 @@ export default function HeroSection() {
     triggerOnce: true
   });
 
-  // 各シャボン玉のデータ（デスクトップ用）
+  // 参考デザインに基づく画像配置（デスクトップ用）
   const desktopBubbleImages = [
-    { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "large", delay: 0, x: "0", y: "5%" },
-    { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "medium", delay: 0.3, x: "70%", y: "15%" },
-    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "small", delay: 0.6, x: "15%", y: "60%" },
-    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "medium", delay: 0.9, x: "80%", y: "75%" },
-    { src: `${BASE_PATH}/images/hero/hero5.jpg`, size: "small", delay: 1.2, x: "35%", y: "10%" },
-    { src: `${BASE_PATH}/images/hero/hero6.jpg`, size: "large", delay: 1.5, x: "30%", y: "75%" },
-    { src: `${BASE_PATH}/images/hero/hero7.jpg`, size: "medium", delay: 1.8, x: "85%", y: "45%" },
-    { src: `${BASE_PATH}/images/hero/hero8.jpg`, size: "small", delay: 2.1, x: "0", y: "70%" }
+    // 左側の大きな縦長ポートレート
+    { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "tall-large", delay: 0, x: "-12%", y: "0%" },
+    // 中央下部の小さなクローズアップ
+    { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "small-square", delay: 0.3, x: "25%", y: "70%" },
+    // 中央のメイン画像
+    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "main-square", delay: 0.6, x: "70%", y: "30%" },
+    // 右上の横長画像
+    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "wide-medium", delay: 0.9, x: "58%", y: "8%" },
   ];
 
-  // モバイル用の位置調整（画面端からの余裕を持たせ、重なりを避ける）
+  // モバイル用の位置調整
   const mobileBubbleImages = [
-    { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "large", delay: 0, x: "0%", y: "0%" },
-    { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "medium", delay: 0.3, x: "75%", y: "10%" },
-    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "small", delay: 0.6, x: "25%", y: "70%" },
-    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "medium", delay: 0.9, x: "70%", y: "80%" },
-    { src: `${BASE_PATH}/images/hero/hero5.jpg`, size: "small", delay: 1.2, x: "48%", y: "12%" },
-    { src: `${BASE_PATH}/images/hero/hero6.jpg`, size: "large", delay: 1.5, x: "32%", y: "100%" },
-    { src: `${BASE_PATH}/images/hero/hero7.jpg`, size: "medium", delay: 1.8, x: "80%", y: "50%" },
-    { src: `${BASE_PATH}/images/hero/hero8.jpg`, size: "small", delay: 2.1, x: "0%", y: "80%" }
+    { src: `${BASE_PATH}/images/hero/hero1.jpg`, size: "mobile-large", delay: 0, x: "0%", y: "-10%" },
+    { src: `${BASE_PATH}/images/hero/hero2.jpg`, size: "mobile-small", delay: 0.3, x: "40%", y: "20%" },
+    { src: `${BASE_PATH}/images/hero/hero3.jpg`, size: "mobile-medium", delay: 0.6, x: "60%", y: "90%" },
+    { src: `${BASE_PATH}/images/hero/hero4.jpg`, size: "mobile-medium", delay: 0.9, x: "25%", y: "70%" },
   ];
 
   // デバイスに応じて適切な画像配列を選択
   const bubbleImages = isMobile ? mobileBubbleImages : desktopBubbleImages;
 
-  // サイズのマッピング（一回り大きく）
+  // 参考デザインに基づくサイズマッピング
   const getSizeClasses = (size: string) => {
     switch (size) {
-      case "large":
-        return "w-40 h-40 sm:w-56 sm:h-56 lg:w-80 lg:h-80";
-      case "medium":
-        return "w-28 h-28 sm:w-40 sm:h-40 lg:w-52 lg:h-52";
-      case "small":
-        return "w-16 h-16 sm:w-28 sm:h-28 lg:w-32 lg:h-32";
+      // デスクトップ用サイズ
+      case "tall-large":
+        return "w-48 h-72 lg:h-auto lg:w-[500px] lg:h-auto"; // 縦長の大きな画像
+      case "main-square":
+        return "w-56 h-56 lg:w-[450px] lg:h-auto"; // メインの正方形画像
+      case "small-square":
+        return "w-24 h-24 lg:w-[200px] lg:h-auto"; // 小さな正方形画像
+      case "wide-medium":
+        return "w-48 h-32 lg:w-64 lg:h-40"; // 横長の中サイズ画像
+      // モバイル用サイズ
+      case "mobile-large":
+        return "w-32 h-48 sm:w-40 sm:h-60";
+      case "mobile-medium":
+        return "w-28 h-28 sm:w-36 sm:h-36";
+      case "mobile-small":
+        return "w-20 h-20 sm:w-24 sm:h-24";
       default:
-        return "w-28 h-28 sm:w-40 sm:h-40 lg:w-52 lg:h-52";
+        return "w-28 h-28 sm:w-36 sm:h-36";
     }
   };
 
@@ -142,7 +148,7 @@ export default function HeroSection() {
                   y: 100
                 }}
                 animate={inView ? {
-                  opacity: 0.7,
+                  opacity: 1,//透明
                   scale: 1,
                   y: 0
                 } : {
@@ -166,44 +172,40 @@ export default function HeroSection() {
               >
                 {/* 浮遊するシャボン玉コンテナ */}
                 <motion.div
-                  animate={isMobile ? {
-                    y: [0, -15, 0],
-                  } : {
-                    y: [0, -30, 0],
-                    x: [0, 15, -10, 0],
-                    rotate: [0, 5, -3, 0]
-                  }}
+                  // animate={isMobile ? {
+                  //   y: [0, -15, 0],
+                  // } : {
+                  //   y: [0, -30, 0],
+                  //   x: [0, 15, -10, 0],
+                  //   rotate: [0, 5, -3, 0]
+                  // }}
                   transition={{
                     duration: isMobile ? 6 : 8 + index,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: bubble.delay + 1.2
                   }}
-                  className={`${getSizeClasses(bubble.size)} rounded-full overflow-hidden shadow-2xl cursor-pointer group gpu-accelerated smooth-animation ${isMobile ? 'mobile-optimized' : ''}`}
-                  whileHover={isMobile ? {} : {
-                    scale: 1.1,
-                    transition: { duration: 0.3 }
-                  }}
+                  className={`${getSizeClasses(bubble.size)} overflow-hidden shadow-2xl cursor-pointer group gpu-accelerated smooth-animation ${isMobile ? 'mobile-optimized' : ''}`}
+                  // whileHover={isMobile ? {} : {
+                  //   scale: 1.1,
+                  //   transition: { duration: 0.3 }
+                  // }}
                   style={{
                     willChange: 'transform',
                     transform: 'translate3d(0, 0, 0)' // GPUアクセラレーション強制
                   }}
                 >
-                  {/* シャボン玉のグラデーション背景 */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent rounded-full" />
-                  
                   {/* 画像 */}
                   <img
                     src={bubble.src}
                     alt={`Beauty Portrait ${index + 1}`}
-                    className={`w-full h-full object-cover rounded-full ${isMobile ? '' : 'group-hover:scale-110'} transition-transform duration-500 filter brightness-110 contrast-90 saturate-80`}
+                    className={`w-full h-full object-cover ${isMobile ? '' : 'group-hover:scale-105'} transition-transform duration-500`}
                     loading="lazy"
                     style={{ willChange: 'transform' }}
                   />
                   
-                  
-                  {/* ホバー時のオーバーレイ */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#caa9af]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
+                  {/* 明るめの白オーバーレイ */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-white/30" />
                 </motion.div>
               </motion.div>
             ))}
@@ -284,7 +286,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 1, delay: 1 }}
-            className="absolute top-10 sm:top-20 right-10 sm:right-20 text-[#54585f]/20 font-shippori text-2xl sm:text-4xl font-light transform rotate-12 select-none"
+            className="absolute top-10 sm:top-20 right-4 sm:right-20 text-[#54585f]/20 font-shippori text-2xl sm:text-4xl font-light transform rotate-12 select-none"
           >
             <motion.div
               animate={isMobile ? {} : {
