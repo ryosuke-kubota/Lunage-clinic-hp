@@ -5,14 +5,15 @@ import { useState } from "react";
 
 const menuCategories = [
   { id: "skin-diagnosis", name: "肌診断", icon: "🔍", anchor: "#skin-diagnosis" },
+  { id: "body-slimming", name: "痩身", icon: "💪", anchor: "#body-slimming" },
   { id: "lift-up", name: "リフトアップ", icon: "✨", anchor: "#lift-up" },
-  { id: "body-slimming", name: "ボディ痩身", icon: "💪", anchor: "#body-slimming" },
   { id: "facial-beauty", name: "フェイシャル・美肌", icon: "🌸", anchor: "#facial-beauty" },
-  { id: "hyperhidrosis", name: "多汗症・ワキガ治療", icon: "💧", anchor: "#hyperhidrosis" },
-  { id: "artmake", name: "アートメイク", icon: "🎨", anchor: "#artmake" },
-  { id: "hair-removal", name: "医療脱毛", icon: "⚡", anchor: "#hair-removal" },
-  { id: "iv-therapy", name: "点滴治療", icon: "💉", anchor: "#iv-therapy" },
-  { id: "medication", name: "薬剤治療", icon: "💊", anchor: "#medication" },
+  { id: "hyperhidrosis", name: "多汗症", icon: "💧", anchor: "#hyperhidrosis" },
+  // { id: "artmake", name: "アートメイク", icon: "🎨", anchor: "#artmake" },
+  { id: "aga", name: "AGA", icon: "⚡", anchor: "#aga" },
+  { id: "hair-removal", name: "脱毛", icon: "⚡", anchor: "#hair-removal" },
+  { id: "iv-therapy", name: "点滴", icon: "💉", anchor: "#iv-therapy" },
+  { id: "medication", name: "薬剤", icon: "💊", anchor: "#medication" },
   { id: "options", name: "オプション", icon: "⚙️", anchor: "#options" },
   { id: "products", name: "物販", icon: "🛍️", anchor: "#products" }
 ];

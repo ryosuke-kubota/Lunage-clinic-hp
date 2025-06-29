@@ -258,16 +258,14 @@ const menuData = {
     ]
   },
   "hyperhidrosis": {
-    title: "多汗症・ワキガ治療",
+    title: "多汗症",
     description: "",
     treatments: [
       {
         name: "ワキガ治療",
         equipment: "ミラドライ機器",
         description: "マイクロ波エネルギーで汗腺を破壊し、多汗症やワキガを根本的に改善します。切らない治療で、長期的な効果が期待できます。",
-        regularPrice: "220,000",
-        specialPrice: "180,000",
-        specialPriceName: "期間限定価格"
+        regularPrice: "",
       }
     ]
   },
@@ -539,7 +537,7 @@ const menuData = {
         contents: "NMN",
         treatmentTime: "30",
         description: "長寿遺伝子と話題の若返りの成分NMN点滴。体内でNAD+となり細胞活性に働きかけます。細胞単位で若返りを望むならこれしかありません。",
-        regularPrice: "仕入れ値確認中。恐らく3万〜"
+        regularPrice: ""
       },
       {
         name: "ビタミン増し増し点滴",
@@ -906,8 +904,20 @@ const menuData = {
   }
 };
 
-// 通貨フォーマット
-const fmt = (price: string) => price ? `¥${Number.parseInt(price).toLocaleString()}` : "";
+// 通貨フォーマット - 特殊なテキストにも対応
+const fmt = (price: string) => {
+  if (!price) return "";
+  
+  // 数値のみの場合は従来通りフォーマット
+  const numericPrice = price.replace(/[^\d]/g, '');
+  if (numericPrice && price === numericPrice) {
+    return `¥${Number.parseInt(price).toLocaleString()}`;
+  }
+  
+  // 特殊なテキストが含まれる場合はそのまま表示
+  // 例: "10g 8000円〜", "施術とセットで無料", "仕入れ値確認中。恐らく3万〜"
+  return price;
+};
 
 interface Treatment {
   name: string;
@@ -983,7 +993,7 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
         backfaceVisibility: 'hidden',
         WebkitBackfaceVisibility: 'hidden'
       }}
-      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl border border-[#dacacf]/20"
+      className="flex flex-col bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl border border-[#dacacf]/20"
     >
       <h3 className="text-xl font-shippori font-medium text-[#54585f] mb-3">{treatment.name}</h3>
       
@@ -1023,7 +1033,7 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
       {/* 従来の施術時間とダウンタイム（基本カテゴリ用） */}
       {treatment.duration && <p className="text-sm text-[#8a6d62] mb-1">施術時間: {treatment.duration}</p>}
       {treatment.downtime && <p className="text-sm text-[#8a6d62] mb-3">ダウンタイム: {treatment.downtime}</p>}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4 mt-auto">
         <div className="bg-[#faf3ef] p-3 rounded-lg">
           <p className="text-xs text-[#8a6d62]">通常価格</p>
           <p className="font-bold text-[#54585f]">{fmt(treatment.regularPrice)}</p>
