@@ -273,7 +273,7 @@ const menuData = {
     ]
   },
   "aga": {
-    title: "",
+    title: "AGA",
     description: "",
     treatments: [
       {
@@ -314,14 +314,14 @@ const menuData = {
   // },
   "hair-removal": {
     title: "脱毛",
-    description: `痛みは最小限に、効果は最大限に、丁寧に施術いたします。\n
-      ⭕️痛みが少ない\n
-      低出力のレーザーを繰り返し照射するため、痛みが少ないとされています。特に、ソプラノアイスプラチナムは、冷却機能も搭載しており、さらに痛みを軽減できます。\n
-      ⭕️幅広い肌質・毛質に対応:\n
-      メラニン色素の量と効果が直接関係しないため、色黒肌や産毛にも効果的です。\n
-      ⭕️施術時間が短い:\n
-      広い照射面積で、広範囲を短時間で脱毛できます。\n
-      ⭕️3種類の波長をブレンド:\n
+    description: `痛みは最小限に、効果は最大限に、丁寧に施術いたします。
+      ⭕️痛みが少ない
+      低出力のレーザーを繰り返し照射するため、痛みが少ないとされています。特に、ソプラノアイスプラチナムは、冷却機能も搭載しており、さらに痛みを軽減できます。
+      ⭕️幅広い肌質・毛質に対応:
+      メラニン色素の量と効果が直接関係しないため、色黒肌や産毛にも効果的です。
+      ⭕️施術時間が短い:
+      広い照射面積で、広範囲を短時間で脱毛できます。
+      ⭕️3種類の波長をブレンド:
       ソプラノチタニウムは、3種類の波長のレーザーをブレンドして照射することで、様々な深さの毛に対応できます。`,
     treatments: [
       {
@@ -685,7 +685,11 @@ export default function MenuSection() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl sm:text-4xl font-light text-[#54585f] mb-4">{cat.title}</h2>
-              {cat.description && <p className="text-lg text-[#8a6d62]">{cat.description}</p>}
+              {cat.description && (
+                <p className="text-lg text-[#8a6d62] whitespace-pre-line">
+                  {cat.description}
+                </p>
+              )}
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {cat.treatments.map((t, i) => <TreatmentCard key={i} treatment={t} index={i} />)}
