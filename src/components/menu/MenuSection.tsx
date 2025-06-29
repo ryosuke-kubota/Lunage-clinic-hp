@@ -986,7 +986,7 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
       ref={cardRef}
       initial={{ opacity: 0, y: 30 }}
       animate={animationState === 'visible' ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
       style={{
         // Safari対応のためのスタイル強制
         willChange: 'opacity, transform',
