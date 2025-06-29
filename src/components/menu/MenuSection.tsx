@@ -7,76 +7,112 @@ import { useState, useEffect, useRef } from "react";
 const menuData = {
   "skin-diagnosis": {
     title: "肌診断",
-    description: "VISIA／オーラ（施術とセットで無料）",
+    description: "",
     treatments: [
       {
-        name: "VISIA",
-        equipment: "VISIA肌診断機器",
-        description: "最新の肌診断機器VISIAを使用し、肌の状態を詳細に分析します。シミ、シワ、毛穴、色素沈着などを可視化し、最適な治療プランをご提案いたします。",
-        regularPrice: "0",
-        specialPrice: "0"
-      },
-      {
-        name: "オーラ",
-        equipment: "オーラシステム",
-        description: "オーラシステムによる色素分析と血行状態の診断を行います。肌の深層部の状態を把握し、より効果的な治療方針を決定するための重要な診断です。",
-        regularPrice: "0",
-        specialPrice: "0"
-      }
-    ]
-  },
-  "lift-up": {
-    title: "リフトアップ",
-    description: "水玉リフト（LDM）、チタニウムリフト（ソプラノ）、HIFUで理想のフェイスラインを実現",
-    treatments: [
-      {
-        name: "水玉リフト（LDM）",
-        equipment: "LDM機器",
-        description: "LDM（局所動的マイクロマッサージ）技術を使用したリフトアップ治療です。超音波の力で皮膚深層に働きかけ、自然なリフトアップ効果を実現します。",
-        regularPrice: "150,000",
-        specialPrice: "120,000"
-      },
-      {
-        name: "チタニウムリフト（ソプラノ）",
-        equipment: "ソプラノチタニウム",
-        description: "ソプラノチタニウムによる高周波治療で、肌の深層部を温めてコラーゲンの生成を促進します。引き締め効果とリフトアップを同時に実現する最新治療です。",
-        regularPrice: "180,000",
-        specialPrice: "150,000"
-      },
-      {
-        name: "HIFU 全顔＋首",
-        equipment: "HIFU機器",
-        description: "高密度焦点式超音波（HIFU）で顔全体と首のたるみを改善します。メスを使わずに深層筋膜（SMAS層）にアプローチし、自然なリフトアップ効果が期待できます。",
-        regularPrice: "200,000",
-        specialPrice: "170,000"
-      },
-      {
-        name: "HIFU 頬下",
-        equipment: "HIFU機器",
-        description: "頬下のたるみに特化したHIFU治療です。フェイスラインをシャープにし、小顔効果を実現します。ダウンタイムがほとんどなく、日常生活に支障をきたしません。",
-        regularPrice: "100,000",
-        specialPrice: "80,000"
+        name: "VISIA/オーラ",
+        equipment: "VISIA/オーラ",
+        description: "最新のカメラを用いて、肌の状態を詳細に分析する肌診断器です。シミ、しわ、毛穴など、様々な肌トラブルを数値化し、肌年齢を推定。肌治療や施術選別前に行います。",
+        regularPrice: "3300",
+        specialPrice: ""
       }
     ]
   },
   "body-slimming": {
     title: "ボディ痩身",
-    description: "HIFUボディ／セルライト改善で部分痩せをサポート",
+    description: "",
     treatments: [
       {
-        name: "HIFUボディ（二の腕・腹部・太もも）",
-        equipment: "ボディ専用HIFU機器",
-        description: "ボディ専用HIFUで気になる部位の脂肪細胞を破壊し、部分痩せを実現します。二の腕、腹部、太ももなど、運動では落ちにくい部位に効果的です。",
-        regularPrice: "250,000",
-        specialPrice: "200,000"
+        name: "セルライト改善",
+        equipment: "LDM",
+        description: "ダウンタイム短縮にもオススメ◎最先端セルライト治療！超音波を用いてセルライトや脂肪吸引後の拘縮を分解します。痛みやダウンタイムも心配ありません。",
+        regularPrice: "16000",
+        specialPrice: ""
       },
       {
-        name: "セルライト改善（LDM）",
-        equipment: "LDM機器",
-        description: "LDM技術でセルライトの原因となる脂肪組織と線維組織の癒着を改善します。肌表面の凸凹を滑らかにし、美しいボディラインを作ります。",
-        regularPrice: "80,000",
-        specialPrice: "65,000"
-      }
+        name: "HIFUボディ",
+        equipment: "HIFU",
+        description: "超音波の熱を使用して脂肪細胞を直接破壊するためリバウンドが少ないと言われております。気になる二の腕やブラ肉、細かな部位アプローチ出来ます。",
+        regularPrice: "30000",
+        specialPrice: ""
+      },
+    ]
+  },
+  "lift-up": {
+    title: "リフトアップ",
+    description: "",
+    treatments: [
+      {
+        name: "HIFU全顔 首",
+        equipment: "HIFU",
+        description: "たるみ治療と言えばHIFU。筋膜にアプローチして皮膚の内側から引き締まりを体験できます。ひとりひとり脂肪や皮膚の厚みが違うため、当院では看護師がお客様の状態に合わせたカスタマイズHIFUを提案いたします。",
+        regularPrice: "30000",
+        firstPrice: "16000",
+        specialPrice: ""
+      },
+      {
+        name: "HIFU 全顔+首",
+        equipment: "HIFU",
+        description: "たるみ治療と言えばHIFU。筋膜にアプローチして皮膚の内側から引き締まりを体験できます。ひとりひとり脂肪や皮膚の厚みが違うため、当院では看護師がお客様の状態に合わせたカスタマイズHIFUを提案いたします。",
+        regularPrice: "30000",
+        specialPrice: ""
+      },
+      {
+        name: "HIFU 頬下",
+        equipment: "HIFU",
+        description: "たるみ治療と言えばHIFU。筋膜にアプローチして皮膚の内側から引き締まりを体験できます。ひとりひとり脂肪や皮膚の厚みが違うため、当院では看護師がお客様の状態に合わせたカスタマイズHIFUを提案いたします。",
+        regularPrice: "25000",
+        specialPrice: ""
+      },
+      {
+        name: "HIFU アイリフト",
+        equipment: "HIFU",
+        description: "たるみ治療と言えばHIFU。筋膜にアプローチして皮膚の内側から引き締まりを体験できます。ひとりひとり脂肪や皮膚の厚みが違うため、当院では看護師がお客様の状態に合わせたカスタマイズHIFUを提案いたします。",
+        regularPrice: "13000",
+        specialPrice: ""
+      },
+      {
+        name: "HIFU 首",
+        equipment: "HIFU",
+        description: "たるみ治療と言えばHIFU。筋膜にアプローチして皮膚の内側から引き締まりを体験できます。ひとりひとり脂肪や皮膚の厚みが違うため、当院では看護師がお客様の状態に合わせたカスタマイズHIFUを提案いたします。",
+        regularPrice: "15000",
+        specialPrice: ""
+      },
+      {
+        name: "HIFU 人中",
+        equipment: "HIFU",
+        description: "たるみ治療と言えばHIFU。筋膜にアプローチして皮膚の内側から引き締まりを体験できます。ひとりひとり脂肪や皮膚の厚みが違うため、当院では看護師がお客様の状態に合わせたカスタマイズHIFUを提案いたします。",
+        regularPrice: "5000",
+        specialPrice: ""
+      },
+      {
+        name: "即席小顔HIFUシャワー",
+        equipment: "HIFU",
+        description: "皮膚の表層に優しい熱を入れることでその場でむくみを取り除きます。コラーゲンの産生も促進されるので定期的な施術で美肌も叶います。細身で頬のコケが気になる方にもおすすめのメニューです。",
+        regularPrice: "15000",
+        specialPrice: ""
+      },
+      {
+        name: "水玉リフト",
+        equipment: "LDM",
+        description: "痛みなく艶感、ハリを速攻で取り戻す！老化が進んだ肌の奥の細胞を肌を傷めることなく刺激し、コラーゲンやヒアルロン酸の再配列を活性化を促します。",
+        regularPrice: "16000",
+        specialPrice: ""
+      },
+      {
+        name: "ダイヤモンドチップ",
+        equipment: "POTENZA",
+        description: "高周波RF（ラジオ波）を肌に照射し、コラーゲンやエラスチンの生成を促進。肌の引き締めやハリ改善など小ジワや毛穴の開き、ニキビ跡の改善効果のある施術。針を使用しないため、痛みやダウンタイムが少ないです。",
+        regularPrice: "30000",
+        specialPrice: ""
+      },
+      {
+        name: "チタニウムリフト",
+        equipment: "ソプラノ",
+        description: "韓国で大人気のチタニウムリフト！医療レーザーを使用し、肌のたるみやシワを改善するリフトアップ治療法です。3つの異なる波長のレーザーを同時に照射し、肌の浅い層から深い層までアプローチすることで、リフトアップ効果だけでなく、肌の引き締め、毛穴の開き改善、美白効果なども期待できます。",
+        regularPrice: "68000",
+        specialPrice: ""
+      },
     ]
   },
   "facial-beauty": {
@@ -84,34 +120,151 @@ const menuData = {
     description: "ピコレーザーやダーマペンで美肌を育成",
     treatments: [
       {
-        name: "ピコトーニング（ピコレーザー）",
-        equipment: "ピコレーザー機器",
-        description: "ピコ秒レーザーで肌の色ムラやくすみを改善します。メラニン色素を細かく破砕し、透明感のある美しい肌へと導きます。ダウンタイムがほとんどありません。",
-        regularPrice: "30,000",
-        specialPrice: "25,000"
+        name: "LDM疾患コース",
+        equipment: "LDM",
+        description: "トリプルオーバー周波数を用いて炎症やかゆみを抑え、肌のバリア機能を整える非侵襲型ケア。細胞外マトリックス全体に深く作用することで肌の状態を根本から整えます。",
+        regularPrice: "16000"
       },
       {
-        name: "ダーマペン全顔／ボディ",
-        equipment: "ダーマペン機器",
-        description: "極細針で肌に微細な穴を開け、自然治癒力を活用して肌再生を促進します。毛穴の縮小、ニキビ跡の改善、肌質向上に効果的です。",
-        regularPrice: "40,000",
-        specialPrice: "32,000"
+        name: "POTENZA s16 肝斑",
+        equipment: "POTENZA",
+        description: "肝斑治療にオススメ！お肌のメラノサイト自体に特定のRFエネルギーを与えることで、肝斑の原因となるメラニンの産生を抑制し、根源的にアプローチいたします。従来の肝斑治療で起こる可能性のあった色素沈着、再発の可能性、白抜けなどのリスクが抑えられており、 赤ら顔や顔全体のくすみ・色素沈着の改善にも効果あり。",
+        regularPrice: "30000"
       },
       {
-        name: "水光注射（ビタミンC）",
-        equipment: "水光注射機器",
-        description: "高濃度ビタミンCを肌の浅い層に注入し、内側から輝く美肌を作ります。保湿効果が高く、肌のツヤとハリを向上させます。",
-        regularPrice: "23,000",
-        specialPrice: "18,000"
+        name: "POTENZA CP21 densify",
+        equipment: "POTENZA",
+        description: "ペプチド・アミノ酸・ヒアルロン酸を含む高濃度製剤が線維芽細胞を刺激し、コラーゲン・エラスチンの産生を促進。毛穴・小ジワ・ハリ低下に根本からアプローチし、なめらかで弾力のある肌へ導きます。",
+        regularPrice: "40000"
+      },
+      {
+        name: "POTENZAエクソソーム",
+        equipment: "POTENZA",
+        description: "幹細胞由来エクソソームが損傷組織の修復を促し、抗炎症・抗酸化・細胞再生を同時に活性化。ニキビ跡、赤み、加齢による肌力低下など、複合的なお悩みに有効な再生治療です。",
+        regularPrice: "40000"
+      },
+      {
+        name: "POTENZAスキンボトックス",
+        equipment: "POTENZA",
+        description: "ボツリヌストキシンが汗腺・皮脂腺の活動を抑制し、毛穴の開き・皮脂分泌・肌のテカリを抑えます。滑らかでマットな質感へ整え、メイクのりの良い陶器肌を実現。自然な表情のまま肌質改善が可能です。",
+        regularPrice: "40000"
+      },
+      {
+        name: "POTENZA ニキビ・汗管腫",
+        equipment: "POTENZA",
+        description: "真皮内の皮脂腺や汗管腫の腫瘍組織に直接熱エネルギーを届け、選択的に破壊・凝固します。ニキビの原因菌繁殖や皮脂過剰を抑制し、再発しづらい肌へ。汗管腫は複数回の照射で縮小・消退を目指す瘢痕を最小限に抑えた治療が可能です。",
+        regularPrice: "10000"
+      },
+      {
+        name: "マッサージピール全顔",
+        equipment: "PRX",
+        description: "従来のTCAピールにコウジ酸も合わさったことで美白効果アップ。しっかり効果が欲しいかたにおすすめ。角質が整い、水光肌に近づきます。",
+        regularPrice: "15000"
+      },
+      {
+        name: "ミラノリピール　ボディ",
+        equipment: "BioRepeal",
+        description: "背中やデコルテのニキビにはこれ！二の腕の毛孔性苔癬にも効果的です。今あるニキビの炎症を抑えながらニキビ跡も薄くしていきます。",
+        regularPrice: "25000"
+      },
+      {
+        name: "痛くない水光注射ビタミンC",
+        equipment: "ターゲットクール",
+        description: "2021年にFDAの認証を取得。氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みやダウンタイムがなく、手軽に美肌ケアができる最新トリートメントです。",
+        regularPrice: "19000"
+      },
+      {
+        name: "痛くない水光注射トラネキサム酸",
+        equipment: "ターゲットクール",
+        description: "2021年にFDAの認証を取得。氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みやダウンタイムがなく、手軽に美肌ケアができる最新トリートメントです。",
+        regularPrice: "20000"
+      },
+      {
+        name: "痛くない水光注射スキンボトックス",
+        equipment: "ターゲットクール",
+        description: "2021年にFDAの認証を取得。氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みやダウンタイムがなく、手軽に美肌ケアができる最新トリートメントです。",
+        regularPrice: "27000"
+      },
+      {
+        name: "痛くない水光注射エクソソーム",
+        equipment: "ターゲットクール",
+        description: "2021年にFDAの認証を取得。氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みやダウンタイムがなく、手軽に美肌ケアができる最新トリートメントです。",
+        regularPrice: "29000"
+      },
+      {
+        name: "痛くない水光注射プルリアル",
+        equipment: "ターゲットクール",
+        description: "2021年にFDAの認証を取得。氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みやダウンタイムがなく、手軽に美肌ケアができる最新トリートメントです。",
+        regularPrice: "27000"
+      },
+      {
+        name: "痛くない水光注射プラセンタ",
+        equipment: "ターゲットクール",
+        description: "2021年にFDAの認証を取得。氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みやダウンタイムがなく、手軽に美肌ケアができる最新トリートメントです。",
+        regularPrice: "19000"
+      },
+      {
+        name: "ニキビ・イボ1個",
+        equipment: "ターゲットクール",
+        description: "低温CO₂ガスによる即時冷却で、炎症を鎮静させます。",
+        regularPrice: "5000"
+      },
+      {
+        name: "ダーマペン　全顔",
+        equipment: "ダーマペン",
+        description: "極細針で肌に微細な刺激を与え、コラーゲン生成を促進。毛穴・ニキビ跡・小ジワの改善に有効な再生治療です。",
+        regularPrice: "17000"
+      },
+      {
+        name: "ダーマペン　ボディ",
+        equipment: "ダーマペン",
+        description: "極細針で肌に微細な刺激を与え、コラーゲン生成を促進。毛穴・ニキビ跡・小ジワの改善に有効な再生治療です。",
+        regularPrice: "30000"
+      },
+      {
+        name: "ダーマペン＋エクソソーム",
+        equipment: "ダーマペン＋エクソソーム",
+        description: "ダーマペンの微細な針刺激に、再生因子豊富なエクソソームを浸透。有名youtuberも重症クレーターがこの施術で治ったと大絶賛。肌再生力を最大限に高める次世代エイジングケア。",
+        regularPrice: "25000"
+      },
+      {
+        name: "ボトックスフェイシャル",
+        equipment: "ダーマペン＋ボトックス",
+        description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。マスクの蒸れや夏場のメイク崩れが改善します。",
+        regularPrice: "23000"
+      },
+      {
+        name: "ヴェルヴェットスキン",
+        equipment: "ダーマペン＋マッサージピール",
+        description: "ダーマペンで肌に微細な穴を開けた直後にピーリング剤を導入。ハリ・ツヤ・毛穴・ニキビ跡を同時にケアする革新トリートメント。リピート率が高い治療です。",
+        regularPrice: "25000"
+      },
+      {
+        name: "ハイドラフェイシャル",
+        equipment: "ハイドロフェイシャル",
+        description: "クレンジング・角質除去・吸引・美容液導入を一度に実現。毛穴の黒ずみやザラつきを改善し、つるんとした透明肌へ。",
+        regularPrice: "17000"
+      },
+      {
+        name: "ピコトーニング",
+        equipment: "ピコレーザー",
+        description: "ピコ秒レーザーがメラニンに優しく作用し、肝斑・くすみ・色ムラを改善。ダウンタイムなく透明感のある肌へ導きます。",
+        regularPrice: "12000"
+      },
+      {
+        name: "ピコフラクショナル",
+        equipment: "ピコレーザー",
+        description: "真皮層に微細なレーザー刺激を与え、肌の再生を促進。毛穴・ニキビ跡・小ジワなどに高い効果を発揮する美肌治療です。",
+        regularPrice: "30000"
       }
     ]
   },
   "hyperhidrosis": {
     title: "多汗症・ワキガ治療",
-    description: "ミラドライ等で汗・ニオイの悩みを解消",
+    description: "",
     treatments: [
       {
-        name: "ミラドライ",
+        name: "ワキガ治療",
         equipment: "ミラドライ機器",
         description: "マイクロ波エネルギーで汗腺を破壊し、多汗症やワキガを根本的に改善します。切らない治療で、長期的な効果が期待できます。",
         regularPrice: "220,000",
@@ -119,50 +272,183 @@ const menuData = {
       }
     ]
   },
-  "artmake": {
-    title: "アートメイク",
-    description: "ストレッチマーク、白斑、リストカット跡などの色素トラブル対応",
+  "aga": {
+    title: "",
+    description: "",
     treatments: [
       {
-        name: "ストレッチマーク治療",
-        equipment: "レーザー・針治療機器",
-        description: "妊娠線や肉割れなどのストレッチマークを改善する治療です。レーザーや針治療により、肌の再生を促し、目立たなくします。",
-        regularPrice: "50,000",
-        specialPrice: "40,000"
+        name: "ヘアクール",
+        equipment: "ターゲットクール",
+        description: "頭皮深層に超低温の二酸化炭素が残存することで血流促進効果・ボーア効果による育毛を促進します。副作用やダウンタイムの全くなく、大人気の新しいAGA治療です。",
+        regularPrice: "12000",
+        specialPrice: ""
       },
       {
-        name: "白斑治療",
-        equipment: "アートメイク機器",
-        description: "白斑部位にメラニン色素を補充し、周囲の肌色に近づける治療です。アートメイク技術を応用し、自然な仕上がりを実現します。",
-        regularPrice: "80,000",
-        specialPrice: "65,000"
+        name: "LDMヘアケア",
+        equipment: "LDM",
+        description: "頭皮の血流を促進し、細胞の再生力をサポート。抜け毛予防・育毛効果が期待される痛みの少ない新しい頭皮ケアです。",
+        regularPrice: "19000",
+        specialPrice: ""
       }
     ]
   },
+  // "artmake": {
+  //   title: "アートメイク",
+  //   description: "ストレッチマーク、白斑、リストカット跡などの色素トラブル対応",
+  //   treatments: [
+  //     {
+  //       name: "ストレッチマーク",
+  //       equipment: "レーザー・針治療機器",
+  //       description: "妊娠線や肉割れなどのストレッチマークを改善する治療です。レーザーや針治療により、肌の再生を促し、目立たなくします。",
+  //       regularPrice: "50,000",
+  //       specialPrice: "40,000"
+  //     },
+  //     {
+  //       name: "白斑治療",
+  //       equipment: "アートメイク機器",
+  //       description: "白斑部位にメラニン色素を補充し、周囲の肌色に近づける治療です。アートメイク技術を応用し、自然な仕上がりを実現します。",
+  //       regularPrice: "80,000",
+  //       specialPrice: "65,000"
+  //     }
+  //   ]
+  // },
   "hair-removal": {
-    title: "医療脱毛",
-    description: "顔～VIOまで全身対応の医療脱毛メニュー",
+    title: "脱毛",
+    description: `痛みは最小限に、効果は最大限に、丁寧に施術いたします。\n
+      ⭕️痛みが少ない\n
+      低出力のレーザーを繰り返し照射するため、痛みが少ないとされています。特に、ソプラノアイスプラチナムは、冷却機能も搭載しており、さらに痛みを軽減できます。\n
+      ⭕️幅広い肌質・毛質に対応:\n
+      メラニン色素の量と効果が直接関係しないため、色黒肌や産毛にも効果的です。\n
+      ⭕️施術時間が短い:\n
+      広い照射面積で、広範囲を短時間で脱毛できます。\n
+      ⭕️3種類の波長をブレンド:\n
+      ソプラノチタニウムは、3種類の波長のレーザーをブレンドして照射することで、様々な深さの毛に対応できます。`,
     treatments: [
       {
-        name: "ワキ脱毛",
-        equipment: "医療レーザー脱毛機器",
-        description: "医療レーザーによるワキの永久脱毛です。短時間で効果的に毛根を破壊し、ムダ毛の悩みを解消します。",
-        regularPrice: "10,000",
-        specialPrice: "8,000"
-      },
-      {
-        name: "VIO脱毛",
-        equipment: "医療レーザー脱毛機器",
-        description: "デリケートゾーンの医療脱毛です。衛生面の向上と快適性を実現し、自己処理による肌トラブルを防ぎます。",
-        regularPrice: "20,000",
-        specialPrice: "16,000"
-      },
-      {
-        name: "全身脱毛",
-        equipment: "医療レーザー脱毛機器",
+        name: "全身",
+        equipment: "ソプラノ",
         description: "顔からつま先まで全身の医療脱毛です。自己処理の手間を大幅に削減し、滑らかで美しい肌を実現します。",
-        regularPrice: "150,000",
-        specialPrice: "120,000"
+        regularPrice: "50000"
+      },
+      {
+        name: "女性VIO",
+        equipment: "ソプラノ",
+        description: "デリケートゾーンの医療脱毛です。衛生面の向上と快適性を実現し、自己処理による肌トラブルを防ぎます。",
+        regularPrice: "18000"
+      },
+      {
+        name: "顔",
+        equipment: "ソプラノ",
+        description: "顔全体の医療脱毛です。産毛まで効果的に処理し、化粧ノリの向上と肌の透明感アップを実現します。",
+        regularPrice: "15000"
+      },
+      {
+        name: "口周り",
+        equipment: "ソプラノ",
+        description: "口周りの医療脱毛です。気になるヒゲや産毛を効果的に処理します。",
+        regularPrice: "8000"
+      },
+      {
+        name: "うなじ",
+        equipment: "ソプラノ",
+        description: "うなじの医療脱毛です。髪をアップにした時の美しいラインを作ります。",
+        regularPrice: "8000"
+      },
+      {
+        name: "肘上",
+        equipment: "ソプラノ",
+        description: "二の腕の医療脱毛です。ノースリーブも自信を持って着られます。",
+        regularPrice: "8000"
+      },
+      {
+        name: "肘下",
+        equipment: "ソプラノ",
+        description: "前腕の医療脱毛です。日常的に露出する部位をきれいに処理します。",
+        regularPrice: "8000"
+      },
+      {
+        name: "膝上",
+        equipment: "ソプラノ",
+        description: "太ももの医療脱毛です。スカートやショートパンツも安心して着用できます。",
+        regularPrice: "8000"
+      },
+      {
+        name: "膝下",
+        equipment: "ソプラノ",
+        description: "すねの医療脱毛です。自己処理による肌荒れから解放されます。",
+        regularPrice: "8000"
+      },
+      {
+        name: "胸部",
+        equipment: "ソプラノ",
+        description: "胸部の医療脱毛です。水着や薄着の季節も安心です。",
+        regularPrice: "8000"
+      },
+      {
+        name: "腹部",
+        equipment: "ソプラノ",
+        description: "お腹の医療脱毛です。へそ周りの毛も含めて処理します。",
+        regularPrice: "8000"
+      },
+      {
+        name: "上背部",
+        equipment: "ソプラノ",
+        description: "背中上部の医療脱毛です。背中の開いた服も美しく着こなせます。",
+        regularPrice: "8000"
+      },
+      {
+        name: "下背部",
+        equipment: "ソプラノ",
+        description: "背中下部の医療脱毛です。腰回りまでしっかりと処理します。",
+        regularPrice: "8000"
+      },
+      {
+        name: "ヒップ",
+        equipment: "ソプラノ",
+        description: "ヒップの医療脱毛です。水着や下着からはみ出る毛を処理します。",
+        regularPrice: "8000"
+      },
+      {
+        name: "手の甲・指",
+        equipment: "ソプラノ",
+        description: "手の甲と指の医療脱毛です。細かい部位もしっかりと処理します。",
+        regularPrice: "5000"
+      },
+      {
+        name: "足の甲・指",
+        equipment: "ソプラノ",
+        description: "足の甲と指の医療脱毛です。サンダルを履く時も安心です。",
+        regularPrice: "5000"
+      },
+      {
+        name: "ワキ",
+        equipment: "ソプラノ",
+        description: "ワキの医療脱毛です。最も人気の高い部位で、短時間で効果的に処理します。",
+        regularPrice: "2000"
+      },
+      {
+        name: "乳輪周り",
+        equipment: "ソプラノ",
+        description: "乳輪周りの医療脱毛です。デリケートな部位も安全に処理します。",
+        regularPrice: "2000"
+      },
+      {
+        name: "へそ周り",
+        equipment: "ソプラノ",
+        description: "へそ周りの医療脱毛です。お腹の露出時も美しく見えます。",
+        regularPrice: "2000"
+      },
+      {
+        name: "1shot",
+        equipment: "ソプラノ",
+        description: "気になる部位の1ショット照射です。お試しや追加照射に最適です。",
+        regularPrice: "1000"
+      },
+      {
+        name: "シェービング",
+        equipment: "ソプラノ",
+        description: "施術前のシェービングサービスです。剃り残しがある場合にご利用ください。",
+        regularPrice: "1000"
       }
     ]
   },
