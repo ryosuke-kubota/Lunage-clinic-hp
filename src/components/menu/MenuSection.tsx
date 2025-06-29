@@ -19,7 +19,7 @@ const menuData = {
     ]
   },
   "body-slimming": {
-    title: "ボディ痩身",
+    title: "痩身",
     description: "",
     treatments: [
       {
@@ -47,8 +47,6 @@ const menuData = {
         equipment: "HIFU",
         description: "たるみ治療と言えばHIFU。筋膜にアプローチして皮膚の内側から引き締まりを体験できます。ひとりひとり脂肪や皮膚の厚みが違うため、当院では看護師がお客様の状態に合わせたカスタマイズHIFUを提案いたします。",
         regularPrice: "30000",
-        specialPrice: "16000",
-        specialPriceName: "初回価格"
       },
       {
         name: "HIFU 全顔+首",
@@ -117,7 +115,7 @@ const menuData = {
   },
   "facial-beauty": {
     title: "フェイシャル・美肌",
-    description: "ピコレーザーやダーマペンで美肌を育成",
+    description: "",
     treatments: [
       {
         name: "LDM疾患コース",
@@ -454,92 +452,455 @@ const menuData = {
     ]
   },
   "iv-therapy": {
-    title: "点滴治療",
-    description: "高濃度ビタミンC点滴など各種点滴メニュー",
+    title: "点滴",
+    description: "",
     treatments: [
       {
-        name: "高濃度ビタミンC点滴",
+        name: "カスタマイズ点滴",
+        contents: "",
+        treatmentTime: "",
+        description: "自分だけのオリジナル点滴。お悩みや体質、目的に合わせてあなただけのカスタマイズ点滴メニューをご提案！",
+        regularPrice: "8000",
+        specialPrice: "1000",
+        specialPriceName: "カウンセリング料金"
+      },
+      {
+        name: "超高濃度ビタミンC",
         contents: "VC25g, 生食250ml",
-        description: "高濃度のビタミンCを直接血管内に投与し、強力な抗酸化作用で美肌効果を実現します。疲労回復や免疫力向上にも効果的です。",
-        treatmentTime: "30分",
-        regularPrice: "10,000",
-        specialPrice: "8,000",
-        specialPriceName: "初回限定価格"
+        treatmentTime: "60",
+        description: "国産の超高濃度ビタミン製剤を使用。強力な抗酸化作用により、アンチエイジングや美白作用あり。炎症鎮静効果も期待できる。",
+        regularPrice: "8000"
       },
       {
         name: "プラセンタ点滴",
-        contents: "プラセンタエキス2A, 生食100ml",
-        description: "プラセンタエキスの点滴で、細胞の再生を促進し、アンチエイジング効果を実現します。疲労回復や肌質改善に効果的です。",
-        treatmentTime: "20分",
-        regularPrice: "8,000",
-        specialPrice: "6,500",
-        specialPriceName: "モニター価格"
+        contents: "生食100ml, ラエンネック10A",
+        treatmentTime: "30",
+        description: "体全体のお肌のハリUP！胎盤由来のプラセンタ製剤により、力がみなぎり元気になれます。ホルモンバランスの乱れや肝臓の疲れにも最適。美肌効果もあり、一度体験するとやみつきに。男性にもおすすめです！",
+        regularPrice: "5000"
+      },
+      {
+        name: "プラセンタ注射",
+        contents: "ラエンネック２A",
+        treatmentTime: "5",
+        description: "お急ぎの方には５分でプラセンタを注射いたします。週に２回程度がおすすめです。",
+        regularPrice: "1000"
+      },
+      {
+        name: "グルタチオン点滴",
+        contents: "生食100ml, ルチオン",
+        treatmentTime: "30",
+        description: "世間の白玉点滴がこちら。グルタチオン600mgt点滴。抗酸化作用と肝臓保護作用により、黄ぐすみを除去して白玉のような美白肌に。",
+        regularPrice: "3000"
+      },
+      {
+        name: "倍量グルタチオン点滴",
+        contents: "生食100ml, ルチオン",
+        treatmentTime: "30",
+        description: "より効果を望むなら。グルタチオンの濃度が倍の1200mgをご用意！",
+        regularPrice: "5000"
+      },
+      {
+        name: "最強ルナージュ爆美カクテル",
+        contents: "生食100ml, アスコルビン酸, トランサミン, ルチオン, クリストファン, ビタメジン, ビオチン",
+        treatmentTime: "30",
+        description: "どの点滴をするか迷ったらこれ。ルナージュこだわりのオリジナルカクテル。美白も美肌も美髪も全て１つの点滴で叶えたいというお客様のご意見のもと作ったメニュー。ビタミンもグルタチオンもたっぷり詰まった最強点滴です。",
+        regularPrice: "8000"
+      },
+      {
+        name: "超美白カクテル",
+        contents: "生食100ml, トランサミン, クリストファン, アスコルビン酸",
+        treatmentTime: "30",
+        description: "夏にとってもオススメ！ビタミンCに加え、メラニンを抑えるトラネキサム酸やLシステインを配合。",
+        regularPrice: "5000"
+      },
+      {
+        name: "つるつる美肌カクテル",
+        contents: "生食100ml, アスコルビン酸, パンテノール, クリストファン",
+        treatmentTime: "30",
+        description: "ターンオーバーUP！！ビタミンCの抗酸化作用とパントテン酸の代謝促進作用できめ細やかな肌に導きます",
+        regularPrice: "5000"
+      },
+      {
+        name: "肝斑対策点滴",
+        contents: "生食100ml, トランサミン, クリストファン",
+        treatmentTime: "30",
+        description: "当院オリジナル！肝斑向け点滴。トラネキサム酸で肝斑を抑えながら、Lシステインでメラニン撃退。肝斑を改善していきます。",
+        regularPrice: "3000"
+      },
+      {
+        name: "美髪・美爪注射",
+        contents: "生食20ml, ビオチン, パンテノール",
+        treatmentTime: "10",
+        description: "ストレスや副作用で爪や髪のダメージが気になるかたに。ビオチンとパントテン酸で髪や爪のケラチンを補修。白髪や爪割れにもおすすめです。",
+        regularPrice: "3000"
+      },
+      {
+        name: "-5歳若返り点滴",
+        contents: "NMN",
+        treatmentTime: "30",
+        description: "長寿遺伝子と話題の若返りの成分NMN点滴。体内でNAD+となり細胞活性に働きかけます。細胞単位で若返りを望むならこれしかありません。",
+        regularPrice: "仕入れ値確認中。恐らく3万〜"
+      },
+      {
+        name: "ビタミン増し増し点滴",
+        contents: "生食100ml,  アスコルビン酸, ビタメジン",
+        treatmentTime: "30",
+        description: "にんにく注射の匂いが苦手な方にもおすすめのビタミンBとCが入った点滴。製剤がピンクで見た目も可愛い点滴です。",
+        regularPrice: "5000"
+      },
+      {
+        name: "にんにく点滴",
+        contents: "生食100ml, アリナミンF50",
+        treatmentTime: "30",
+        description: "日々の疲れが取れない方へ。疲労回復・活力アップ。にんにくの香りはしないので予定前でも大丈夫。",
+        regularPrice: "3000"
+      },
+      {
+        name: "にんにく注射",
+        contents: "アリナミンF50",
+        treatmentTime: "10",
+        description: "時間がない方はこれ。にんにく点滴と有効成分量は変わらず、時短で施術可能です。",
+        regularPrice: "2000"
+      },
+      {
+        name: "疲労回復点滴",
+        contents: "生食100ml, アスコルビン酸, アリナミンF50",
+        treatmentTime: "30",
+        description: "ビタミンCとビタミンBで活力アップ、体力回復。にんにく注射のレベルアップ点滴。イベント前後にもオススメ！",
+        regularPrice: "3000"
+      },
+      {
+        name: "二日酔い爆速回復点滴",
+        contents: "ソルラクト, 強ミノ, ファモチジン",
+        treatmentTime: "60",
+        description: "二日酔いにはこれ一択。内臓環境回復など有効成分を詰め込んだ点滴です。オプションで吐き気どめも追加できます。",
+        regularPrice: "8000"
+      },
+      {
+        name: "飲み会前守りの点滴",
+        contents: "ビタメジン, 強ミノ, 生食100ml",
+        treatmentTime: "30",
+        description: "飲み会前の二日酔い予防・酔い潰れ予防におすすめ。肝機能を向上させてビタミンB群も補給します。",
+        regularPrice: "5000"
+      },
+      {
+        name: "飲み会前守りの注射",
+        contents: "強ミノ",
+        treatmentTime: "10",
+        description: "時間がない方にはこれ。10分で肝機能を鉄壁にして飲み会に備えることができます。",
+        regularPrice: "2000"
+      },
+      {
+        name: "ダイエット・筋トレ点滴",
+        contents: "生食100ml, エルカルニチン, チオクト酸",
+        treatmentTime: "30",
+        description: "男女どちらにもおすすめ。脂肪の燃焼を促進させることで健康的なダイエットが叶います。",
+        regularPrice: "5000"
+      },
+      {
+        name: "痩せる注射",
+        contents: "チオクト酸, エルカルニチン",
+        treatmentTime: "10",
+        description: "時間がないかたにおすすめ。成分はそのまま、濃縮したダイエット注射です。",
+        regularPrice: "3000"
+      },
+      {
+        name: "レッドブル注射",
+        contents: "アリナミンF50, カフェイン",
+        treatmentTime: "10",
+        description: "踏ん張りたい時にオススメ！徹夜続きでも目が覚めるエナジー注射です。疲労回復と眠気覚ましの効果があります。",
+        regularPrice: "3000"
+      },
+      {
+        name: "免疫強化点滴",
+        contents: "生食100ml, アスコルビン酸, ビタメジン, 強ミノ, エルカルニチン",
+        treatmentTime: "30",
+        description: "風邪の引き始めや疲れを感じた時に。体のダメージを補修して免疫を強化します。今以上に悪化しないように予防のためにもぜひ受けてほしい。",
+        regularPrice: "5000"
+      },
+      {
+        name: "OS1点滴",
+        contents: "アスコルビン酸, ビタメジン, ソルラクト",
+        treatmentTime: "60",
+        description: "猛暑で脱水気味や食欲低下が気になる方や、体調回復におすすめ。ミネラルに加えてビタミン類も加えた点滴メニューです。",
+        regularPrice: "5000"
+      },
+      {
+        name: "口内炎点滴",
+        contents: "生食100ml, アスコルビン酸, パンテノール, ビタメジン, ビオチン",
+        treatmentTime: "30",
+        description: "何をしても治らなかった口内炎に、ついに終止符。― 話題の”内側から治す”ビタミン点滴。サプリでも治らなかった口内炎が改善！10年以上悩んでいたお客様からは「初めて、口の中に口内炎がない日々を体験できた」と感動の声も。",
+        regularPrice: "5000"
+      },
+      {
+        name: "胃もたれ注射",
+        contents: "生食20ml, ファモチジン",
+        treatmentTime: "10",
+        description: "今すぐ治したい胃もたれに注射でアタック！静脈からの吸収は消化管からの吸収より早く強く効果が出ます。胃腸が弱いスタッフがイチオシのメニューです。オプションで吐き気どめも追加できます。",
+        regularPrice: "2000"
+      },
+      {
+        name: "むくみスッキリ注射",
+        contents: "ラシックス, 生食20ml",
+        treatmentTime: "10",
+        description: "体に溜まった毒素をデトックス。ストレスでお肌が荒れてしまった後のケアにもオススメです。施術後は頻繁にお手洗いに行きたくなるので注意。",
+        regularPrice: "2000"
+      },
+      {
+        name: "つわり点滴",
+        contents: "ソルラクト, アスコルビン酸, プリンペラン, ファモチジン, ビタメジン",
+        treatmentTime: "60",
+        description: "辛いつわりに脱水補給と必須ビタミン類を補充。もちろん吐き気止めの効果も入っています。ご自身の楽な体制で点滴を受けていただけます。",
+        regularPrice: "8000"
+      },
+      {
+        name: "エクソソーム点滴",
+        contents: "生食100ml, エクソソーム",
+        treatmentTime: "30",
+        description: "細胞間の情報伝達を担うエクソソームを高濃度に含み、肌の修復・再生力を高める先進的な再生医療由来の美容点滴です。手術や施術後のダウンタイム対策にも効果的です。",
+        regularPrice: "9900"
+      },
+      {
+        name: "育毛点滴",
+        contents: "生食100ml, パンテノール, ビオチン, ビタメジン",
+        treatmentTime: "30",
+        description: "まるでミノキシジル？！毛髪に必要な成分をふんだんに詰め込んだ点滴です。飲み薬との併用でさらに効果を望めます。",
+        regularPrice: "5000"
+      },
+      {
+        name: "静脈麻酔",
+        contents: "アタラックスP, 生食100ml",
+        treatmentTime: "30",
+        description: "痛みを伴う施術のオプションです。当日中の車の運転はお控えください。",
+        regularPrice: "3000"
       }
     ]
   },
   "medication": {
-    title: "薬剤治療",
-    description: "ボトックス・ヒアルロン酸注射、内服薬など",
+    title: "薬剤",
+    description: "",
     treatments: [
       {
-        name: "ボトックス注射",
-        type: "注射薬",
-        drugName: "ボツリヌストキシン",
-        efficacy: "表情筋弛緩、シワ改善、小顔効果",
-        description: "ボツリヌストキシンを注射し、表情筋の動きを抑制してシワを改善します。エラ張りの改善による小顔効果も期待できます。",
-        regularPrice: "18,000",
-        specialPrice: "15,000",
-        specialPriceName: "初回価格"
+        name: "べピオローション",
+        type: "軟膏",
+        drugName: "べピオローション",
+        efficacy: "ニキビ",
+        description: "ニキビの原因となるアクネ菌やブドウ球菌に対する抗菌作用でニキビを抑えます。また、古い角質を剥がれやすくし、角栓の形成を防ぐピーリング効果や毛穴部分の角質層を緩めることで、毛穴詰まりが原因の白ニキビ・毛穴が開きが目立つ黒ニキビにも効果が期待できます。",
+        regularPrice: "2200"
       },
       {
-        name: "ヒアルロン酸注射",
-        type: "注射薬",
-        drugName: "ヒアルロン酸",
-        efficacy: "ボリュームアップ、保湿、ハリ改善",
-        description: "ヒアルロン酸を注入し、失われたボリュームを補います。ほうれい線の改善や唇のボリュームアップなど、自然な若返り効果を実現します。",
-        regularPrice: "39,800",
-        specialPrice: "32,000",
-        specialPriceName: "キャンペーン価格"
+        name: "べピオウォッシュ",
+        type: "軟膏",
+        drugName: "べピオウォッシュ",
+        efficacy: "ニキビ",
+        description: "洗い流すタイプの2025年夏に新発売された,新しいニキビのお薬。べピオローションと効果は変わらず、刺激性も抑えられています。いつものスキンケアも変わらずお使いいただけます。",
+        regularPrice: "2200"
+      },
+      {
+        name: "ゼビアックスローション",
+        type: "軟膏",
+        drugName: "ゼビアックスローション",
+        efficacy: "",
+        description: "アクネ菌の増殖を抑える作用があり、炎症した赤ニキビに効果を示します。",
+        regularPrice: "2200"
+      },
+      {
+        name: "ヒルドイドローション",
+        type: "軟膏",
+        drugName: "ヒルドイドローション",
+        efficacy: "保湿",
+        description: "高保湿成分が角質層まで浸透し、乾燥によるカサつき・毛穴の開き・ニキビをケア。血行促進で炎症や赤みの改善にも効果が期待できます。",
+        regularPrice: "2200"
+      },
+      {
+        name: "トラネキサム酸",
+        type: "内服薬",
+        drugName: "トラネキサム酸",
+        efficacy: "肝斑",
+        description: "肌の炎症やメラニン生成を抑え、肝斑やくすみの改善に。内側から透明感のある明るい肌を目指す方におすすめです。",
+        regularPrice: "2200"
+      },
+      {
+        name: "シナール",
+        type: "内服薬",
+        drugName: "シナール",
+        efficacy: "ビタミンC",
+        description: "抗酸化作用でシミやくすみをケア。コラーゲン生成を助け、内側からハリと明るさをサポートします。",
+        regularPrice: "2200"
+      },
+      {
+        name: "タチオン",
+        type: "内服薬",
+        drugName: "タチオン",
+        efficacy: "美白　飲酒",
+        description: "強力な抗酸化作用で全身の美白・解毒サポート。疲れやすさや肌のくすみが気になる方に最適です。",
+        regularPrice: "2200"
+      },
+      {
+        name: "ハイチオール",
+        type: "内服薬",
+        drugName: "ハイチオール",
+        efficacy: "美白　飲酒",
+        description: "シミの原因となる過剰なメラニンを生成抑制、無色化、排出します。アセトアルデヒドの分解もサポートするので二日酔いにも効果的です。",
+        regularPrice: "2200"
+      },
+      {
+        name: "ユベラ",
+        type: "内服薬",
+        drugName: "ユベラ",
+        efficacy: "",
+        description: "血行を促進し、冷え・くすみ・肌荒れを改善。ホルモンバランスを整え、肌の内側から健やかさを支えます。",
+        regularPrice: ""
+      },
+      {
+        name: "スピロノラクトン2w",
+        type: "内服薬",
+        drugName: "スピロノラクトン2w",
+        efficacy: "ニキビ　むくみ",
+        description: "皮脂分泌を抑える作用があり、ホルモン由来のニキビ改善に有効。大人の繰り返すニキビ対策に適しています。",
+        regularPrice: "2200"
+      },
+      {
+        name: "ミノキシジル",
+        type: "内服薬",
+        drugName: "ミノキシジル",
+        efficacy: "AGA",
+        description: "頭皮の血流を改善し、発毛因子を活性化。抜け毛を予防し、発毛・育毛を促進。薄毛が気になる方に効果が期待されます。",
+        regularPrice: "3000"
+      },
+      {
+        name: "フィナステリド",
+        type: "内服薬",
+        drugName: "フィナステリド",
+        efficacy: "AGA",
+        description: "男性型脱毛症の原因物質を抑制し、抜け毛の進行を防止。発毛環境を整える長期的ケアに適した成分です。",
+        regularPrice: "3000"
+      },
+      {
+        name: "デュタステリド",
+        type: "",
+        drugName: "デュタステリド",
+        efficacy: "AGA",
+        description: "抜け毛の原因に広くアプローチし、フィナステリドよりも強力に脱毛の進行を抑制。発毛効果もより高いとされています。",
+        regularPrice: "3000"
+      },
+      {
+        name: "イソトレチノイン",
+        type: "内服薬",
+        drugName: "イソトレチノイン",
+        efficacy: "ニキビ",
+        description: "皮脂の分泌を抑え、重度のニキビや炎症を根本から改善。繰り返す頑固なニキビに対し、高い効果が期待されます。",
+        regularPrice: "10mg 8000円〜"
+      },
+      {
+        name: "十味敗毒湯",
+        type: "漢方",
+        drugName: "十味敗毒湯",
+        efficacy: "ニキビ",
+        description: "肌の炎症や湿疹、ニキビなどの体の内側からのトラブルに。体質を整え、繰り返す肌荒れを根本から改善へ導きます。",
+        regularPrice: "4000"
+      },
+      {
+        name: "五苓散",
+        type: "漢方",
+        drugName: "五苓散",
+        efficacy: "むくみ・二日酔い",
+        description: "体内の余分な水分バランスを整え、むくみ・頭重感・天気痛などの不調を緩和。水分代謝の乱れにアプローチします。",
+        regularPrice: "4000"
+      },
+      {
+        name: "防風通聖散",
+        type: "漢方",
+        drugName: "防風通聖散",
+        efficacy: "肥満",
+        description: "脂肪代謝を高め、便通を改善。ぽっこりお腹や内臓脂肪が気になる方に。体の中からすっきり引き締めたい方に最適です。",
+        regularPrice: "4000"
+      },
+      {
+        name: "桂枝茯苓丸加意苡仁",
+        type: "漢方",
+        drugName: "桂枝茯苓丸加意苡仁",
+        efficacy: "冷え　生理不順",
+        description: "血流やホルモンバランスを整え、くすみ・肌荒れ・月経トラブルなどを緩和。ニキビや吹き出物にも効果が期待されます。",
+        regularPrice: "4000"
+      },
+      {
+        name: "ラピフォート",
+        type: "外用",
+        drugName: "ラピフォート",
+        efficacy: "多汗症",
+        description: "過剰なワキ汗を抑える外用薬。有効成分が汗腺に働きかけ、日常生活で気になる汗ジミやニオイをしっかり予防します。",
+        regularPrice: ""
+      },
+      {
+        name: "エクラープラスター",
+        type: "外用",
+        drugName: "エクラープラスター",
+        efficacy: "赤い傷跡に",
+        description: "皮膚の盛り上がりやしこりの改善に。ケロイドや肥厚性瘢痕に効果的で、なめらかな肌への回復をサポートします。",
+        regularPrice: ""
+      },
+      {
+        name: "ケロコート",
+        type: "外用",
+        drugName: "ケロコート",
+        efficacy: "ケロイドなどの被覆材",
+        description: "シリコンジェルが傷跡をコーティングし、水分バランスを整えて目立つ瘢痕の修復を促進。術後ややけど跡にもおすすめです。",
+        regularPrice: ""
       }
     ]
   },
   "options": {
     title: "オプション・その他",
-    description: "麻酔クリームや個室など施術オプション",
+    description: "",
     treatments: [
       {
-        name: "表面麻酔",
-        supplies: "麻酔クリーム",
-        description: "施術部位に麻酔クリームを塗布し、痛みを軽減します。レーザー治療や注射治療の際に、より快適に施術を受けていただけます。",
-        regularPrice: "3,000",
-        specialPrice: "2,500",
-        specialPriceName: "セット割引価格"
+        name: "麻酔クリーム",
+        supplies: "10%クリーム麻酔",
+        description: "お顔にクリームを塗って痛みを軽減する表面麻酔です。韓国から強力な麻酔クリームを輸入しています。",
+        regularPrice: "1000",
       },
       {
-        name: "笑気ガス麻酔",
-        supplies: "笑気ガス吸入器",
-        description: "笑気ガスを吸入することで、リラックス状態を作り出し、施術への不安や緊張を和らげます。意識はしっかりと保たれます。",
-        regularPrice: "5,000",
-        specialPrice: "4,000",
-        specialPriceName: "セット割引価格"
+        name: "点滴麻酔",
+        supplies: "",
+        description: "恐怖心や痛みに弱い方は睡眠導入剤を使用して施術を受けられます。",
+        regularPrice: "3000",
+      },
+      {
+        name: "パック",
+        supplies: "成長因子系パック",
+        description: "施術後に成長因子のパックをすることで、赤みやダウンタイムの短縮に効果的です。傷の修復や炎症の鎮静に有効成分が働きかけます。",
+        regularPrice: "2000",
+      },
+      {
+        name: "痛くない点滴針",
+        supplies: "サーフロー",
+        description: "長時間の点滴をする方は、プラスチックの針に変更可能です。動いても違和感のない柔らかい素材でできているのでリラックスして点滴を受けられます。",
+        regularPrice: "500",
+      },
+      {
+        name: "水素吸入",
+        supplies: "",
+        description: "強力な抗酸化作用で体内の悪玉活性酸素を除去。疲労回復やアンチエイジング、肌荒れ・くすみ改善にも効果が期待されます。",
+        regularPrice: "5000",
       }
     ]
   },
   "products": {
     title: "物販",
-    description: "ドクターズコスメやサプリメントなど販売商品",
+    description: "",
     treatments: [
       {
-        name: "ドクターズコスメ",
+        name: "アルファサイエンス",
         regularPrice: "5,000",
         features: ["医師監修", "高品質"],
-        description: "医師が監修した高品質なスキンケア製品です。クリニックでの治療効果を維持・向上させるためのホームケア用品をご提供します。"
+        description: ""
       },
       {
-        name: "ビタミンサプリ",
+        name: "ナビジョン",
         regularPrice: "4,000",
         features: ["内側からケア", "美容効果"],
-        description: "美容と健康をサポートする高品質なビタミンサプリメントです。外側からの治療と併用することで、より効果的な美容効果を実現します。"
+        description: ""
       }
     ]
   }
@@ -636,7 +997,7 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
         <p className="text-sm text-[#8a6d62] mb-2">内容: {treatment.contents}</p>
       )}
       {treatment.treatmentTime && (
-        <p className="text-sm text-[#8a6d62] mb-2">施術時間: {treatment.treatmentTime}</p>
+        <p className="text-sm text-[#8a6d62] mb-2">施術時間: {treatment.treatmentTime}分</p>
       )}
       
       {/* 薬剤用の種類、薬剤名、効能表示 */}
