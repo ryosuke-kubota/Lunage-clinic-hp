@@ -47,8 +47,8 @@ const menuData = {
         equipment: "HIFU",
         description: "たるみ治療と言えばHIFU。筋膜にアプローチして皮膚の内側から引き締まりを体験できます。ひとりひとり脂肪や皮膚の厚みが違うため、当院では看護師がお客様の状態に合わせたカスタマイズHIFUを提案いたします。",
         regularPrice: "30000",
-        firstPrice: "16000",
-        specialPrice: ""
+        specialPrice: "16000",
+        specialPriceName: "初回価格"
       },
       {
         name: "HIFU 全顔+首",
@@ -268,7 +268,8 @@ const menuData = {
         equipment: "ミラドライ機器",
         description: "マイクロ波エネルギーで汗腺を破壊し、多汗症やワキガを根本的に改善します。切らない治療で、長期的な効果が期待できます。",
         regularPrice: "220,000",
-        specialPrice: "180,000"
+        specialPrice: "180,000",
+        specialPriceName: "期間限定価格"
       }
     ]
   },
@@ -462,7 +463,8 @@ const menuData = {
         description: "高濃度のビタミンCを直接血管内に投与し、強力な抗酸化作用で美肌効果を実現します。疲労回復や免疫力向上にも効果的です。",
         treatmentTime: "30分",
         regularPrice: "10,000",
-        specialPrice: "8,000"
+        specialPrice: "8,000",
+        specialPriceName: "初回限定価格"
       },
       {
         name: "プラセンタ点滴",
@@ -470,7 +472,8 @@ const menuData = {
         description: "プラセンタエキスの点滴で、細胞の再生を促進し、アンチエイジング効果を実現します。疲労回復や肌質改善に効果的です。",
         treatmentTime: "20分",
         regularPrice: "8,000",
-        specialPrice: "6,500"
+        specialPrice: "6,500",
+        specialPriceName: "モニター価格"
       }
     ]
   },
@@ -485,7 +488,8 @@ const menuData = {
         efficacy: "表情筋弛緩、シワ改善、小顔効果",
         description: "ボツリヌストキシンを注射し、表情筋の動きを抑制してシワを改善します。エラ張りの改善による小顔効果も期待できます。",
         regularPrice: "18,000",
-        specialPrice: "15,000"
+        specialPrice: "15,000",
+        specialPriceName: "初回価格"
       },
       {
         name: "ヒアルロン酸注射",
@@ -494,7 +498,8 @@ const menuData = {
         efficacy: "ボリュームアップ、保湿、ハリ改善",
         description: "ヒアルロン酸を注入し、失われたボリュームを補います。ほうれい線の改善や唇のボリュームアップなど、自然な若返り効果を実現します。",
         regularPrice: "39,800",
-        specialPrice: "32,000"
+        specialPrice: "32,000",
+        specialPriceName: "キャンペーン価格"
       }
     ]
   },
@@ -507,14 +512,16 @@ const menuData = {
         supplies: "麻酔クリーム",
         description: "施術部位に麻酔クリームを塗布し、痛みを軽減します。レーザー治療や注射治療の際に、より快適に施術を受けていただけます。",
         regularPrice: "3,000",
-        specialPrice: "2,500"
+        specialPrice: "2,500",
+        specialPriceName: "セット割引価格"
       },
       {
         name: "笑気ガス麻酔",
         supplies: "笑気ガス吸入器",
         description: "笑気ガスを吸入することで、リラックス状態を作り出し、施術への不安や緊張を和らげます。意識はしっかりと保たれます。",
         regularPrice: "5,000",
-        specialPrice: "4,000"
+        specialPrice: "4,000",
+        specialPriceName: "セット割引価格"
       }
     ]
   },
@@ -545,6 +552,7 @@ interface Treatment {
   name: string;
   regularPrice: string;
   specialPrice?: string;
+  specialPriceName?: string; // 特別価格の名前をカスタマイズ可能に
   duration?: string;
   downtime?: string;
   features?: string[];
@@ -661,7 +669,7 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
         </div>
         {treatment.specialPrice && (
           <div className="bg-gradient-to-r from-[#caa9af]/10 to-[#d6c6b5]/10 p-3 rounded-lg">
-            <p className="text-xs text-[#8a6d62]">特別料金</p>
+            <p className="text-xs text-[#8a6d62]">{treatment.specialPriceName || "特別料金"}</p>
             <p className="font-bold text-[#54585f]">{fmt(treatment.specialPrice)}</p>
           </div>
         )}
