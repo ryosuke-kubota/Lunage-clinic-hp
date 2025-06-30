@@ -1003,9 +1003,9 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
       )}
       
       {/* 点滴用の内容と施術時間表示 */}
-      {treatment.contents && (
+      {/* {treatment.contents && (
         <p className="text-sm text-[#8a6d62] mb-2">内容: {treatment.contents}</p>
-      )}
+      )} */}
       {treatment.treatmentTime && (
         <p className="text-sm text-[#8a6d62] mb-2">施術時間: {treatment.treatmentTime}分</p>
       )}
