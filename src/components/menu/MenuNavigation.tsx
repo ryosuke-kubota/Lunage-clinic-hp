@@ -93,18 +93,6 @@ export default function MenuNavigation() {
             ))}
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="mt-6 text-center"
-        >
-          <p className="text-[#8a6d62] font-shippori text-sm">
-            気になるカテゴリーをクリックして詳細をご覧ください
-          </p>
-        </motion.div>
       </div>
     </section>
   );
