@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function MenuHero() {
   return (
-    <section className="pt-20 pb-16 bg-gradient-to-b from-[#faf3ef] to-white relative overflow-hidden">
+    <section className="pt-28 pb-16 bg-gradient-to-b from-[#faf3ef] to-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -51,7 +51,7 @@ export default function MenuHero() {
               Home
             </Link>
             <span className="text-[#8a6d62]">→</span>
-            <span className="text-[#54585f] font-shippori">Menu・PRICE</span>
+            <span className="text-[#54585f] font-shippori">Menu</span>
           </nav>
         </motion.div>
 
@@ -68,7 +68,7 @@ export default function MenuHero() {
               <span className="text-[#caa9af] font-shippori text-sm tracking-wide">施術・料金案内</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-shippori font-light text-[#54585f] mb-8">
-              MENU・PRICE
+              Menu
             </h1>
           </motion.div>
 

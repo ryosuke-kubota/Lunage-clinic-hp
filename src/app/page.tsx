@@ -18,9 +18,9 @@ export default function Home() {
       <HeroSection />
       <PhilosophySection />
       <MenuSection />
-      <BeforeAfterSection />
+      {/* <BeforeAfterSection /> */}
       <ClinicInterior />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <MessageSection />
       <FAQSection />
       <InformationSection />

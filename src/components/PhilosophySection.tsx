@@ -16,24 +16,21 @@ export default function PhilosophySection() {
         {/* Main Philosophy Statement */}
         <div className="mb-20">
           <h3 className="text-3xl md:text-4xl font-shippori font-medium text-[#54585f] leading-relaxed mb-8">
-            美容医療をもっと身近に、もっと心地よく
+            あなたの毎日に、そっと輝きを。
           </h3>
 
           <div className="space-y-6 text-[#54585f] font-shippori text-lg leading-relaxed">
             <p>
-              美容医療を、もっと日常に。
+              ルナージュクリニックは、表参道の心地よい空間で、肌の小さな不安にもやさしく寄り添います。
             </p>
             <p>
-              特別な日だけのものではなく、スキンケアのように、ヘアメイクのように。
+            経験豊かな医師とナースがチームとなり、わかりやすい説明と丁寧なケアで安心をご提供。
             </p>
             <p>
-              私たちは、美容医療を"習慣"として提案します。
+            完全予約制の落ち着いた院内で、自分のペースで通いながら美肌を育む――
             </p>
             <p>
-              一人ひとりの悩みに丁寧に向き合いながら、通うたびに、自分をもっと好きになれるように。
-            </p>
-            <p>
-              あなたの日常に、そっと寄り添うクリニックでありたいと願っています。
+            そんな“心が満たされる時間”をお届けしたいと願っています。
             </p>
           </div>
         </div>

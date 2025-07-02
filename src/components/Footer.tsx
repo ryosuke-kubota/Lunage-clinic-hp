@@ -34,7 +34,7 @@ export default function Footer() {
                 Doctor
               </Link>
               <Link href="#menu" className="block text-[#dacacf] hover:text-white transition-colors font-shippori">
-                Menu・PRICE
+                Menu
               </Link>
               <Link href="#access" className="block text-[#dacacf] hover:text-white transition-colors font-shippori">
                 Access

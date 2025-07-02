@@ -71,7 +71,7 @@ export default function Header() {
               About
             </Link>
             <Link href="/menu" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
-              Menu・PRICE
+              Menu
             </Link>
             <Link href="/#doctor" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
               Doctor
@@ -160,7 +160,7 @@ export default function Header() {
                     className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Menu・PRICE
+                    Menu
                   </Link>
                 </motion.div>
                 <motion.div variants={menuItemVariants}>

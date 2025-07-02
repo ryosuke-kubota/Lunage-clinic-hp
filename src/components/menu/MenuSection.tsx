@@ -1052,7 +1052,7 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
 // メニューセクション
 export default function MenuSection() {
   return (
-    <section className="py-16 bg-[#faf3ef]">
+    <section className="py-24 bg-[#faf3ef]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {Object.entries(menuData).map(([key, cat]) => (
           <div key={key} id={key} className="mb-20">

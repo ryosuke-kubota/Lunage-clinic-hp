@@ -68,7 +68,7 @@ export default function MenuSection() {
             <span className="text-[#caa9af] font-shippori text-sm tracking-wide">施術・料金案内</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-8">
-            MENU・PRICE
+            Menu
           </h2>
         </motion.div>
 
