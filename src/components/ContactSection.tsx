@@ -48,13 +48,13 @@ export default function ContactSection() {
               お電話でご予約
             </h4>
             <a
-              href="tel:03-0000-0000"
+              href="tel:03-4400-9519"
               className="text-4xl font-shippori font-medium text-[#caa9af] hover:text-[#8a6d62] transition-colors block mb-2"
             >
-              03-0000-0000
+              03-4400-9519
             </a>
             <p className="text-[#8a6d62] font-shippori text-sm">
-              平日・土日：9:00〜18:00
+              平日・土日：11:00〜21:00
             </p>
           </div>
 

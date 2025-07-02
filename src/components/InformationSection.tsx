@@ -25,15 +25,15 @@ export default function InformationSection() {
                   <div className="flex items-start">
                     <span className="w-20 text-[#8a6d62] font-medium">住所</span>
                     <div>
-                      <p>〒100-0000</p>
-                      <p>東京都〇〇</p>
+                      <p>〒150-0001</p>
+                      <p>東京都渋谷区神宮前3-2-17 上田ビル201</p>
                     </div>
                   </div>
 
                   <div className="flex items-center">
                     <span className="w-20 text-[#8a6d62] font-medium">TEL</span>
-                    <a href="tel:03-0000-0000" className="text-[#caa9af] hover:text-[#8a6d62] transition-colors">
-                      03-0000-0000
+                    <a href="tel:03-4400-9519" className="text-[#caa9af] hover:text-[#8a6d62] transition-colors">
+                      03-4400-9519
                     </a>
                   </div>
 
@@ -47,7 +47,7 @@ export default function InformationSection() {
                   <div className="flex items-start">
                     <span className="w-20 text-[#8a6d62] font-medium">診療時間</span>
                     <div>
-                      <p>9:00〜18:00</p>
+                      <p>11:00〜21:00</p>
                       <p className="text-sm text-[#8a6d62]">（年中無休）</p>
                     </div>
                   </div>

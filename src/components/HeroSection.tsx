@@ -285,7 +285,7 @@ export default function HeroSection() {
           >
             <div className="text-center bg-white/10 backdrop-blur-sm md:backdrop-blur-md rounded-3xl px-8 py-6 border border-white/20">
               <p className="text-[#8a6d62] font-shippori text-sm sm:text-base mb-2">
-                銀座の美容クリニック
+                表参道の美肌治療専門クリニック
               </p>
               <h1 className="text-[#54585f] font-shippori font-medium text-2xl sm:text-3xl lg:text-4xl">
                 LUNAGE CLINIC

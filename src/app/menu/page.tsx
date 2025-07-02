@@ -7,8 +7,8 @@ import MenuSection from "@/components/menu/MenuSection";
 import ContactSection from "@/components/ContactSection";
 
 export const metadata: Metadata = {
-  title: "施術・料金案内 | 銀座の美容皮膚科・美容外科 BIJOU CLINIC",
-  description: "BIJOU CLINICの施術メニューと料金をご案内します。二重・目元施術、輪郭形成、スキンケアなど、豊富なメニューをご用意。初回カウンセリング無料、医療ローン対応。",
+  title: "施術・料金案内 | 表参道の美肌治療専門クリニック ルナージュクリニック",
+  description: "ルナージュクリニックの施術メニューと料金をご案内します。二重・目元施術、輪郭形成、スキンケアなど、豊富なメニューをご用意しております。",
 };
 
 export default function MenuPage() {

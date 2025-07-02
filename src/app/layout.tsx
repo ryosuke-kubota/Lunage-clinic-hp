@@ -10,8 +10,8 @@ const shippioriMincho = Shippori_Mincho_B1({
 });
 
 export const metadata: Metadata = {
-  title: "銀座の美容皮膚科・美容外科 BIJOU CLINIC",
-  description: "繊細な技術と確かな審美眼で、一人ひとりの美しさに寄り添う。肌・目元・輪郭など自然で上品な仕上がりを追求する美容医療クリニック。",
+  title: "表参道の美肌治療専門クリニック｜ルナージュクリニック",
+  description: "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
 };
 
 export default function RootLayout({

@@ -12,10 +12,10 @@ export default function Footer() {
               LUNAGE CLINIC
             </h3>
             <div className="space-y-2 text-[#dacacf] font-shippori">
-              <p>〒100-0001</p>
-              <p>東京都〇〇</p>
+              <p>〒150-0001</p>
+              <p>東京都渋谷区神宮前3-2-17 上田ビル201</p>
               <p className="mt-4">
-                TEL: <a href="tel:03-0000-0000" className="text-[#caa9af] hover:text-white transition-colors">03-0000-0000</a>
+                TEL: <a href="tel:03-4400-9519" className="text-[#caa9af] hover:text-white transition-colors">03-4400-9519</a>
               </p>
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function Footer() {
               ご予約はこちら
             </Button>
             <p className="text-[#dacacf] font-shippori text-sm">
-              診療時間: 9:00〜18:00
+              診療時間: 11:00〜21:00
               <br />
               年中無休
             </p>
