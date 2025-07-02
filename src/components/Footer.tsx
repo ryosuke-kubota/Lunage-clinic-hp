@@ -15,7 +15,7 @@ export default function Footer() {
               <p>〒150-0001</p>
               <p>東京都渋谷区神宮前3-2-17 上田ビル201</p>
               <p className="mt-4">
-                TEL: <a href="tel:03-4400-9519" className="text-[#caa9af] hover:text-white transition-colors">03-4400-9519</a>
+                TEL: <a href="tel:03-4400-9519" className="text-[#DDCDB9] hover:text-white transition-colors">03-4400-9519</a>
               </p>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-shippori font-medium mb-4">Reservation</h4>
             <Button
-              className="bg-[#caa9af] hover:bg-[#c2ac94] text-white font-shippori px-6 py-2 rounded-full transition-colors w-full mb-4"
+              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-6 py-2 rounded-full transition-colors w-full mb-4"
             >
               ご予約はこちら
             </Button>

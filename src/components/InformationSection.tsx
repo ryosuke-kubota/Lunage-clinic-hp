@@ -5,8 +5,8 @@ export default function InformationSection() {
         {/* Section Header */}
         <div className="mb-16">
           <div className="flex items-center mb-6">
-            <div className="w-3 h-3 bg-[#caa9af] rounded-full mr-3" />
-            <span className="text-[#caa9af] font-shippori text-sm tracking-wide">クリニック概要</span>
+            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">クリニック概要</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-8">
             Information
@@ -32,7 +32,7 @@ export default function InformationSection() {
 
                   <div className="flex items-center">
                     <span className="w-20 text-[#8a6d62] font-medium">TEL</span>
-                    <a href="tel:03-4400-9519" className="text-[#caa9af] hover:text-[#8a6d62] transition-colors">
+                    <a href="tel:03-4400-9519" className="text-[#DDCDB9] hover:text-[#8a6d62] transition-colors">
                       03-4400-9519
                     </a>
                   </div>
@@ -85,7 +85,7 @@ export default function InformationSection() {
                 href="https://maps.app.goo.gl/mchA5zYJcx22ZCc87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#caa9af] hover:text-[#8a6d62] font-shippori text-sm transition-colors underline"
+                className="text-[#DDCDB9] hover:text-[#8a6d62] font-shippori text-sm transition-colors underline"
               >
                 Google Mapで開く
               </a>

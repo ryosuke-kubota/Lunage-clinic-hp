@@ -112,8 +112,8 @@ export default function FAQSection() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="w-3 h-3 bg-[#caa9af] rounded-full mr-3" />
-            <span className="text-[#caa9af] font-shippori text-sm tracking-wide">よくあるご質問</span>
+            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">よくあるご質問</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-8">
             FAQ
@@ -139,8 +139,8 @@ export default function FAQSection() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full font-shippori text-sm transition-all ${
                   selectedCategory === category
-                    ? 'bg-[#caa9af] text-white shadow-lg'
-                    : 'bg-white text-[#8a6d62] hover:bg-[#caa9af]/10 border border-[#dacacf]'
+                    ? 'bg-[#DDCDB9] text-white shadow-lg'
+                    : 'bg-white text-[#8a6d62] hover:bg-[#DDCDB9]/10 border border-[#dacacf]'
                 }`}
               >
                 {category}
@@ -174,11 +174,11 @@ export default function FAQSection() {
                   whileHover={{ backgroundColor: "rgba(250, 243, 239, 0.5)" }}
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-6 h-6 bg-[#caa9af]/10 rounded-full flex items-center justify-center text-[#caa9af] text-sm font-bold mt-1">
+                    <div className="flex-shrink-0 w-6 h-6 bg-[#DDCDB9]/10 rounded-full flex items-center justify-center text-[#DDCDB9] text-sm font-bold mt-1">
                       Q
                     </div>
                     <div>
-                      <div className="text-xs text-[#caa9af] font-shippori mb-1">
+                      <div className="text-xs text-[#DDCDB9] font-shippori mb-1">
                         {item.category}
                       </div>
                       <h3 className="text-[#54585f] font-shippori font-medium text-lg">
@@ -191,7 +191,7 @@ export default function FAQSection() {
                     transition={{ duration: 0.3 }}
                     className="flex-shrink-0 ml-4"
                   >
-                    <ChevronDownIcon className="w-5 h-5 text-[#caa9af]" />
+                    <ChevronDownIcon className="w-5 h-5 text-[#DDCDB9]" />
                   </motion.div>
                 </motion.button>
 
@@ -239,7 +239,7 @@ export default function FAQSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#caa9af] hover:bg-[#c2ac94] text-white font-shippori px-6 py-3 rounded-full transition-all"
+              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-6 py-3 rounded-full transition-all"
             >
               電話で相談する
             </motion.button>

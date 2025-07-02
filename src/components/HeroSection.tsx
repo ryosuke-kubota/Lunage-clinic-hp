@@ -117,7 +117,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="pt-20 pb-16 bg-gradient-to-b from-[#faf3ef] to-[#dacacf] overflow-hidden"
+      className="pt-20 pb-16 bg-gradient-to-b from-[#faf3ef] to-[#e4d7c8] overflow-hidden"
       id="home"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,7 +140,7 @@ export default function HeroSection() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className={`absolute top-10 sm:top-20 left-10 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-[#caa9af]/20 to-[#d6c6b5]/20 ${isMobile ? 'blur-xl' : isTablet ? 'blur-2xl' : 'blur-2xl sm:blur-3xl'}`}
+              className={`absolute top-10 sm:top-20 left-10 sm:left-20 w-32 h-32 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-[#DDCDB9]/20 to-[#d6c6b5]/20 ${isMobile ? 'blur-xl' : isTablet ? 'blur-2xl' : 'blur-2xl sm:blur-3xl'}`}
               style={{ willChange: 'transform' }}
             />
             <motion.div
@@ -265,7 +265,7 @@ export default function HeroSection() {
                   ease: "easeInOut",
                   delay: index * 0.5
                 }}
-                className={`absolute w-4 h-4 sm:w-6 sm:h-6 lg:w-10 lg:h-10 rounded-full bg-gradient-to-br from-[#caa9af]/30 to-[#dacacf]/30 ${isMobile ? '' : 'backdrop-blur-sm'}`}
+                className={`absolute w-4 h-4 sm:w-6 sm:h-6 lg:w-10 lg:h-10 rounded-full bg-gradient-to-br from-[#DDCDB9]/30 to-[#dacacf]/30 ${isMobile ? '' : 'backdrop-blur-sm'}`}
                 style={{
                   left: `${5 + index * 15}%`,
                   top: `${15 + index * 12}%`,
@@ -290,7 +290,7 @@ export default function HeroSection() {
               <h1 className="text-[#54585f] font-shippori font-medium text-2xl sm:text-3xl lg:text-4xl">
                 LUNAGE CLINIC
               </h1>
-              <div className="mt-4 w-16 h-0.5 bg-gradient-to-r from-[#caa9af] to-[#dacacf] mx-auto" />
+              <div className="mt-4 w-16 h-0.5 bg-gradient-to-r from-[#DDCDB9] to-[#dacacf] mx-auto" />
             </div>
           </motion.div>
 
@@ -354,7 +354,7 @@ export default function HeroSection() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute top-1/2 left-1/4 w-2 h-2 sm:w-4 sm:h-4 bg-[#caa9af]/40 rounded-full"
+                className="absolute top-1/2 left-1/4 w-2 h-2 sm:w-4 sm:h-4 bg-[#DDCDB9]/40 rounded-full"
                 style={{ willChange: 'transform' }}
               />
               <motion.div

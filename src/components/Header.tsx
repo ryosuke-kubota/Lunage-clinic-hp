@@ -64,22 +64,22 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+            <Link href="/" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Home
             </Link>
-            <Link href="/#about" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+            <Link href="/#about" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               About
             </Link>
-            <Link href="/menu" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+            <Link href="/menu" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Menu
             </Link>
-            <Link href="/#doctor" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+            <Link href="/#doctor" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Doctor
             </Link>
-            <Link href="/#faq" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+            <Link href="/#faq" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               FAQ
             </Link>
-            <Link href="/#access" className="text-[#54585f] hover:text-[#caa9af] transition-colors font-shippori text-sm">
+            <Link href="/#access" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Access
             </Link>
           </nav>
@@ -87,7 +87,7 @@ export default function Header() {
           {/* Reservation Button & Mobile Menu Toggle */}
           <div className="flex items-center space-x-3">
             <Button
-              className="hidden sm:flex bg-[#caa9af] hover:bg-[#c2ac94] text-white font-shippori px-4 md:px-6 py-2 rounded-full text-sm transition-colors"
+              className="hidden sm:flex bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-4 md:px-6 py-2 rounded-full text-sm transition-colors"
             >
               Reservation
             </Button>
@@ -139,7 +139,7 @@ export default function Header() {
                 <motion.div variants={menuItemVariants}>
                   <Link
                     href="/"
-                    className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
+                    className="block px-4 py-3 text-[#54585f] hover:text-[#DDCDB9] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Home
@@ -148,7 +148,7 @@ export default function Header() {
                 <motion.div variants={menuItemVariants}>
                   <Link
                     href="/#about"
-                    className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
+                    className="block px-4 py-3 text-[#54585f] hover:text-[#DDCDB9] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     About
@@ -157,7 +157,7 @@ export default function Header() {
                 <motion.div variants={menuItemVariants}>
                   <Link
                     href="/menu"
-                    className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
+                    className="block px-4 py-3 text-[#54585f] hover:text-[#DDCDB9] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Menu
@@ -166,7 +166,7 @@ export default function Header() {
                 <motion.div variants={menuItemVariants}>
                   <Link
                     href="/#doctor"
-                    className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
+                    className="block px-4 py-3 text-[#54585f] hover:text-[#DDCDB9] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Doctor
@@ -175,7 +175,7 @@ export default function Header() {
                 <motion.div variants={menuItemVariants}>
                   <Link
                     href="/#faq"
-                    className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
+                    className="block px-4 py-3 text-[#54585f] hover:text-[#DDCDB9] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     FAQ
@@ -184,7 +184,7 @@ export default function Header() {
                 <motion.div variants={menuItemVariants}>
                   <Link
                     href="/#access"
-                    className="block px-4 py-3 text-[#54585f] hover:text-[#caa9af] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
+                    className="block px-4 py-3 text-[#54585f] hover:text-[#DDCDB9] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Access
@@ -192,7 +192,7 @@ export default function Header() {
                 </motion.div>
                 <motion.div variants={menuItemVariants} className="pt-4 border-t border-[#d6c6b5]/20">
                   <Button
-                    className="w-full bg-[#caa9af] hover:bg-[#c2ac94] text-white font-shippori py-3 rounded-full transition-colors"
+                    className="w-full bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori py-3 rounded-full transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     ご予約はこちら

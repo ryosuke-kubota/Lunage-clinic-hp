@@ -18,7 +18,7 @@ export default function MenuHero() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut"
           }}
-          className="absolute top-20 left-20 w-64 h-64 rounded-full bg-gradient-to-br from-[#caa9af]/10 to-[#d6c6b5]/10 blur-3xl"
+          className="absolute top-20 left-20 w-64 h-64 rounded-full bg-gradient-to-br from-[#DDCDB9]/10 to-[#d6c6b5]/10 blur-3xl"
         />
         <motion.div
           animate={{
@@ -46,7 +46,7 @@ export default function MenuHero() {
           <nav className="flex items-center space-x-2 text-sm">
             <Link
               href="/"
-              className="text-[#8a6d62] hover:text-[#caa9af] transition-colors font-shippori"
+              className="text-[#8a6d62] hover:text-[#DDCDB9] transition-colors font-shippori"
             >
               Home
             </Link>
@@ -64,8 +64,8 @@ export default function MenuHero() {
             className="mb-6"
           >
             <div className="flex items-center justify-center mb-6">
-              <div className="w-3 h-3 bg-[#caa9af] rounded-full mr-3" />
-              <span className="text-[#caa9af] font-shippori text-sm tracking-wide">施術・料金案内</span>
+              <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+              <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">施術・料金案内</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-shippori font-light text-[#54585f] mb-8">
               Menu
@@ -85,15 +85,15 @@ export default function MenuHero() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm text-[#8a6d62] font-shippori">
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-[#caa9af] rounded-full mr-2" />
+                <div className="w-2 h-2 bg-[#DDCDB9] rounded-full mr-2" />
                 <span>初回カウンセリング無料</span>
               </div>
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-[#caa9af] rounded-full mr-2" />
+                <div className="w-2 h-2 bg-[#DDCDB9] rounded-full mr-2" />
                 <span>医療ローン対応</span>
               </div>
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-[#caa9af] rounded-full mr-2" />
+                <div className="w-2 h-2 bg-[#DDCDB9] rounded-full mr-2" />
                 <span>アフターケア充実</span>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function MenuHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-12 p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-[#caa9af]/20 max-w-2xl mx-auto"
+            className="mt-12 p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-[#DDCDB9]/20 max-w-2xl mx-auto"
           >
             <h3 className="text-[#54585f] font-shippori font-medium mb-3">料金について</h3>
             <div className="text-[#8a6d62] font-shippori text-sm space-y-2">

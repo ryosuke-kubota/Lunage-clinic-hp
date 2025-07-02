@@ -112,7 +112,7 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, treatment }: BeforeAfterSl
           className="w-full h-full object-cover"
           draggable={false}
         />
-        <div className="absolute top-3 right-3 bg-[#caa9af] text-white px-2 py-1 rounded-full text-xs sm:text-sm font-shippori">
+        <div className="absolute top-3 right-3 bg-[#DDCDB9] text-white px-2 py-1 rounded-full text-xs sm:text-sm font-shippori">
           After
         </div>
       </div>
@@ -125,9 +125,9 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, treatment }: BeforeAfterSl
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full shadow-lg border-2 border-[#caa9af] flex items-center justify-center cursor-grab active:cursor-grabbing"
+          className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full shadow-lg border-2 border-[#DDCDB9] flex items-center justify-center cursor-grab active:cursor-grabbing"
         >
-          <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#caa9af] rounded-full" />
+          <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#DDCDB9] rounded-full" />
         </motion.div>
       </div>
 
@@ -183,8 +183,8 @@ export default function BeforeAfterSection() {
           className="text-center mb-12 sm:mb-16"
         >
           <div className="flex items-center justify-center mb-4 sm:mb-6">
-            <div className="w-3 h-3 bg-[#caa9af] rounded-full mr-3" />
-            <span className="text-[#caa9af] font-shippori text-sm tracking-wide">施術実績</span>
+            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">施術実績</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-6 sm:mb-8">
             Before & After
@@ -223,8 +223,8 @@ export default function BeforeAfterSection() {
               <div className="w-full lg:w-1/2">
                 <div className="bg-[#faf3ef] p-4 sm:p-6 rounded-xl">
                   <div className="flex items-center mb-3">
-                    <div className="w-2 h-2 bg-[#caa9af] rounded-full mr-2" />
-                    <span className="text-[#caa9af] font-shippori text-sm font-medium">
+                    <div className="w-2 h-2 bg-[#DDCDB9] rounded-full mr-2" />
+                    <span className="text-[#DDCDB9] font-shippori text-sm font-medium">
                       {item.treatment}
                     </span>
                   </div>
@@ -245,7 +245,7 @@ export default function BeforeAfterSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-16 sm:mt-20 bg-gradient-to-r from-[#caa9af]/10 to-[#d6c6b5]/10 rounded-2xl p-6 sm:p-8 md:p-12"
+          className="mt-16 sm:mt-20 bg-gradient-to-r from-[#DDCDB9]/10 to-[#d6c6b5]/10 rounded-2xl p-6 sm:p-8 md:p-12"
         >
           <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-shippori font-medium text-[#54585f] mb-4">
@@ -270,7 +270,7 @@ export default function BeforeAfterSection() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="text-center"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-shippori font-bold text-[#caa9af] mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-shippori font-bold text-[#DDCDB9] mb-2">
                   {stat.percentage}
                 </div>
                 <p className="text-[#8a6d62] font-shippori text-xs sm:text-sm">
@@ -291,7 +291,7 @@ export default function BeforeAfterSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#caa9af] hover:bg-[#c2ac94] text-white font-shippori px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all shadow-lg"
+            className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg transition-all shadow-lg"
           >
             あなたの理想を相談する
           </motion.button>

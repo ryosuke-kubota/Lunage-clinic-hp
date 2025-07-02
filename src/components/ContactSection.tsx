@@ -7,8 +7,8 @@ export default function ContactSection() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <div className="flex items-center justify-center mb-6">
-            <div className="w-3 h-3 bg-[#caa9af] rounded-full mr-3" />
-            <span className="text-[#caa9af] font-shippori text-sm tracking-wide">ご予約・お問い合わせ</span>
+            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">ご予約・お問い合わせ</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-8">
             Contact
@@ -21,7 +21,7 @@ export default function ContactSection() {
         {/* Reservation Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-16">
           <div className="text-center">
-            <h3 className="text-3xl md:text-8xl font-shippori font-light text-[#caa9af] mb-8">
+            <h3 className="text-3xl md:text-8xl font-shippori font-light text-[#DDCDB9] mb-8">
               Reservation
             </h3>
             <p className="text-[#54585f] font-shippori text-lg mb-8">
@@ -29,7 +29,7 @@ export default function ContactSection() {
             </p>
 
             <Button
-              className="bg-[#caa9af] hover:bg-[#c2ac94] text-white font-shippori px-12 py-4 rounded-full text-xl transition-all transform hover:scale-105 shadow-lg mb-8"
+              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-12 py-4 rounded-full text-xl transition-all transform hover:scale-105 shadow-lg mb-8"
             >
               Reservation
             </Button>
@@ -49,7 +49,7 @@ export default function ContactSection() {
             </h4>
             <a
               href="tel:03-4400-9519"
-              className="text-4xl font-shippori font-medium text-[#caa9af] hover:text-[#8a6d62] transition-colors block mb-2"
+              className="text-4xl font-shippori font-medium text-[#DDCDB9] hover:text-[#8a6d62] transition-colors block mb-2"
             >
               03-4400-9519
             </a>

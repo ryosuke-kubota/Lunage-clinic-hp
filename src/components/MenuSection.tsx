@@ -64,8 +64,8 @@ export default function MenuSection() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="w-3 h-3 bg-[#caa9af] rounded-full mr-3" />
-            <span className="text-[#caa9af] font-shippori text-sm tracking-wide">施術・料金案内</span>
+            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">施術・料金案内</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-8">
             Menu
@@ -90,12 +90,12 @@ export default function MenuSection() {
                   href={item.href}
                   className="block group"
                 >
-                  <div className="bg-[#faf3ef] hover:bg-white border border-transparent hover:border-[#caa9af]/20 rounded-lg p-4 transition-all duration-300 hover:shadow-lg">
+                  <div className="bg-[#faf3ef] hover:bg-white border border-transparent hover:border-[#DDCDB9]/20 rounded-lg p-4 transition-all duration-300 hover:shadow-lg">
                     <div className="flex items-center justify-between">
-                      <span className="font-shippori text-[#54585f] group-hover:text-[#caa9af] transition-colors">
+                      <span className="font-shippori text-[#54585f] group-hover:text-[#DDCDB9] transition-colors">
                         {item.name}
                       </span>
-                      <div className="text-[#caa9af] opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300">
+                      <div className="text-[#DDCDB9] opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300">
                         →
                       </div>
                     </div>
@@ -133,7 +133,7 @@ export default function MenuSection() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut"
             }}
-            className="absolute top-20 right-20 w-32 h-32 rounded-full bg-gradient-to-br from-[#caa9af]/5 to-[#d6c6b5]/5 blur-xl"
+            className="absolute top-20 right-20 w-32 h-32 rounded-full bg-gradient-to-br from-[#DDCDB9]/5 to-[#d6c6b5]/5 blur-xl"
           />
           <motion.div
             animate={{

@@ -1039,7 +1039,7 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
           <p className="font-bold text-[#54585f]">{fmt(treatment.regularPrice)}</p>
         </div>
         {treatment.specialPrice && (
-          <div className="bg-gradient-to-r from-[#caa9af]/10 to-[#d6c6b5]/10 p-3 rounded-lg">
+          <div className="bg-gradient-to-r from-[#DDCDB9]/10 to-[#d6c6b5]/10 p-3 rounded-lg">
             <p className="text-xs text-[#8a6d62]">{treatment.specialPriceName || "特別料金"}</p>
             <p className="font-bold text-[#54585f]">{fmt(treatment.specialPrice)}</p>
           </div>
@@ -1052,7 +1052,7 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
 // メニューセクション
 export default function MenuSection() {
   return (
-    <section className="py-24 bg-[#faf3ef]">
+    <section className="py-16 bg-[#faf3ef]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {Object.entries(menuData).map(([key, cat]) => (
           <div key={key} id={key} className="mb-20">
@@ -1086,7 +1086,7 @@ export default function MenuSection() {
               { icon: '📱', title: '月額制', label: 'サブスクプラン' }
             ].map((m) => (
               <div key={m.title}>
-                <div className="w-16 h-16 bg-[#caa9af]/10 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">{m.icon}</div>
+                <div className="w-16 h-16 bg-[#DDCDB9]/10 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">{m.icon}</div>
                 <h4 className="font-medium text-[#54585f] mb-1">{m.title}</h4>
                 <p className="text-sm text-[#8a6d62]">{m.label}</p>
               </div>

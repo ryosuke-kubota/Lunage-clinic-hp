@@ -93,7 +93,7 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
           >
             {/* Header */}
             <div className="relative">
-              <div className="h-48 sm:h-64 bg-gradient-to-br from-[#caa9af] to-[#d6c6b5] relative overflow-hidden">
+              <div className="h-48 sm:h-64 bg-gradient-to-br from-[#DDCDB9] to-[#d6c6b5] relative overflow-hidden">
                 <motion.img
                   initial={{ scale: 1.2 }}
                   animate={{ scale: 1 }}
@@ -116,7 +116,7 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
 
                 {/* Title */}
                 <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6">
-                  <div className="bg-[#caa9af] text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-shippori mb-2">
+                  <div className="bg-[#DDCDB9] text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-shippori mb-2">
                     {treatment.category}
                   </div>
                   <h2 className="text-xl sm:text-3xl font-shippori font-bold text-white">
@@ -138,8 +138,8 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
                       onClick={() => setActiveTab(tab.id)}
                       className={`flex-1 px-3 sm:px-6 py-3 sm:py-4 font-shippori text-sm sm:text-base transition-colors ${
                         activeTab === tab.id
-                          ? 'text-[#caa9af] border-b-2 border-[#caa9af]'
-                          : 'text-[#8a6d62] hover:text-[#caa9af]'
+                          ? 'text-[#DDCDB9] border-b-2 border-[#DDCDB9]'
+                          : 'text-[#8a6d62] hover:text-[#DDCDB9]'
                       }`}
                     >
                       {tab.label}
@@ -171,19 +171,19 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
 
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                         <div className="bg-[#faf3ef] p-3 sm:p-4 rounded-lg">
-                          <div className="text-[#caa9af] font-shippori text-xs sm:text-sm mb-1">施術時間</div>
+                          <div className="text-[#DDCDB9] font-shippori text-xs sm:text-sm mb-1">施術時間</div>
                           <div className="text-[#54585f] font-shippori font-medium text-sm sm:text-base">
                             {treatment.duration}
                           </div>
                         </div>
                         <div className="bg-[#faf3ef] p-3 sm:p-4 rounded-lg">
-                          <div className="text-[#caa9af] font-shippori text-xs sm:text-sm mb-1">ダウンタイム</div>
+                          <div className="text-[#DDCDB9] font-shippori text-xs sm:text-sm mb-1">ダウンタイム</div>
                           <div className="text-[#54585f] font-shippori font-medium text-sm sm:text-base">
                             {treatment.downtime}
                           </div>
                         </div>
                         <div className="bg-[#faf3ef] p-3 sm:p-4 rounded-lg">
-                          <div className="text-[#caa9af] font-shippori text-xs sm:text-sm mb-1">料金目安</div>
+                          <div className="text-[#DDCDB9] font-shippori text-xs sm:text-sm mb-1">料金目安</div>
                           <div className="text-[#54585f] font-shippori font-medium text-sm sm:text-base">
                             {treatment.price}
                           </div>
@@ -203,7 +203,7 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
                               transition={{ delay: index * 0.1 }}
                               className="flex items-center"
                             >
-                              <div className="w-2 h-2 bg-[#caa9af] rounded-full mr-3" />
+                              <div className="w-2 h-2 bg-[#DDCDB9] rounded-full mr-3" />
                               <span className="text-[#8a6d62] font-shippori text-sm sm:text-base">{benefit}</span>
                             </motion.div>
                           ))}
@@ -259,7 +259,7 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
                             transition={{ delay: index * 0.1 }}
                             className="flex items-start"
                           >
-                            <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-[#caa9af] text-white rounded-full flex items-center justify-center font-shippori font-bold text-xs sm:text-sm mr-3 sm:mr-4">
+                            <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-[#DDCDB9] text-white rounded-full flex items-center justify-center font-shippori font-bold text-xs sm:text-sm mr-3 sm:mr-4">
                               {index + 1}
                             </div>
                             <div className="flex-1">
@@ -286,7 +286,7 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
                         料金表
                       </h3>
                       <div className="bg-[#faf3ef] p-4 sm:p-6 rounded-lg">
-                        <div className="text-xl sm:text-2xl font-shippori font-bold text-[#caa9af] mb-2">
+                        <div className="text-xl sm:text-2xl font-shippori font-bold text-[#DDCDB9] mb-2">
                           {treatment.price}
                         </div>
                         <p className="text-[#8a6d62] font-shippori text-xs sm:text-sm">
@@ -314,14 +314,14 @@ export default function TreatmentModal({ isOpen, onClose, treatment }: Treatment
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex-1 bg-[#caa9af] hover:bg-[#c2ac94] text-white font-shippori py-2.5 sm:py-3 px-4 sm:px-6 rounded-full transition-colors text-sm sm:text-base"
+                  className="flex-1 bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori py-2.5 sm:py-3 px-4 sm:px-6 rounded-full transition-colors text-sm sm:text-base"
                 >
                   この施術を予約する
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex-1 bg-white hover:bg-[#faf3ef] text-[#caa9af] border border-[#caa9af] font-shippori py-2.5 sm:py-3 px-4 sm:px-6 rounded-full transition-colors text-sm sm:text-base"
+                  className="flex-1 bg-white hover:bg-[#faf3ef] text-[#DDCDB9] border border-[#DDCDB9] font-shippori py-2.5 sm:py-3 px-4 sm:px-6 rounded-full transition-colors text-sm sm:text-base"
                 >
                   カウンセリングを受ける
                 </motion.button>

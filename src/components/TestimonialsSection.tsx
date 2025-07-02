@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
             transition={{ delay: star.id * 0.1, duration: 0.3 }}
           >
             <svg
-              className={`w-5 h-5 ${star.filled ? 'text-[#caa9af]' : 'text-gray-300'}`}
+              className={`w-5 h-5 ${star.filled ? 'text-[#DDCDB9]' : 'text-gray-300'}`}
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -132,8 +132,8 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="w-3 h-3 bg-[#caa9af] rounded-full mr-3" />
-            <span className="text-[#caa9af] font-shippori text-sm tracking-wide">お客様の声</span>
+            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">お客様の声</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-8">
             Customer Reviews
@@ -166,9 +166,9 @@ export default function TestimonialsSection() {
                   <img
                     src={testimonials[activeIndex].image}
                     alt={testimonials[activeIndex].name}
-                    className="w-24 h-24 rounded-full object-cover border-4 border-[#caa9af]/20"
+                    className="w-24 h-24 rounded-full object-cover border-4 border-[#DDCDB9]/20"
                   />
-                  <div className="absolute -bottom-2 -right-2 bg-[#caa9af] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
+                  <div className="absolute -bottom-2 -right-2 bg-[#DDCDB9] text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
                     ★
                   </div>
                 </motion.div>
@@ -210,7 +210,7 @@ export default function TestimonialsSection() {
               onClick={() => setActiveIndex(index)}
               className={`bg-white rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
                 activeIndex === index
-                  ? 'ring-2 ring-[#caa9af] shadow-xl'
+                  ? 'ring-2 ring-[#DDCDB9] shadow-xl'
                   : 'hover:shadow-xl'
               }`}
             >
@@ -259,7 +259,7 @@ export default function TestimonialsSection() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="text-3xl md:text-4xl font-shippori font-bold text-[#caa9af] mb-2"
+                className="text-3xl md:text-4xl font-shippori font-bold text-[#DDCDB9] mb-2"
               >
                 {stat.number}
               </motion.div>
