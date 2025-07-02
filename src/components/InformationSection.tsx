@@ -40,7 +40,7 @@ export default function InformationSection() {
                   <div className="flex items-start">
                     <span className="w-20 text-[#8a6d62] font-medium">アクセス</span>
                     <div>
-                      <p>〇〇出口徒歩30秒</p>
+                      <p>表参道駅・外苑前駅から徒歩5分</p>
                     </div>
                   </div>
 
@@ -64,27 +64,25 @@ export default function InformationSection() {
             </div>
           </div>
 
-          {/* Right Side - Map */}
+          {/* Right Side - Google Map */}
           <div>
             <div className="relative rounded-lg overflow-hidden shadow-lg h-96">
-              <img
-                src="https://ext.same-assets.com/390596101/3962919721.png"
-                alt="Clinic Location Map"
-                className="w-full h-full object-cover"
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3243277804618!2d139.71344059999998!3d35.6690153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d878426ebf9%3A0x6f445a5ada639d42!2z44Or44OK44O844K444Ol44Kv44Oq44OL44OD44Kv!5e0!3m2!1sen!2sjp!4v1751445044095!5m2!1sen!2sjp"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="LUNAGE CLINIC Location"
+                className="w-full h-full"
               />
-
-              {/* Map Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-
-              {/* Location Pin */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="w-8 h-8 bg-[#caa9af] rounded-full border-4 border-white shadow-lg animate-pulse" />
-              </div>
             </div>
 
             <div className="mt-4 text-center">
               <a
-                href="https://www.google.com/maps/place/%E3%80%92104-0061+%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%8A%80%E5%BA%A7%EF%BC%94%E4%B8%81%E7%9B%AE%EF%BC%96%E2%88%92%EF%BC%91%EF%BC%98+%E3%82%AE%E3%83%B3%E3%82%B6%E3%82%A2%E3%82%AF%E3%83%88%E3%83%93%E3%83%AB/@35.6717381,139.7659222,17z/data=!3m1!4b1!4m6!3m5!1s0x60188be69b3ca549:0xeaf508e05578628b!8m2!3d35.6717381!4d139.7659222!16s%2Fg%2F11c71cb17v"
+                href="https://maps.app.goo.gl/mchA5zYJcx22ZCc87"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#caa9af] hover:text-[#8a6d62] font-shippori text-sm transition-colors underline"
