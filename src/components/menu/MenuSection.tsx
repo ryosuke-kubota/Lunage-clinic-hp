@@ -955,7 +955,7 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
           // 遅延を追加してSafariの問題を回避
           setTimeout(() => {
             setAnimationState('visible');
-          }, index * 100 + 50);
+          }, index * 30);
           
           // 一度トリガーされたらObserverを切断
           if (observerRef.current) {
