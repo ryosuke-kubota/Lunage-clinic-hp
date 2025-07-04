@@ -172,7 +172,7 @@ export default function Header() {
                     Doctor
                   </Link>
                 </motion.div>
-                <motion.div variants={menuItemVariants}>
+                {/* <motion.div variants={menuItemVariants}>
                   <Link
                     href="/#faq"
                     className="block px-4 py-3 text-[#54585f] hover:text-[#DDCDB9] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
@@ -180,7 +180,7 @@ export default function Header() {
                   >
                     FAQ
                   </Link>
-                </motion.div>
+                </motion.div> */}
                 <motion.div variants={menuItemVariants}>
                   <Link
                     href="/#access"
