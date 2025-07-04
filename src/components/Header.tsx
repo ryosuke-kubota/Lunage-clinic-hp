@@ -76,9 +76,9 @@ export default function Header() {
             <Link href="/#doctor" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Doctor
             </Link>
-            <Link href="/#faq" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
+            {/* <Link href="/#faq" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               FAQ
-            </Link>
+            </Link> */}
             <Link href="/#access" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Access
             </Link>
