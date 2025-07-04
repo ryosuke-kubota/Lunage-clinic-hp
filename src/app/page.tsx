@@ -22,7 +22,7 @@ export default function Home() {
       <ClinicInterior />
       {/* <TestimonialsSection /> */}
       <MessageSection />
-      <FAQSection />
+      {/* <FAQSection /> */}
       <InformationSection />
       <ContactSection />
       <Footer />
