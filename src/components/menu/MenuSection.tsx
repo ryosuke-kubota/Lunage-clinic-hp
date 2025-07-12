@@ -1,7 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+
+// シェブロンダウンアイコンコンポーネント
+const ChevronDownIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+  </svg>
+);
 
 // スプレッドシートの各シートと施術サブカテゴリをトップレベルに配置
 const menuData = {
@@ -986,57 +993,140 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
         backfaceVisibility: 'hidden',
         WebkitBackfaceVisibility: 'hidden'
       }}
-      className="flex flex-col bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl border border-[#dacacf]/20"
+      className="flex flex-col bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl border border-[#dacacf]/20 h-full"
     >
-      <h3 className="text-xl font-shippori font-medium text-[#54585f] mb-3">{treatment.name}</h3>
+      <h3 className="text-lg sm:text-xl font-shippori font-medium text-[#54585f] mb-2 sm:mb-3 line-clamp-2">{treatment.name}</h3>
       
       {/* 基本カテゴリ用の機械表示 */}
       {treatment.equipment && (
-        <p className="text-sm text-[#8a6d62] mb-2">使用機械: {treatment.equipment}</p>
+        <p className="text-xs sm:text-sm text-[#8a6d62] mb-2">使用機械: {treatment.equipment}</p>
       )}
       
       {/* 点滴用の内容と施術時間表示 */}
-      {/* {treatment.contents && (
-        <p className="text-sm text-[#8a6d62] mb-2">内容: {treatment.contents}</p>
-      )} */}
       {treatment.treatmentTime && (
-        <p className="text-sm text-[#8a6d62] mb-2">施術時間: {treatment.treatmentTime}分</p>
+        <p className="text-xs sm:text-sm text-[#8a6d62] mb-2">施術時間: {treatment.treatmentTime}分</p>
       )}
       
       {/* 薬剤用の種類、薬剤名、効能表示 */}
       {treatment.type && (
-        <p className="text-sm text-[#8a6d62] mb-2">種類: {treatment.type}</p>
+        <p className="text-xs sm:text-sm text-[#8a6d62] mb-2">種類: {treatment.type}</p>
       )}
       {treatment.drugName && (
-        <p className="text-sm text-[#8a6d62] mb-2">薬剤名: {treatment.drugName}</p>
+        <p className="text-xs sm:text-sm text-[#8a6d62] mb-2">薬剤名: {treatment.drugName}</p>
       )}
       {treatment.efficacy && (
-        <p className="text-sm text-[#8a6d62] mb-2">効能: {treatment.efficacy}</p>
+        <p className="text-xs sm:text-sm text-[#8a6d62] mb-2">効能: {treatment.efficacy}</p>
       )}
       
       {/* オプション用の使用物品表示 */}
       {treatment.supplies && (
-        <p className="text-sm text-[#8a6d62] mb-2">使用物品: {treatment.supplies}</p>
+        <p className="text-xs sm:text-sm text-[#8a6d62] mb-2">使用物品: {treatment.supplies}</p>
       )}
       
       {treatment.description && (
-        <p className="text-sm text-[#6b7280] mb-4 leading-relaxed">{treatment.description}</p>
+        <p className="text-xs sm:text-sm text-[#6b7280] mb-3 sm:mb-4 leading-relaxed line-clamp-4 sm:line-clamp-none flex-grow">{treatment.description}</p>
       )}
       
       {/* 従来の施術時間とダウンタイム（基本カテゴリ用） */}
-      {treatment.duration && <p className="text-sm text-[#8a6d62] mb-1">施術時間: {treatment.duration}</p>}
-      {treatment.downtime && <p className="text-sm text-[#8a6d62] mb-3">ダウンタイム: {treatment.downtime}</p>}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4 mt-auto">
-        <div className="bg-[#faf3ef] p-3 rounded-lg">
+      {treatment.duration && <p className="text-xs sm:text-sm text-[#8a6d62] mb-1">施術時間: {treatment.duration}</p>}
+      {treatment.downtime && <p className="text-xs sm:text-sm text-[#8a6d62] mb-3">ダウンタイム: {treatment.downtime}</p>}
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-auto">
+        <div className="bg-[#faf3ef] p-2 sm:p-3 rounded-lg">
           <p className="text-xs text-[#8a6d62]">通常価格</p>
-          <p className="font-bold text-[#54585f]">{fmt(treatment.regularPrice)}</p>
+          <p className="font-bold text-sm sm:text-base text-[#54585f] truncate">{fmt(treatment.regularPrice)}</p>
         </div>
         {treatment.specialPrice && (
-          <div className="bg-gradient-to-r from-[#DDCDB9]/10 to-[#d6c6b5]/10 p-3 rounded-lg">
+          <div className="bg-gradient-to-r from-[#DDCDB9]/10 to-[#d6c6b5]/10 p-2 sm:p-3 rounded-lg">
             <p className="text-xs text-[#8a6d62]">{treatment.specialPriceName || "特別料金"}</p>
-            <p className="font-bold text-[#54585f]">{fmt(treatment.specialPrice)}</p>
+            <p className="font-bold text-sm sm:text-base text-[#54585f] truncate">{fmt(treatment.specialPrice)}</p>
           </div>
         )}
+      </div>
+    </motion.div>
+  );
+};
+
+// アコーディオンカテゴリコンポーネント
+const CategoryAccordion = ({ categoryKey, category, index }: {
+  categoryKey: string;
+  category: { title: string; description: string; treatments: Treatment[] };
+  index: number;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="mb-3 sm:mb-4"
+    >
+      <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-[#dacacf]/20">
+        {/* アコーディオンヘッダー */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-full px-4 py-4 sm:px-6 sm:py-6 text-left bg-gradient-to-r from-[#faf3ef] to-[#f5ede7] hover:from-[#f5ede7] hover:to-[#f0e6dd] transition-all duration-300 flex items-center justify-between group active:scale-[0.98] touch-manipulation"
+        >
+          <div className="flex-1 min-w-0">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-light text-[#54585f] mb-1 sm:mb-2 group-hover:text-[#8a6d62] transition-colors truncate">
+              {category.title}
+            </h2>
+            {category.description && (
+              <p className="text-xs sm:text-sm lg:text-base text-[#8a6d62] line-clamp-1 sm:line-clamp-2">
+                {category.description.length > 80
+                  ? `${category.description.substring(0, 80)}...`
+                  : category.description
+                }
+              </p>
+            )}
+            <p className="text-xs sm:text-sm text-[#a0a0a0] mt-1 sm:mt-2">
+              {category.treatments.length}件のメニュー
+            </p>
+          </div>
+          <div className="ml-3 sm:ml-4 flex-shrink-0">
+            <motion.div
+              animate={{ rotate: isOpen ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+              className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-white/50 group-hover:bg-white/80 transition-colors"
+            >
+              <ChevronDownIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[#8a6d62]" />
+            </motion.div>
+          </div>
+        </button>
+
+        {/* アコーディオンコンテンツ */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="overflow-hidden"
+            >
+              <div className="p-4 sm:p-6 pt-0">
+                {category.description && (
+                  <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-[#faf3ef] rounded-lg sm:rounded-xl">
+                    <p className="text-sm sm:text-base text-[#8a6d62] whitespace-pre-line leading-relaxed">
+                      {category.description}
+                    </p>
+                  </div>
+                )}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                  {category.treatments.map((treatment, treatmentIndex) => (
+                    <TreatmentCard
+                      key={treatmentIndex}
+                      treatment={treatment}
+                      index={treatmentIndex}
+                    />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.div>
   );
@@ -1045,47 +1135,35 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
 // メニューセクション
 export default function MenuSection() {
   return (
-    <section className="py-16 bg-[#faf3ef]">
+    <section className="py-8 sm:py-16 bg-[#faf3ef]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {Object.entries(menuData).map(([key, cat]) => (
-          <div key={key} id={key} className="mb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl sm:text-4xl font-light text-[#54585f] mb-4">{cat.title}</h2>
-              {cat.description && (
-                <p className="text-lg text-[#8a6d62] whitespace-pre-line">
-                  {cat.description}
-                </p>
-              )}
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {cat.treatments.map((t, i) => <TreatmentCard key={i} treatment={t} index={i} />)}
-            </div>
-          </div>
-        ))}
-        {/* お支払い情報 */}
-        {/* <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="mt-20 bg-white rounded-2xl p-8 shadow-lg">
-          <h3 className="text-2xl font-medium text-center text-[#54585f] mb-6">お支払い方法</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            {[
-              { icon: '💳', title: '現金', label: '一括払い' },
-              { icon: '💳', title: 'クレジットカード', label: '各種対応' },
-              { icon: '📋', title: '医療ローン', label: '最大60回分割' },
-              { icon: '📱', title: '月額制', label: 'サブスクプラン' }
-            ].map((m) => (
-              <div key={m.title}>
-                <div className="w-16 h-16 bg-[#DDCDB9]/10 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">{m.icon}</div>
-                <h4 className="font-medium text-[#54585f] mb-1">{m.title}</h4>
-                <p className="text-sm text-[#8a6d62]">{m.label}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div> */}
+        {/* セクションタイトル */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-8 sm:mb-12"
+        >
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#54585f] mb-3 sm:mb-4">
+            施術メニュー
+          </h1>
+          <p className="text-base sm:text-lg text-[#8a6d62] max-w-2xl mx-auto px-4">
+            各カテゴリをタップして詳細をご確認ください
+          </p>
+        </motion.div>
+
+        {/* アコーディオンカテゴリ一覧 */}
+        <div className="space-y-3 sm:space-y-4">
+          {Object.entries(menuData).map(([key, category], index) => (
+            <CategoryAccordion
+              key={key}
+              categoryKey={key}
+              category={category}
+              index={index}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
