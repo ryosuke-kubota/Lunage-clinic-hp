@@ -10,8 +10,8 @@ const menuData = {
     description: "",
     treatments: [
       {
-        name: "VISIA/オーラ",
-        equipment: "VISIA/オーラ",
+        name: "",
+        equipment: "",
         description: "最新のカメラを用いて、肌の状態を詳細に分析する肌診断器です。シミ、しわ、毛穴など、様々な肌トラブルを数値化し、肌年齢を推定。肌治療や施術選別前に行います。",
         regularPrice: "3300",
         specialPrice: ""
@@ -67,13 +67,6 @@ const menuData = {
         equipment: "HIFU",
         description: "筋膜にアプローチして皮膚の内側から引き締まりが期待できるたるみ治療です。ひとりひとり脂肪や皮膚の厚みが違うため、当院ではお客様の状態に合わせたカスタマイズ HIFUを提案いたします。",
         regularPrice: "15000",
-        specialPrice: ""
-      },
-      {
-        name: "HIFU 人中",
-        equipment: "HIFU",
-        description: "たるみ治療と言えばHIFU。筋膜にアプローチして皮膚の内側から引き締まりを体験できます。ひとりひとり脂肪や皮膚の厚みが違うため、当院では看護師がお客様の状態に合わせたカスタマイズHIFUを提案いたします。",
-        regularPrice: "5000",
         specialPrice: ""
       },
       {
