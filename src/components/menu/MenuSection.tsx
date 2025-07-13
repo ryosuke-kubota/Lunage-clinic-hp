@@ -117,28 +117,30 @@ const menuData = {
         regularPrice: "16000"
       },
       {
-        name: "POTENZA s16 肝斑",
+        name: "POTENZA s16tip",
         equipment: "POTENZA",
         description: "肝斑治療をお考えの方におすすめの施術です。お肌のメラノサイト自体に特定のRFエネルギーを与えることで、肝斑の原因となるメラニンの産生を抑制し、根本的な改善を目指します。本施術により、色素沈着や再発、白抜けのリスクに配慮した治療が可能です。また、赤ら顔や顔全体のくすみ・色素沈着の改善にも効果が期待できます。 赤ら顔や顔全体のくすみ・色素沈着の改善にも効果あり。",
         regularPrice: "30000"
       },
       {
-        name: "POTENZA CP21 densify",
+        name: "POTENZA CP21tip",
         equipment: "POTENZA",
-        description: "ペプチド・アミノ酸・ヒアルロン酸を含む高濃度製剤が線維芽細胞を刺激し、コラーゲン・エラスチンの産生を促進。毛穴・小ジワ・ハリ低下の原因にアプローチします。",
-        regularPrice: "40000"
-      },
-      {
-        name: "POTENZAエクソソーム",
-        equipment: "POTENZA",
-        description: "幹細胞由来エクソソームが損傷組織の修復を促し、抗炎症・抗酸化・細胞再生に働きかけます。ニキビ跡、赤み、加齢による肌力低下など、複合的なお悩みに効果が期待できる再生治療です。",
-        regularPrice: "40000"
-      },
-      {
-        name: "POTENZA CP21 スキンボトックス",
-        equipment: "POTENZA",
-        description: "ボツリヌストキシンが汗腺・皮脂腺の活動を抑制し、毛穴の開き・皮脂分泌・肌のテカリを軽減します。滑らかでマットな質感へ整え、メイクのりの良い陶器肌のような仕上がりが期待できます。自然な表情のまま肌質改善が可能です。",
-        regularPrice: "40000"
+        description: "ニキビ跡や毛穴の凹凸にアプローチ。Cマイクロニードルと薬剤導入を組み合わせ、肌本来のなめらかさを引き出します。",
+        regularPrice: "40000",
+        introducedDrugs: [
+          {
+            name: "densify",
+            description: "ペプチド・アミノ酸・ヒアルロン酸を含む高濃度製剤が線維芽細胞を刺激し、コラーゲン・エラスチンの産生を促進。毛穴・小ジワ・ハリ低下の原因にアプローチします。"
+          },
+          {
+            name: "エクソソーム",
+            description: "幹細胞由来エクソソームが損傷組織の修復を促し、抗炎症・抗酸化・細胞再生に働きかけます。ニキビ跡、赤み、加齢による肌力低下など、複合的なお悩みに効果が期待できる再生治療です。"
+          },
+          {
+            name: "スキンボトックス",
+            description: "ボツリヌストキシンが汗腺・皮脂腺の活動を抑制し、毛穴の開き・皮脂分泌・肌のテカリを軽減します。滑らかでマットな質感へ整え、メイクのりの良い陶器肌のような仕上がりが期待できます。自然な表情のまま肌質改善が可能です。"
+          }
+        ]
       },
       {
         name: "POTENZA ニキビ・汗管腫",
@@ -162,13 +164,13 @@ const menuData = {
         name: "痛くない水光注射ビタミンC",
         equipment: "ターゲットクール",
         description: "2021年にFDAの認証を取得。（本機器は国内未承認医療機器です。諸外国における安全性等に係る情報として、米国FDAで承認されています。）氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みが少なく、ダウンタイムもほとんどありません。",
-        regularPrice: "19000"
+        regularPrice: "19000",
       },
       {
         name: "痛くない水光注射トラネキサム酸",
         equipment: "ターゲットクール",
         description: "2021年にFDAの認証を取得。（本機器は国内未承認医療機器です。諸外国における安全性等に係る情報として、米国FDAで承認されています。）氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みが少なく、ダウンタイムもほとんどありません。",
-        regularPrice: "20000"
+        regularPrice: "20000",
       },
       {
         name: "痛くない水光注射スキンボトックス",
@@ -186,7 +188,7 @@ const menuData = {
         name: "痛くない水光注射プルリアル",
         equipment: "ターゲットクール",
         description: "2021年にFDAの認証を取得。（本機器は国内未承認医療機器です。諸外国における安全性等に係る情報として、米国FDAで承認されています。）氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みが少なく、ダウンタイムもほとんどありません。",
-        regularPrice: "27000"
+        regularPrice: "27000",
       },
       {
         name: "痛くない水光注射プラセンタ",
@@ -216,19 +218,19 @@ const menuData = {
         name: "ダーマペン＋エクソソーム",
         equipment: "ダーマペン＋エクソソーム",
         description: "ダーマペンの微細な針刺激に、再生因子豊富なエクソソームを浸透。肌再生力を高め、エイジングケアをサポートします。",
-        regularPrice: "25000"
+        regularPrice: "25000",
       },
       {
         name: "ボトックスフェイシャル",
         equipment: "ダーマペン＋ボトックス",
         description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。肌質改善により、マスクの蒸れや夏場のメイク崩れが軽減される可能性があります。",
-        regularPrice: "23000"
+        regularPrice: "23000",
       },
       {
         name: "ヴェルヴェットスキン",
         equipment: "ダーマペン＋マッサージピール",
         description: "ダーマペンで肌に微細な穴を開けた直後にピーリング剤を導入。ハリ・ツヤ・毛穴・ニキビ跡を同時にケアするトリートメントです。",
-        regularPrice: "25000"
+        regularPrice: "25000",
       },
       {
         name: "ハイドラフェイシャル",
@@ -939,6 +941,11 @@ interface Treatment {
   efficacy?: string;
   // オプション用
   supplies?: string;
+  // 導入薬剤用（美肌項目）
+  introducedDrugs?: {
+    name: string;
+    description: string;
+  }[];
 }
 
 // カードコンポーネント
@@ -1025,6 +1032,21 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
       
       {treatment.description && (
         <p className="text-xs sm:text-sm text-[#6b7280] mb-3 sm:mb-4 leading-relaxed line-clamp-4 sm:line-clamp-none flex-grow">{treatment.description}</p>
+      )}
+      
+      {/* 導入薬剤情報の表示 */}
+      {treatment.introducedDrugs && treatment.introducedDrugs.length > 0 && (
+        <div className="mb-3 sm:mb-4">
+          <h4 className="text-xs sm:text-sm font-medium text-[#8a6d62] mb-2">導入薬剤</h4>
+          <div className="space-y-2">
+            {treatment.introducedDrugs.map((drug, index) => (
+              <div key={index} className="bg-gradient-to-r from-[#faf3ef] to-[#f5ede7] p-2 sm:p-3 rounded-lg border-l-2 border-[#d6c6b5]">
+                <p className="text-xs sm:text-sm font-medium text-[#54585f] mb-1">{drug.name}</p>
+                <p className="text-xs text-[#6b7280] leading-relaxed">{drug.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       )}
       
       {/* 従来の施術時間とダウンタイム（基本カテゴリ用） */}
