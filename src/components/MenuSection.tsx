@@ -89,6 +89,13 @@ export default function MenuSection() {
                 <Link
                   href={item.href}
                   className="block group"
+                  onClick={() => {
+                    // セッションストレージに情報を保存
+                    const hash = item.href.split('#')[1];
+                    if (hash) {
+                      sessionStorage.setItem('openAccordion', hash);
+                    }
+                  }}
                 >
                   <div className="bg-[#faf3ef] hover:bg-white border border-transparent hover:border-[#DDCDB9]/20 rounded-lg p-4 transition-all duration-300 hover:shadow-lg">
                     <div className="flex items-center justify-between">

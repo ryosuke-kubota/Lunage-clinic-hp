@@ -1048,20 +1048,56 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
 };
 
 // アコーディオンカテゴリコンポーネント
-const CategoryAccordion = ({ categoryKey, category, index }: {
+const CategoryAccordion = ({ categoryKey, category, index, initialOpen = false }: {
   categoryKey: string;
   category: { title: string; description: string; treatments: Treatment[] };
   index: number;
+  initialOpen?: boolean;
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(initialOpen);
+  const accordionRef = useRef<HTMLDivElement>(null);
+
+  console.log(`CategoryAccordion ${categoryKey}:`, { initialOpen, isOpen });
+
+  // 初期状態でアコーディオンが開かれている場合のスクロール処理
+  useEffect(() => {
+    console.log(`CategoryAccordion ${categoryKey} useEffect:`, { initialOpen });
+    if (initialOpen && accordionRef.current) {
+      console.log(`Opening accordion for ${categoryKey}`);
+      const timer = setTimeout(() => {
+        const element = accordionRef.current;
+        if (element) {
+          const elementRect = element.getBoundingClientRect();
+          const currentScrollY = window.scrollY;
+          const fixedOffset = 120; // ヘッダーの高さを考慮
+          const targetPosition = elementRect.top + currentScrollY - fixedOffset;
+          
+          console.log(`Scrolling to ${categoryKey}:`, { targetPosition });
+          window.scrollTo({
+            top: Math.max(0, targetPosition),
+            behavior: 'smooth'
+          });
+        }
+      }, 500); // アニメーションが完了してからスクロール
+
+      return () => clearTimeout(timer);
+    }
+  }, [initialOpen, categoryKey]);
+
+  // initialOpenが変更された時にisOpenも更新
+  useEffect(() => {
+    setIsOpen(initialOpen);
+  }, [initialOpen]);
 
   return (
     <motion.div
+      ref={accordionRef}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="mb-3 sm:mb-4"
+      id={categoryKey}
     >
       <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-[#dacacf]/20">
         {/* アコーディオンヘッダー */}
@@ -1134,6 +1170,31 @@ const CategoryAccordion = ({ categoryKey, category, index }: {
 
 // メニューセクション
 export default function MenuSection() {
+  const [targetCategory, setTargetCategory] = useState<string | null>(null);
+
+  useEffect(() => {
+    // セッションストレージから開くべきアコーディオンを確認
+    const openAccordion = sessionStorage.getItem('openAccordion');
+    const hash = window.location.hash.replace('#', '');
+    
+    console.log('MenuSection useEffect:', { openAccordion, hash, url: window.location.href });
+    
+    if (openAccordion) {
+      console.log('Setting target category from sessionStorage:', openAccordion);
+      setTargetCategory(openAccordion);
+      // 使用後は削除
+      sessionStorage.removeItem('openAccordion');
+    } else if (hash) {
+      console.log('Setting target category from hash:', hash);
+      setTargetCategory(hash);
+    }
+  }, []);
+
+  // targetCategoryの変更をログ出力
+  useEffect(() => {
+    console.log('Target category changed:', targetCategory);
+  }, [targetCategory]);
+
   return (
     <section className="py-8 sm:py-16 bg-[#faf3ef]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1161,6 +1222,7 @@ export default function MenuSection() {
               categoryKey={key}
               category={category}
               index={index}
+              initialOpen={targetCategory === key}
             />
           ))}
         </div>
