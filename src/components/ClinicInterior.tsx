@@ -6,11 +6,11 @@ export default function ClinicInterior() {
         <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="https://ext.same-assets.com/390596101/868030216.png"
+              src="/images/space.JPG"
               alt="LUNAGE Clinic Interior"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/30 sm:from-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-white/30 to-transparent" />
           </div>
 
           {/* Overlay Content - Responsive */}

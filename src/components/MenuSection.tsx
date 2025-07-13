@@ -10,7 +10,7 @@ const menuItems = [
   { name: "肌診断", href: "/menu#skin-diagnosis" },
   { name: "痩身", href: "/menu#body-slimming" },
   { name: "リフトアップ", href: "/menu#lift-up" },
-  { name: "フェイシャル・美肌", href: "/menu#facial-beauty" },
+  { name: "美肌", href: "/menu#facial-beauty" },
   { name: "多汗症", href: "/menu#hyperhidrosis" },
   // { name: "アートメイク", href: "/menu#artmake" },
   { name: "AGA", href: "/menu#aga" },

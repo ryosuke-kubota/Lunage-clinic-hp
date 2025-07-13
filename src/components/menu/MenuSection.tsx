@@ -107,7 +107,7 @@ const menuData = {
     ]
   },
   "facial-beauty": {
-    title: "フェイシャル・美肌",
+    title: "美肌",
     description: "",
     treatments: [
       {

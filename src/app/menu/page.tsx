@@ -16,7 +16,7 @@ export default function MenuPage() {
     <main className="min-h-screen bg-[#faf3ef]">
       <Header />
       <MenuHero />
-      <MenuNavigation />
+      {/* <MenuNavigation /> */}
       <MenuSection />
       <ContactSection />
       <Footer />

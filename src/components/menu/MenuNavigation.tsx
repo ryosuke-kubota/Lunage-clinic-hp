@@ -7,7 +7,7 @@ const menuCategories = [
   { id: "skin-diagnosis", name: "肌診断", icon: "🔍", anchor: "#skin-diagnosis" },
   { id: "body-slimming", name: "痩身", icon: "💪", anchor: "#body-slimming" },
   { id: "lift-up", name: "リフトアップ", icon: "✨", anchor: "#lift-up" },
-  { id: "facial-beauty", name: "フェイシャル・美肌", icon: "🌸", anchor: "#facial-beauty" },
+  { id: "facial-beauty", name: "美肌", icon: "🌸", anchor: "#facial-beauty" },
   { id: "hyperhidrosis", name: "多汗症", icon: "💧", anchor: "#hyperhidrosis" },
   // { id: "artmake", name: "アートメイク", icon: "🎨", anchor: "#artmake" },
   { id: "aga", name: "AGA", icon: "⚡", anchor: "#aga" },
