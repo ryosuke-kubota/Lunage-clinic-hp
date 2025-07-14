@@ -1125,7 +1125,7 @@ const CategoryAccordion = ({ categoryKey, category, index, initialOpen = false }
         {/* アコーディオンヘッダー */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full px-4 py-4 sm:px-6 sm:py-6 text-left bg-gradient-to-r from-[#faf3ef] to-[#f5ede7] hover:from-[#f5ede7] hover:to-[#f0e6dd] transition-all duration-300 flex items-center justify-between group active:scale-[0.98] touch-manipulation"
+          className="w-full px-4 py-4 sm:px-6 sm:py-6 text-left bg-gradient-to-r from-[#faf3ef] to-[#f5ede7] hover:from-[#f5ede7] hover:to-[#f0e6dd] transition-all duration-300 flex items-center justify-between group touch-manipulation"
         >
           <div className="flex-1 min-w-0">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-light text-[#54585f] mb-1 sm:mb-2 group-hover:text-[#8a6d62] transition-colors truncate">
@@ -1164,7 +1164,7 @@ const CategoryAccordion = ({ categoryKey, category, index, initialOpen = false }
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="overflow-hidden"
             >
-              <div className="p-4 sm:p-6 pt-0">
+              <div className="p-4 sm:p-6">
                 {category.description && (
                   <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-[#faf3ef] rounded-lg sm:rounded-xl">
                     <p className="text-sm sm:text-base text-[#8a6d62] whitespace-pre-line leading-relaxed">
