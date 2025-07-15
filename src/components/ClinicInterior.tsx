@@ -1,3 +1,7 @@
+import nextConfig from "../../next.config.mjs";
+
+const BASE_PATH = nextConfig.basePath || "";
+
 export default function ClinicInterior() {
   return (
     <section className="py-16 sm:py-20 bg-gradient-to-b from-white to-[#faf3ef]">
@@ -6,7 +10,7 @@ export default function ClinicInterior() {
         <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="/images/space.JPG"
+              src={`${BASE_PATH}/images/space.jpg`}
               alt="LUNAGE Clinic Interior"
               className="w-full h-full object-cover"
             />
