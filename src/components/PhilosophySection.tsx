@@ -16,18 +16,18 @@ export default function PhilosophySection() {
         {/* Main Philosophy Statement */}
         <div className="mb-20">
           <h3 className="text-3xl md:text-4xl font-shippori font-medium text-[#54585f] leading-relaxed mb-8">
-            あなたの毎日に、そっと輝きを。
+          月のように、あなたを照らす癒しを。
           </h3>
 
           <div className="space-y-6 text-[#54585f] font-shippori text-lg leading-relaxed">
             <p>
-              ルナージュクリニックは、表参道の心地よい空間で、肌の小さな不安にもやさしく寄り添います。
+            LUNAGE clinicは、月の満ち欠けのように、女性の心と体のリズムに寄り添うクリニック。
             </p>
             <p>
-            経験豊かな医師とナースがチームとなり、わかりやすい説明と丁寧なケアで安心をご提供。
+            忙しさの中で忘れてしまいがちな「本来の自分らしさ」を、美容医療を通じて静かに呼び起こします。
             </p>
             <p>
-            完全予約制の落ち着いた院内で、自分のペースで通いながら美肌を育む――
+            内面から輝きを引き出すような、心地よい“再生”と“癒し”の時間をあなたに。
             </p>
             <p>
             そんな“心が満たされる時間”をお届けしたいと願っています。
