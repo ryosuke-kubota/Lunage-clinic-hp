@@ -24,7 +24,7 @@ interface MenuModalProps {
 // 価格フォーマット関数
 const formatPrice = (price: string) => {
   if (!price || price === "" || price === "#VALUE!" || price === "準備中" || price.includes("準備中") || price.includes("計算中")) {
-    return "お問い合わせください";
+    return "準備中";
   }
   const numPrice = parseInt(price.replace(/[^\d]/g, ''));
   if (isNaN(numPrice)) return "お問い合わせください";
