@@ -757,8 +757,8 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="bg-white rounded-xl p-6 shadow-lg border border-[#dacacf]/20 hover:shadow-xl transition-all duration-300"
     >
@@ -876,7 +876,7 @@ const CategoryAccordion = ({
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
             >
-              <div className="px-6 pb-6">
+              <div className="p-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                   {category.treatments.map((treatment, treatmentIndex) => (
                     <TreatmentCard
