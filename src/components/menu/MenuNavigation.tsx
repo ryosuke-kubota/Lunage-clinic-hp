@@ -98,56 +98,6 @@ export default function MenuNavigation() {
             </button>
           </div>
         </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden lg:block">
-          <div className="flex items-center justify-center space-x-1 flex-wrap">
-            {currentCategories.map((category, index) => (
-              <motion.button
-                key={`${viewMode}-${category.id}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => handleCategoryClick(category.id, category.anchor)}
-                className={`px-4 py-3 rounded-full font-shippori text-sm mb-2 ${
-                  activeCategory === category.id
-                    ? 'bg-[#DDCDB9] text-white shadow-lg'
-                    : 'bg-[#faf3ef] text-[#8a6d62] hover:bg-[#DDCDB9]/20 hover:text-[#54585f]'
-                }`}
-              >
-                <span className="mr-2">{category.icon}</span>
-                {category.name}
-              </motion.button>
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div className="lg:hidden">
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {currentCategories.map((category, index) => (
-              <motion.button
-                key={`${viewMode}-mobile-${category.id}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => handleCategoryClick(category.id, category.anchor)}
-                className={`p-3 rounded-xl font-shippori text-xs ${
-                  activeCategory === category.id
-                    ? 'bg-[#DDCDB9] text-white shadow-lg'
-                    : 'bg-[#faf3ef] text-[#8a6d62] hover:bg-[#DDCDB9]/20'
-                }`}
-              >
-                <div className="text-lg mb-1">{category.icon}</div>
-                <div className="leading-tight">{category.name}</div>
-              </motion.button>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

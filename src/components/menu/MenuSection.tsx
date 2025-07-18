@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
+import MenuModal from "./MenuModal";
 
 // シェブロンダウンアイコンコンポーネント
 const ChevronDownIcon = ({ className }: { className?: string }) => (
@@ -747,8 +748,16 @@ const menuData = {
   }
 };
 
-// 治療カードコンポーネント
-const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: number }) => {
+// 治療カードコンポーネント（簡素化版）
+const TreatmentCard = ({
+  treatment,
+  index,
+  onClick
+}: {
+  treatment: Treatment;
+  index: number;
+  onClick: () => void;
+}) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -760,50 +769,45 @@ const TreatmentCard = ({ treatment, index }: { treatment: Treatment; index: numb
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white rounded-xl p-6 shadow-lg border border-[#dacacf]/20 hover:shadow-xl transition-all duration-300"
+      onClick={onClick}
+      className="bg-white rounded-xl p-4 shadow-lg border border-[#dacacf]/20 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
     >
-      <div className="space-y-4">
-        {/* 治療名とメニュー分岐 */}
+      <div className="space-y-3">
+        {/* 治療名 */}
         <div>
           <h4 className="text-lg font-shippori font-medium text-[#54585f] mb-1">
             {treatment.name}
-            {treatment.branch && (
-              <span className="block text-sm text-[#8a6d62] font-normal mt-1">
-                {treatment.branch}
-              </span>
-            )}
           </h4>
-          <p className="text-sm text-[#DDCDB9] font-shippori">
-            使用機器: {treatment.equipment}
-          </p>
+          {treatment.branch && (
+            <p className="text-sm text-[#8a6d62] font-normal">
+              {treatment.branch}
+            </p>
+          )}
         </div>
 
-        {/* 説明 */}
-        <p className="text-sm text-[#54585f] leading-relaxed font-shippori">
-          {treatment.description}
-        </p>
-
-        {/* 価格表示 */}
-        <div className="flex flex-col space-y-2 pt-4 border-t border-[#dacacf]/20">
-          {treatment.memberPrice && (
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-[#8a6d62] font-shippori">会員価格</span>
-              <span className="text-lg font-bold text-[#DDCDB9] font-shippori">
-                {formatPrice(treatment.memberPrice)}
-              </span>
-            </div>
-          )}
-          <div className="flex justify-between items-center">
-            <span className="text-sm text-[#8a6d62] font-shippori">正規価格</span>
-            <span className="text-lg font-bold text-[#54585f] font-shippori">
-              {formatPrice(treatment.regularPrice)}
+        {/* 価格表示（簡素化） */}
+        <div className="flex justify-between items-center pt-2 border-t border-[#dacacf]/20">
+          {treatment.specialPriceName ? (
+            <span className="text-sm font-medium text-[#8b4513]">
+              {treatment.specialPriceName}
             </span>
-          </div>
-          {treatment.specialPriceName && (
-            <div className="text-xs text-[#8a6d62] font-shippori">
-              ※{treatment.specialPriceName}
-            </div>
+          ) : (
+            <>
+              <span className="text-sm text-[#8a6d62] font-shippori">
+                {treatment.memberPrice ? "会員価格" : "料金"}
+              </span>
+              <span className="text-lg font-bold text-[#8b4513] font-shippori">
+                {formatPrice(treatment.memberPrice || treatment.regularPrice)}
+              </span>
+            </>
           )}
+        </div>
+
+        {/* 詳細を見るボタン */}
+        <div className="text-center pt-2">
+          <span className="text-xs text-[#8b4513]/70 font-shippori">
+            クリックで詳細を見る
+          </span>
         </div>
       </div>
     </motion.div>
@@ -815,12 +819,14 @@ const CategoryAccordion = ({
   categoryKey,
   category,
   index,
-  initialOpen = false
+  initialOpen = false,
+  onTreatmentClick
 }: {
   categoryKey: string;
   category: Category;
   index: number;
   initialOpen?: boolean;
+  onTreatmentClick: (treatment: Treatment) => void;
 }) => {
   const [isOpen, setIsOpen] = useState(initialOpen);
 
@@ -840,21 +846,20 @@ const CategoryAccordion = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="mb-6"
       id={categoryKey}
     >
       <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-[#dacacf]/20">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full px-6 py-6 text-left bg-gradient-to-r from-[#faf3ef] to-white hover:from-[#f5ede7] hover:to-[#faf3ef] transition-all duration-300"
+          className="w-full px-2 md:px-6 py-6 text-left bg-gradient-to-r from-[#faf3ef] to-white hover:from-[#f5ede7] hover:to-[#faf3ef] transition-all duration-300"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="ml-3 sm:ml-4 flex-shrink-0">
-                <h3 className="text-xl sm:text-2xl font-shippori font-medium text-[#54585f] mb-2">
+                <h3 className="text-xl sm:text-2xl font-shippori font-medium text-[#54585f]">
                   {category.title}
                 </h3>
-                <p className="text-sm text-[#8a6d62] font-shippori">
+                <p className="hidden md:block text-sm text-[#8a6d62] font-shippori">
                   {category.description}
                 </p>
               </div>
@@ -876,13 +881,14 @@ const CategoryAccordion = ({
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
             >
-              <div className="p-6">
+              <div className="p-6 px-2">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                   {category.treatments.map((treatment, treatmentIndex) => (
                     <TreatmentCard
                       key={`${treatment.name}-${treatmentIndex}`}
                       treatment={treatment}
                       index={treatmentIndex}
+                      onClick={() => onTreatmentClick(treatment)}
                     />
                   ))}
                 </div>
@@ -897,6 +903,8 @@ const CategoryAccordion = ({
 
 export default function MenuSection() {
   const [viewMode, setViewMode] = useState<'concerns' | 'equipment'>('concerns');
+  const [selectedTreatment, setSelectedTreatment] = useState<Treatment | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -924,6 +932,16 @@ export default function MenuSection() {
 
   const currentData = viewMode === 'concerns' ? menuData.concerns : menuData.equipment;
 
+  const handleTreatmentClick = (treatment: Treatment) => {
+    setSelectedTreatment(treatment);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedTreatment(null);
+  };
+
   return (
     <section className="py-8 sm:py-16 bg-[#faf3ef]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -944,7 +962,7 @@ export default function MenuSection() {
         </motion.div>
 
         {/* メニューカテゴリ */}
-        <div className="space-y-6">
+        <div className="space-y-3">
           {Object.entries(currentData).map(([key, category], index) => (
             <CategoryAccordion
               key={`${viewMode}-${key}`}
@@ -952,9 +970,17 @@ export default function MenuSection() {
               category={category}
               index={index}
               initialOpen={false}
+              onTreatmentClick={handleTreatmentClick}
             />
           ))}
         </div>
+
+        {/* モーダル */}
+        <MenuModal
+          treatment={selectedTreatment}
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+        />
       </div>
     </section>
   );
