@@ -35,10 +35,10 @@ interface Category {
 // 価格フォーマット関数
 const formatPrice = (price: string) => {
   if (!price || price === "" || price === "0" || price === "#VALUE!" || price === "準備中" || price.includes("準備中") || price.includes("計算中")) {
-    return "お問い合わせください";
+    return "準備中";
   }
   const numPrice = parseInt(price.replace(/[^\d]/g, ''));
-  if (isNaN(numPrice) || numPrice === 0) return "お問い合わせください";
+  if (isNaN(numPrice) || numPrice === 0) return "準備中";
   return `¥${numPrice.toLocaleString()}`;
 };
 
@@ -1200,43 +1200,52 @@ const TreatmentCard = ({
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       onClick={onClick}
-      className="bg-white rounded-xl p-4 shadow-lg border border-[#dacacf]/20 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+      className="bg-white rounded-xl py-4 p-2 md:p-4 shadow-lg border border-[#dacacf]/20 hover:shadow-xl transition-all duration-300 cursor-pointer"
     >
-      <div className="space-y-3">
+      <div className="space-y-2 md:space-y-3">
         {/* 治療名 */}
         <div>
-          <h4 className="text-lg font-shippori font-medium text-[#54585f] mb-1">
+          <h4 className="text-xs md:text-lg font-shippori font-medium text-[#54585f] mb-1">
             {treatment.name}
           </h4>
-          {treatment.branch && (
-            <p className="text-sm text-[#8a6d62] font-normal">
-              {treatment.branch}
-            </p>
-          )}
         </div>
 
-        {/* 価格表示（簡素化） */}
-        <div className="flex justify-between items-center pt-2 border-t border-[#dacacf]/20">
+        {/* 価格表示（会員価格と一般価格の両方を表示） */}
+        <div className="pt-2 border-t border-[#dacacf]/20">
           {treatment.specialPriceName ? (
-            <span className="text-sm font-medium text-[#8b4513]">
-              {treatment.specialPriceName}
-            </span>
+            <div className="text-center">
+              <span className="text-sm font-medium text-[#8b4513]">
+                {treatment.specialPriceName}
+              </span>
+            </div>
           ) : (
-            <>
-              <span className="text-sm text-[#8a6d62] font-shippori">
-                {treatment.memberPrice ? "会員価格" : "料金"}
-              </span>
-              <span className="text-lg font-bold text-[#8b4513] font-shippori">
-                {formatPrice(treatment.memberPrice || treatment.regularPrice)}
-              </span>
-            </>
+            <div className="space-y-1">
+              {treatment.memberPrice && (
+                <div className="flex justify-between items-center flex-col md:flex-row">
+                  <span className="text-xs text-[#8a6d62] font-shippori">
+                    会員価格
+                  </span>
+                  <span className="text-sm font-bold text-[#8b4513] font-shippori">
+                    {formatPrice(treatment.memberPrice)}
+                  </span>
+                </div>
+              )}
+              <div className="flex justify-between items-center flex-col md:flex-row">
+                <span className="text-xs text-[#8a6d62] font-shippori">
+                  通常価格
+                </span>
+                <span className={`font-bold font-shippori ${treatment.memberPrice ? 'text-sm text-[#8a6d62]' : 'text-lg text-[#8b4513]'}`}>
+                  {formatPrice(treatment.regularPrice)}
+                </span>
+              </div>
+            </div>
           )}
         </div>
 
         {/* 詳細を見るボタン */}
         <div className="text-center pt-2">
           <span className="text-xs text-[#8b4513]/70 font-shippori">
-            クリックで詳細を見る
+            タップで詳細
           </span>
         </div>
       </div>
@@ -1312,7 +1321,7 @@ const CategoryAccordion = ({
               className="overflow-hidden"
             >
               <div className="p-6 px-2">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 sm:gap-6">
                   {category.treatments.map((treatment, treatmentIndex) => (
                     <TreatmentCard
                       key={`${treatment.name}-${treatmentIndex}`}
@@ -1374,7 +1383,7 @@ export default function MenuSection() {
 
   return (
     <section className="py-8 sm:py-16 bg-[#faf3ef]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* セクションヘッダー */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

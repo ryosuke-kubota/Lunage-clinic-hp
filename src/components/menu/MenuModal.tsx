@@ -27,7 +27,7 @@ const formatPrice = (price: string) => {
     return "準備中";
   }
   const numPrice = parseInt(price.replace(/[^\d]/g, ''));
-  if (isNaN(numPrice)) return "お問い合わせください";
+  if (isNaN(numPrice)) return "準備中";
   return `¥${numPrice.toLocaleString()}`;
 };
 
@@ -64,11 +64,11 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
               {/* ヘッダー */}
               <div className="sticky top-0 bg-white rounded-t-2xl border-b border-[#dacacf]/20 p-6 flex items-center justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold text-[#8b4513] mb-1">
+                  <h2 className="text-lg md:text-2xl font-bold text-[#8b4513] mb-1">
                     {treatment.name}
                   </h2>
                   {treatment.branch && (
-                    <p className="text-sm text-[#8b4513]/70">
+                    <p className="text-xs md:text-sm text-[#8b4513]/70">
                       {treatment.branch}
                     </p>
                   )}
@@ -108,7 +108,7 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
                 {/* 説明 */}
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold text-[#8b4513] mb-3">施術について</h3>
-                  <p className="text-[#8b4513]/80 leading-relaxed whitespace-pre-line">
+                  <p className="text-sm md:text-base text-[#8b4513]/80 leading-relaxed whitespace-pre-line">
                     {treatment.description}
                   </p>
                 </div>
@@ -126,19 +126,26 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
                   ) : (
                     <div className="space-y-3">
                       {treatment.memberPrice && (
-                        <div className="flex justify-between items-center">
-                          <span className="text-[#8b4513]/70">会員価格</span>
+                        <div className="flex justify-between items-center p-3 bg-[#8b4513]/5 rounded-lg">
+                          <span className="text-[#8b4513]/70 font-medium">会員価格</span>
                           <span className="text-xl font-bold text-[#8b4513]">
                             {formatPrice(treatment.memberPrice)}
                           </span>
                         </div>
                       )}
-                      <div className="flex justify-between items-center">
-                        <span className="text-[#8b4513]/70">通常価格</span>
-                        <span className="text-xl font-bold text-[#8b4513]">
+                      <div className="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                        <span className="text-[#8b4513]/70 font-medium">通常価格</span>
+                        <span className={`text-xl font-bold ${treatment.memberPrice ? 'text-[#8b4513]/60' : 'text-[#8b4513]'}`}>
                           {formatPrice(treatment.regularPrice)}
                         </span>
                       </div>
+                      {treatment.memberPrice && (
+                        <div className="text-center pt-2">
+                          <p className="text-sm text-[#8b4513]/60">
+                            会員価格は通常価格から約10%お得です
+                          </p>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -163,12 +170,12 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
 
                 {/* アクションボタン */}
                 <div className="mt-8 flex gap-3">
-                  <button className="flex-1 bg-[#8b4513] text-white py-3 px-6 rounded-xl font-medium hover:bg-[#8b4513]/90 transition-colors">
+                  <button className="text-sm md:text-base flex-1 bg-[#8b4513] text-white py-3 px-3 md:px-6 rounded-xl font-medium hover:bg-[#8b4513]/90 transition-colors">
                     予約・相談する
                   </button>
                   <button 
                     onClick={onClose}
-                    className="px-6 py-3 border border-[#dacacf] text-[#8b4513] rounded-xl font-medium hover:bg-[#faf3ef] transition-colors"
+                    className="text-sm md:text-base px-6 py-3 border border-[#dacacf] text-[#8b4513] rounded-xl font-medium hover:bg-[#faf3ef] transition-colors"
                   >
                     閉じる
                   </button>
