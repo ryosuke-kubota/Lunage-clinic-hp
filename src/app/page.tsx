@@ -19,9 +19,9 @@ export default function Home() {
       <PhilosophySection />
       <MenuSection />
       {/* <BeforeAfterSection /> */}
-      <ClinicInterior />
+      {/* <ClinicInterior /> */}
       {/* <TestimonialsSection /> */}
-      <MessageSection />
+      {/* <MessageSection /> */}
       {/* <FAQSection /> */}
       <InformationSection />
       <ContactSection />

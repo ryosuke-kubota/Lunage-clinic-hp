@@ -16,7 +16,8 @@ const menuItems = [
   { name: "薄毛", href: "/menu#hair-loss" },
   { name: "脱毛", href: "/menu#hair-removal" },
   { name: "鎮静", href: "/menu#soothing" },
-  { name: "ハリ・艶", href: "/menu#glow-firmness" },
+  { name: "ハリ・艶", href: "/menu#firmness-glow" },
+  { name: "しわ", href: "/menu#wrinkles" },
   { name: "ボディ", href: "/menu#body" }
 ];
 

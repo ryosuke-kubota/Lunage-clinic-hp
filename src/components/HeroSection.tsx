@@ -28,7 +28,7 @@ export default function HeroSection() {
     offset: ["start start", "end start"]
   });
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  // const y1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const [ref, inView] = useInView({
@@ -48,7 +48,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 1.1 }}
         animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        style={{ y: y1 }}
+        // style={{ y: y1 }}
         className="inset-0 w-full h-auto"
       >
         {/* デスクトップ用画像 */}
@@ -69,7 +69,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* 下部のテキスト（スマホのみ） */}
-      {/* {isMobile && (
+      {isMobile && (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -77,7 +77,8 @@ export default function HeroSection() {
           style={{ opacity }}
           className="absolute bottom-6 left-0 right-0 z-20 flex justify-center px-4"
         >
-          <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl px-6 py-4 sm:px-12 sm:py-8 border border-white/30 shadow-2xl">
+          {/* <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl px-6 py-4 sm:px-12 sm:py-8 border border-white/30 shadow-2xl"> */}
+          <div className="text-center bg-transparent px-6 py-4 sm:px-12 sm:py-8">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -104,7 +105,7 @@ export default function HeroSection() {
             />
           </div>
         </motion.div>
-      )} */}
+      )}
 
       {/* 装飾的な浮遊要素（デスクトップのみ） */}
       {!isMobile && (
