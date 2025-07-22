@@ -1194,13 +1194,13 @@ const TreatmentCard = ({
   });
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={inView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+    <div
+      // ref={ref}
+      // initial={{ opacity: 0 }}
+      // animate={inView ? { opacity: 1 } : { opacity: 0 }}
+      // transition={{ duration: 0.5, delay: index * 0.1 }}
       onClick={onClick}
-      className="bg-white rounded-xl py-4 p-2 md:p-4 shadow-lg border border-[#dacacf]/20 hover:shadow-xl transition-all duration-300 cursor-pointer opacity-0"
+      className="bg-white rounded-xl py-4 p-2 md:p-4 shadow-lg border border-[#dacacf]/20 hover:shadow-xl transition-all duration-300 cursor-pointer"
     >
       <div className="space-y-2 md:space-y-3">
         {/* 治療名 */}
@@ -1249,7 +1249,7 @@ const TreatmentCard = ({
           </span>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
