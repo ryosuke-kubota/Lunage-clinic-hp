@@ -62,7 +62,7 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
               className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             >
               {/* ヘッダー */}
-              <div className="sticky top-0 bg-white rounded-t-2xl border-b border-[#dacacf]/20 p-6 flex items-center justify-between">
+              <div className="sticky top-0 bg-white rounded-t-2xl border-b border-[#dacacf]/20 p-6 flex items-center justify-between z-10">
                 <div>
                   <h2 className="text-lg md:text-2xl font-bold text-[#8b4513] mb-1">
                     {treatment.name}

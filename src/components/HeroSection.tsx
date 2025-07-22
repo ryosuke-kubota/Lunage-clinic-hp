@@ -68,6 +68,11 @@ export default function HeroSection() {
         />
       </motion.div>
 
+      {/* 下部のグラデーション背景（スマホのみ） */}
+      {isMobile && (
+        <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-white/80 via-white/60 to-transparent z-10" />
+      )}
+
       {/* 下部のテキスト（スマホのみ） */}
       {isMobile && (
         <motion.div
@@ -75,15 +80,14 @@ export default function HeroSection() {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: 0.8, duration: 1 }}
           style={{ opacity }}
-          className="absolute bottom-6 left-0 right-0 z-20 flex justify-center px-4"
+          className="absolute bottom-2 left-0 right-0 z-20 flex justify-center px-4"
         >
-          {/* <div className="text-center bg-white/60 backdrop-blur-sm rounded-3xl px-6 py-4 sm:px-12 sm:py-8 border border-white/30 shadow-2xl"> */}
-          <div className="text-center bg-transparent px-6 py-4 sm:px-12 sm:py-8">
+          <div className="text-center px-6 py-4 sm:px-12 sm:py-8">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 1.2, duration: 0.8 }}
-              className="text-[#8a6d62] font-shippori text-xs sm:text-base mb-2"
+              className="text-[#c38092] font-shippori text-xs sm:text-base mb-2"
             >
               表参道の美肌治療専門クリニック
             </motion.p>
@@ -92,17 +96,17 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 1.4, duration: 0.8 }}
-              className="text-[#54585f] font-shippori font-medium text-sm sm:text-4xl lg:text-5xl"
+              className="text-[#54585f] font-shippori font-medium text-base sm:text-4xl lg:text-5xl"
             >
               LUNAGE CLINIC
             </motion.h1>
             
-            <motion.div
+            {/* <motion.div
               initial={{ width: 0 }}
               animate={inView ? { width: "4rem" } : { width: 0 }}
               transition={{ delay: 1.8, duration: 0.8 }}
               className="mt-4 h-0.5 bg-gradient-to-r from-[#DDCDB9] to-[#dacacf] mx-auto"
-            />
+            /> */}
           </div>
         </motion.div>
       )}
