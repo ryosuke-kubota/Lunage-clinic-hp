@@ -69,7 +69,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* 下部のテキスト（スマホのみ） */}
-      {isMobile && (
+      {/* {isMobile && (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -104,7 +104,7 @@ export default function HeroSection() {
             />
           </div>
         </motion.div>
-      )}
+      )} */}
 
       {/* 装飾的な浮遊要素（デスクトップのみ） */}
       {!isMobile && (
