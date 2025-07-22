@@ -8,17 +8,16 @@ import { easeOut } from "framer-motion";
 // Simple menu items based on the original site
 const menuItems = [
   { name: "肌診断", href: "/menu#skin-diagnosis" },
-  { name: "痩身", href: "/menu#body-slimming" },
-  { name: "リフトアップ", href: "/menu#lift-up" },
-  { name: "美肌", href: "/menu#facial-beauty" },
-  { name: "多汗症", href: "/menu#hyperhidrosis" },
-  // { name: "アートメイク", href: "/menu#artmake" },
-  { name: "AGA", href: "/menu#aga" },
+  { name: "たるみ", href: "/menu#sagging" },
+  { name: "痩身", href: "/menu#slimming" },
+  { name: "しみ・肝斑", href: "/menu#spots-melasma" },
+  { name: "毛穴・ニキビ跡", href: "/menu#pores-acne-scars" },
+  { name: "肌荒れ", href: "/menu#acne-inflammation" },
+  { name: "薄毛", href: "/menu#hair-loss" },
   { name: "脱毛", href: "/menu#hair-removal" },
-  { name: "点滴", href: "/menu#iv-therapy" },
-  { name: "薬剤", href: "/menu#medication" },
-  { name: "オプション", href: "/menu#options" },
-  { name: "物販", href: "/menu#products" }
+  { name: "鎮静", href: "/menu#soothing" },
+  { name: "ハリ・艶", href: "/menu#glow-firmness" },
+  { name: "ボディ", href: "/menu#body" }
 ];
 
 export default function MenuSection() {
