@@ -74,7 +74,7 @@ export default function MenuNavigation() {
     <section className="py-8 bg-white lg:sticky lg:top-16 z-40 border-b border-[#dacacf]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 表示切り替えボタン */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center">
           <div className="bg-[#faf3ef] rounded-full p-1 shadow-lg border border-[#dacacf]/20">
             <button
               onClick={() => handleViewModeChange('concerns')}
