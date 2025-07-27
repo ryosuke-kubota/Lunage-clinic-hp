@@ -45,11 +45,14 @@ export default function Footer() {
           {/* Reservation */}
           <div>
             <h4 className="text-lg font-shippori font-medium mb-4">Reservation</h4>
-            <Button
-              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-6 py-2 rounded-full transition-colors w-full mb-4"
+            <Link
+              href="https://lin.ee/teAI9dY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-6 py-2 rounded-full transition-colors block w-fit mb-4"
             >
               ご予約はこちら
-            </Button>
+            </Link>
             <p className="text-[#dacacf] font-shippori text-sm">
               診療時間: 11:00〜21:00
               <br />
@@ -65,12 +68,12 @@ export default function Footer() {
               © 2025 LUNAGE CLINIC All Rights Reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-[#dacacf] hover:text-white transition-colors font-shippori text-sm">
+              {/* <Link href="#" className="text-[#dacacf] hover:text-white transition-colors font-shippori text-sm">
                 プライバシーポリシー
               </Link>
               <Link href="#" className="text-[#dacacf] hover:text-white transition-colors font-shippori text-sm">
                 利用規約
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

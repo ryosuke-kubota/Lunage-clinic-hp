@@ -92,11 +92,14 @@ export default function Header() {
 
           {/* Reservation Button & Mobile Menu Toggle */}
           <div className="flex items-center space-x-3">
-            <Button
+            <a
+              href="https://lin.ee/teAI9dY"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:flex bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-4 md:px-6 py-2 rounded-full text-sm transition-colors"
             >
               Reservation
-            </Button>
+            </a>
 
             {/* Mobile menu button */}
             <motion.button
@@ -215,12 +218,15 @@ export default function Header() {
                   </Link>
                 </motion.div>
                 <motion.div variants={menuItemVariants} className="pt-4 border-t border-[#d6c6b5]/20">
-                  <Button
-                    className="w-full bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori py-3 rounded-full transition-colors"
+                  <a
+                    href="https://lin.ee/teAI9dY"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-sm text-white font-shippori py-2 px-6 rounded-full transition-colors block w-full mx-auto text-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     ご予約はこちら
-                  </Button>
+                  </a>
                 </motion.div>
               </div>
             </motion.div>

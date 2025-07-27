@@ -28,11 +28,14 @@ export default function ContactSection() {
               ネット予約は24時間受付中
             </p>
 
-            <Button
-              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-12 py-4 rounded-full text-xl transition-all transform hover:scale-105 shadow-lg mb-8"
+            <a
+              href="https://lin.ee/teAI9dY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-12 py-4 rounded-full text-xl transition-all transform hover:scale-105 shadow-lg mb-8 block w-fit mx-auto"
             >
               Reservation
-            </Button>
+            </a>
 
             <div className="text-[#8a6d62] font-shippori text-sm">
               ※ご予約確認後に担当者より確認のお電話をさせていただきます
@@ -64,7 +67,7 @@ export default function ContactSection() {
               LINEからもご予約いただけます
             </h4>
             <div className="flex justify-center mb-4">
-              <a href="#" className="underline text-2xl">ご予約はこちら</a>
+              <a href="https://lin.ee/teAI9dY" target="_blank" rel="noopener noreferrer" className="underline text-2xl">ご予約はこちら</a>
             </div>
             {/* <p className="text-[#8a6d62] font-shippori text-sm">
               未成年者治療同意書はこちら

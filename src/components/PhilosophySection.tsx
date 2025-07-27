@@ -16,7 +16,7 @@ export default function PhilosophySection() {
         {/* Main Philosophy Statement */}
         <div className="">
           <h3 className="text-2xl md:text-4xl font-shippori font-medium text-[#54585f] leading-relaxed mb-8">
-          月のように、あなたを照らす癒しを。
+          月のように、<br className="md:hidden"/>あなたを照らす癒しを。
           </h3>
 
           <div className="space-y-6 text-[#54585f] font-shippori text-sm leading-relaxed">
