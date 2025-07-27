@@ -15,11 +15,11 @@ export default function PhilosophySection() {
 
         {/* Main Philosophy Statement */}
         <div className="">
-          <h3 className="text-3xl md:text-4xl font-shippori font-medium text-[#54585f] leading-relaxed mb-8">
+          <h3 className="text-2xl md:text-4xl font-shippori font-medium text-[#54585f] leading-relaxed mb-8">
           月のように、あなたを照らす癒しを。
           </h3>
 
-          <div className="space-y-6 text-[#54585f] font-shippori text-lg leading-relaxed">
+          <div className="space-y-6 text-[#54585f] font-shippori text-sm leading-relaxed">
             <p>
             LUNAGE clinicは、月の満ち欠けのように、女性の心と体のリズムに寄り添うクリニック。
             </p>
