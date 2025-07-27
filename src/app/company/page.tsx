@@ -1,9 +1,36 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "会社概要｜一般社団法人 医療あおぞら会",
   description: "一般社団法人 医療あおぞら会の会社概要。科学的根拠に基づく医療情報の提供による健康増進・疾病予防の推進を目的とした法人です。",
+  keywords: "会社概要, 一般社団法人, 医療あおぞら会, 健康増進, 疾病予防, 医療情報",
+  alternates: {
+    canonical: "/company",
+  },
+  openGraph: {
+    title: "会社概要｜一般社団法人 医療あおぞら会",
+    description: "一般社団法人 医療あおぞら会の会社概要。科学的根拠に基づく医療情報の提供による健康増進・疾病予防の推進を目的とした法人です。",
+    url: "https://runaju-clinic.com/company",
+    siteName: "ルナージュクリニック",
+    images: [
+      {
+        url: "/images/ogp.png",
+        width: 1200,
+        height: 630,
+        alt: "一般社団法人 医療あおぞら会 会社概要",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "会社概要｜一般社団法人 医療あおぞら会",
+    description: "一般社団法人 医療あおぞら会の会社概要。科学的根拠に基づく医療情報の提供による健康増進・疾病予防の推進を目的とした法人です。",
+    images: ["/images/ogp.png"],
+  },
 };
 
 export default function CompanyPage() {
