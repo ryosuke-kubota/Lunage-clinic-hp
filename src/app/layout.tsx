@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://runaju-clinic.com"),
+  metadataBase: new URL("https://lunage-clinic.com"),
   alternates: {
     canonical: "/",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "表参道の美肌治療専門クリニック｜ルナージュクリニック",
     description: "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
-    url: "https://runaju-clinic.com",
+    url: "https://lunage-clinic.com",
     siteName: "ルナージュクリニック",
     images: [
       {
@@ -85,9 +85,9 @@ export default function RootLayout({
               "@type": "MedicalBusiness",
               "name": "ルナージュクリニック",
               "description": "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
-              "url": "https://runaju-clinic.com",
-              "logo": "https://runaju-clinic.com/images/ogp.png",
-              "image": "https://runaju-clinic.com/images/ogp.png",
+              "url": "https://lunage-clinic.com",
+              "logo": "https://lunage-clinic.com/images/ogp.png",
+              "image": "https://lunage-clinic.com/images/ogp.png",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "神宮前3丁目2番17号 上田ビル2階",
@@ -116,7 +116,7 @@ export default function RootLayout({
                 "Mo-Su 10:00-19:00"
               ],
               "sameAs": [
-                "https://runaju-clinic.com"
+                "https://lunage-clinic.com"
               ]
             })
           }}

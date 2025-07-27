@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "料金一覧表 | ルナージュクリニック",
     description: "ルナージュクリニックの全施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
-    url: "https://runaju-clinic.com/pricing",
+    url: "https://lunage-clinic.com/pricing",
     siteName: "ルナージュクリニック",
     images: [
       {

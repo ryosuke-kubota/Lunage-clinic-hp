@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "施術・料金案内 | ルナージュクリニック",
     description: "ルナージュクリニックの施術メニューと料金をご案内します。二重・目元施術、輪郭形成、スキンケアなど、豊富なメニューをご用意しております。",
-    url: "https://runaju-clinic.com/menu",
+    url: "https://lunage-clinic.com/menu",
     siteName: "ルナージュクリニック",
     images: [
       {

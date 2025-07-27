@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "会社概要｜一般社団法人 医療あおぞら会",
     description: "一般社団法人 医療あおぞら会の会社概要。科学的根拠に基づく医療情報の提供による健康増進・疾病予防の推進を目的とした法人です。",
-    url: "https://runaju-clinic.com/company",
+    url: "https://lunage-clinic.com/company",
     siteName: "ルナージュクリニック",
     images: [
       {
