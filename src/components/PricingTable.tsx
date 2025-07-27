@@ -66,11 +66,11 @@ export default function PricingTable() {
                             </div>
                           </div>
                         </td>
-                        <td className="px-6 py-4 border-b border-[#dacacf]/10 hidden sm:table-cell">
+                        {/* <td className="px-6 py-4 border-b border-[#dacacf]/10 hidden sm:table-cell">
                           <div className="text-xs md:text-sm text-[#54585f]">
                             {treatment.equipment}
                           </div>
-                        </td>
+                        </td> */}
                         <td className="px-3 py-4 border-b border-[#dacacf]/10 text-right">
                           <div className="space-y-1">
                             {treatment.specialPriceName ? (
