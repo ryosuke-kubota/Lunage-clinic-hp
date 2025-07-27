@@ -73,6 +73,9 @@ export default function Header() {
             <Link href="/menu" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Menu
             </Link>
+            <Link href="/pricing" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
+              Pricing
+            </Link>
             {/* <Link href="/#doctor" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Doctor
             </Link> */}
@@ -164,6 +167,15 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Menu
+                  </Link>
+                </motion.div>
+                <motion.div variants={menuItemVariants}>
+                  <Link
+                    href="/pricing"
+                    className="block px-4 py-3 text-[#54585f] hover:text-[#DDCDB9] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Pricing
                   </Link>
                 </motion.div>
                 {/* <motion.div variants={menuItemVariants}>

@@ -4,22 +4,13 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { easeOut } from "framer-motion";
+import { concernsData } from "../data/menuData";
 
-// Simple menu items based on the original site
-const menuItems = [
-  { name: "肌診断", href: "/menu#skin-diagnosis" },
-  { name: "たるみ", href: "/menu#sagging" },
-  { name: "痩身", href: "/menu#slimming" },
-  { name: "しみ・肝斑", href: "/menu#spots-melasma" },
-  { name: "毛穴・ニキビ跡", href: "/menu#pores-acne-scars" },
-  { name: "肌荒れ", href: "/menu#acne-inflammation" },
-  { name: "薄毛", href: "/menu#hair-loss" },
-  { name: "脱毛", href: "/menu#hair-removal" },
-  { name: "鎮静", href: "/menu#soothing" },
-  { name: "ハリ・艶", href: "/menu#firmness-glow" },
-  { name: "しわ", href: "/menu#wrinkles" },
-  { name: "ボディ", href: "/menu#body" }
-];
+// メニューアイテムを共通データから生成
+const menuItems = Object.entries(concernsData).map(([key, category]) => ({
+  name: category.title,
+  href: `/menu#${key}`
+}));
 
 export default function MenuSection() {
   const [ref, inView] = useInView({
