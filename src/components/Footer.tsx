@@ -13,7 +13,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-2 text-[#dacacf] font-shippori">
               <p>〒150-0001</p>
-              <p>東京都渋谷区神宮前3-2-17 上田ビル201</p>
+              <p>東京都渋谷区神宮前3-2-17 上田ビル202</p>
               <p className="mt-4">
                 TEL: <a href="tel:03-4400-9519" className="text-[#DDCDB9] hover:text-white transition-colors">03-4400-9519</a>
               </p>

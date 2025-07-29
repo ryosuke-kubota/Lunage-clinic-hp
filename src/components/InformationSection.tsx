@@ -26,7 +26,7 @@ export default function InformationSection() {
                     <span className="w-20 text-[#8a6d62] font-medium">住所</span>
                     <div>
                       <p>〒150-0001</p>
-                      <p>東京都渋谷区神宮前3-2-17 上田ビル201</p>
+                      <p>東京都渋谷区神宮前3-2-17 上田ビル202</p>
                     </div>
                   </div>
 
