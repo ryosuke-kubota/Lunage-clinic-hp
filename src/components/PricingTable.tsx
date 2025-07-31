@@ -1,7 +1,7 @@
 "use client";
 
 import { useInView } from "react-intersection-observer";
-import { concernsData, formatPrice, type Treatment, type Category } from "../data/menuData";
+import { equipmentData, formatPrice, type Treatment, type Category } from "../data/menuData";
 
 export default function PricingTable() {
   const [ref, inView] = useInView({
@@ -10,7 +10,7 @@ export default function PricingTable() {
   });
 
   // データが存在するかチェック
-  if (!concernsData || Object.keys(concernsData).length === 0) {
+  if (!equipmentData || Object.keys(equipmentData).length === 0) {
     return (
       <section className="py-8 sm:py-16 bg-[#faf3ef]">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -45,7 +45,7 @@ export default function PricingTable() {
         <div
           className="space-y-8"
         >
-          {Object.entries(concernsData).map(([key, category]) => (
+          {Object.entries(equipmentData).map(([key, category]) => (
             <div key={key} className="bg-white rounded-xl shadow-lg overflow-hidden">
               {/* カテゴリヘッダー */}
               <div className="bg-[#c2ac94] text-white px-6 py-4">
