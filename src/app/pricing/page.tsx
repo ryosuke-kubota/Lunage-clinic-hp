@@ -5,14 +5,14 @@ import PricingTable from "@/components/PricingTable";
 
 export const metadata: Metadata = {
   title: "料金一覧表 | 表参道の美肌治療専門クリニック ルナージュクリニック",
-  description: "ルナージュクリニックの全施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
-  keywords: "料金一覧, 美容施術料金, メンバー価格, 表参道, ルナージュクリニック",
+  description: "ルナージュクリニックの機械別施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
+  keywords: "機械別料金一覧, 美容機器, 施術料金, メンバー価格, 表参道, ルナージュクリニック",
   alternates: {
     canonical: "/pricing",
   },
   openGraph: {
     title: "料金一覧表 | ルナージュクリニック",
-    description: "ルナージュクリニックの全施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
+    description: "ルナージュクリニックの機械別施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
     url: "https://lunage-clinic.com/pricing",
     siteName: "ルナージュクリニック",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "料金一覧表 | ルナージュクリニック",
-    description: "ルナージュクリニックの全施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
+    description: "ルナージュクリニックの機械別施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
     images: ["/images/ogp.png"],
   },
 };

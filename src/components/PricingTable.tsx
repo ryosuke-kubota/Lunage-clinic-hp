@@ -31,7 +31,7 @@ export default function PricingTable() {
         >
           <div className="flex items-center justify-center mb-6">
             <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
-            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">機械別料金一覧表</span>
+            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">料金一覧表</span>
           </div>
           <h1 className="text-2xl md:text-5xl font-shippori font-light text-[#54585f] mb-4">
             Equipment Menu
