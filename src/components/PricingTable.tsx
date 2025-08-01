@@ -31,13 +31,13 @@ export default function PricingTable() {
         >
           <div className="flex items-center justify-center mb-6">
             <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
-            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">料金一覧表</span>
+            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">機械別料金一覧表</span>
           </div>
           <h1 className="text-2xl md:text-5xl font-shippori font-light text-[#54585f] mb-4">
-            Pricing Table
+            Equipment Menu
           </h1>
           <p className="text-[#54585f] text-sm max-w-2xl mx-auto">
-            全施術の料金を一覧でご確認いただけます
+            機械別に全施術の料金を一覧でご確認いただけます
           </p>
         </div>
 
@@ -64,13 +64,13 @@ export default function PricingTable() {
                             <div className="font-medium text-[#54585f] text-xs sm:text-base">
                               {treatment.name}
                             </div>
+                            {treatment.branch && (
+                              <div className="text-xs text-[#8a6d62] mt-1">
+                                {treatment.branch}
+                              </div>
+                            )}
                           </div>
                         </td>
-                        {/* <td className="px-6 py-4 border-b border-[#dacacf]/10 hidden sm:table-cell">
-                          <div className="text-xs md:text-sm text-[#54585f]">
-                            {treatment.equipment}
-                          </div>
-                        </td> */}
                         <td className="px-3 py-4 border-b border-[#dacacf]/10 text-right">
                           <div className="space-y-1">
                             {treatment.specialPriceName ? (

@@ -12,25 +12,33 @@ const concernCategories = [
   { id: "pores-acne-scars", name: "毛穴・ニキビ跡", icon: "🌸", anchor: "#pores-acne-scars" },
   { id: "acne-inflammation", name: "肌荒れ", icon: "🩹", anchor: "#acne-inflammation" },
   { id: "hair-loss", name: "薄毛", icon: "💆", anchor: "#hair-loss" },
+  { id: "hair-growth", name: "育毛", icon: "🌱", anchor: "#hair-growth" },
   { id: "hair-removal", name: "脱毛", icon: "⚡", anchor: "#hair-removal" },
   { id: "soothing", name: "鎮静", icon: "🌿", anchor: "#soothing" },
-  { id: "glow-firmness", name: "ハリ・艶", icon: "✨", anchor: "#glow-firmness" },
-  { id: "body", name: "ボディ", icon: "💆‍♀️", anchor: "#body" }
+  { id: "pores-firmness-glow", name: "毛穴・ハリ・艶", icon: "✨", anchor: "#pores-firmness-glow" },
+  { id: "body", name: "ボディ", icon: "💆‍♀️", anchor: "#body" },
+  { id: "others", name: "その他", icon: "🔧", anchor: "#others" }
 ];
 
 // 機械別カテゴリ
 const equipmentCategories = [
-  { id: "hifu", name: "HIFU（ハイフ）", icon: "🔥", anchor: "#hifu" },
+  { id: "skin-diagnosis", name: "肌診断機x", icon: "🔍", anchor: "#skin-diagnosis" },
+  { id: "customize-hifu", name: "カスタマイズHIFU", icon: "🔥", anchor: "#customize-hifu" },
+  { id: "ultraformer", name: "ウルトラフォーマー", icon: "🔥", anchor: "#ultraformer" },
+  { id: "ondalift", name: "オンダリフト", icon: "⚡", anchor: "#ondalift" },
   { id: "ldm", name: "LDM", icon: "🌊", anchor: "#ldm" },
   { id: "potenza", name: "POTENZA", icon: "⚡", anchor: "#potenza" },
   { id: "soprano", name: "ソプラノ", icon: "💎", anchor: "#soprano" },
+  { id: "peeling", name: "ピーリング", icon: "🧴", anchor: "#peeling" },
   { id: "coolgun", name: "クールガン", icon: "❄️", anchor: "#coolgun" },
-  { id: "dermapen", name: "ダーマペン４", icon: "💉", anchor: "#dermapen" },
+  { id: "dermapen4", name: "ダーマペン４", icon: "💉", anchor: "#dermapen4" },
   { id: "hydrafacial", name: "ハイドラフェイシャル", icon: "💧", anchor: "#hydrafacial" },
   { id: "picoway", name: "Picoway", icon: "⚡", anchor: "#picoway" },
-  { id: "mesogun", name: "メソガンU225", icon: "🎯", anchor: "#mesogun" },
+  { id: "mesogun", name: "メソガン", icon: "🎯", anchor: "#mesogun" },
   { id: "sofwave", name: "ソフウェーブ", icon: "🌊", anchor: "#sofwave" },
-  { id: "emface", name: "EMFACE", icon: "⚡", anchor: "#emface" }
+  { id: "emface", name: "EMFACE", icon: "⚡", anchor: "#emface" },
+  { id: "thermacool", name: "サーマクール", icon: "🔥", anchor: "#thermacool" },
+  { id: "others", name: "その他の機器", icon: "🔧", anchor: "#others" }
 ];
 
 export default function MenuNavigation() {
