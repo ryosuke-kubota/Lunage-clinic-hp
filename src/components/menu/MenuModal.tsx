@@ -13,6 +13,7 @@ interface Treatment {
   contents?: string;
   treatmentTime?: string;
   specialPriceName?: string;
+  image?: string;
 }
 
 interface MenuModalProps {
@@ -85,16 +86,26 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
               <div className="p-6">
                 {/* 画像エリア */}
                 <div className="mb-6">
-                  <div className="aspect-video bg-gradient-to-br from-[#faf3ef] to-[#f0e6d6] rounded-xl flex items-center justify-center border border-[#dacacf]/20">
-                    <div className="text-center text-[#8b4513]/50">
-                      <div className="w-16 h-16 mx-auto mb-3 opacity-30">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM4 7v10h16V7H4zm8 2l5 4H7l5-4z"/>
-                        </svg>
-                      </div>
-                      <p className="text-sm">施術イメージ</p>
+                  {treatment.image ? (
+                    <div className="aspect-video rounded-xl overflow-hidden border border-[#dacacf]/20">
+                      <img
+                        src={treatment.image}
+                        alt={`${treatment.name}の施術イメージ`}
+                        className="w-auto h-full mx-auto object-cover"
+                      />
                     </div>
-                  </div>
+                  ) : (
+                    <div className="aspect-video bg-gradient-to-br from-[#faf3ef] to-[#f0e6d6] rounded-xl flex items-center justify-center border border-[#dacacf]/20">
+                      <div className="text-center text-[#8b4513]/50">
+                        <div className="w-16 h-16 mx-auto mb-3 opacity-30">
+                          <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM4 7v10h16V7H4zm8 2l5 4H7l5-4z"/>
+                          </svg>
+                        </div>
+                        <p className="text-sm">施術イメージ</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* 機器情報 */}

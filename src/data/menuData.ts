@@ -9,6 +9,7 @@ export interface Treatment {
   contents?: string;
   treatmentTime?: string;
   specialPriceName?: string;
+  image?: string;
 }
 
 // カテゴリの型定義
@@ -125,6 +126,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "顔/首",
         equipment: "ソフウェーブ",
+        image: "/images/testimonials/sofwave.JPG",
         description: "7MHzの超音波を皮膚真皮中層に照射し、熱刺激によりコラーゲンの生成を促す非侵襲的な施術です。皮膚表面を傷つけずに、目元やフェイスラインなどの変化にアプローチでき、エイジングケアを意識する方に選ばれています。",
         memberPrice: "99000",
         regularPrice: "108900"
@@ -132,6 +134,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "顔・首",
         equipment: "ソフウェーブ",
+        image: "/images/testimonials/sofwave.JPG",
         description: "7MHzの超音波を皮膚真皮中層に照射し、熱刺激によりコラーゲンの生成を促す非侵襲的な施術です。皮膚表面を傷つけずに、目元やフェイスラインなどの変化にアプローチでき、エイジングケアを意識する方に選ばれています。",
         memberPrice: "130000",
         regularPrice: "143000"
@@ -139,6 +142,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "額・目の下・頬・あご下から2エリア",
         equipment: "EMFACE",
+        image: "/images/testimonials/emface.JPG",
         description: "高周波（RF）と筋肉刺激（HIFES）を同時に照射し、皮膚と表情筋の両方にアプローチする技術です。非侵襲的に筋肉の収縮を促すことで、リフト感や引き締まった輪郭の印象を目指します。施術後のダウンタイムもほとんどなく、短時間でのケアが可能です。",
         memberPrice: "99000",
         regularPrice: "108900"
@@ -146,6 +150,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "顔",
         equipment: "サーマクール",
+        image: "/images/testimonials/thermacool.JPG",
         description: "高周波（RF）を皮膚深部に届けることで、コラーゲン繊維の収縮および再構築を促し、肌の弾力や輪郭の変化が期待されます。リアルタイムで温度をモニターしながら照射できるため、安全性と快適性に配慮した治療が可能です。",
         memberPrice: "99000",
         regularPrice: "108900"
@@ -153,6 +158,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "顔・首",
         equipment: "サーマクール",
+        image: "/images/testimonials/thermacool.JPG",
         description: "高周波（RF）を皮膚深部に届けることで、コラーゲン繊維の収縮および再構築を促し、肌の弾力や輪郭の変化が期待されます。リアルタイムで温度をモニターしながら照射できるため、安全性と快適性に配慮した治療が可能です。",
         memberPrice: "150000",
         regularPrice: "165000"
@@ -253,6 +259,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "全顔",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "極細針で肌に微細な刺激を与え、コラーゲン生成を促進。毛穴・ニキビ跡・小ジワの改善に有効な再生治療です。",
         memberPrice: "12000",
         regularPrice: "13200"
@@ -260,6 +267,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "ボディ",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "極細針で肌に微細な刺激を与え、コラーゲン生成を促進。毛穴・ニキビ跡・小ジワの改善に有効な再生治療です。",
         memberPrice: "30000",
         regularPrice: "33000"
@@ -267,6 +275,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "ボトックスフェイシャル",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。肌質改善により、マスクの蒸れや夏場のメイク崩れが軽減されます。",
         memberPrice: "23000",
         regularPrice: "25300"
@@ -274,6 +283,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "ヴェルヴェットスキン",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "ダーマペンで肌に微細な穴を開けた直後にピーリング剤を導入。ハリ・ツヤ・毛穴・ニキビ跡を同時にケアするトリートメントです。",
         memberPrice: "17000",
         regularPrice: "18700"
@@ -281,6 +291,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "ダーマペンエクソソーム",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら肌内部へ届けることで、肌の水分保持やキメ、ハリのある印象の維持をサポートします。加齢やニキビ跡が気になる方に適したケアです。",
         memberPrice: "31800",
         regularPrice: "31800"
@@ -359,6 +370,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "ヘアダーマ",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "極細針で頭皮に微細な刺激を与え、血流促進と毛包の活性化を促進。薄毛・抜け毛の改善に有効な再生治療です。",
         regularPrice: "準備中"
       }
@@ -524,6 +536,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "プラセンタフェイシャル",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         branch: "プラセンタ",
         description: "アミノ酸やビタミン、ミネラルを豊富に含むプラセンタ製剤を、LDMの超音波振動によって肌深部へ導入する施術です。ハリ感や潤いを意識した肌ケアとして用いられ、年齢や乾燥による肌状態の変化が気になる方に適したメニューとなっています。",
         memberPrice: "20000",
@@ -539,6 +552,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "Pluryal Densify",
         equipment: "メソガンU225",
+        image: "/images/testimonials/u225.JPG",
         description: "ペプチド・アミノ酸・ヒアルロン酸を含む高濃度製剤が線維芽細胞を刺激し、コラーゲン・エラスチンの産生を促進。毛穴・小ジワ・ハリ低下の原因にアプローチします。",
         regularPrice: "計算中"
       },
@@ -583,6 +597,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "妊娠線ケア",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "妊娠や急激な体重変化により生じた線状皮膚萎縮（いわゆる妊娠線）に対し、ダーマペンで微細な穿孔を行い、皮膚の創傷治癒機構を利用して滑らかでふっくらとした肌質感を目指します。併用するミラノリピールは、TCA、ラクトビオン酸、サリチル酸、タルトル酸（酒石酸）、クエン酸の5種類の酸が配合されているピーリング治療です。これらの酸のピーリング効果に加えて、アミノ酸やビタミンが直接的に肌細胞を刺激し、Ⅲ型コラーゲンを増やして、エラスチンやヒアルロン酸を作る手助けをします。また、保湿成分のスクワラン、ビタミンＢ、Ｃ、GABA、アルギニンなどの成分も配合されています。TCAの濃度がマッサージピールよりも高いため、皮むけのリスクはその分高まりますが、配合成分の違いによって、ミラノリピールのほうが施術中の痛みを感じにくいと言われています。肌の奥に働きかける刺激で、硬くなった妊娠線周辺の皮膚にハリや柔軟性を感じやすく、回数を重ねることで線が徐々に目立ちにくくなる印象を目指します。",
         memberPrice: "45000",
         regularPrice: "49500"
@@ -1011,6 +1026,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "全顔",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "極細針で肌に微細な刺激を与え、コラーゲン生成を促進。毛穴・ニキビ跡・小ジワの改善に有効な再生治療です。",
         memberPrice: "12000",
         regularPrice: "13200"
@@ -1018,6 +1034,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "ボディ",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "極細針で肌に微細な刺激を与え、コラーゲン生成を促進。毛穴・ニキビ跡・小ジワの改善に有効な再生治療です。",
         memberPrice: "30000",
         regularPrice: "33000"
@@ -1025,6 +1042,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "ボトックスフェイシャル",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。肌質改善により、マスクの蒸れや夏場のメイク崩れが軽減されます。",
         memberPrice: "23000",
         regularPrice: "25300"
@@ -1032,6 +1050,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "ヴェルヴェットスキン",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "ダーマペンで肌に微細な穴を開けた直後にピーリング剤を導入。ハリ・ツヤ・毛穴・ニキビ跡を同時にケアするトリートメントです。",
         memberPrice: "17000",
         regularPrice: "18700"
@@ -1039,6 +1058,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "プラセンタフェイシャル",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         branch: "プラセンタ",
         description: "アミノ酸やビタミン、ミネラルを豊富に含むプラセンタ製剤を、LDMの超音波振動によって肌深部へ導入する施術です。ハリ感や潤いを意識した肌ケアとして用いられ、年齢や乾燥による肌状態の変化が気になる方に適したメニューとなっています。",
         memberPrice: "20000",
@@ -1047,6 +1067,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "ダーマペンエクソソーム",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら肌内部へ届けることで、肌の水分保持やキメ、ハリのある印象の維持をサポートします。加齢やニキビ跡が気になる方に適したケアです。",
         memberPrice: "31800",
         regularPrice: "31800"
@@ -1054,6 +1075,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "妊娠線ケア",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "妊娠や急激な体重変化により生じた線状皮膚萎縮（いわゆる妊娠線）に対し、ダーマペンで微細な穿孔を行い、皮膚の創傷治癒機構を利用して滑らかでふっくらとした肌質感を目指します。併用するミラノリピールは、TCA、ラクトビオン酸、サリチル酸、タルトル酸（酒石酸）、クエン酸の5種類の酸が配合されているピーリング治療です。これらの酸のピーリング効果に加えて、アミノ酸やビタミンが直接的に肌細胞を刺激し、Ⅲ型コラーゲンを増やして、エラスチンやヒアルロン酸を作る手助けをします。また、保湿成分のスクワラン、ビタミンＢ、Ｃ、GABA、アルギニンなどの成分も配合されています。TCAの濃度がマッサージピールよりも高いため、皮むけのリスクはその分高まりますが、配合成分の違いによって、ミラノリピールのほうが施術中の痛みを感じにくいと言われています。肌の奥に働きかける刺激で、硬くなった妊娠線周辺の皮膚にハリや柔軟性を感じやすく、回数を重ねることで線が徐々に目立ちにくくなる印象を目指します。",
         memberPrice: "45000",
         regularPrice: "49500"
@@ -1061,6 +1083,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "ヘアダーマ",
         equipment: "ダーマペン４",
+        image: "/images/testimonials/dermapen.PNG",
         description: "極細針で頭皮に微細な刺激を与え、血流促進と毛包の活性化を促進。薄毛・抜け毛の改善に有効な再生治療です。",
         regularPrice: "準備中"
       }
@@ -1106,6 +1129,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "Pluryal Densify",
         equipment: "メソガンU225",
+        image: "/images/testimonials/u225.JPG",
         description: "ペプチド・アミノ酸・ヒアルロン酸を含む高濃度製剤が線維芽細胞を刺激し、コラーゲン・エラスチンの産生を促進。毛穴・小ジワ・ハリ低下の原因にアプローチします。",
         regularPrice: "計算中"
       },
@@ -1148,6 +1172,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "顔/首",
         equipment: "ソフウェーブ",
+        image: "/images/testimonials/sofwave.JPG",
         description: "7MHzの超音波を皮膚真皮中層に照射し、熱刺激によりコラーゲンの生成を促す非侵襲的な施術です。皮膚表面を傷つけずに、目元やフェイスラインなどの変化にアプローチでき、エイジングケアを意識する方に選ばれています。",
         memberPrice: "99000",
         regularPrice: "108900"
@@ -1155,6 +1180,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "顔・首",
         equipment: "ソフウェーブ",
+        image: "/images/testimonials/sofwave.JPG",
         description: "7MHzの超音波を皮膚真皮中層に照射し、熱刺激によりコラーゲンの生成を促す非侵襲的な施術です。皮膚表面を傷つけずに、目元やフェイスラインなどの変化にアプローチでき、エイジングケアを意識する方に選ばれています。",
         memberPrice: "130000",
         regularPrice: "143000"
@@ -1168,6 +1194,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "額・目の下・頬・あご下から2エリア",
         equipment: "EMFACE",
+        image: "/images/testimonials/emface.JPG",
         description: "高周波（RF）と筋肉刺激（HIFES）を同時に照射し、皮膚と表情筋の両方にアプローチする技術です。非侵襲的に筋肉の収縮を促すことで、リフト感や引き締まった輪郭の印象を目指します。施術後のダウンタイムもほとんどなく、短時間でのケアが可能です。",
         memberPrice: "99000",
         regularPrice: "108900"
@@ -1181,6 +1208,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "顔",
         equipment: "サーマクール",
+        image: "/images/testimonials/thermacool.JPG",
         description: "高周波（RF）を皮膚深部に届けることで、コラーゲン繊維の収縮および再構築を促し、肌の弾力や輪郭の変化が期待されます。リアルタイムで温度をモニターしながら照射できるため、安全性と快適性に配慮した治療が可能です。",
         memberPrice: "99000",
         regularPrice: "108900"
@@ -1188,6 +1216,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "顔・首",
         equipment: "サーマクール",
+        image: "/images/testimonials/thermacool.JPG",
         description: "高周波（RF）を皮膚深部に届けることで、コラーゲン繊維の収縮および再構築を促し、肌の弾力や輪郭の変化が期待されます。リアルタイムで温度をモニターしながら照射できるため、安全性と快適性に配慮した治療が可能です。",
         memberPrice: "150000",
         regularPrice: "165000"
