@@ -64,28 +64,28 @@ export const concernsData: Record<string, Category> = {
       },
       {
         name: "全顔・首",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         description: "高密度焦点式超音波（HIFU）を真皮やSMAS層に照射することで、熱によるコラーゲン変性と収縮が起こり、肌のハリ感や輪郭の引き締まり感が期待されます。照射深度を部位に合わせて調整でき、個々の状態に応じたケアが可能です。",
         memberPrice: "88000",
         regularPrice: "96800"
       },
       {
         name: "頬・顎下",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         description: "高密度焦点式超音波（HIFU）を真皮やSMAS層に照射することで、熱によるコラーゲン変性と収縮が起こり、肌のハリ感や輪郭の引き締まり感が期待されます。照射深度を部位に合わせて調整でき、個々の状態に応じたケアが可能です。",
         memberPrice: "44000",
         regularPrice: "48400"
       },
       {
         name: "顎下・首",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         description: "高密度焦点式超音波（HIFU）を真皮やSMAS層に照射することで、熱によるコラーゲン変性と収縮が起こり、肌のハリ感や輪郭の引き締まり感が期待されます。照射深度を部位に合わせて調整でき、個々の状態に応じたケアが可能です。",
         memberPrice: "44000",
         regularPrice: "48400"
       },
       {
         name: "ハイフシャワー全顔",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         description: "皮膚の表層に優しい熱を入れることでその場でむくみを軽減する効果が期待できます。コラーゲンの産生も促進されるので定期的な施術で美肌効果も期待できます。細身で頬のコケが気になる方にもおすすめのメニューです。",
         memberPrice: "33000",
         regularPrice: "36300"
@@ -171,7 +171,7 @@ export const concernsData: Record<string, Category> = {
     treatments: [
       {
         name: "ボディMパーツ",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         branch: "背中上部、背中下部、二の腕（左右）、腰、臀部（バナナロール）、ふくらはぎ、腹部、ウエスト",
         description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
         memberPrice: "50000",
@@ -179,7 +179,7 @@ export const concernsData: Record<string, Category> = {
       },
       {
         name: "ボディLパーツ",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         branch: "大腿前面・大腿後面・大腿内側（左右）",
         description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
         memberPrice: "65000",
@@ -684,40 +684,40 @@ export const equipmentData: Record<string, Category> = {
     ]
   },
   "ultraformer": {
-    title: "ウルトラフォーマー",
+    title: "ウルトラフォーマーMPT",
     description: "高密度焦点式超音波（HIFU）による引き締め治療",
     treatments: [
       {
         name: "全顔・首",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         description: "高密度焦点式超音波（HIFU）を真皮やSMAS層に照射することで、熱によるコラーゲン変性と収縮が起こり、肌のハリ感や輪郭の引き締まり感が期待されます。照射深度を部位に合わせて調整でき、個々の状態に応じたケアが可能です。",
         memberPrice: "88000",
         regularPrice: "96800"
       },
       {
         name: "頬・顎下",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         description: "高密度焦点式超音波（HIFU）を真皮やSMAS層に照射することで、熱によるコラーゲン変性と収縮が起こり、肌のハリ感や輪郭の引き締まり感が期待されます。照射深度を部位に合わせて調整でき、個々の状態に応じたケアが可能です。",
         memberPrice: "44000",
         regularPrice: "48400"
       },
       {
         name: "顎下・首",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         description: "高密度焦点式超音波（HIFU）を真皮やSMAS層に照射することで、熱によるコラーゲン変性と収縮が起こり、肌のハリ感や輪郭の引き締まり感が期待されます。照射深度を部位に合わせて調整でき、個々の状態に応じたケアが可能です。",
         memberPrice: "44000",
         regularPrice: "48400"
       },
       {
         name: "ハイフシャワー全顔",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         description: "皮膚の表層に優しい熱を入れることでその場でむくみを軽減する効果が期待できます。コラーゲンの産生も促進されるので定期的な施術で美肌効果も期待できます。細身で頬のコケが気になる方にもおすすめのメニューです。",
         memberPrice: "33000",
         regularPrice: "36300"
       },
       {
         name: "ボディMパーツ",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         branch: "背中上部、背中下部、二の腕（左右）、腰、臀部（バナナロール）、ふくらはぎ、腹部、ウエスト",
         description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
         memberPrice: "50000",
@@ -725,7 +725,7 @@ export const equipmentData: Record<string, Category> = {
       },
       {
         name: "ボディLパーツ",
-        equipment: "ウルトラフォーマー",
+        equipment: "ウルトラフォーマーMPT",
         branch: "大腿前面・大腿後面・大腿内側（左右）",
         description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
         memberPrice: "65000",
