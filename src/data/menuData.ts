@@ -38,7 +38,7 @@ export const concernsData: Record<string, Category> = {
       {
         name: "肌診断",
         equipment: "肌診断機x",
-        description: "最新のカメラを用いて、肌の状態を詳細に分析する肌診断器です。シミ、しわ、毛穴など、様々な肌トラブルを数値化し、肌年齢を推定。肌治療前に測定することでベストな治療の提案に役立ちます。",
+        description: "最新のカメラを用いて、肌の状態を詳細に分析する肌診断器です。シミ、しわ、毛穴など、様々な肌トラブルを数値化し、肌年齢を推定。肌治療前に測定することでベストな治療の提案に役立ちます。肌治療を予約した方は無料で受けられます。",
         memberPrice: "3300",
         regularPrice: "3630"
       }
@@ -221,17 +221,17 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "計算中"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
-        branch: "トラネキサム酸",
-        description: "LDMのマイクロマッサージ作用により、肌に必要な成分を角質層まで届けやすくします。トラネキサム酸は肌のくすみ印象や色ムラが気になる方に用いられる成分で、LDMとの組み合わせにより、肌の明るさや均一感を意識したケアを行うことが可能です。",
-        memberPrice: "12000",
-        regularPrice: "13200"
+        branch: "ルナージュオリジナル製剤",
+        description: "LDMのマイクロマッサージ作用により、肌に必要な成分を皮膚深層まで届けやすくします。カウンセリングにてオリジナル製剤の中から最適な美容成分をご提案いたします。",
+        memberPrice: "12900",
+        regularPrice: "14190"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
-        branch: "トラネキサム酸",
+        branch: "美白",
         description: "肌のくすみ印象や色ムラが気になる方に用いられる成分で、CO2凍結との組み合わせにより、肌の明るさや均一感を意識したケアを行うことが可能です。",
         memberPrice: "15000",
         regularPrice: "16500"
@@ -277,24 +277,24 @@ export const concernsData: Record<string, Category> = {
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
         description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。肌質改善により、マスクの蒸れや夏場のメイク崩れが軽減されます。",
-        memberPrice: "23000",
-        regularPrice: "25300"
+        memberPrice: "19000",
+        regularPrice: "20900"
       },
       {
         name: "ヴェルヴェットスキン",
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
         description: "ダーマペンで肌に微細な穴を開けた直後にピーリング剤を導入。ハリ・ツヤ・毛穴・ニキビ跡を同時にケアするトリートメントです。",
-        memberPrice: "17000",
-        regularPrice: "18700"
+        memberPrice: "15000",
+        regularPrice: "16500"
       },
       {
         name: "ダーマペンエクソソーム",
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
         description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら肌内部へ届けることで、肌の水分保持やキメ、ハリのある印象の維持をサポートします。加齢やニキビ跡が気になる方に適したケアです。",
-        memberPrice: "31800",
-        regularPrice: "31800"
+        memberPrice: "47600",
+        regularPrice: "52360"
       },
       {
         name: "ハイドラフェイシャル",
@@ -357,22 +357,34 @@ export const concernsData: Record<string, Category> = {
       },
       {
         name: "Hair filler",
-        equipment: "メソガンU229",
+        equipment: "メソガンU225",
         description: "ペプチドやヒアルロン酸などを配合した製剤を頭皮に注入し、頭皮環境の健やかさを保つことを目的とした施術です。栄養成分が頭皮に行き渡ることで、ハリ・コシが気になる方の毛髪のボリューム維持をサポートします。痛くても効果重視な方におすすめ。",
-        regularPrice: "計算中"
+        memberPrice: "30000",
+        regularPrice: "33000"
       },
       {
-        name: "Hairエクソソーム",
-        equipment: "メソガンU230",
+        name: "Hair EXO",
+        equipment: "メソガンU225",
         description: "エクソソームは、頭皮環境の整備や毛包周辺へのアプローチが期待されており、注目される先端成分です。ドラッグデリバリー機器を用いて頭皮表面に微細な通路を形成し、栄養成分を効率よく浸透させる設計となっており、ボリューム感やハリ・コシが気になる方の頭皮ケアに取り入れられています。",
-        regularPrice: "計算中"
+        memberPrice: "44600",
+        regularPrice: "49060"
       },
       {
         name: "ヘアダーマ",
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
-        description: "極細針で頭皮に微細な刺激を与え、血流促進と毛包の活性化を促進。薄毛・抜け毛の改善に有効な再生治療です。",
-        regularPrice: "準備中"
+        description: "ダーマペンで頭皮に微細な刺激を与えることで、頭皮のターンオーバーを促し、健やかな環境を整えます。毛髪の土台である頭皮の状態を見直したい方におすすめ。",
+        memberPrice: "12000",
+        regularPrice: "13200"
+      },
+      {
+        name: "ヘアダーマ",
+        equipment: "ダーマペン４",
+        branch: "臍帯血幹細胞培養液導入（エクソソーム）",
+        image: "/images/testimonials/dermapen.PNG",
+        description: "国内の大学病院で各種検査をクリアした限定ドナー由来の国産エクソソームを使用。ダーマペンによる傷で浸透させ、育毛を促進します。安全性と品質にこだわった施術です。",
+        memberPrice: "47600",
+        regularPrice: "52360"
       }
     ]
   },
@@ -383,12 +395,12 @@ export const concernsData: Record<string, Category> = {
       {
         name: "ヘアクール",
         equipment: "クールガン",
-        description: "頭皮深層に超低温の二酸化炭素が残存することで血流促進効果・ボーア効果による育毛を促進します。副作用やダウンタイムはほとんどないと言われています。",
+        description: "頭皮深層に超低温の二酸化炭素が残存することで血流促進効果・ボーア効果による育毛を促進します。副作用やダウンタイムがないため前後の予定を気にせず治療を継続できます。",
         memberPrice: "12000",
         regularPrice: "13200"
       },
       {
-        name: "ヘアクール導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "Hair filler",
         description: "CO2によるボーア効果に加え、ペプチドやヒアルロン酸などを配合した製剤を頭皮に注入し、頭皮環境の健やかさを保つことを目的とした施術です。栄養成分が頭皮に行き渡ることで、ハリ・コシが気になる方の毛髪のボリューム維持をサポートします。痛みが苦手な方にオススメ。",
@@ -428,18 +440,18 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "10890"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
-        branch: "成長因子パック導入",
+        branch: "GFパック導入",
         description: "成長因子を含むパックを組み合わせることで、乾燥やキメの乱れ、肌のコンディション低下が気になる方へ、整肌を目的としたトリートメントとして使用されています。",
-        memberPrice: "12000",
-        regularPrice: "13200"
+        memberPrice: "11900",
+        regularPrice: "13090"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
-        branch: "ビタミンC",
-        description: "2021年にFDAの認証を取得。（本機器は国内未承認医療機器です。諸外国における安全性等に係る情報として、米国FDAで承認されています。）氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みが少なく、ダウンタイムもほとんどありません。",
+        branch: "ニキビ",
+        description: "ピーリング作用と抗炎症効果のある製剤をCO2凍結との組み合わせにより、皮脂量の調整や溜まった角質層のケアを行うことが可能です。",
         memberPrice: "15000",
         regularPrice: "16500"
       }
@@ -457,28 +469,28 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "10890"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
         branch: "臍帯血幹細胞培養液導入（エクソソーム）",
         description: "幹細胞由来エクソソームが損傷組織の修復を促し、抗炎症・抗酸化・細胞再生に働きかけます。ニキビ跡、赤み、加齢による肌力低下など、複合的なお悩みに効果が期待できる再生治療です。",
-        memberPrice: "18000",
-        regularPrice: "19800"
+        memberPrice: "49500",
+        regularPrice: "54450"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
         branch: "スキンボトックス",
         description: "ボツリヌストキシンが汗腺・皮脂腺の活動を抑制し、毛穴の開き・皮脂分泌・肌のテカリを軽減します。滑らかでマットな質感へ整え、メイクのりの良い陶器肌のような仕上がりが期待できます。自然な表情のまま肌質改善が可能です。",
-        memberPrice: "15000",
-        regularPrice: "16500"
+        memberPrice: "25900",
+        regularPrice: "28490"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
         branch: "プラセンタ",
         description: "アミノ酸やビタミン、ミネラルを豊富に含むプラセンタ製剤を、LDMの超音波振動によって肌深部へ導入する施術です。ハリ感や潤いを意識した肌ケアとして用いられ、年齢や乾燥による肌状態の変化が気になる方に適したメニューとなっています。",
-        memberPrice: "12000",
-        regularPrice: "13200"
+        memberPrice: "14900",
+        regularPrice: "16390"
       },
       {
         name: "マッサージピール",
@@ -494,44 +506,52 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "計算中"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
+        equipment: "クールガン",
+        branch: "臍帯血幹細胞培養液導入（エクソソーム）",
+        description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら頭皮深層へ届けることで、毛母細胞の活性化やダメージを受けた組織の修復を通して育毛効果を期待できます。",
+        memberPrice: "35000",
+        regularPrice: "38500"
+      },
+      {
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "Pluryal Densify",
         description: "ペプチド・アミノ酸・ヒアルロン酸を含む高濃度製剤が線維芽細胞を刺激し、コラーゲン・エラスチンの産生を促進。毛穴・小ジワ・ハリ低下の原因にアプローチします。",
-        memberPrice: "35000",
-        regularPrice: "38500"
+        memberPrice: "33000",
+        regularPrice: "36300"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "臍帯血幹細胞培養液導入（エクソソーム）",
         description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら肌内部へ届けることで、肌の水分保持やキメ、ハリのある印象の維持をサポートします。加齢やニキビ跡が気になる方に適したケアです。",
-        memberPrice: "35000",
-        regularPrice: "38500"
+        memberPrice: "47600",
+        regularPrice: "52360"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "スキンボトックス",
         description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。肌質改善により、マスクの蒸れや夏場のメイク崩れが軽減されます。",
-        memberPrice: "32000",
-        regularPrice: "35200"
+        memberPrice: "19000",
+        regularPrice: "20900"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "LIZNE",
         description: "ポリヌクレオチド（PN）、低分子ヒアルロン酸、ペプチド、コエンザイムなどが配合されており、肌の水分保持力やハリ感に働きかけることが期待されます。毛穴やざらつき、乾燥感など、肌の質感変化が気になる方に選ばれています。",
-        memberPrice: "35000",
-        regularPrice: "38500"
+        memberPrice: "23000",
+        regularPrice: "25300"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "プラセンタ",
         description: "アミノ酸やビタミン、ミネラルを豊富に含むプラセンタ製剤を、LDMの超音波振動によって肌深部へ導入する施術です。ハリ感や潤いを意識した肌ケアとして用いられ、年齢や乾燥による肌状態の変化が気になる方に適したメニューとなっています。",
-        memberPrice: "15000",
-        regularPrice: "16500"
+        memberPrice: "13000",
+        regularPrice: "14300"
       },
       {
         name: "プラセンタフェイシャル",
@@ -539,8 +559,8 @@ export const concernsData: Record<string, Category> = {
         image: "/images/testimonials/dermapen.PNG",
         branch: "プラセンタ",
         description: "アミノ酸やビタミン、ミネラルを豊富に含むプラセンタ製剤を、LDMの超音波振動によって肌深部へ導入する施術です。ハリ感や潤いを意識した肌ケアとして用いられ、年齢や乾燥による肌状態の変化が気になる方に適したメニューとなっています。",
-        memberPrice: "20000",
-        regularPrice: "22000"
+        memberPrice: "13000",
+        regularPrice: "14300"
       },
       {
         name: "cp21導入",
@@ -554,25 +574,29 @@ export const concernsData: Record<string, Category> = {
         equipment: "メソガンU225",
         image: "/images/testimonials/u225.JPG",
         description: "ペプチド・アミノ酸・ヒアルロン酸を含む高濃度製剤が線維芽細胞を刺激し、コラーゲン・エラスチンの産生を促進。毛穴・小ジワ・ハリ低下の原因にアプローチします。",
-        regularPrice: "計算中"
+        memberPrice: "30000",
+        regularPrice: "33000"
       },
       {
         name: "LIZNE",
-        equipment: "メソガンU226",
+        equipment: "メソガンU225",
         description: "ポリヌクレオチド（PN）、低分子ヒアルロン酸、ペプチド、コエンザイムなどが配合されており、肌の水分保持力やハリ感に働きかけることが期待されます。毛穴やざらつき、乾燥感など、肌の質感変化が気になる方に選ばれています。",
-        regularPrice: "計算中"
+        memberPrice: "20000",
+        regularPrice: "22000"
       },
       {
         name: "臍帯血幹細胞培養液導入（エクソソーム）",
-        equipment: "メソガンU227",
-        description: "ASCE+は幹細胞由来エクソソームを含む整肌製剤で、成長因子、ペプチド、アミノ酸などの有用成分を豊富に含んでいます。ドラッグデリバリー機器により微細な経路を形成しながら肌に導入することで、乾燥・ざらつき・ハリの低下が気になる肌に潤いと健やかさを与えるケアとして選ばれています。",
-        regularPrice: "計算中"
+        equipment: "メソガンU225",
+        description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら肌内部へ届けることで、肌の水分保持やキメ、ハリのある印象の維持をサポートします。加齢やニキビ跡が気になる方に適したケアです。",
+        memberPrice: "44600",
+        regularPrice: "49060"
       },
       {
         name: "スキンボトックス",
-        equipment: "メソガンU228",
+        equipment: "メソガンU225",
         description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。肌質改善により、マスクの蒸れや夏場のメイク崩れが軽減されます。",
-        regularPrice: "計算中"
+        memberPrice: "16000",
+        regularPrice: "17600"
       }
     ]
   },
@@ -599,8 +623,8 @@ export const concernsData: Record<string, Category> = {
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
         description: "妊娠や急激な体重変化により生じた線状皮膚萎縮（いわゆる妊娠線）に対し、ダーマペンで微細な穿孔を行い、皮膚の創傷治癒機構を利用して滑らかでふっくらとした肌質感を目指します。併用するミラノリピールは、TCA、ラクトビオン酸、サリチル酸、タルトル酸（酒石酸）、クエン酸の5種類の酸が配合されているピーリング治療です。これらの酸のピーリング効果に加えて、アミノ酸やビタミンが直接的に肌細胞を刺激し、Ⅲ型コラーゲンを増やして、エラスチンやヒアルロン酸を作る手助けをします。また、保湿成分のスクワラン、ビタミンＢ、Ｃ、GABA、アルギニンなどの成分も配合されています。TCAの濃度がマッサージピールよりも高いため、皮むけのリスクはその分高まりますが、配合成分の違いによって、ミラノリピールのほうが施術中の痛みを感じにくいと言われています。肌の奥に働きかける刺激で、硬くなった妊娠線周辺の皮膚にハリや柔軟性を感じやすく、回数を重ねることで線が徐々に目立ちにくくなる印象を目指します。",
-        memberPrice: "45000",
-        regularPrice: "49500"
+        memberPrice: "69600",
+        regularPrice: "76560"
       }
     ]
   },
@@ -633,7 +657,7 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "肌診断",
         equipment: "肌診断機x",
-        description: "最新のカメラを用いて、肌の状態を詳細に分析する肌診断器です。シミ、しわ、毛穴など、様々な肌トラブルを数値化し、肌年齢を推定。肌治療前に測定することでベストな治療の提案に役立ちます。",
+        description: "最新のカメラを用いて、肌の状態を詳細に分析する肌診断器です。シミ、しわ、毛穴など、様々な肌トラブルを数値化し、肌年齢を推定。肌治療前に測定することでベストな治療の提案に役立ちます。肌治療を予約した方は無料で受けられます。",
         memberPrice: "3300",
         regularPrice: "3630"
       }
@@ -785,44 +809,44 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "10890"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
-        branch: "成長因子パック導入",
+        branch: "GFパック導入",
         description: "成長因子を含むパックを組み合わせることで、乾燥やキメの乱れ、肌のコンディション低下が気になる方へ、整肌を目的としたトリートメントとして使用されています。",
-        memberPrice: "12000",
-        regularPrice: "13200"
+        memberPrice: "11900",
+        regularPrice: "13090"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
         branch: "臍帯血幹細胞培養液導入（エクソソーム）",
         description: "幹細胞由来エクソソームが損傷組織の修復を促し、抗炎症・抗酸化・細胞再生に働きかけます。ニキビ跡、赤み、加齢による肌力低下など、複合的なお悩みに効果が期待できる再生治療です。",
-        memberPrice: "18000",
-        regularPrice: "19800"
+        memberPrice: "49500",
+        regularPrice: "54450"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
         branch: "スキンボトックス",
         description: "ボツリヌストキシンが汗腺・皮脂腺の活動を抑制し、毛穴の開き・皮脂分泌・肌のテカリを軽減します。滑らかでマットな質感へ整え、メイクのりの良い陶器肌のような仕上がりが期待できます。自然な表情のまま肌質改善が可能です。",
-        memberPrice: "15000",
-        regularPrice: "16500"
+        memberPrice: "25900",
+        regularPrice: "28490"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
         branch: "プラセンタ",
         description: "アミノ酸やビタミン、ミネラルを豊富に含むプラセンタ製剤を、LDMの超音波振動によって肌深部へ導入する施術です。ハリ感や潤いを意識した肌ケアとして用いられ、年齢や乾燥による肌状態の変化が気になる方に適したメニューとなっています。",
-        memberPrice: "12000",
-        regularPrice: "13200"
+        memberPrice: "14900",
+        regularPrice: "16390"
       },
       {
-        name: "超音波導入",
+        name: "水玉スペシャル",
         equipment: "LDM",
-        branch: "トラネキサム酸",
-        description: "LDMのマイクロマッサージ作用により、肌に必要な成分を角質層まで届けやすくします。トラネキサム酸は肌のくすみ印象や色ムラが気になる方に用いられる成分で、LDMとの組み合わせにより、肌の明るさや均一感を意識したケアを行うことが可能です。",
-        memberPrice: "12000",
-        regularPrice: "13200"
+        branch: "ルナージュオリジナル製剤",
+        description: "LDMのマイクロマッサージ作用により、肌に必要な成分を皮膚深層まで届けやすくします。カウンセリングにてオリジナル製剤の中から最適な美容成分をご提案いたします。",
+        memberPrice: "12900",
+        regularPrice: "14190"
       },
       {
         name: "ヘアケア",
@@ -949,12 +973,12 @@ export const equipmentData: Record<string, Category> = {
       {
         name: "ヘアクール",
         equipment: "クールガン",
-        description: "頭皮深層に超低温の二酸化炭素が残存することで血流促進効果・ボーア効果による育毛を促進します。副作用やダウンタイムはほとんどないと言われています。",
+        description: "頭皮深層に超低温の二酸化炭素が残存することで血流促進効果・ボーア効果による育毛を促進します。副作用やダウンタイムがないため前後の予定を気にせず治療を継続できます。",
         memberPrice: "12000",
         regularPrice: "13200"
       },
       {
-        name: "ヘアクール導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "Hair filler",
         description: "CO2によるボーア効果に加え、ペプチドやヒアルロン酸などを配合した製剤を頭皮に注入し、頭皮環境の健やかさを保つことを目的とした施術です。栄養成分が頭皮に行き渡ることで、ハリ・コシが気になる方の毛髪のボリューム維持をサポートします。痛みが苦手な方にオススメ。",
@@ -962,60 +986,68 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "33000"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
-        branch: "ビタミンC",
-        description: "2021年にFDAの認証を取得。（本機器は国内未承認医療機器です。諸外国における安全性等に係る情報として、米国FDAで承認されています。）氷の針状にした薬剤を高速噴射し、針を使わずに有効成分を肌深部へ導入。痛みが少なく、ダウンタイムもほとんどありません。",
+        branch: "臍帯血幹細胞培養液導入（エクソソーム）",
+        description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら頭皮深層へ届けることで、毛母細胞の活性化やダメージを受けた組織の修復を通して育毛効果を期待できます。",
+        memberPrice: "35000",
+        regularPrice: "38500"
+      },
+      {
+        name: "ヘアクール",
+        equipment: "クールガン",
+        branch: "ニキビ",
+        description: "ピーリング作用と抗炎症効果のある製剤をCO2凍結との組み合わせにより、皮脂量の調整や溜まった角質層のケアを行うことが可能です。",
         memberPrice: "15000",
         regularPrice: "16500"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
-        branch: "トラネキサム酸",
+        branch: "美白",
         description: "肌のくすみ印象や色ムラが気になる方に用いられる成分で、CO2凍結との組み合わせにより、肌の明るさや均一感を意識したケアを行うことが可能です。",
         memberPrice: "15000",
         regularPrice: "16500"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "Pluryal Densify",
         description: "ペプチド・アミノ酸・ヒアルロン酸を含む高濃度製剤が線維芽細胞を刺激し、コラーゲン・エラスチンの産生を促進。毛穴・小ジワ・ハリ低下の原因にアプローチします。",
-        memberPrice: "35000",
-        regularPrice: "38500"
+        memberPrice: "33000",
+        regularPrice: "36300"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "臍帯血幹細胞培養液導入（エクソソーム）",
         description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら肌内部へ届けることで、肌の水分保持やキメ、ハリのある印象の維持をサポートします。加齢やニキビ跡が気になる方に適したケアです。",
-        memberPrice: "35000",
-        regularPrice: "38500"
+        memberPrice: "47600",
+        regularPrice: "52360"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "スキンボトックス",
         description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。肌質改善により、マスクの蒸れや夏場のメイク崩れが軽減されます。",
-        memberPrice: "32000",
-        regularPrice: "35200"
+        memberPrice: "19000",
+        regularPrice: "20900"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "LIZNE",
         description: "ポリヌクレオチド（PN）、低分子ヒアルロン酸、ペプチド、コエンザイムなどが配合されており、肌の水分保持力やハリ感に働きかけることが期待されます。毛穴やざらつき、乾燥感など、肌の質感変化が気になる方に選ばれています。",
-        memberPrice: "35000",
-        regularPrice: "38500"
+        memberPrice: "23000",
+        regularPrice: "25300"
       },
       {
-        name: "CO2導入",
+        name: "ヘアクール",
         equipment: "クールガン",
         branch: "プラセンタ",
         description: "アミノ酸やビタミン、ミネラルを豊富に含むプラセンタ製剤を、LDMの超音波振動によって肌深部へ導入する施術です。ハリ感や潤いを意識した肌ケアとして用いられ、年齢や乾燥による肌状態の変化が気になる方に適したメニューとなっています。",
-        memberPrice: "15000",
-        regularPrice: "16500"
+        memberPrice: "13000",
+        regularPrice: "14300"
       }
     ]
   },
@@ -1044,16 +1076,16 @@ export const equipmentData: Record<string, Category> = {
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
         description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。肌質改善により、マスクの蒸れや夏場のメイク崩れが軽減されます。",
-        memberPrice: "23000",
-        regularPrice: "25300"
+        memberPrice: "19000",
+        regularPrice: "20900"
       },
       {
         name: "ヴェルヴェットスキン",
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
         description: "ダーマペンで肌に微細な穴を開けた直後にピーリング剤を導入。ハリ・ツヤ・毛穴・ニキビ跡を同時にケアするトリートメントです。",
-        memberPrice: "17000",
-        regularPrice: "18700"
+        memberPrice: "15000",
+        regularPrice: "16500"
       },
       {
         name: "プラセンタフェイシャル",
@@ -1061,31 +1093,41 @@ export const equipmentData: Record<string, Category> = {
         image: "/images/testimonials/dermapen.PNG",
         branch: "プラセンタ",
         description: "アミノ酸やビタミン、ミネラルを豊富に含むプラセンタ製剤を、LDMの超音波振動によって肌深部へ導入する施術です。ハリ感や潤いを意識した肌ケアとして用いられ、年齢や乾燥による肌状態の変化が気になる方に適したメニューとなっています。",
-        memberPrice: "20000",
-        regularPrice: "22000"
+        memberPrice: "13000",
+        regularPrice: "14300"
       },
       {
         name: "ダーマペンエクソソーム",
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
         description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら肌内部へ届けることで、肌の水分保持やキメ、ハリのある印象の維持をサポートします。加齢やニキビ跡が気になる方に適したケアです。",
-        memberPrice: "31800",
-        regularPrice: "31800"
+        memberPrice: "47600",
+        regularPrice: "52360"
       },
       {
         name: "妊娠線ケア",
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
         description: "妊娠や急激な体重変化により生じた線状皮膚萎縮（いわゆる妊娠線）に対し、ダーマペンで微細な穿孔を行い、皮膚の創傷治癒機構を利用して滑らかでふっくらとした肌質感を目指します。併用するミラノリピールは、TCA、ラクトビオン酸、サリチル酸、タルトル酸（酒石酸）、クエン酸の5種類の酸が配合されているピーリング治療です。これらの酸のピーリング効果に加えて、アミノ酸やビタミンが直接的に肌細胞を刺激し、Ⅲ型コラーゲンを増やして、エラスチンやヒアルロン酸を作る手助けをします。また、保湿成分のスクワラン、ビタミンＢ、Ｃ、GABA、アルギニンなどの成分も配合されています。TCAの濃度がマッサージピールよりも高いため、皮むけのリスクはその分高まりますが、配合成分の違いによって、ミラノリピールのほうが施術中の痛みを感じにくいと言われています。肌の奥に働きかける刺激で、硬くなった妊娠線周辺の皮膚にハリや柔軟性を感じやすく、回数を重ねることで線が徐々に目立ちにくくなる印象を目指します。",
-        memberPrice: "45000",
-        regularPrice: "49500"
+        memberPrice: "69600",
+        regularPrice: "76560"
       },
       {
         name: "ヘアダーマ",
         equipment: "ダーマペン４",
         image: "/images/testimonials/dermapen.PNG",
-        description: "極細針で頭皮に微細な刺激を与え、血流促進と毛包の活性化を促進。薄毛・抜け毛の改善に有効な再生治療です。",
-        regularPrice: "準備中"
+        description: "ダーマペンで頭皮に微細な刺激を与えることで、頭皮のターンオーバーを促し、健やかな環境を整えます。毛髪の土台である頭皮の状態を見直したい方におすすめ。",
+        memberPrice: "12000",
+        regularPrice: "13200"
+      },
+      {
+        name: "ヘアダーマ",
+        equipment: "ダーマペン４",
+        branch: "臍帯血幹細胞培養液導入（エクソソーム）",
+        image: "/images/testimonials/dermapen.PNG",
+        description: "国内の大学病院で各種検査をクリアした限定ドナー由来の国産エクソソームを使用。ダーマペンによる傷で浸透させ、育毛を促進します。安全性と品質にこだわった施術です。",
+        memberPrice: "47600",
+        regularPrice: "52360"
       }
     ]
   },
@@ -1123,7 +1165,7 @@ export const equipmentData: Record<string, Category> = {
     ]
   },
   "mesogun": {
-    title: "メソガン",
+    title: "メソガンU225",
     description: "ドラッグデリバリー機器による美容成分導入",
     treatments: [
       {
@@ -1131,37 +1173,43 @@ export const equipmentData: Record<string, Category> = {
         equipment: "メソガンU225",
         image: "/images/testimonials/u225.JPG",
         description: "ペプチド・アミノ酸・ヒアルロン酸を含む高濃度製剤が線維芽細胞を刺激し、コラーゲン・エラスチンの産生を促進。毛穴・小ジワ・ハリ低下の原因にアプローチします。",
-        regularPrice: "計算中"
+        memberPrice: "30000",
+        regularPrice: "33000"
       },
       {
         name: "LIZNE",
-        equipment: "メソガンU226",
+        equipment: "メソガンU225",
         description: "ポリヌクレオチド（PN）、低分子ヒアルロン酸、ペプチド、コエンザイムなどが配合されており、肌の水分保持力やハリ感に働きかけることが期待されます。毛穴やざらつき、乾燥感など、肌の質感変化が気になる方に選ばれています。",
-        regularPrice: "計算中"
+        memberPrice: "20000",
+        regularPrice: "22000"
       },
       {
         name: "臍帯血幹細胞培養液導入（エクソソーム）",
-        equipment: "メソガンU227",
-        description: "ASCE+は幹細胞由来エクソソームを含む整肌製剤で、成長因子、ペプチド、アミノ酸などの有用成分を豊富に含んでいます。ドラッグデリバリー機器により微細な経路を形成しながら肌に導入することで、乾燥・ざらつき・ハリの低下が気になる肌に潤いと健やかさを与えるケアとして選ばれています。",
-        regularPrice: "計算中"
+        equipment: "メソガンU225",
+        description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら肌内部へ届けることで、肌の水分保持やキメ、ハリのある印象の維持をサポートします。加齢やニキビ跡が気になる方に適したケアです。",
+        memberPrice: "44600",
+        regularPrice: "49060"
       },
       {
         name: "スキンボトックス",
-        equipment: "メソガンU228",
+        equipment: "メソガンU225",
         description: "極少量のボトックスを顔全体に微注入。筋肉の動きは残しつつ、毛穴・小ジワ・皮脂テカリを整える肌質改善治療。肌質改善により、マスクの蒸れや夏場のメイク崩れが軽減されます。",
-        regularPrice: "計算中"
+        memberPrice: "16000",
+        regularPrice: "17600"
       },
       {
         name: "Hair filler",
-        equipment: "メソガンU229",
+        equipment: "メソガンU225",
         description: "ペプチドやヒアルロン酸などを配合した製剤を頭皮に注入し、頭皮環境の健やかさを保つことを目的とした施術です。栄養成分が頭皮に行き渡ることで、ハリ・コシが気になる方の毛髪のボリューム維持をサポートします。痛くても効果重視な方におすすめ。",
-        regularPrice: "計算中"
+        memberPrice: "30000",
+        regularPrice: "33000"
       },
       {
-        name: "Hairエクソソーム",
-        equipment: "メソガンU230",
+        name: "Hair EXO",
+        equipment: "メソガンU225",
         description: "エクソソームは、頭皮環境の整備や毛包周辺へのアプローチが期待されており、注目される先端成分です。ドラッグデリバリー機器を用いて頭皮表面に微細な通路を形成し、栄養成分を効率よく浸透させる設計となっており、ボリューム感やハリ・コシが気になる方の頭皮ケアに取り入れられています。",
-        regularPrice: "計算中"
+        memberPrice: "44600",
+        regularPrice: "49060"
       }
     ]
   },
