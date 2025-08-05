@@ -94,7 +94,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://ext.same-assets.com" />
         <link rel="dns-prefetch" href="https://ugc.same-assets.com" />
         
-        {/* Critical CSS をインライン化 */}
+        {/* Critical CSS をインライン化 - Above the fold content */}
         <style
           dangerouslySetInnerHTML={{
             __html: `
@@ -108,6 +108,7 @@ export default function RootLayout({
                 --border: 214 198 181;
                 --radius: 0.5rem;
               }
+              * { box-sizing: border-box; }
               html { scroll-behavior: smooth; }
               body {
                 font-family: var(--font-shippori), serif;
@@ -122,6 +123,7 @@ export default function RootLayout({
                 line-height: 1.3;
                 margin: 0;
               }
+              /* Essential layout classes */
               .container {
                 width: 100%;
                 margin-left: auto;
@@ -133,7 +135,10 @@ export default function RootLayout({
               @media (min-width: 768px) { .container { max-width: 768px; } }
               @media (min-width: 1024px) { .container { max-width: 1024px; } }
               @media (min-width: 1280px) { .container { max-width: 1280px; } }
+              /* Critical utility classes */
               .text-center { text-align: center; }
+              .text-white { color: rgb(255 255 255); }
+              .text-primary { color: rgb(var(--primary)); }
               .flex { display: flex; }
               .items-center { align-items: center; }
               .justify-center { justify-content: center; }
@@ -141,16 +146,156 @@ export default function RootLayout({
               .relative { position: relative; }
               .absolute { position: absolute; }
               .fixed { position: fixed; }
+              .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
               .z-10 { z-index: 10; }
               .z-50 { z-index: 50; }
               .hidden { display: none; }
+              .block { display: block; }
+              .w-full { width: 100%; }
+              .h-full { height: 100%; }
+              .min-h-screen { min-height: 100vh; }
+              .p-4 { padding: 1rem; }
+              .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+              .px-4 { padding-left: 1rem; padding-right: 1rem; }
+              .mb-4 { margin-bottom: 1rem; }
+              .mb-8 { margin-bottom: 2rem; }
+              .opacity-90 { opacity: 0.9; }
+              .bg-white { background-color: rgb(255 255 255); }
+              .bg-primary { background-color: rgb(var(--primary)); }
+              .rounded { border-radius: 0.25rem; }
+              .shadow { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); }
+              /* Critical responsive utilities */
               @media (min-width: 768px) {
                 .md\\:block { display: block; }
                 .md\\:hidden { display: none; }
+                .md\\:flex { display: flex; }
+                .md\\:text-left { text-align: left; }
+                .md\\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+              }
+              @media (min-width: 1024px) {
+                .lg\\:px-12 { padding-left: 3rem; padding-right: 3rem; }
+              }
+              /* Critical header styles */
+              .header-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 50;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid rgba(214, 198, 181, 0.2);
+              }
+              /* Critical hero styles */
+              .hero-container {
+                position: relative;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, rgba(194, 172, 148, 0.1), rgba(202, 169, 175, 0.1));
               }
             `
           }}
         />
+        
+        {/* CSS非同期読み込みスクリプト - レンダリングブロッキングを回避 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // CSS非同期読み込み関数（最適化版）
+                function loadCSS(href, before, media, attributes) {
+                  var doc = window.document;
+                  var ss = doc.createElement("link");
+                  var ref;
+                  if (before) {
+                    ref = before;
+                  } else {
+                    var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+                    ref = refs[refs.length - 1];
+                  }
+                  var sheets = doc.styleSheets;
+                  if (attributes) {
+                    for (var attributeName in attributes) {
+                      if (attributes.hasOwnProperty(attributeName)) {
+                        ss.setAttribute(attributeName, attributes[attributeName]);
+                      }
+                    }
+                  }
+                  ss.rel = "stylesheet";
+                  ss.href = href;
+                  ss.media = "only x";
+                  function ready(cb) {
+                    if (doc.body) {
+                      return cb();
+                    }
+                    setTimeout(function() {
+                      ready(cb);
+                    });
+                  }
+                  ready(function() {
+                    ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+                  });
+                  var onloadcssdefined = function(cb) {
+                    var resolvedHref = ss.href;
+                    var i = sheets.length;
+                    while (i--) {
+                      if (sheets[i].href === resolvedHref) {
+                        return cb();
+                      }
+                    }
+                    setTimeout(function() {
+                      onloadcssdefined(cb);
+                    });
+                  };
+                  function loadCB() {
+                    if (ss.addEventListener) {
+                      ss.removeEventListener("load", loadCB);
+                    }
+                    ss.media = media || "all";
+                  }
+                  if (ss.addEventListener) {
+                    ss.addEventListener("load", loadCB);
+                  }
+                  ss.onloadcssdefined = onloadcssdefined;
+                  onloadcssdefined(loadCB);
+                  return ss;
+                }
+                
+                // CSS非同期読み込み実行
+                function asyncLoadCSS() {
+                  var links = document.querySelectorAll('link[rel="stylesheet"]');
+                  var processedHrefs = new Set();
+                  
+                  links.forEach(function(link) {
+                    if (link.href.includes('_next/static/css/') && !processedHrefs.has(link.href)) {
+                      processedHrefs.add(link.href);
+                      var href = link.href;
+                      // 元のリンクを削除
+                      link.parentNode.removeChild(link);
+                      // 非同期で再読み込み
+                      loadCSS(href, null, "all");
+                    }
+                  });
+                }
+                
+                // 即座に実行してレンダリングブロッキングを回避
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', asyncLoadCSS);
+                } else {
+                  asyncLoadCSS();
+                }
+                
+                // フォールバック: ページ読み込み完了後にも実行
+                window.addEventListener('load', function() {
+                  setTimeout(asyncLoadCSS, 50);
+                });
+              })();
+            `
+          }}
+        />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

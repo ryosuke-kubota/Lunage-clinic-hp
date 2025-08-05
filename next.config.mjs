@@ -38,6 +38,8 @@ const nextConfig = {
   // パフォーマンス最適化
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
+    optimizeCss: true,
+    cssChunking: 'loose',
   },
   // 圧縮設定
   compress: true,
@@ -73,20 +75,59 @@ const nextConfig = {
   // Webpack設定でCSS最適化
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
-      // CSS分割の最適化
+      // CSS分割の最適化 - より細かく分割してブロッキングを軽減
       config.optimization.splitChunks = {
         ...config.optimization.splitChunks,
         cacheGroups: {
           ...config.optimization.splitChunks.cacheGroups,
+          // Critical CSS用
+          criticalStyles: {
+            name: 'critical-styles',
+            test: /critical\.css$/,
+            chunks: 'all',
+            enforce: true,
+            priority: 30,
+          },
+          // 基本スタイル用
+          baseStyles: {
+            name: 'base-styles',
+            test: /globals\.css$/,
+            chunks: 'all',
+            enforce: true,
+            priority: 20,
+          },
+          // その他のCSS
           styles: {
             name: 'styles',
             test: /\.(css|scss|sass)$/,
             chunks: 'all',
             enforce: true,
             priority: 10,
+            minSize: 0,
           },
         },
       };
+      
+      // CSS最適化プラグインの設定
+      const MiniCssExtractPlugin = config.plugins.find(
+        plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
+      );
+      
+      if (MiniCssExtractPlugin) {
+        MiniCssExtractPlugin.options = {
+          ...MiniCssExtractPlugin.options,
+          ignoreOrder: true,
+          insert: function(linkTag) {
+            // CSS を非同期で読み込む
+            linkTag.rel = 'preload';
+            linkTag.as = 'style';
+            linkTag.onload = function() {
+              this.rel = 'stylesheet';
+            };
+            document.head.appendChild(linkTag);
+          }
+        };
+      }
     }
     
     return config;
