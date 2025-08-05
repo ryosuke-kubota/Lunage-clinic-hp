@@ -39,7 +39,10 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
     cssChunking: 'strict',
+    optimizeCss: true, // CSS最適化を有効化
   },
+  // フォント最適化設定
+  optimizeFonts: true,
   // 圧縮設定
   compress: true,
   // 静的ファイルの最適化

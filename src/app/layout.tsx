@@ -5,10 +5,10 @@ import ClientBody from "./ClientBody";
 
 const shippioriMincho = Shippori_Mincho_B1({
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // 実際に使用するウェイトのみ（normal, medium, bold）
+  weight: ["400", "500", "700"], // 実際に使用されているウェイトのみ（normal, medium, bold）
   variable: "--font-shippori",
   display: "swap",
-  preload: true,
+  preload: false, // 事前読み込みを無効化してファイル数を削減
   fallback: ["serif"],
   adjustFontFallback: false,
 });
