@@ -55,7 +55,7 @@ export default function HeroSection() {
       >
         {/* デスクトップ用画像 */}
         <Image
-          src={`${BASE_PATH}/images/hero/hero.png`}
+          src={`${BASE_PATH}/images/hero/hero.webp`}
           alt="LUNAGE CLINIC Hero"
           width={1920}
           height={1080}
@@ -67,7 +67,7 @@ export default function HeroSection() {
         
         {/* スマホ用画像 */}
         <Image
-          src={`${BASE_PATH}/images/hero/hero_sp.png`}
+          src={`${BASE_PATH}/images/hero/hero_sp.webp`}
           alt="LUNAGE CLINIC Hero Mobile"
           width={750}
           height={1334}
