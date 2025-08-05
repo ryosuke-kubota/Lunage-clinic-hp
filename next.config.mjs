@@ -37,7 +37,6 @@ const nextConfig = {
   },
   // パフォーマンス最適化
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
   // 圧縮設定
