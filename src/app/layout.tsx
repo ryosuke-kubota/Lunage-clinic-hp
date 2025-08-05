@@ -7,6 +7,8 @@ const shippioriMincho = Shippori_Mincho_B1({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-shippori",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -77,6 +79,13 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${shippioriMincho.variable}`}>
       <head>
+        {/* パフォーマンス最適化のメタタグ */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://ext.same-assets.com" />
+        <link rel="dns-prefetch" href="https://ugc.same-assets.com" />
+        <meta httpEquiv="x-dns-prefetch-control" content="on" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

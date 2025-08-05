@@ -1,3 +1,4 @@
+import Image from "next/image";
 import nextConfig from "../../next.config.mjs";
 
 const BASE_PATH = nextConfig.basePath || "";
@@ -9,10 +10,13 @@ export default function ClinicInterior() {
         {/* Interior Image Showcase */}
         <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden">
           <div className="absolute inset-0">
-            <img
+            <Image
               src={`${BASE_PATH}/images/space.jpg`}
               alt="LUNAGE Clinic Interior"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="100vw"
+              quality={85}
             />
             <div className="absolute inset-0 bg-white/30 to-transparent" />
           </div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { easeOut } from "framer-motion";
 
 export default function Header() {
@@ -48,7 +48,8 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-white/95 backdrop-blur-sm fixed top-0 z-50 border-b border-[#d6c6b5]/20 shadow-sm">
+    <LazyMotion features={domAnimation}>
+      <header className="w-full bg-white/95 backdrop-blur-sm fixed top-0 z-50 border-b border-[#d6c6b5]/20 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
@@ -234,5 +235,6 @@ export default function Header() {
         </AnimatePresence>
       </div>
     </header>
+    </LazyMotion>
   );
 }

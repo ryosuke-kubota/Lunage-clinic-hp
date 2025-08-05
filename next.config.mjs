@@ -2,7 +2,10 @@
 const nextConfig = {
   basePath: "",
   images: {
-    unoptimized: true,
+    unoptimized: false,
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     domains: [
       "source.unsplash.com",
       "images.unsplash.com",
@@ -32,6 +35,17 @@ const nextConfig = {
       },
     ],
   },
+  // パフォーマンス最適化
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['framer-motion', 'lucide-react'],
+  },
+  // 圧縮設定
+  compress: true,
+  // 静的ファイルの最適化
+  poweredByHeader: false,
+  // SWC minify（高速化）
+  swcMinify: true,
 };
 
 export default nextConfig;

@@ -1,8 +1,9 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, LazyMotion, domAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 import nextConfig from "../../next.config.mjs";
 
 const BASE_PATH = nextConfig.basePath || "";
@@ -37,11 +38,12 @@ export default function HeroSection() {
   });
 
   return (
-    <section
-      ref={containerRef}
-      className="relative overflow-hidden mt-16 md:mt-20"
-      id="home"
-    >
+    <LazyMotion features={domAnimation}>
+      <section
+        ref={containerRef}
+        className="relative overflow-hidden mt-16 md:mt-20"
+        id="home"
+      >
       {/* メイン画像 */}
       <motion.div
         ref={ref}
@@ -52,19 +54,27 @@ export default function HeroSection() {
         className="inset-0 w-full h-auto"
       >
         {/* デスクトップ用画像 */}
-        <img
+        <Image
           src={`${BASE_PATH}/images/hero/hero.png`}
           alt="LUNAGE CLINIC Hero"
+          width={1920}
+          height={1080}
           className="hidden md:block w-full h-auto object-cover"
-          loading="eager"
+          priority
+          quality={85}
+          sizes="100vw"
         />
         
         {/* スマホ用画像 */}
-        <img
+        <Image
           src={`${BASE_PATH}/images/hero/hero_sp.png`}
           alt="LUNAGE CLINIC Hero Mobile"
+          width={750}
+          height={1334}
           className="block md:hidden w-full h-auto object-cover"
-          loading="eager"
+          priority
+          quality={85}
+          sizes="100vw"
         />
       </motion.div>
 
@@ -157,6 +167,7 @@ export default function HeroSection() {
           />
         </>
       )}
-    </section>
+      </section>
+    </LazyMotion>
   );
 }

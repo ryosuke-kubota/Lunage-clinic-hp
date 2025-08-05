@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -142,14 +141,14 @@
       backdrop-filter: blur(4px) !important;
       -webkit-backdrop-filter: blur(4px) !important;
     }
-    
-    /* モバイルで複雑なアニメーションを無効化 */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
+  }
+
+  /* アクセシビリティ対応 */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
   }
 
@@ -168,5 +167,16 @@
 
   .contain-paint {
     contain: paint;
+  }
+
+  /* Critical CSS - Above the fold content */
+  .critical-content {
+    contain: layout style paint;
+  }
+
+  /* Lazy loading optimization */
+  .lazy-load {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 400px;
   }
 }

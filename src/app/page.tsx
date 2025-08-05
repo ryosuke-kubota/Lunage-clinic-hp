@@ -15,16 +15,26 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#faf3ef]">
       <Header />
-      <HeroSection />
-      <PhilosophySection />
-      <MenuSection />
+      <div className="critical-content">
+        <HeroSection />
+      </div>
+      <div className="lazy-load">
+        <PhilosophySection />
+      </div>
+      <div className="lazy-load">
+        <MenuSection />
+      </div>
       {/* <BeforeAfterSection /> */}
       {/* <ClinicInterior /> */}
       {/* <TestimonialsSection /> */}
       {/* <MessageSection /> */}
       {/* <FAQSection /> */}
-      <InformationSection />
-      <ContactSection />
+      <div className="lazy-load">
+        <InformationSection />
+      </div>
+      <div className="lazy-load">
+        <ContactSection />
+      </div>
       <Footer />
     </main>
   );

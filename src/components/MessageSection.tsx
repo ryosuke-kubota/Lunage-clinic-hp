@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function MessageSection() {
   return (
     <section className="py-20 bg-[#faf3ef]" id="doctor">
@@ -49,10 +51,14 @@ export default function MessageSection() {
           {/* Right Side - Doctor Image and Credentials */}
           <div>
             <div className="mb-8">
-              <img
+              <Image
                 src="https://ext.same-assets.com/390596101/2764878999.png"
                 alt="LUNAGE CLINIC 院長 宮崎恵"
+                width={400}
+                height={500}
                 className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 400px"
               />
             </div>
 
