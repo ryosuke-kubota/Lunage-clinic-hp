@@ -27,10 +27,23 @@
     --radius: 0.5rem;
   }
 
-  /* Critical styles are now inlined in layout.tsx */
-  /* Non-critical styles below */
+  html {
+    scroll-behavior: smooth;
+  }
 
-  /* Non-critical: Custom scrollbar - loaded after initial render */
+  body {
+    font-family: var(--font-shippori), serif;
+    background: rgb(var(--background));
+    color: rgb(var(--foreground));
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-shippori), serif;
+    line-height: 1.3;
+  }
+
+  /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -50,7 +63,6 @@
 }
 
 @layer components {
-  /* Non-critical: Decorative effects - loaded after initial render */
   .text-gradient {
     background: linear-gradient(135deg, rgb(var(--accent)), rgb(var(--primary)));
     -webkit-background-clip: text;
@@ -79,12 +91,10 @@
 }
 
 @layer utilities {
-  /* Non-critical: Font utilities - loaded after initial render */
   .font-shippori {
     font-family: var(--font-shippori), serif;
   }
 
-  /* Non-critical: Animations - loaded after initial render */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }

@@ -43,8 +43,54 @@ const nextConfig = {
   compress: true,
   // 静的ファイルの最適化
   poweredByHeader: false,
-  // SWC minify（高速化）
-  swcMinify: true,
+  // CSS最適化
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  // ヘッダー設定でキャッシュ最適化
+  async headers() {
+    return [
+      {
+        source: '/_next/static/css/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/js/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
+  // Webpack設定でCSS最適化
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // CSS分割の最適化
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...config.optimization.splitChunks.cacheGroups,
+          styles: {
+            name: 'styles',
+            test: /\.(css|scss|sass)$/,
+            chunks: 'all',
+            enforce: true,
+            priority: 10,
+          },
+        },
+      };
+    }
+    
+    return config;
+  },
 };
 
 export default nextConfig;
