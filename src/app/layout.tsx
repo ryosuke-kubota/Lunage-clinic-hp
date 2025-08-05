@@ -90,6 +90,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" as="style" />
         
+        {/* Hero画像のpreload - FCPパフォーマンス向上 */}
+        <link rel="preload" href="/images/hero/hero.webp" as="image" type="image/webp" media="(min-width: 768px)" fetchPriority="high" />
+        <link rel="preload" href="/images/hero/hero_sp.webp" as="image" type="image/webp" media="(max-width: 767px)" fetchPriority="high" />
+        
         {/* リソースヒント */}
         <link rel="dns-prefetch" href="https://ext.same-assets.com" />
         <link rel="dns-prefetch" href="https://ugc.same-assets.com" />
@@ -194,6 +198,37 @@ export default function RootLayout({
                 align-items: center;
                 justify-content: center;
                 background: linear-gradient(135deg, rgba(194, 172, 148, 0.1), rgba(202, 169, 175, 0.1));
+              }
+              .hero-image {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                will-change: auto;
+              }
+              .hero-image-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+                contain: layout style paint;
+              }
+              .hero-text-overlay {
+                position: absolute;
+                bottom: 0.5rem;
+                left: 0;
+                right: 0;
+                z-index: 20;
+                display: flex;
+                justify-content: center;
+                padding: 0 1rem;
+              }
+              .hero-gradient {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 9rem;
+                background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), transparent);
+                z-index: 10;
               }
             `
           }}

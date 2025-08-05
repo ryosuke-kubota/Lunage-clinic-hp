@@ -45,6 +45,44 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
+/* Hero画像の最適化スタイル */
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  will-change: auto;
+}
+
+/* Hero画像のコンテナ最適化 */
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  contain: layout style paint;
+}
+
+/* モバイル用テキストオーバーレイ */
+.hero-text-overlay {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.hero-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 9rem;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), transparent);
+  z-index: 10;
+}
+
 /* Essential utility classes */
 .container {
   width: 100%;
