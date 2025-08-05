@@ -48,7 +48,7 @@ export default function ClinicInterior() {
         {/* Bottom Content */}
         <div className="px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-shippori font-light text-[#54585f] mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-shippori font-normal text-[#54585f] mb-6 sm:mb-8">
               洗練された空間で、
               <br />
               特別なケアタイムを

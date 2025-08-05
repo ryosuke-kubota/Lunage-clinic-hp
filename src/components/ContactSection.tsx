@@ -10,7 +10,7 @@ export default function ContactSection() {
             <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">ご予約・お問い合わせ</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-8">
+          <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-8">
             Contact
           </h2>
           <p className="text-[#8a6d62] font-shippori text-lg">
@@ -21,7 +21,7 @@ export default function ContactSection() {
         {/* Reservation Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-16">
           <div className="text-center">
-            <h3 className="text-3xl md:text-8xl font-shippori font-light text-[#DDCDB9] mb-8">
+            <h3 className="text-3xl md:text-8xl font-shippori font-normal text-[#DDCDB9] mb-8">
               Reservation
             </h3>
             <p className="text-[#54585f] font-shippori text-lg mb-8">

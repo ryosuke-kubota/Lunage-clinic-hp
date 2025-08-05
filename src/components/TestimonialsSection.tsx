@@ -135,7 +135,7 @@ export default function TestimonialsSection() {
             <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">お客様の声</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-8">
+          <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-8">
             Customer Reviews
           </h2>
           <p className="text-[#8a6d62] font-shippori text-lg max-w-2xl mx-auto">

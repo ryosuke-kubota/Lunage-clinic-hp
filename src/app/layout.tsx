@@ -5,7 +5,7 @@ import ClientBody from "./ClientBody";
 
 const shippioriMincho = Shippori_Mincho_B1({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "700"], // 実際に使用するウェイトのみ（normal, medium, bold）
   variable: "--font-shippori",
   display: "swap",
   preload: true,
@@ -88,7 +88,6 @@ export default function RootLayout({
         {/* フォント最適化 */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" as="style" />
         
         {/* Hero画像のpreload - FCPパフォーマンス向上 */}
         <link rel="preload" href="/images/hero/hero.webp" as="image" type="image/webp" media="(min-width: 768px)" fetchPriority="high" />

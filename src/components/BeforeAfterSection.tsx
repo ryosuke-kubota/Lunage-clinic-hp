@@ -186,7 +186,7 @@ export default function BeforeAfterSection() {
             <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">施術実績</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-6 sm:mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-6 sm:mb-8">
             Before & After
           </h2>
           <p className="text-[#8a6d62] font-shippori text-base sm:text-lg max-w-2xl mx-auto">

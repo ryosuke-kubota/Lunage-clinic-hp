@@ -8,7 +8,7 @@ export default function PhilosophySection() {
             <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">クリニック理念</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-shippori font-light text-[#54585f] mb-8">
+          <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-8">
             PHILOSOPHY
           </h2>
         </div> */}

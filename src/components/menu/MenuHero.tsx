@@ -67,7 +67,7 @@ export default function MenuHero() {
               <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
               <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">施術・料金案内</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-shippori font-light text-[#54585f] mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-shippori font-normal text-[#54585f] mb-8">
               Menu
             </h1>
           </motion.div>
