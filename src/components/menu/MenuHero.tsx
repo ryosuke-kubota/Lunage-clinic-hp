@@ -37,7 +37,7 @@ export default function MenuHero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Breadcrumb */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -53,7 +53,7 @@ export default function MenuHero() {
             <span className="text-[#8a6d62]">→</span>
             <span className="text-[#54585f] font-shippori">Menu</span>
           </nav>
-        </motion.div>
+        </motion.div> */}
 
         {/* Hero Content */}
         <div className="text-center">
@@ -63,8 +63,7 @@ export default function MenuHero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6"
           >
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+            <div className="flex items-center justify-center mb-1">
               <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">施術・料金案内</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-shippori font-normal text-[#54585f] mb-8">

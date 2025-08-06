@@ -7,7 +7,6 @@ export default function MessageSection() {
         {/* Section Header */}
         <div className="mb-16">
           <div className="flex items-center mb-6">
-            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">院長からのメッセージ</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-8">

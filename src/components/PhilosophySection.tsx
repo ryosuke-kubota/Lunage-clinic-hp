@@ -19,7 +19,7 @@ export default function PhilosophySection() {
           月のように、<br className="md:hidden"/>あなたを照らす癒しを。
           </h3>
 
-          <div className="space-y-6 text-[#54585f] font-shippori text-sm leading-relaxed">
+          <div className="space-y-6 text-[#54585f] font-shippori text-xs md:text-sm leading-relaxed">
             <p>
             LUNAGE clinicは、月の満ち欠けのように、女性の心と体のリズムに寄り添うクリニック。
             </p>

@@ -4,8 +4,7 @@ export default function InformationSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16">
-          <div className="flex items-center mb-6">
-            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+          <div className="flex items-center mb-1">
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">クリニック概要</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-8">

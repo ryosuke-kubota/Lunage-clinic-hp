@@ -183,7 +183,6 @@ export default function BeforeAfterSection() {
           className="text-center mb-12 sm:mb-16"
         >
           <div className="flex items-center justify-center mb-4 sm:mb-6">
-            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">施術実績</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-6 sm:mb-8">

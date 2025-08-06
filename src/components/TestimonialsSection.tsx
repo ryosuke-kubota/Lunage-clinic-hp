@@ -131,8 +131,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-3 h-3 bg-[#DDCDB9] rounded-full mr-3" />
+          <div className="flex items-center justify-center mb-1">
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">お客様の声</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-8">
