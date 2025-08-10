@@ -628,6 +628,192 @@ export const concernsData: Record<string, Category> = {
       }
     ]
   },
+  "tenteki": {
+    title: "点滴",
+    description: "各種点滴・注射メニュー",
+    treatments: [
+      {
+        name: "超高濃度25gビタミンC",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "10000"
+      },
+      {
+        name: "プラセンタ点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "プラセンタ注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "1000"
+      },
+      {
+        name: "グルタチオン点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "倍量グルタチオン点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "最強ルナージュ爆美カクテル",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "10000"
+      },
+      {
+        name: "超美白カクテル",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "つるつる美肌カクテル",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "肝斑対策点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "美髪・美爪注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "ビタミン増し増し点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "にんにく点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "にんにく注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2000"
+      },
+      {
+        name: "臭わないにんにく注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2500"
+      },
+      {
+        name: "疲労回復点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "二日酔い爆速回復点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "8000"
+      },
+      {
+        name: "飲み会前守りの点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "飲み会前守りの注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2000"
+      },
+      {
+        name: "ダイエット・筋トレ点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "痩せる注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "レッドブル注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "免疫強化点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "OS1点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "口内炎点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "胃もたれ注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2000"
+      },
+      {
+        name: "むくみスッキリ注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2000"
+      },
+      {
+        name: "つわり点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "8000"
+      },
+      {
+        name: "エクソソーム点滴1cc",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "19800"
+      },
+      {
+        name: "育毛点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "睡眠点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      }
+    ]
+  },
   "others": {
     title: "その他",
     description: "その他の特殊な施術",
@@ -645,7 +831,7 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "準備中"
       }
     ]
-  }
+  },
 };
 
 // 機械別カテゴリのデータ
@@ -1271,6 +1457,192 @@ export const equipmentData: Record<string, Category> = {
       }
     ]
   },
+  "tenteki": {
+    title: "点滴",
+    description: "各種点滴・注射メニュー",
+    treatments: [
+      {
+        name: "超高濃度25gビタミンC",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "10000"
+      },
+      {
+        name: "プラセンタ点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "プラセンタ注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "1000"
+      },
+      {
+        name: "グルタチオン点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "倍量グルタチオン点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "最強ルナージュ爆美カクテル",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "10000"
+      },
+      {
+        name: "超美白カクテル",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "つるつる美肌カクテル",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "肝斑対策点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "美髪・美爪注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "ビタミン増し増し点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "にんにく点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "にんにく注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2000"
+      },
+      {
+        name: "臭わないにんにく注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2500"
+      },
+      {
+        name: "疲労回復点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "二日酔い爆速回復点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "8000"
+      },
+      {
+        name: "飲み会前守りの点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "飲み会前守りの注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2000"
+      },
+      {
+        name: "ダイエット・筋トレ点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "痩せる注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "レッドブル注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      },
+      {
+        name: "免疫強化点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "OS1点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "口内炎点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "胃もたれ注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2000"
+      },
+      {
+        name: "むくみスッキリ注射",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "2000"
+      },
+      {
+        name: "つわり点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "8000"
+      },
+      {
+        name: "エクソソーム点滴1cc",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "19800"
+      },
+      {
+        name: "育毛点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "5000"
+      },
+      {
+        name: "睡眠点滴",
+        equipment: "点滴",
+        description: "",
+        regularPrice: "3000"
+      }
+    ]
+  },
   "others": {
     title: "その他の機器",
     description: "その他の特殊な治療機器",
@@ -1288,7 +1660,7 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "準備中"
       }
     ]
-  }
+  },
 };
 
 // メニューデータの統合オブジェクト

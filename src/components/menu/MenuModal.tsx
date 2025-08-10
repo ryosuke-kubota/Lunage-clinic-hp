@@ -42,6 +42,9 @@ const CloseIcon = ({ className }: { className?: string }) => (
 export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps) {
   if (!treatment) return null;
 
+  // 点滴カテゴリかどうかを判定
+  const isTenteki = treatment.equipment === '点滴';
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -108,61 +111,75 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
                   )}
                 </div>
 
-                {/* 機器情報 */}
-                <div className="mb-6">
-                  <div className="bg-[#faf3ef] rounded-lg p-4">
-                    <h3 className="text-sm font-semibold text-[#8b4513] mb-2">使用機器</h3>
-                    <p className="text-[#8b4513]">{treatment.equipment}</p>
+                {/* 機器情報 - 点滴の場合非表示 */}
+                {!isTenteki && (
+                  <div className="mb-6">
+                    <div className="bg-[#faf3ef] rounded-lg p-4">
+                      <h3 className="text-sm font-semibold text-[#8b4513] mb-2">使用機器</h3>
+                      <p className="text-[#8b4513]">{treatment.equipment}</p>
+                    </div>
                   </div>
-                </div>
+                )}
 
-                {/* 説明 */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-[#8b4513] mb-3">施術について</h3>
-                  <p className="text-sm md:text-base text-[#8b4513]/80 leading-relaxed whitespace-pre-line">
-                    {treatment.description}
-                  </p>
-                </div>
+                {/* 説明 - 点滴の場合非表示 */}
+                {!isTenteki && treatment.description && (
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-[#8b4513] mb-3">施術について</h3>
+                    <p className="text-sm md:text-base text-[#8b4513]/80 leading-relaxed whitespace-pre-line">
+                      {treatment.description}
+                    </p>
+                  </div>
+                )}
 
                 {/* 価格情報 */}
                 <div className="bg-gradient-to-r from-[#8b4513]/5 to-[#8b4513]/10 rounded-xl p-6">
                   <h3 className="text-lg font-semibold text-[#8b4513] mb-4">料金</h3>
                   
-                  {treatment.specialPriceName ? (
+                  {isTenteki ? (
+                    // 点滴の場合は通常価格のみ表示
                     <div className="text-center">
-                      <p className="text-[#8b4513] font-medium">
-                        {treatment.specialPriceName}
-                      </p>
+                      <span className="text-2xl font-bold text-[#8b4513]">
+                        {formatPrice(treatment.regularPrice)}
+                      </span>
                     </div>
                   ) : (
-                    <div className="space-y-3">
-                      {treatment.memberPrice && (
-                        <div className="flex justify-between items-center p-3 bg-[#8b4513]/5 rounded-lg">
-                          <span className="text-[#8b4513]/70 font-medium">会員価格</span>
-                          <span className="text-xl font-bold text-[#8b4513]">
-                            {formatPrice(treatment.memberPrice)}
+                    // その他の施術の場合
+                    treatment.specialPriceName ? (
+                      <div className="text-center">
+                        <p className="text-[#8b4513] font-medium">
+                          {treatment.specialPriceName}
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="space-y-3">
+                        {treatment.memberPrice && (
+                          <div className="flex justify-between items-center p-3 bg-[#8b4513]/5 rounded-lg">
+                            <span className="text-[#8b4513]/70 font-medium">会員価格</span>
+                            <span className="text-xl font-bold text-[#8b4513]">
+                              {formatPrice(treatment.memberPrice)}
+                            </span>
+                          </div>
+                        )}
+                        <div className="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                          <span className="text-[#8b4513]/70 font-medium">通常価格</span>
+                          <span className={`text-xl font-bold ${treatment.memberPrice ? 'text-[#8b4513]/60' : 'text-[#8b4513]'}`}>
+                            {formatPrice(treatment.regularPrice)}
                           </span>
                         </div>
-                      )}
-                      <div className="flex justify-between items-center p-3 bg-white/50 rounded-lg">
-                        <span className="text-[#8b4513]/70 font-medium">通常価格</span>
-                        <span className={`text-xl font-bold ${treatment.memberPrice ? 'text-[#8b4513]/60' : 'text-[#8b4513]'}`}>
-                          {formatPrice(treatment.regularPrice)}
-                        </span>
+                        {treatment.memberPrice && (
+                          <div className="text-center pt-2">
+                            <p className="text-sm text-[#8b4513]/60">
+                              会員価格は通常価格から約10%お得です
+                            </p>
+                          </div>
+                        )}
                       </div>
-                      {treatment.memberPrice && (
-                        <div className="text-center pt-2">
-                          <p className="text-sm text-[#8b4513]/60">
-                            会員価格は通常価格から約10%お得です
-                          </p>
-                        </div>
-                      )}
-                    </div>
+                    )
                   )}
                 </div>
 
-                {/* 追加情報 */}
-                {(treatment.contents || treatment.treatmentTime) && (
+                {/* 追加情報 - 点滴の場合非表示 */}
+                {!isTenteki && (treatment.contents || treatment.treatmentTime) && (
                   <div className="mt-6 space-y-4">
                     {treatment.contents && (
                       <div>

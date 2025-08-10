@@ -17,11 +17,13 @@ const ChevronDownIcon = ({ className }: { className?: string }) => (
 const TreatmentCard = ({
   treatment,
   index,
-  onClick
+  onClick,
+  isTenteki = false
 }: {
   treatment: Treatment;
   index: number;
   onClick: () => void;
+  isTenteki?: boolean;
 }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,
@@ -41,35 +43,43 @@ const TreatmentCard = ({
           </h4>
         </div>
 
-        {/* 価格表示（会員価格と一般価格の両方を表示） */}
+        {/* 価格表示（点滴の場合は通常価格のみ表示） */}
         <div className="pt-2 border-t border-[#dacacf]/20">
-          {treatment.specialPriceName ? (
+          {isTenteki ? (
             <div className="text-center">
-              <span className="text-sm font-medium text-[#8b4513]">
-                {treatment.specialPriceName}
+              <span className="text-lg font-bold text-[#8b4513] font-shippori">
+                {formatPrice(treatment.regularPrice)}
               </span>
             </div>
           ) : (
-            <div className="space-y-1">
-              {treatment.memberPrice && (
-                <div className="flex justify-between items-center flex-col md:flex-row">
-                  <span className="text-xs text-[#8a6d62] font-shippori">
-                    会員価格
-                  </span>
-                  <span className="text-sm font-bold text-[#8b4513] font-shippori">
-                    {formatPrice(treatment.memberPrice)}
-                  </span>
-                </div>
-              )}
-              <div className="flex justify-between items-center flex-col md:flex-row">
-                <span className="text-xs text-[#8a6d62] font-shippori">
-                  通常価格
-                </span>
-                <span className={`font-bold font-shippori ${treatment.memberPrice ? 'text-sm text-[#8a6d62]' : 'text-lg text-[#8b4513]'}`}>
-                  {formatPrice(treatment.regularPrice)}
+            treatment.specialPriceName ? (
+              <div className="text-center">
+                <span className="text-sm font-medium text-[#8b4513]">
+                  {treatment.specialPriceName}
                 </span>
               </div>
-            </div>
+            ) : (
+              <div className="space-y-1">
+                {treatment.memberPrice && (
+                  <div className="flex justify-between items-center flex-col md:flex-row">
+                    <span className="text-xs text-[#8a6d62] font-shippori">
+                      会員価格
+                    </span>
+                    <span className="text-sm font-bold text-[#8b4513] font-shippori">
+                      {formatPrice(treatment.memberPrice)}
+                    </span>
+                  </div>
+                )}
+                <div className="flex justify-between items-center flex-col md:flex-row">
+                  <span className="text-xs text-[#8a6d62] font-shippori">
+                    通常価格
+                  </span>
+                  <span className={`font-bold font-shippori ${treatment.memberPrice ? 'text-sm text-[#8a6d62]' : 'text-lg text-[#8b4513]'}`}>
+                    {formatPrice(treatment.regularPrice)}
+                  </span>
+                </div>
+              </div>
+            )
           )}
         </div>
 
@@ -159,6 +169,7 @@ const CategoryAccordion = ({
                       treatment={treatment}
                       index={treatmentIndex}
                       onClick={() => onTreatmentClick(treatment)}
+                      isTenteki={categoryKey === 'tenteki'}
                     />
                   ))}
                 </div>

@@ -50,7 +50,7 @@ export default function Header() {
   return (
     <LazyMotion features={domAnimation}>
       <header className="w-full bg-white/95 backdrop-blur-sm fixed top-0 z-50 border-b border-[#d6c6b5]/20 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <motion.div
@@ -64,7 +64,7 @@ export default function Header() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             <Link href="/" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Home
             </Link>
@@ -97,15 +97,15 @@ export default function Header() {
               href="https://lin.ee/teAI9dY"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-4 md:px-6 py-2 rounded-full text-sm transition-colors"
+              className="hidden md:flex bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-4 md:px-6 py-2 rounded-full text-sm transition-colors"
             >
-              Reservation
+              ご予約はこちら
             </a>
 
             {/* Mobile menu button */}
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="lg:hidden p-2 rounded-lg hover:bg-[#faf3ef] transition-colors"
+              className="md:hidden p-2 rounded-lg hover:bg-[#faf3ef] transition-colors"
               onClick={toggleMenu}
             >
               <AnimatePresence mode="wait">
@@ -143,7 +143,7 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="lg:hidden absolute left-0 right-0 top-full bg-white backdrop-blur-md border-b border-[#d6c6b5]/20 shadow-lg"
+              className="md:hidden absolute left-0 right-0 top-full bg-white backdrop-blur-md border-b border-[#d6c6b5]/20 shadow-lg"
             >
               <div className="px-4 py-6 space-y-4">
                 <motion.div variants={menuItemVariants}>
