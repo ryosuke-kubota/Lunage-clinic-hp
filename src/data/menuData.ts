@@ -63,7 +63,7 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "16500"
       },
       {
-        name: "全顔・首",
+        name: "全顔・目・首",
         equipment: "ウルトラフォーマーMPT",
         description: "高密度焦点式超音波（HIFU）を真皮やSMAS層に照射することで、熱によるコラーゲン変性と収縮が起こり、肌のハリ感や輪郭の引き締まり感が期待されます。照射深度を部位に合わせて調整でき、個々の状態に応じたケアが可能です。",
         memberPrice: "88000",
@@ -874,7 +874,7 @@ export const equipmentData: Record<string, Category> = {
     description: "高密度焦点式超音波（HIFU）による引き締め治療",
     treatments: [
       {
-        name: "全顔・首",
+        name: "全顔・目・首",
         equipment: "ウルトラフォーマーMPT",
         description: "高密度焦点式超音波（HIFU）を真皮やSMAS層に照射することで、熱によるコラーゲン変性と収縮が起こり、肌のハリ感や輪郭の引き締まり感が期待されます。照射深度を部位に合わせて調整でき、個々の状態に応じたケアが可能です。",
         memberPrice: "88000",

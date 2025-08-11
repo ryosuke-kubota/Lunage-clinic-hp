@@ -38,7 +38,8 @@ const TreatmentCard = ({
       <div className="space-y-2 md:space-y-3">
         {/* 治療名 */}
         <div>
-          <h4 className="text-xs md:text-lg font-shippori font-medium text-[#54585f] mb-1">
+          <div className="text-[8px] md:text-xs text-[#8a6d62] font-shippori text-center">{treatment.equipment}</div>
+          <h4 className="text-xs md:text-lg font-shippori font-medium text-[#54585f] mb-1 text-center">
             {treatment.name}
           </h4>
         </div>
