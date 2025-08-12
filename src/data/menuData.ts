@@ -349,12 +349,12 @@ export const concernsData: Record<string, Category> = {
     title: "薄毛",
     description: "育毛・発毛効果が期待できる施術",
     treatments: [
-      {
-        name: "ヘアケア",
-        equipment: "LDM",
-        description: "頭皮の血流を促進し、細胞の再生力をサポート。抜け毛予防・育毛効果が期待される痛みの少ない頭皮ケアです。",
-        regularPrice: "準備中"
-      },
+      // {
+      //   name: "ヘアケア",
+      //   equipment: "LDM",
+      //   description: "頭皮の血流を促進し、細胞の再生力をサポート。抜け毛予防・育毛効果が期待される痛みの少ない頭皮ケアです。",
+      //   regularPrice: "準備中"
+      // },
       {
         name: "Hair filler",
         equipment: "メソガンU225",
@@ -363,7 +363,7 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "33000"
       },
       {
-        name: "Hair EXO",
+        name: "エクソソーム",
         equipment: "メソガンU225",
         description: "エクソソームは、頭皮環境の整備や毛包周辺へのアプローチが期待されており、注目される先端成分です。ドラッグデリバリー機器を用いて頭皮表面に微細な通路を形成し、栄養成分を効率よく浸透させる設計となっており、ボリューム感やハリ・コシが気になる方の頭皮ケアに取り入れられています。",
         memberPrice: "44600",
@@ -378,7 +378,7 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "13200"
       },
       {
-        name: "ヘアダーマ",
+        name: "エクソソーム",
         equipment: "ダーマペン４",
         branch: "臍帯血幹細胞培養液導入（エクソソーム）",
         image: "/images/testimonials/dermapen.PNG",
@@ -1035,12 +1035,12 @@ export const equipmentData: Record<string, Category> = {
         memberPrice: "12900",
         regularPrice: "14190"
       },
-      {
-        name: "ヘアケア",
-        equipment: "LDM",
-        description: "頭皮の血流を促進し、細胞の再生力をサポート。抜け毛予防・育毛効果が期待される痛みの少ない頭皮ケアです。",
-        regularPrice: "準備中"
-      },
+      // {
+      //   name: "ヘアケア",
+      //   equipment: "LDM",
+      //   description: "頭皮の血流を促進し、細胞の再生力をサポート。抜け毛予防・育毛効果が期待される痛みの少ない頭皮ケアです。",
+      //   regularPrice: "準備中"
+      // },
       {
         name: "bodyセルライト・拘縮改善",
         equipment: "LDM",
@@ -1309,7 +1309,7 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "13200"
       },
       {
-        name: "ヘアダーマ",
+        name: "エクソソーム",
         equipment: "ダーマペン４",
         branch: "臍帯血幹細胞培養液導入（エクソソーム）",
         image: "/images/testimonials/dermapen.PNG",
@@ -1393,7 +1393,7 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "33000"
       },
       {
-        name: "Hair EXO",
+        name: "エクソソーム",
         equipment: "メソガンU225",
         description: "エクソソームは、頭皮環境の整備や毛包周辺へのアプローチが期待されており、注目される先端成分です。ドラッグデリバリー機器を用いて頭皮表面に微細な通路を形成し、栄養成分を効率よく浸透させる設計となっており、ボリューム感やハリ・コシが気になる方の頭皮ケアに取り入れられています。",
         memberPrice: "44600",
