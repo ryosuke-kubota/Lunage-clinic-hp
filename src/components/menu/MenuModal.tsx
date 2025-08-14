@@ -163,6 +163,7 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
                         <div className="flex justify-between items-center p-3 bg-white/50 rounded-lg">
                           <span className="text-[#8b4513]/70 font-medium">通常価格</span>
                           <span className={`text-xl font-bold ${treatment.memberPrice ? 'text-[#8b4513]/60' : 'text-[#8b4513]'}`}>
+                            {treatment.regularPrice.includes('+') && '+'} 
                             {formatPrice(treatment.regularPrice)}
                           </span>
                         </div>
@@ -198,9 +199,9 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
 
                 {/* アクションボタン */}
                 <div className="mt-8 flex gap-3">
-                  <button className="text-sm md:text-base flex-1 bg-[#8b4513] text-white py-3 px-3 md:px-6 rounded-xl font-medium hover:bg-[#8b4513]/90 transition-colors">
+                  <a href="https://lin.ee/teAI9dY" target="_blank" rel="noopener noreferrer" className="text-sm md:text-base text-center flex-1 bg-[#8b4513] text-white py-3 px-3 md:px-6 rounded-xl font-medium hover:bg-[#8b4513]/90 transition-colors">
                     予約・相談する
-                  </button>
+                  </a>
                   <button 
                     onClick={onClose}
                     className="text-sm md:text-base px-6 py-3 border border-[#dacacf] text-[#8b4513] rounded-xl font-medium hover:bg-[#faf3ef] transition-colors"

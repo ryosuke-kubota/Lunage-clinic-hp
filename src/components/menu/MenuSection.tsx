@@ -78,6 +78,7 @@ const TreatmentCard = ({
                     通常価格
                   </span>
                   <span className={`font-bold font-shippori ${treatment.memberPrice ? 'text-sm text-[#8a6d62]' : 'text-lg text-[#8b4513]'}`}>
+                    {treatment.regularPrice.includes('+') && '+'} 
                     {formatPrice(treatment.regularPrice)}
                   </span>
                 </div>
