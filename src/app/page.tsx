@@ -4,6 +4,7 @@ import PickupSection from "@/components/PickupSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import KodawariSection from "@/components/KodawariSection";
 import MenuSection from "@/components/MenuSection";
+import PaymentSection from "@/components/PaymentSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import ClinicInterior from "@/components/ClinicInterior";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -32,6 +33,9 @@ export default function Home() {
       <div className="lazy-load">
         <MenuSection />
       </div>
+      {/* <div className="lazy-load">
+        <PaymentSection />
+      </div> */}
       {/* <BeforeAfterSection /> */}
       {/* <ClinicInterior /> */}
       {/* <TestimonialsSection /> */}
