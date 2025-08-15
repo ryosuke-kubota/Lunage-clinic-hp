@@ -1261,33 +1261,10 @@ export const equipmentData: Record<string, Category> = {
       }
     ]
   },
-  "coolgun": {
-    title: "クールガン",
+  "coolgun-facial": {
+    title: "クールガン Boosting (フェイシャル)",
     description: "CO2凍結による針を使わない導入治療",
     treatments: [
-      {
-        name: "ヘアクール",
-        equipment: "クールガン",
-        description: "頭皮深層に超低温の二酸化炭素が残存することで血流促進効果・ボーア効果による育毛を促進します。副作用やダウンタイムがないため前後の予定を気にせず治療を継続できます。",
-        memberPrice: "12000",
-        regularPrice: "13200"
-      },
-      {
-        name: "Hair filler",
-        equipment: "クールガン",
-        // branch: "Hair filler",
-        description: "CO2によるボーア効果に加え、ペプチドやヒアルロン酸などを配合した製剤を頭皮に注入し、頭皮環境の健やかさを保つことを目的とした施術です。栄養成分が頭皮に行き渡ることで、ハリ・コシが気になる方の毛髪のボリューム維持をサポートします。痛みが苦手な方にオススメ。",
-        memberPrice: "42000",
-        regularPrice: "46200"
-      },
-      {
-        name: "臍帯血幹細胞培養液導入（エクソソーム）",
-        equipment: "クールガン",
-        // branch: "臍帯血幹細胞培養液導入（エクソソーム）",
-        description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら頭皮深層へ届けることで、毛母細胞の活性化やダメージを受けた組織の修復を通して育毛効果を期待できます。",
-        memberPrice: "31800",
-        regularPrice: "34980"
-      },
       {
         name: "ニキビ",
         equipment: "クールガン",
@@ -1344,6 +1321,35 @@ export const equipmentData: Record<string, Category> = {
         memberPrice: "17000",
         regularPrice: "18700"
       }
+    ]
+  },
+  "coolgun-hair": {
+    title: "クールガン Cooling (薄毛)",
+    description: "CO2凍結による針を使わない導入治療",
+    treatments: [
+      {
+        name: "ヘアクール",
+        equipment: "クールガン",
+        description: "頭皮深層に超低温の二酸化炭素が残存することで血流促進効果・ボーア効果による育毛を促進します。副作用やダウンタイムがないため前後の予定を気にせず治療を継続できます。",
+        memberPrice: "12000",
+        regularPrice: "13200"
+      },
+      {
+        name: "Hair filler",
+        equipment: "クールガン",
+        // branch: "Hair filler",
+        description: "CO2によるボーア効果に加え、ペプチドやヒアルロン酸などを配合した製剤を頭皮に注入し、頭皮環境の健やかさを保つことを目的とした施術です。栄養成分が頭皮に行き渡ることで、ハリ・コシが気になる方の毛髪のボリューム維持をサポートします。痛みが苦手な方にオススメ。",
+        memberPrice: "42000",
+        regularPrice: "46200"
+      },
+      {
+        name: "臍帯血幹細胞培養液導入（エクソソーム）",
+        equipment: "クールガン",
+        // branch: "臍帯血幹細胞培養液導入（エクソソーム）",
+        description: "エクソソームは細胞間の情報伝達を担うナノサイズの顆粒で、成長因子や核酸などを内包しています。微細な経路を形成しながら頭皮深層へ届けることで、毛母細胞の活性化やダメージを受けた組織の修復を通して育毛効果を期待できます。",
+        memberPrice: "31800",
+        regularPrice: "34980"
+      },
     ]
   },
   "dermapen4": {
