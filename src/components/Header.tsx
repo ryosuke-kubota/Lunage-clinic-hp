@@ -99,7 +99,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="hidden md:flex bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-4 md:px-6 py-2 rounded-full text-sm transition-colors"
             >
-              ご予約はこちら
+              LINEで予約
             </a>
 
             {/* Mobile menu button */}
@@ -226,7 +226,7 @@ export default function Header() {
                     className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-sm text-white font-shippori py-2 px-6 rounded-full transition-colors block w-full mx-auto text-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    ご予約はこちら
+                    LINEで予約
                   </a>
                 </motion.div>
               </div>

@@ -51,7 +51,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-6 py-2 rounded-full transition-colors block w-fit mb-4"
             >
-              ご予約はこちら
+              LINEで予約
             </Link>
             <p className="text-[#dacacf] font-shippori text-sm">
               診療時間: 11:00〜21:00

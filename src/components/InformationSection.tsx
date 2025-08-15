@@ -58,7 +58,7 @@ export default function InformationSection() {
                 <p className="text-[#54585f] font-shippori mb-4">
                   LINEでのお問い合わせ・ご予約も承っております
                 </p>
-                <a href="https://lin.ee/teAI9dY" target="_blank" rel="noopener noreferrer" className="underline text-2xl">ご予約はこちら</a>
+                <a href="https://lin.ee/teAI9dY" target="_blank" rel="noopener noreferrer" className="underline text-2xl">LINEで予約</a>
               </div>
             </div>
           </div>

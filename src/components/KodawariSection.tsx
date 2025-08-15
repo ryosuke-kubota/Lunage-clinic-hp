@@ -31,7 +31,7 @@ export default function KodawariSection() {
         >
           {/* タイトルバー */}
           <div className="bg-[#5d4e37] text-white rounded-full mx-auto py-3 px-8 block mb-8">
-            <h2 className="text-base md:text-2xl font-bold text-center">
+            <h2 className="text-sm md:text-2xl font-bold text-center">
               ルナージュクリニックのこだわり
             </h2>
           </div>

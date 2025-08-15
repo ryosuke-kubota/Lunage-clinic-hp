@@ -23,7 +23,7 @@ export default function ContactSection() {
             <h3 className="text-3xl md:text-8xl font-shippori font-normal text-[#DDCDB9] mb-8">
               Reservation
             </h3>
-            <p className="text-[#54585f] font-shippori text-lg mb-8">
+            <p className="text-[#54585f] font-shippori text-base mb-8">
               ネット予約は24時間受付中
             </p>
 
@@ -31,19 +31,19 @@ export default function ContactSection() {
               href="https://lin.ee/teAI9dY"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-12 py-4 rounded-full text-xl transition-all transform hover:scale-105 shadow-lg mb-8 block w-fit mx-auto"
+              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-12 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg mb-8 block w-fit mx-auto"
             >
-              Reservation
+              LINEで予約
             </a>
 
-            <div className="text-[#8a6d62] font-shippori text-sm">
+            {/* <div className="text-[#8a6d62] font-shippori text-sm">
               ※ご予約確認後に担当者より確認のお電話をさせていただきます
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* Contact Options */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-1 gap-8">
           {/* Phone Contact */}
           <div className="bg-[#faf3ef] p-8 rounded-lg text-center">
             <h4 className="text-[#54585f] font-shippori text-lg mb-4">
@@ -61,17 +61,14 @@ export default function ContactSection() {
           </div>
 
           {/* LINE Contact */}
-          <div className="bg-[#faf3ef] p-8 rounded-lg text-center">
+          {/* <div className="bg-[#faf3ef] p-8 rounded-lg text-center">
             <h4 className="text-[#54585f] font-shippori text-lg mb-4">
               LINEからもご予約いただけます
             </h4>
             <div className="flex justify-center mb-4">
-              <a href="https://lin.ee/teAI9dY" target="_blank" rel="noopener noreferrer" className="underline text-2xl">ご予約はこちら</a>
+              <a href="https://lin.ee/teAI9dY" target="_blank" rel="noopener noreferrer" className="underline text-2xl">LINEで予約</a>
             </div>
-            {/* <p className="text-[#8a6d62] font-shippori text-sm">
-              未成年者治療同意書はこちら
-            </p> */}
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Message */}
