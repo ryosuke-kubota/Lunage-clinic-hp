@@ -93,7 +93,6 @@ export default function PickupSection() {
             slidesPerView={1.2}
             centeredSlides={true}
             loop={true}
-            loopedSlides={9}
             navigation
             pagination={{ clickable: true }}
             autoplay={{
@@ -105,13 +104,11 @@ export default function PickupSection() {
                 slidesPerView: 2.2,
                 spaceBetween: 20,
                 centeredSlides: true,
-                loopedSlides: 9,
               },
               768: {
                 slidesPerView: 3.2,
                 spaceBetween: 30,
                 centeredSlides: true,
-                loopedSlides: 9,
               },
             }}
             className="pickup-swiper"

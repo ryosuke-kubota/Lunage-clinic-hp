@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import PickupSection from "@/components/PickupSection";
 import PhilosophySection from "@/components/PhilosophySection";
+import KodawariSection from "@/components/KodawariSection";
 import MenuSection from "@/components/MenuSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import ClinicInterior from "@/components/ClinicInterior";
@@ -24,6 +25,9 @@ export default function Home() {
       </div>
       <div className="lazy-load">
         <PhilosophySection />
+      </div>
+      <div className="lazy-load">
+        <KodawariSection />
       </div>
       <div className="lazy-load">
         <MenuSection />
