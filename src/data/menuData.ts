@@ -1854,7 +1854,8 @@ export const equipmentCategoryOrder = [
   "thermacool",          // サーマクール
   "dermapen4",           // ダーマペン4
   "picolaser",           // ピコレーザー
-  "coolgun",             // クールガン
+  "coolgun-facial",             // クールガンフェイシャル
+  "coolgun-hair",             // クールガン薄毛
   "mesogun",             // メソガン
   "ldm",                 // LDM
   "peeling",             // ピーリング
