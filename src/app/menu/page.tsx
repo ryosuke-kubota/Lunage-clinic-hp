@@ -7,7 +7,7 @@ import MenuSection from "@/components/menu/MenuSection";
 import ContactSection from "@/components/ContactSection";
 
 export const metadata: Metadata = {
-  title: "施術・料金案内 | 表参道の美肌治療専門クリニック ルナージュクリニック",
+  title: "施術・料金案内 | 大人のコンプレックス解消を切らずにお手伝い ルナージュクリニック",
   description: "ルナージュクリニックの施術メニューと料金をご案内します。二重・目元施術、輪郭形成、スキンケアなど、豊富なメニューをご用意しております。",
   keywords: "美容施術, 料金案内, 二重, 目元, 輪郭形成, スキンケア, 表参道, ルナージュクリニック",
   alternates: {

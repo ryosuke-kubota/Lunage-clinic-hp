@@ -14,7 +14,7 @@ const shippioriMincho = Shippori_Mincho_B1({
 });
 
 export const metadata: Metadata = {
-  title: "表参道の美肌治療専門クリニック｜ルナージュクリニック",
+  title: "大人のコンプレックス解消を切らずにお手伝い｜ルナージュクリニック",
   description: "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
   keywords: "美容クリニック, 表参道, 美肌治療, シミ, しわ, たるみ, ニキビ, ルナージュクリニック",
   authors: [{ name: "ルナージュクリニック" }],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     apple: "/images/favicon.ico",
   },
   openGraph: {
-    title: "表参道の美肌治療専門クリニック｜ルナージュクリニック",
+    title: "大人のコンプレックス解消を切らずにお手伝い｜ルナージュクリニック",
     description: "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
     url: "https://lunage-clinic.com",
     siteName: "ルナージュクリニック",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         url: "/images/ogp.png",
         width: 1200,
         height: 630,
-        alt: "ルナージュクリニック - 表参道の美肌治療専門クリニック",
+        alt: "ルナージュクリニック - 大人のコンプレックス解消を切らずにお手伝い",
       },
     ],
     locale: "ja_JP",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "表参道の美肌治療専門クリニック｜ルナージュクリニック",
+    title: "大人のコンプレックス解消を切らずにお手伝い｜ルナージュクリニック",
     description: "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
     images: ["/images/ogp.png"],
   },

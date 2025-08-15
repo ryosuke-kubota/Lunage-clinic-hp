@@ -76,7 +76,7 @@ export default function HeroSection() {
         <div className="absolute bottom-2 left-0 right-0 z-20 flex justify-center px-4">
           <div className="text-center px-6 py-4 sm:px-12 sm:py-8">
             <p className="text-[#c38092] font-shippori text-xs sm:text-base mb-2">
-              表参道の美肌治療専門クリニック
+            大人のコンプレックス解消を切らずにお手伝い
             </p>
             
             <h1 className="text-[#54585f] font-shippori font-medium text-base sm:text-4xl lg:text-5xl">

@@ -37,7 +37,7 @@ export const concernsData: Record<string, Category> = {
     treatments: [
       {
         name: "肌診断",
-        equipment: "肌診断機x",
+        equipment: "肌診断機",
         description: "最新のカメラを用いて、肌の状態を詳細に分析する肌診断器です。シミ、しわ、毛穴など、様々な肌トラブルを数値化し、肌年齢を推定。肌治療前に測定することでベストな治療の提案に役立ちます。肌治療を予約した方は無料で受けられます。",
         memberPrice: "3300",
         regularPrice: "3630"
@@ -907,12 +907,12 @@ export const concernsData: Record<string, Category> = {
 // 機械別カテゴリのデータ
 export const equipmentData: Record<string, Category> = {
   "skin-diagnosis": {
-    title: "肌診断機x",
+    title: "肌診断機",
     description: "最新のカメラを用いた肌診断システム",
     treatments: [
       {
         name: "肌診断",
-        equipment: "肌診断機x",
+        equipment: "肌診断機",
         description: "最新のカメラを用いて、肌の状態を詳細に分析する肌診断器です。シミ、しわ、毛穴など、様々な肌トラブルを数値化し、肌年齢を推定。肌治療前に測定することでベストな治療の提案に役立ちます。肌治療を予約した方は無料で受けられます。",
         memberPrice: "3300",
         regularPrice: "3630"

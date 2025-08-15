@@ -22,7 +22,7 @@ const concernCategories = [
 
 // 機械別カテゴリ
 const equipmentCategories = [
-  { id: "skin-diagnosis", name: "肌診断機x", icon: "🔍", anchor: "#skin-diagnosis" },
+  { id: "skin-diagnosis", name: "肌診断機", icon: "🔍", anchor: "#skin-diagnosis" },
   { id: "customize-hifu", name: "カスタマイズHIFU", icon: "🔥", anchor: "#customize-hifu" },
   { id: "ultraformer", name: "ウルトラフォーマー", icon: "🔥", anchor: "#ultraformer" },
   { id: "ondalift", name: "オンダリフト", icon: "⚡", anchor: "#ondalift" },
