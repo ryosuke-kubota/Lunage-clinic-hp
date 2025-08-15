@@ -93,7 +93,7 @@ export default function PickupSection() {
             slidesPerView={1.2}
             centeredSlides={true}
             loop={true}
-            loopAdditionalSlides={2}
+            loopedSlides={9}
             navigation
             pagination={{ clickable: true }}
             autoplay={{
@@ -105,63 +105,43 @@ export default function PickupSection() {
                 slidesPerView: 2.2,
                 spaceBetween: 20,
                 centeredSlides: true,
+                loopedSlides: 9,
               },
               768: {
                 slidesPerView: 3.2,
                 spaceBetween: 30,
                 centeredSlides: true,
+                loopedSlides: 9,
               },
             }}
             className="pickup-swiper"
           >
-            {/* 元のアイテム */}
-            {pickupItems.map((item, index) => (
-              <SwiperSlide key={`${item.id}-${index}`}>
-                <div
-                  className="cursor-pointer group"
-                  onClick={() => handleItemClick(item)}
-                >
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-xl shadow-lg">
-                    <Image
-                      src={item.thumbnail}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-lg font-bold mb-1">{item.title}</h3>
-                      <p className="text-sm">{item.description}</p>
+            {/* 複数回繰り返してスライド数を増加 */}
+            {Array.from({ length: 3 }).map((_, repeatIndex) =>
+              pickupItems.map((item, index) => (
+                <SwiperSlide key={`${item.id}-${repeatIndex}-${index}`}>
+                  <div
+                    className="cursor-pointer group"
+                    onClick={() => handleItemClick(item)}
+                  >
+                    <div className="relative aspect-[3/4] overflow-hidden rounded-xl shadow-lg">
+                      <Image
+                        src={item.thumbnail}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 className="text-lg font-bold mb-1">{item.title}</h3>
+                        <p className="text-sm">{item.description}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-            {/* 追加のスライド（ループ効果のため） */}
-            {pickupItems.map((item, index) => (
-              <SwiperSlide key={`${item.id}-duplicate-${index}`}>
-                <div
-                  className="cursor-pointer group"
-                  onClick={() => handleItemClick(item)}
-                >
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-xl shadow-lg">
-                    <Image
-                      src={item.thumbnail}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-lg font-bold mb-1">{item.title}</h3>
-                      <p className="text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                </SwiperSlide>
+              ))
+            )}
           </Swiper>
         </motion.div>
 
