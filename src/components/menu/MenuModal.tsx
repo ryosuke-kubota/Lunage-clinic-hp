@@ -121,10 +121,10 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
                   </div>
                 )}
 
-                {/* 説明 - 点滴の場合非表示 */}
-                {!isTenteki && treatment.description && (
+                {/* 説明 */}
+                {treatment.description && (
                   <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-[#8b4513] mb-3">施術について</h3>
+                    <h3 className="text-lg font-semibold text-[#8b4513] mb-3">{isTenteki ? '説明' : '施術について'}</h3>
                     <p className="text-sm md:text-base text-[#8b4513]/80 leading-relaxed whitespace-pre-line">
                       {treatment.description}
                     </p>
@@ -179,12 +179,12 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
                   )}
                 </div>
 
-                {/* 追加情報 - 点滴の場合非表示 */}
-                {!isTenteki && (treatment.contents || treatment.treatmentTime) && (
+                {/* 追加情報 */}
+                {(treatment.contents || treatment.treatmentTime) && (
                   <div className="mt-6 space-y-4">
                     {treatment.contents && (
                       <div>
-                        <h4 className="text-sm font-semibold text-[#8b4513] mb-2">内容</h4>
+                        <h4 className="text-sm font-semibold text-[#8b4513] mb-2">{isTenteki ? '成分内容' : '内容'}</h4>
                         <p className="text-[#8b4513]/80 text-sm">{treatment.contents}</p>
                       </div>
                     )}

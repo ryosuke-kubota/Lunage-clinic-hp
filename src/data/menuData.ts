@@ -673,183 +673,213 @@ export const concernsData: Record<string, Category> = {
     description: "各種点滴・注射メニュー",
     treatments: [
       {
-        name: "超高濃度25gビタミンC",
+        name: "超高濃度ビタミンC",
         equipment: "点滴",
-        description: "",
+        description: "国産の超高濃度製剤を使用。強力な抗酸化作用が期待でき、アンチエイジングや美白へのアプローチとして注目されています。酸化剤不使用の国産ビタミンCを採用しています。",
+        contents: "VC25g, 生食250ml",
         regularPrice: "10000"
       },
       {
         name: "プラセンタ点滴",
         equipment: "点滴",
-        description: "",
+        description: "胎盤由来のプラセンタ製剤により、健やかな毎日をサポートします。プラセンタは、ホルモンバランスの乱れや肝臓の疲れが気になる方にも活用されています。美肌効果もあり、女性はもちろん男性にもおすすめです！",
+        contents: "生食100ml, ラエンネック10A",
         regularPrice: "5000"
       },
       {
         name: "プラセンタ注射",
         equipment: "点滴",
         description: "",
+        contents: "ラエンネック２A",
         regularPrice: "1000"
       },
       {
         name: "グルタチオン点滴",
         equipment: "点滴",
-        description: "",
+        description: "グルタチオン600mgt点滴。抗酸化作用と肝臓保護作用により、黄ぐすみの軽減や美白効果が期待できます。",
+        contents: "生食100ml, ルチオン",
         regularPrice: "3000"
       },
       {
         name: "倍量グルタチオン点滴",
         equipment: "点滴",
-        description: "",
+        description: "高濃度のグルタチオンを配合した点滴です。グルタチオンの濃度が倍の1200mgです。",
+        contents: "生食100ml, ルチオン",
         regularPrice: "5000"
       },
       {
-        name: "最強ルナージュ爆美カクテル",
+        name: "ルナージュオリジナル美肌カクテル",
         equipment: "点滴",
-        description: "",
+        description: "ルナージュこだわりのオリジナルカクテルです。美白、美肌、美髪など、複数の美容効果が期待できる成分を配合したオリジナルカクテル点滴です。ビタミンやグルタチオンなどをバランス良く配合しています。",
+        contents: "生食100ml, アスコルビン酸, トランサミン, ルチオン, クリストファン, ビタメジン, ビオチン",
         regularPrice: "10000"
       },
       {
-        name: "超美白カクテル",
+        name: "美白カクテル",
         equipment: "点滴",
-        description: "",
+        description: "ビタミンCに加え、メラニンを抑えるトラネキサム酸やLシステインを配合。",
+        contents: "生食100ml, トランサミン, クリストファン, アスコルビン酸",
         regularPrice: "5000"
       },
       {
         name: "つるつる美肌カクテル",
         equipment: "点滴",
-        description: "",
+        description: "ビタミンCの抗酸化作用とパントテン酸の代謝促進作用できめ細やかな肌に導きます",
+        contents: "生食100ml, アスコルビン酸, パンテノール, クリストファン",
         regularPrice: "5000"
       },
       {
         name: "肝斑対策点滴",
         equipment: "点滴",
-        description: "",
+        description: "トラネキサム酸が肝斑に働きかけ、Lシステインがメラニンの生成を抑制することで、肝斑の改善を目指します。",
+        contents: "生食100ml, トランサミン, クリストファン",
         regularPrice: "3000"
       },
       {
         name: "美髪・美爪注射",
         equipment: "点滴",
-        description: "",
+        description: "ビオチンとパントテン酸で髪や爪のケラチンを補修。髪や爪の健康維持をサポートし、白髪や爪割れが気になる方にもお勧めです。",
+        contents: "生食20ml, ビオチン, パンテノール",
         regularPrice: "3000"
       },
       {
-        name: "ビタミン増し増し点滴",
+        name: "高濃度ビタミン点滴",
         equipment: "点滴",
-        description: "",
+        description: "にんにく注射の匂いが苦手な方にもおすすめのビタミンBとCが入った点滴です。",
+        contents: "生食100ml,  アスコルビン酸, ビタメジン",
         regularPrice: "5000"
       },
       {
         name: "にんにく点滴",
         equipment: "点滴",
-        description: "",
+        description: "疲労回復や活力アップが期待できます。にんにくの香りはしないので予定前でも大丈夫です。",
+        contents: "生食100ml, アリナミンF50",
         regularPrice: "3000"
       },
       {
         name: "にんにく注射",
         equipment: "点滴",
-        description: "",
+        description: "時間がない方はこれ。にんにく点滴と同等の有効成分量を、短時間で注入できる注射です。",
+        contents: "アリナミンF50",
         regularPrice: "2000"
       },
       {
         name: "臭わないにんにく注射",
         equipment: "点滴",
-        description: "",
+        description: "にんにく注射特有の香りが苦手な方におすすめです。香りを抑えた製剤を使用しています。",
+        contents: "ビタメジン, 生食20ml",
         regularPrice: "2500"
       },
       {
         name: "疲労回復点滴",
         equipment: "点滴",
-        description: "",
+        description: "ビタミンCとビタミンBで活力アップや体力回復が期待できます。",
+        contents: "生食100ml, アスコルビン酸, アリナミンF50",
         regularPrice: "3000"
       },
       {
-        name: "二日酔い爆速回復点滴",
+        name: "二日酔い回復点滴",
         equipment: "点滴",
-        description: "",
+        description: "二日酔いへの有効成分を詰め込んだ点滴です。オプションで吐き気どめも追加できます。",
+        contents: "ソルラクト, 強ミノ, ファモチジン",
         regularPrice: "8000"
       },
       {
         name: "飲み会前守りの点滴",
         equipment: "点滴",
-        description: "",
+        description: "飲酒前の二日酔い対策や体調管理におすすめです。肝機能のサポートやビタミンB群の補給が期待できます。",
+        contents: "ビタメジン, 強ミノ, 生食100ml",
         regularPrice: "5000"
       },
       {
         name: "飲み会前守りの注射",
         equipment: "点滴",
-        description: "",
+        description: "短時間で肝機能のサポートやビタミンB群の補給が期待できます。男女どちらにもおすすめです。",
+        contents: "強ミノ",
         regularPrice: "2000"
       },
       {
         name: "ダイエット・筋トレ点滴",
         equipment: "点滴",
-        description: "",
+        description: "男女どちらにもおすすめ。脂肪の燃焼を促進し、健康的なダイエットをサポートします。",
+        contents: "生食100ml, エルカルニチン, チオクト酸",
         regularPrice: "5000"
       },
       {
-        name: "痩せる注射",
+        name: "ダイエットサポート注射",
         equipment: "点滴",
-        description: "",
+        description: "時間がない方におすすめです。ダイエット・筋トレ点滴と同様の有効成分を配合した注射です。",
+        contents: "チオクト酸, エルカルニチン",
         regularPrice: "3000"
       },
       {
         name: "レッドブル注射",
         equipment: "点滴",
-        description: "",
+        description: "活力アップをサポートする注射です。疲労回復や眠気対策に効果が期待できます。",
+        contents: "アリナミンF50, カフェイン",
         regularPrice: "3000"
       },
       {
         name: "免疫強化点滴",
         equipment: "点滴",
-        description: "",
+        description: "風邪の季節や疲れを感じた時などの体調管理に。体のコンディションを整え、健康維持をサポートします。",
+        contents: "生食100ml, アスコルビン酸, ビタメジン, 強ミノ, エルカルニチン",
         regularPrice: "5000"
       },
       {
         name: "OS1点滴",
         equipment: "点滴",
-        description: "",
+        description: "猛暑で脱水気味や食欲低下が気になる方におすすめ。ミネラルに加えてビタミン類も加えた点滴メニューです。",
+        contents: "アスコルビン酸, ビタメジン, ソルラクト",
         regularPrice: "5000"
       },
       {
         name: "口内炎点滴",
         equipment: "点滴",
-        description: "",
+        description: "口内炎が気になる方へ。ビタミンを補給し、口内炎の改善をサポートする点滴です。",
+        contents: "生食100ml, アスコルビン酸, パンテノール, ビタメジン, ビオチン",
         regularPrice: "5000"
       },
       {
         name: "胃もたれ注射",
         equipment: "点滴",
-        description: "",
+        description: "胃もたれが気になる方へ。有効成分を直接注入することで、胃の不快感を和らげることが期待できます。オプションで吐き気どめも追加できます。",
+        contents: "生食20ml, ファモチジン",
         regularPrice: "2000"
       },
       {
         name: "むくみスッキリ注射",
         equipment: "点滴",
-        description: "",
+        description: "むくみが気になる方へ。体内の余分な水分排出をサポートし、すっきり感を促すことが期待できます。施術後は頻繁にお手洗いに行きたくなるので注意。",
+        contents: "ラシックス, 生食20ml",
         regularPrice: "2000"
       },
       {
         name: "つわり点滴",
         equipment: "点滴",
-        description: "",
+        description: "辛いつわりに、脱水補給と必須ビタミン類を補充します。吐き気止めの成分も配合されており、つわりの症状緩和が期待できます。ご自身の楽な体勢で点滴を受けていただけます。",
+        contents: "ソルラクト, アスコルビン酸, プリンペラン, ファモチジン, ビタメジン",
         regularPrice: "8000"
       },
       {
-        name: "エクソソーム点滴1cc",
+        name: "エクソソーム点滴",
         equipment: "点滴",
-        description: "",
+        description: "エクソソームを高濃度に配合した、再生医療由来の美容点滴です。肌のコンディションを整え、ニキビ跡、赤み、加齢による肌力低下など複合的なお悩みの改善、および手術や施術後のダウンタイムの軽減が期待できます。",
+        contents: "生食100ml, エクソソーム",
         regularPrice: "19800"
       },
       {
         name: "育毛点滴",
         equipment: "点滴",
-        description: "",
+        description: "毛髪に必要な成分を配合した点滴です。飲み薬との併用により、より良い効果が期待できる場合があります。",
+        contents: "生食100ml, パンテノール, ビオチン, ビタメジン",
         regularPrice: "5000"
       },
       {
-        name: "睡眠点滴",
+        name: "静脈麻酔",
         equipment: "点滴",
-        description: "",
+        description: "痛みを伴う施術のオプションです。当日中の車の運転はお控えください。",
+        contents: "アタラックスP, 生食100ml",
         regularPrice: "3000"
       }
     ]
@@ -1521,183 +1551,213 @@ export const equipmentData: Record<string, Category> = {
     description: "各種点滴・注射メニュー",
     treatments: [
       {
-        name: "超高濃度25gビタミンC",
+        name: "超高濃度ビタミンC",
         equipment: "点滴",
-        description: "",
+        description: "国産の超高濃度製剤を使用。強力な抗酸化作用が期待でき、アンチエイジングや美白へのアプローチとして注目されています。酸化剤不使用の国産ビタミンCを採用しています。",
+        contents: "VC25g, 生食250ml",
         regularPrice: "10000"
       },
       {
         name: "プラセンタ点滴",
         equipment: "点滴",
-        description: "",
+        description: "胎盤由来のプラセンタ製剤により、健やかな毎日をサポートします。プラセンタは、ホルモンバランスの乱れや肝臓の疲れが気になる方にも活用されています。美肌効果もあり、女性はもちろん男性にもおすすめです！",
+        contents: "生食100ml, ラエンネック10A",
         regularPrice: "5000"
       },
       {
         name: "プラセンタ注射",
         equipment: "点滴",
         description: "",
+        contents: "ラエンネック２A",
         regularPrice: "1000"
       },
       {
         name: "グルタチオン点滴",
         equipment: "点滴",
-        description: "",
+        description: "グルタチオン600mgt点滴。抗酸化作用と肝臓保護作用により、黄ぐすみの軽減や美白効果が期待できます。",
+        contents: "生食100ml, ルチオン",
         regularPrice: "3000"
       },
       {
         name: "倍量グルタチオン点滴",
         equipment: "点滴",
-        description: "",
+        description: "高濃度のグルタチオンを配合した点滴です。グルタチオンの濃度が倍の1200mgです。",
+        contents: "生食100ml, ルチオン",
         regularPrice: "5000"
       },
       {
-        name: "最強ルナージュ爆美カクテル",
+        name: "ルナージュオリジナル美肌カクテル",
         equipment: "点滴",
-        description: "",
+        description: "ルナージュこだわりのオリジナルカクテルです。美白、美肌、美髪など、複数の美容効果が期待できる成分を配合したオリジナルカクテル点滴です。ビタミンやグルタチオンなどをバランス良く配合しています。",
+        contents: "生食100ml, アスコルビン酸, トランサミン, ルチオン, クリストファン, ビタメジン, ビオチン",
         regularPrice: "10000"
       },
       {
-        name: "超美白カクテル",
+        name: "美白カクテル",
         equipment: "点滴",
-        description: "",
+        description: "ビタミンCに加え、メラニンを抑えるトラネキサム酸やLシステインを配合。",
+        contents: "生食100ml, トランサミン, クリストファン, アスコルビン酸",
         regularPrice: "5000"
       },
       {
         name: "つるつる美肌カクテル",
         equipment: "点滴",
-        description: "",
+        description: "ビタミンCの抗酸化作用とパントテン酸の代謝促進作用できめ細やかな肌に導きます",
+        contents: "生食100ml, アスコルビン酸, パンテノール, クリストファン",
         regularPrice: "5000"
       },
       {
         name: "肝斑対策点滴",
         equipment: "点滴",
-        description: "",
+        description: "トラネキサム酸が肝斑に働きかけ、Lシステインがメラニンの生成を抑制することで、肝斑の改善を目指します。",
+        contents: "生食100ml, トランサミン, クリストファン",
         regularPrice: "3000"
       },
       {
         name: "美髪・美爪注射",
         equipment: "点滴",
-        description: "",
+        description: "ビオチンとパントテン酸で髪や爪のケラチンを補修。髪や爪の健康維持をサポートし、白髪や爪割れが気になる方にもお勧めです。",
+        contents: "生食20ml, ビオチン, パンテノール",
         regularPrice: "3000"
       },
       {
-        name: "ビタミン増し増し点滴",
+        name: "高濃度ビタミン点滴",
         equipment: "点滴",
-        description: "",
+        description: "にんにく注射の匂いが苦手な方にもおすすめのビタミンBとCが入った点滴です。",
+        contents: "生食100ml,  アスコルビン酸, ビタメジン",
         regularPrice: "5000"
       },
       {
         name: "にんにく点滴",
         equipment: "点滴",
-        description: "",
+        description: "疲労回復や活力アップが期待できます。にんにくの香りはしないので予定前でも大丈夫です。",
+        contents: "生食100ml, アリナミンF50",
         regularPrice: "3000"
       },
       {
         name: "にんにく注射",
         equipment: "点滴",
-        description: "",
+        description: "時間がない方はこれ。にんにく点滴と同等の有効成分量を、短時間で注入できる注射です。",
+        contents: "アリナミンF50",
         regularPrice: "2000"
       },
       {
         name: "臭わないにんにく注射",
         equipment: "点滴",
-        description: "",
+        description: "にんにく注射特有の香りが苦手な方におすすめです。香りを抑えた製剤を使用しています。",
+        contents: "ビタメジン, 生食20ml",
         regularPrice: "2500"
       },
       {
         name: "疲労回復点滴",
         equipment: "点滴",
-        description: "",
+        description: "ビタミンCとビタミンBで活力アップや体力回復が期待できます。",
+        contents: "生食100ml, アスコルビン酸, アリナミンF50",
         regularPrice: "3000"
       },
       {
-        name: "二日酔い爆速回復点滴",
+        name: "二日酔い回復点滴",
         equipment: "点滴",
-        description: "",
+        description: "二日酔いへの有効成分を詰め込んだ点滴です。オプションで吐き気どめも追加できます。",
+        contents: "ソルラクト, 強ミノ, ファモチジン",
         regularPrice: "8000"
       },
       {
         name: "飲み会前守りの点滴",
         equipment: "点滴",
-        description: "",
+        description: "飲酒前の二日酔い対策や体調管理におすすめです。肝機能のサポートやビタミンB群の補給が期待できます。",
+        contents: "ビタメジン, 強ミノ, 生食100ml",
         regularPrice: "5000"
       },
       {
         name: "飲み会前守りの注射",
         equipment: "点滴",
-        description: "",
+        description: "短時間で肝機能のサポートやビタミンB群の補給が期待できます。男女どちらにもおすすめです。",
+        contents: "強ミノ",
         regularPrice: "2000"
       },
       {
         name: "ダイエット・筋トレ点滴",
         equipment: "点滴",
-        description: "",
+        description: "男女どちらにもおすすめ。脂肪の燃焼を促進し、健康的なダイエットをサポートします。",
+        contents: "生食100ml, エルカルニチン, チオクト酸",
         regularPrice: "5000"
       },
       {
-        name: "痩せる注射",
+        name: "ダイエットサポート注射",
         equipment: "点滴",
-        description: "",
+        description: "時間がない方におすすめです。ダイエット・筋トレ点滴と同様の有効成分を配合した注射です。",
+        contents: "チオクト酸, エルカルニチン",
         regularPrice: "3000"
       },
       {
         name: "レッドブル注射",
         equipment: "点滴",
-        description: "",
+        description: "活力アップをサポートする注射です。疲労回復や眠気対策に効果が期待できます。",
+        contents: "アリナミンF50, カフェイン",
         regularPrice: "3000"
       },
       {
         name: "免疫強化点滴",
         equipment: "点滴",
-        description: "",
+        description: "風邪の季節や疲れを感じた時などの体調管理に。体のコンディションを整え、健康維持をサポートします。",
+        contents: "生食100ml, アスコルビン酸, ビタメジン, 強ミノ, エルカルニチン",
         regularPrice: "5000"
       },
       {
         name: "OS1点滴",
         equipment: "点滴",
-        description: "",
+        description: "猛暑で脱水気味や食欲低下が気になる方におすすめ。ミネラルに加えてビタミン類も加えた点滴メニューです。",
+        contents: "アスコルビン酸, ビタメジン, ソルラクト",
         regularPrice: "5000"
       },
       {
         name: "口内炎点滴",
         equipment: "点滴",
-        description: "",
+        description: "口内炎が気になる方へ。ビタミンを補給し、口内炎の改善をサポートする点滴です。",
+        contents: "生食100ml, アスコルビン酸, パンテノール, ビタメジン, ビオチン",
         regularPrice: "5000"
       },
       {
         name: "胃もたれ注射",
         equipment: "点滴",
-        description: "",
+        description: "胃もたれが気になる方へ。有効成分を直接注入することで、胃の不快感を和らげることが期待できます。オプションで吐き気どめも追加できます。",
+        contents: "生食20ml, ファモチジン",
         regularPrice: "2000"
       },
       {
         name: "むくみスッキリ注射",
         equipment: "点滴",
-        description: "",
+        description: "むくみが気になる方へ。体内の余分な水分排出をサポートし、すっきり感を促すことが期待できます。施術後は頻繁にお手洗いに行きたくなるので注意。",
+        contents: "ラシックス, 生食20ml",
         regularPrice: "2000"
       },
       {
         name: "つわり点滴",
         equipment: "点滴",
-        description: "",
+        description: "辛いつわりに、脱水補給と必須ビタミン類を補充します。吐き気止めの成分も配合されており、つわりの症状緩和が期待できます。ご自身の楽な体勢で点滴を受けていただけます。",
+        contents: "ソルラクト, アスコルビン酸, プリンペラン, ファモチジン, ビタメジン",
         regularPrice: "8000"
       },
       {
-        name: "エクソソーム点滴1cc",
+        name: "エクソソーム点滴",
         equipment: "点滴",
-        description: "",
+        description: "エクソソームを高濃度に配合した、再生医療由来の美容点滴です。肌のコンディションを整え、ニキビ跡、赤み、加齢による肌力低下など複合的なお悩みの改善、および手術や施術後のダウンタイムの軽減が期待できます。",
+        contents: "生食100ml, エクソソーム",
         regularPrice: "19800"
       },
       {
         name: "育毛点滴",
         equipment: "点滴",
-        description: "",
+        description: "毛髪に必要な成分を配合した点滴です。飲み薬との併用により、より良い効果が期待できる場合があります。",
+        contents: "生食100ml, パンテノール, ビオチン, ビタメジン",
         regularPrice: "5000"
       },
       {
-        name: "睡眠点滴",
+        name: "静脈麻酔",
         equipment: "点滴",
-        description: "",
+        description: "痛みを伴う施術のオプションです。当日中の車の運転はお控えください。",
+        contents: "アタラックスP, 生食100ml",
         regularPrice: "3000"
       }
     ]
