@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import PickupSection from "@/components/PickupSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import MenuSection from "@/components/MenuSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
@@ -17,6 +18,9 @@ export default function Home() {
       <Header />
       <div className="critical-content">
         <HeroSection />
+      </div>
+      <div className="lazy-load">
+        <PickupSection />
       </div>
       <div className="lazy-load">
         <PhilosophySection />
