@@ -77,9 +77,9 @@ export default function ContactSection() {
         {/* Bottom Message */}
         <div className="text-center mt-16">
           <p className="text-[#8a6d62] font-shippori text-lg leading-relaxed max-w-3xl mx-auto">
-            お肌のお悩み、美容のご相談、どんなことでも気軽にお話しください。
-            <br />
-            持続性と毎月お会いできること、美容のお話ができることを、心から楽しみにしております。
+          月明かりで包み込むようなケアを。<br />
+          確かな効果と安全性を追求し、医学的根拠に基づく施術で、<br />
+          お一人おひとりのからだが本来持つ力を最大限に引き出します。
           </p>
         </div>
       </div>
