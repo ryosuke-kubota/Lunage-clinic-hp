@@ -198,51 +198,51 @@ export const concernsData: Record<string, Category> = {
       }
     ]
   },
-  "slimming": {
-    title: "痩身",
-    description: "ボディラインの引き締めを目指す施術",
-    treatments: [
-      {
-        name: "ボディMパーツ",
-        equipment: "ウルトラフォーマーMPT",
-        branch: "背中上部、背中下部、二の腕（左右）、腰、臀部（バナナロール）、ふくらはぎ、腹部、ウエスト",
-        description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
-        memberPrice: "50000",
-        regularPrice: "55000"
-      },
-      {
-        name: "ボディLパーツ",
-        equipment: "ウルトラフォーマーMPT",
-        branch: "大腿前面・大腿後面・大腿内側（左右）",
-        description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
-        memberPrice: "65000",
-        regularPrice: "71500"
-      },
-      // {
-      //   name: "ボディMパーツ",
-      //   equipment: "オンダリフト",
-      //   branch: "背中上部、背中下部、二の腕（左右）、腰、臀部（バナナロール）、ふくらはぎ、腹部、ウエスト",
-      //   description: "マイクロ波が皮下深部の脂肪細胞に熱エネルギーを注ぐことで、脂肪分解とセルライト改善が期待できます。冷却機構付きで肌表面への負担を軽減し、痛みに配慮した施術です。たるみ・凸凹改善と引き締め効果が期待できます。",
-      //   memberPrice: "40000",
-      //   regularPrice: "44000"
-      // },
-      // {
-      //   name: "ボディLパーツ",
-      //   equipment: "オンダリフト",
-      //   branch: "大腿前面・大腿後面・大腿内側（左右）",
-      //   description: "マイクロ波が皮下深部の脂肪細胞に熱エネルギーを注ぐことで、脂肪分解とセルライト改善が期待できます。冷却機構付きで肌表面への負担を軽減し、痛みに配慮した施術です。たるみ・凸凹改善と引き締め効果が期待できます。",
-      //   memberPrice: "55000",
-      //   regularPrice: "60500"
-      // },
-      {
-        name: "bodyセルライト・拘縮改善",
-        equipment: "LDM",
-        description: "ダウンタイム短縮にもオススメ◎最先端セルライト治療！超音波を用いてセルライトや脂肪吸引後の拘縮を分解します。痛みやダウンタイムも心配ありません。",
-        memberPrice: "16000",
-        regularPrice: "17600"
-      }
-    ]
-  },
+  // "slimming": {
+  //   title: "痩身",
+  //   description: "ボディラインの引き締めを目指す施術",
+  //   treatments: [
+  //     {
+  //       name: "ボディMパーツ",
+  //       equipment: "ウルトラフォーマーMPT",
+  //       branch: "背中上部、背中下部、二の腕（左右）、腰、臀部（バナナロール）、ふくらはぎ、腹部、ウエスト",
+  //       description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
+  //       memberPrice: "50000",
+  //       regularPrice: "55000"
+  //     },
+  //     {
+  //       name: "ボディLパーツ",
+  //       equipment: "ウルトラフォーマーMPT",
+  //       branch: "大腿前面・大腿後面・大腿内側（左右）",
+  //       description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
+  //       memberPrice: "65000",
+  //       regularPrice: "71500"
+  //     },
+  //     // {
+  //     //   name: "ボディMパーツ",
+  //     //   equipment: "オンダリフト",
+  //     //   branch: "背中上部、背中下部、二の腕（左右）、腰、臀部（バナナロール）、ふくらはぎ、腹部、ウエスト",
+  //     //   description: "マイクロ波が皮下深部の脂肪細胞に熱エネルギーを注ぐことで、脂肪分解とセルライト改善が期待できます。冷却機構付きで肌表面への負担を軽減し、痛みに配慮した施術です。たるみ・凸凹改善と引き締め効果が期待できます。",
+  //     //   memberPrice: "40000",
+  //     //   regularPrice: "44000"
+  //     // },
+  //     // {
+  //     //   name: "ボディLパーツ",
+  //     //   equipment: "オンダリフト",
+  //     //   branch: "大腿前面・大腿後面・大腿内側（左右）",
+  //     //   description: "マイクロ波が皮下深部の脂肪細胞に熱エネルギーを注ぐことで、脂肪分解とセルライト改善が期待できます。冷却機構付きで肌表面への負担を軽減し、痛みに配慮した施術です。たるみ・凸凹改善と引き締め効果が期待できます。",
+  //     //   memberPrice: "55000",
+  //     //   regularPrice: "60500"
+  //     // },
+  //     {
+  //       name: "bodyセルライト・拘縮改善",
+  //       equipment: "LDM",
+  //       description: "ダウンタイム短縮にもオススメ◎最先端セルライト治療！超音波を用いてセルライトや脂肪吸引後の拘縮を分解します。痛みやダウンタイムも心配ありません。",
+  //       memberPrice: "16000",
+  //       regularPrice: "17600"
+  //     }
+  //   ]
+  // },
   "spots-melasma": {
     title: "しみ・肝斑",
     description: "色素沈着やくすみの改善を目指す施術",
@@ -666,6 +666,45 @@ export const concernsData: Record<string, Category> = {
         memberPrice: "20000",
         regularPrice: "22000"
       },
+      {
+        name: "ボディMパーツ",
+        equipment: "ウルトラフォーマーMPT",
+        branch: "背中上部、背中下部、二の腕（左右）、腰、臀部（バナナロール）、ふくらはぎ、腹部、ウエスト",
+        description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
+        memberPrice: "50000",
+        regularPrice: "55000"
+      },
+      {
+        name: "ボディLパーツ",
+        equipment: "ウルトラフォーマーMPT",
+        branch: "大腿前面・大腿後面・大腿内側（左右）",
+        description: "超音波の熱を利用した施術により、気になる部位の脂肪にアプローチし、ボディラインの引き締めを目指します。気になる二の腕やブラ肉、細かな部位へのアプローチが可能です。",
+        memberPrice: "65000",
+        regularPrice: "71500"
+      },
+      // {
+      //   name: "ボディMパーツ",
+      //   equipment: "オンダリフト",
+      //   branch: "背中上部、背中下部、二の腕（左右）、腰、臀部（バナナロール）、ふくらはぎ、腹部、ウエスト",
+      //   description: "マイクロ波が皮下深部の脂肪細胞に熱エネルギーを注ぐことで、脂肪分解とセルライト改善が期待できます。冷却機構付きで肌表面への負担を軽減し、痛みに配慮した施術です。たるみ・凸凹改善と引き締め効果が期待できます。",
+      //   memberPrice: "40000",
+      //   regularPrice: "44000"
+      // },
+      // {
+      //   name: "ボディLパーツ",
+      //   equipment: "オンダリフト",
+      //   branch: "大腿前面・大腿後面・大腿内側（左右）",
+      //   description: "マイクロ波が皮下深部の脂肪細胞に熱エネルギーを注ぐことで、脂肪分解とセルライト改善が期待できます。冷却機構付きで肌表面への負担を軽減し、痛みに配慮した施術です。たるみ・凸凹改善と引き締め効果が期待できます。",
+      //   memberPrice: "55000",
+      //   regularPrice: "60500"
+      // },
+      {
+        name: "bodyセルライト・拘縮改善",
+        equipment: "LDM",
+        description: "ダウンタイム短縮にもオススメ◎最先端セルライト治療！超音波を用いてセルライトや脂肪吸引後の拘縮を分解します。痛みやダウンタイムも心配ありません。",
+        memberPrice: "16000",
+        regularPrice: "17600"
+      }
     ]
   },
   "tenteki": {
@@ -1780,6 +1819,65 @@ export const equipmentData: Record<string, Category> = {
       }
     ]
   },
+};
+
+// カテゴリの表示順序設定
+// 配列の順番を変更することで、表示順序を簡単に制御できます
+export const concernsCategoryOrder = [
+  "skin-diagnosis",      // 肌診断
+  "acne-inflammation",   // 肌荒れ
+  "pores-acne-scars",    // 毛穴・ニキビ跡
+  "pores-firmness-glow", // 毛穴・ハリ・ツヤ
+  "soothing",            // 沈静・赤み
+  "spots-melasma",       // シミ・肝斑
+  "stretch-marks",       // 妊娠線・肉割れ
+  "sagging",             // たるみ
+  "hair-loss",           // 薄毛
+  "hair-removal",        // 脱毛
+  "body",                // ボディ
+  "tenteki",             // 点滴
+  "others"               // その他
+];
+
+export const equipmentCategoryOrder = [
+  "skin-diagnosis",      // 肌診断
+  "customize-hifu",      // カスタマイズHIFU
+  "ultraformer",         // ウルトラフォーマー
+  "sofwave",             // ソフウェーブ
+  "emface",              // エムフェイス
+  "thermacool",          // サーマクール
+  "dermapen4",           // ダーマペン4
+  "picolaser",           // ピコレーザー
+  "coolgun",             // クールガン
+  "mesogun",             // メソガン
+  "ldm",                 // LDM
+  "peeling",             // ピーリング
+  "tenteki",             // 点滴
+  "others"               // その他
+];
+
+// 順序に従ってカテゴリを取得する関数
+export const getOrderedCategories = (
+  data: Record<string, Category>,
+  order: string[]
+): Array<[string, Category]> => {
+  const orderedCategories: Array<[string, Category]> = [];
+  
+  // 指定された順序でカテゴリを追加
+  for (const key of order) {
+    if (data[key]) {
+      orderedCategories.push([key, data[key]]);
+    }
+  }
+  
+  // 順序配列に含まれていないカテゴリを最後に追加（念のため）
+  for (const [key, category] of Object.entries(data)) {
+    if (!order.includes(key)) {
+      orderedCategories.push([key, category]);
+    }
+  }
+  
+  return orderedCategories;
 };
 
 // メニューデータの統合オブジェクト

@@ -4,7 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import MenuModal from "./MenuModal";
-import { menuData, formatPrice, type Treatment, type Category } from "../../data/menuData";
+import { 
+  menuData, 
+  formatPrice, 
+  type Treatment, 
+  type Category,
+  getOrderedCategories,
+  concernsCategoryOrder,
+  equipmentCategoryOrder
+} from "../../data/menuData";
 
 // シェブロンダウンアイコンコンポーネント
 const ChevronDownIcon = ({ className }: { className?: string }) => (
@@ -216,6 +224,8 @@ export default function MenuSection() {
   }, []);
 
   const currentData = viewMode === 'concerns' ? menuData.concerns : menuData.equipment;
+  const currentOrder = viewMode === 'concerns' ? concernsCategoryOrder : equipmentCategoryOrder;
+  const orderedCategories = getOrderedCategories(currentData, currentOrder);
 
   const handleTreatmentClick = (treatment: Treatment) => {
     setSelectedTreatment(treatment);
@@ -247,7 +257,7 @@ export default function MenuSection() {
 
         {/* メニューカテゴリ */}
         <div className="space-y-3">
-          {Object.entries(currentData).map(([key, category], index) => (
+          {orderedCategories.map(([key, category], index) => (
             <CategoryAccordion
               key={`${viewMode}-${key}`}
               categoryKey={key}

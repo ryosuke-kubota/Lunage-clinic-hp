@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { easeOut } from "framer-motion";
-import { concernsData } from "../data/menuData";
+import { concernsData, getOrderedCategories, concernsCategoryOrder } from "../data/menuData";
 
-// メニューアイテムを共通データから生成
-const menuItems = Object.entries(concernsData).map(([key, category]) => ({
+// メニューアイテムを共通データから生成（順序を制御）
+const orderedCategories = getOrderedCategories(concernsData, concernsCategoryOrder);
+const menuItems = orderedCategories.map(([key, category]) => ({
   name: category.title,
   href: `/menu#${key}`
 }));
