@@ -5,6 +5,7 @@ import PhilosophySection from "@/components/PhilosophySection";
 import KodawariSection from "@/components/KodawariSection";
 import MenuSection from "@/components/MenuSection";
 import PaymentSection from "@/components/PaymentSection";
+import InstagramSection from "@/components/InstagramSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import ClinicInterior from "@/components/ClinicInterior";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -46,6 +47,9 @@ export default function Home() {
       </div>
       <div className="lazy-load">
         <ContactSection />
+      </div>
+      <div className="lazy-load">
+        <InstagramSection />
       </div>
       <Footer />
     </main>
