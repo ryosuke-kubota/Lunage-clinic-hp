@@ -32,7 +32,7 @@ export default function KodawariSection() {
           {/* タイトルバー */}
           <div className="bg-[#5d4e37] text-white rounded-full mx-auto py-3 px-8 block mb-8">
             <h2 className="text-sm md:text-2xl font-bold text-center">
-              ルナージュクリニックのこだわり
+              エクソソーム製剤のこだわり
             </h2>
           </div>
 
@@ -47,11 +47,11 @@ export default function KodawariSection() {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="border-b border-[#d4c4b0] last:border-0 pb-6 last:pb-0"
                 >
-                  <h3 className="text-base md:text-xl font-bold text-[#5d4e37] mb-2">
-                    <span className="text-base md:text-3xl font-bold mr-2">{item.number}.</span>
+                  <h3 className="text-xs md:text-xl font-bold text-[#5d4e37] mb-2">
+                    <span className="text-sm md:text-3xl font-bold mr-2">{item.number}.</span>
                     {item.title}
                   </h3>
-                  <p className="text-[#8b7355] ml-4 md:ml-10 text-sm md:text-base">
+                  <p className="text-[#8b7355] ml-4 md:ml-10 text-xs md:text-base">
                     → {item.description}
                   </p>
                 </motion.div>

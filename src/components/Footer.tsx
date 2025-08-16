@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ChevronDownIcon } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -44,15 +46,37 @@ export default function Footer() {
 
           {/* Reservation */}
           <div>
-            <h4 className="text-lg font-shippori font-medium mb-4">Reservation</h4>
-            <Link
-              href="https://lin.ee/teAI9dY"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-6 py-2 rounded-full transition-colors block w-fit mb-4"
-            >
-              LINEで予約
-            </Link>
+            <h4 className="text-lg font-shippori font-medium mb-4">SNS</h4>
+            <div className="flex">
+              <Link
+                href="https://lin.ee/teAI9dY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-shippori block w-fit mb-4"
+              >
+                <Image
+                  src="/icons/line.svg"
+                  alt="LINE"
+                  width={24}
+                  height={24}
+                  className="w-10 h-10 invert"
+                />
+              </Link>
+              <Link
+                href="https://www.instagram.com/lunage_clinic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-shippori block w-fit mb-4"
+              >
+                <Image
+                  src="/icons/instagram.svg"
+                  alt="instagram"
+                  width={24}
+                  height={24}
+                  className="w-10 h-10 invert"
+                />
+              </Link>
+            </div>
             <p className="text-[#dacacf] font-shippori text-sm">
               診療時間: 11:00〜21:00
               <br />

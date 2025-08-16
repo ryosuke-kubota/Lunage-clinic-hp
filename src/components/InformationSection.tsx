@@ -54,12 +54,12 @@ export default function InformationSection() {
               </div>
 
               {/* QR Code Section */}
-              <div className="bg-[#faf3ef] p-6 rounded-lg flex flex-col items-center">
+              {/* <div className="bg-[#faf3ef] p-6 rounded-lg flex flex-col items-center">
                 <p className="text-[#54585f] font-shippori mb-4">
                   LINEでのお問い合わせ・ご予約も承っております
                 </p>
                 <a href="https://lin.ee/teAI9dY" target="_blank" rel="noopener noreferrer" className="underline text-2xl">LINEで予約</a>
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -26,8 +26,11 @@ export default function Home() {
         <PickupSection />
       </div>
       <div className="lazy-load">
-        <PhilosophySection />
+        <InstagramSection />
       </div>
+      {/* <div className="lazy-load">
+        <PhilosophySection />
+      </div> */}
       <div className="lazy-load">
         <KodawariSection />
       </div>
