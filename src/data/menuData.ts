@@ -81,20 +81,20 @@ export const concernsData: Record<string, Category> = {
     title: "たるみ",
     description: "リフトアップ・引き締め効果が期待できる施術",
     treatments: [
-      {
-        name: "頬下・顎下 600shot",
-        equipment: "カスタマイズHIFU",
-        description: "筋膜にアプローチして皮膚の内側から引き締まりが期待できるたるみ治療です。ひとりひとり脂肪や皮膚の厚みが違うため、当院ではお客様の状態に合わせたカスタマイズ HIFUを提案いたします。",
-        memberPrice: "33000",
-        regularPrice: "36300"
-      },
-      {
-        name: "マッサージハイフ 20分",
-        equipment: "カスタマイズHIFU",
-        description: "皮膚の表層に優しい熱を入れることでその場でむくみを軽減する効果が期待できます。コラーゲンの産生も促進されるので定期的な施術で美肌効果も期待できます。細身で頬のコケが気になる方にもおすすめのメニューです。",
-        memberPrice: "15000",
-        regularPrice: "16500"
-      },
+      // {
+      //   name: "頬下・顎下 600shot",
+      //   equipment: "カスタマイズHIFU",
+      //   description: "筋膜にアプローチして皮膚の内側から引き締まりが期待できるたるみ治療です。ひとりひとり脂肪や皮膚の厚みが違うため、当院ではお客様の状態に合わせたカスタマイズ HIFUを提案いたします。",
+      //   memberPrice: "33000",
+      //   regularPrice: "36300"
+      // },
+      // {
+      //   name: "マッサージハイフ 20分",
+      //   equipment: "カスタマイズHIFU",
+      //   description: "皮膚の表層に優しい熱を入れることでその場でむくみを軽減する効果が期待できます。コラーゲンの産生も促進されるので定期的な施術で美肌効果も期待できます。細身で頬のコケが気になる方にもおすすめのメニューです。",
+      //   memberPrice: "15000",
+      //   regularPrice: "16500"
+      // },
       {
         name: "全顔・目・首",
         equipment: "ウルトラフォーマーMPT",
@@ -958,26 +958,26 @@ export const equipmentData: Record<string, Category> = {
       }
     ]
   },
-  "customize-hifu": {
-    title: "カスタマイズHIFU",
-    description: "お客様の状態に合わせたカスタマイズHIFU治療",
-    treatments: [
-      {
-        name: "頬下・顎下 600shot",
-        equipment: "カスタマイズHIFU",
-        description: "筋膜にアプローチして皮膚の内側から引き締まりが期待できるたるみ治療です。ひとりひとり脂肪や皮膚の厚みが違うため、当院ではお客様の状態に合わせたカスタマイズ HIFUを提案いたします。",
-        memberPrice: "33000",
-        regularPrice: "36300"
-      },
-      {
-        name: "マッサージハイフ 20分",
-        equipment: "カスタマイズHIFU",
-        description: "皮膚の表層に優しい熱を入れることでその場でむくみを軽減する効果が期待できます。コラーゲンの産生も促進されるので定期的な施術で美肌効果も期待できます。細身で頬のコケが気になる方にもおすすめのメニューです。",
-        memberPrice: "15000",
-        regularPrice: "16500"
-      }
-    ]
-  },
+  // "customize-hifu": {
+  //   title: "カスタマイズHIFU",
+  //   description: "お客様の状態に合わせたカスタマイズHIFU治療",
+  //   treatments: [
+  //     {
+  //       name: "頬下・顎下 600shot",
+  //       equipment: "カスタマイズHIFU",
+  //       description: "筋膜にアプローチして皮膚の内側から引き締まりが期待できるたるみ治療です。ひとりひとり脂肪や皮膚の厚みが違うため、当院ではお客様の状態に合わせたカスタマイズ HIFUを提案いたします。",
+  //       memberPrice: "33000",
+  //       regularPrice: "36300"
+  //     },
+  //     {
+  //       name: "マッサージハイフ 20分",
+  //       equipment: "カスタマイズHIFU",
+  //       description: "皮膚の表層に優しい熱を入れることでその場でむくみを軽減する効果が期待できます。コラーゲンの産生も促進されるので定期的な施術で美肌効果も期待できます。細身で頬のコケが気になる方にもおすすめのメニューです。",
+  //       memberPrice: "15000",
+  //       regularPrice: "16500"
+  //     }
+  //   ]
+  // },
   "ultraformer": {
     title: "ウルトラフォーマーMPT",
     description: "高密度焦点式超音波（HIFU）による引き締め治療",
