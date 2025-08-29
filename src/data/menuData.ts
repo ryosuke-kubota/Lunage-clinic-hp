@@ -737,14 +737,14 @@ export const concernsData: Record<string, Category> = {
         equipment: "点滴",
         description: "グルタチオン600mgt点滴。抗酸化作用と肝臓保護作用により、黄ぐすみの軽減や美白効果が期待できます。",
         contents: "生食100ml, ルチオン",
-        regularPrice: "3000"
+        regularPrice: "5000"
       },
       {
         name: "倍量グルタチオン点滴",
         equipment: "点滴",
         description: "高濃度のグルタチオンを配合した点滴です。グルタチオンの濃度が倍の1200mgです。",
         contents: "生食100ml, ルチオン",
-        regularPrice: "5000"
+        regularPrice: "8000"
       },
       {
         name: "ルナージュオリジナル美肌カクテル",
