@@ -172,14 +172,14 @@ export const concernsData: Record<string, Category> = {
         memberPrice: "130000",
         regularPrice: "143000"
       },
-      {
-        name: "額・目の下・頬・あご下から2エリア",
-        equipment: "EMFACE",
-        image: "/images/testimonials/emface.JPG",
-        description: "高周波（RF）と筋肉刺激（HIFES）を同時に照射し、皮膚と表情筋の両方にアプローチする技術です。非侵襲的に筋肉の収縮を促すことで、リフト感や引き締まった輪郭の印象を目指します。施術後のダウンタイムもほとんどなく、短時間でのケアが可能です。",
-        memberPrice: "99000",
-        regularPrice: "108900"
-      },
+      // {
+      //   name: "額・目の下・頬・あご下から2エリア",
+      //   equipment: "EMFACE",
+      //   image: "/images/testimonials/emface.JPG",
+      //   description: "高周波（RF）と筋肉刺激（HIFES）を同時に照射し、皮膚と表情筋の両方にアプローチする技術です。非侵襲的に筋肉の収縮を促すことで、リフト感や引き締まった輪郭の印象を目指します。施術後のダウンタイムもほとんどなく、短時間でのケアが可能です。",
+      //   memberPrice: "99000",
+      //   regularPrice: "108900"
+      // },
       {
         name: "顔",
         equipment: "サーマクール",
@@ -273,8 +273,8 @@ export const concernsData: Record<string, Category> = {
         name: "ピコジェネシス(レーザートーニング)",
         equipment: "ピコレーザー",
         description: "ピコ秒レーザーがメラニンに優しく作用し、肝斑・くすみ・色ムラを改善。ダウンタイムはほとんどなく透明感のある肌へ導きます。",
-        memberPrice: "8000",
-        regularPrice: "8800"
+        memberPrice: "8800",
+        regularPrice: "11000"
       }
     ]
   },
@@ -341,7 +341,7 @@ export const concernsData: Record<string, Category> = {
         equipment: "ピコレーザー",
         description: "真皮層に微細なレーザー刺激を与え、肌の再生を促進。毛穴・ニキビ跡・小ジワなどに効果が期待できる美肌治療です。",
         memberPrice: "9900",
-        regularPrice: "10890"
+        regularPrice: "16500"
       }
     ]
   },
@@ -1472,15 +1472,15 @@ export const equipmentData: Record<string, Category> = {
         name: "ピコジェネシス(レーザートーニング)",
         equipment: "ピコレーザー",
         description: "ピコ秒レーザーがメラニンに優しく作用し、肝斑・くすみ・色ムラを改善。ダウンタイムはほとんどなく透明感のある肌へ導きます。",
-        memberPrice: "8000",
-        regularPrice: "8800"
+        memberPrice: "8800",
+        regularPrice: "11000"
       },
       {
         name: "ピコフラクショナル",
         equipment: "ピコレーザー",
         description: "真皮層に微細なレーザー刺激を与え、肌の再生を促進。毛穴・ニキビ跡・小ジワなどに効果が期待できる美肌治療です。",
         memberPrice: "9900",
-        regularPrice: "10890"
+        regularPrice: "16500"
       }
     ]
   },
@@ -1555,20 +1555,20 @@ export const equipmentData: Record<string, Category> = {
       }
     ]
   },
-  "emface": {
-    title: "EMFACE",
-    description: "高周波（RF）と筋肉刺激（HIFES）の同時照射による表情筋アプローチ",
-    treatments: [
-      {
-        name: "額・目の下・頬・あご下から2エリア",
-        equipment: "EMFACE",
-        image: "/images/testimonials/emface.JPG",
-        description: "高周波（RF）と筋肉刺激（HIFES）を同時に照射し、皮膚と表情筋の両方にアプローチする技術です。非侵襲的に筋肉の収縮を促すことで、リフト感や引き締まった輪郭の印象を目指します。施術後のダウンタイムもほとんどなく、短時間でのケアが可能です。",
-        memberPrice: "99000",
-        regularPrice: "108900"
-      }
-    ]
-  },
+  // "emface": {
+  //   title: "EMFACE",
+  //   description: "高周波（RF）と筋肉刺激（HIFES）の同時照射による表情筋アプローチ",
+  //   treatments: [
+  //     {
+  //       name: "額・目の下・頬・あご下から2エリア",
+  //       equipment: "EMFACE",
+  //       image: "/images/testimonials/emface.JPG",
+  //       description: "高周波（RF）と筋肉刺激（HIFES）を同時に照射し、皮膚と表情筋の両方にアプローチする技術です。非侵襲的に筋肉の収縮を促すことで、リフト感や引き締まった輪郭の印象を目指します。施術後のダウンタイムもほとんどなく、短時間でのケアが可能です。",
+  //       memberPrice: "99000",
+  //       regularPrice: "108900"
+  //     }
+  //   ]
+  // },
   "thermacool": {
     title: "サーマクール",
     description: "高周波（RF）による皮膚深部へのコラーゲン繊維収縮・再構築",
