@@ -273,7 +273,7 @@ export const concernsData: Record<string, Category> = {
         name: "ピコジェネシス(レーザートーニング)",
         equipment: "ピコレーザー",
         description: "ピコ秒レーザーがメラニンに優しく作用し、肝斑・くすみ・色ムラを改善。ダウンタイムはほとんどなく透明感のある肌へ導きます。",
-        memberPrice: "8800",
+        memberPrice: "10000",
         regularPrice: "11000"
       }
     ]
@@ -340,7 +340,7 @@ export const concernsData: Record<string, Category> = {
         name: "ピコフラクショナル",
         equipment: "ピコレーザー",
         description: "真皮層に微細なレーザー刺激を与え、肌の再生を促進。毛穴・ニキビ跡・小ジワなどに効果が期待できる美肌治療です。",
-        memberPrice: "9900",
+        memberPrice: "15000",
         regularPrice: "16500"
       }
     ]
@@ -1472,14 +1472,14 @@ export const equipmentData: Record<string, Category> = {
         name: "ピコジェネシス(レーザートーニング)",
         equipment: "ピコレーザー",
         description: "ピコ秒レーザーがメラニンに優しく作用し、肝斑・くすみ・色ムラを改善。ダウンタイムはほとんどなく透明感のある肌へ導きます。",
-        memberPrice: "8800",
+        memberPrice: "10000",
         regularPrice: "11000"
       },
       {
         name: "ピコフラクショナル",
         equipment: "ピコレーザー",
         description: "真皮層に微細なレーザー刺激を与え、肌の再生を促進。毛穴・ニキビ跡・小ジワなどに効果が期待できる美肌治療です。",
-        memberPrice: "9900",
+        memberPrice: "15000",
         regularPrice: "16500"
       }
     ]
