@@ -21,7 +21,7 @@ export default function KodawariSection() {
   ];
 
   return (
-    <section className="py-20 bg-[#d4c4b0] relative">
+    <section className="py-20 bg-[#d4c4b0] relative" id="about">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
