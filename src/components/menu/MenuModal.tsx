@@ -27,6 +27,9 @@ const formatPrice = (price: string) => {
   if (!price || price === "" || price === "#VALUE!" || price === "準備中" || price.includes("準備中") || price.includes("計算中")) {
     return "準備中";
   }
+  if (price === "サブスク限定") {
+    return "サブスク限定";
+  }
   const numPrice = parseInt(price.replace(/[^\d]/g, ''));
   if (isNaN(numPrice)) return "準備中";
   return `¥${numPrice.toLocaleString()}`;

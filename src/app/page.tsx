@@ -26,9 +26,9 @@ export default function Home() {
       <div className="lazy-load">
         <PickupSection />
       </div>
-      <div className="lazy-load">
+      {/* <div className="lazy-load">
         <DentalTreatmentSection />
-      </div>
+      </div> */}
       <div className="lazy-load">
         <InstagramSection />
       </div>

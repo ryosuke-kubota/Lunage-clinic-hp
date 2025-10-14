@@ -24,6 +24,9 @@ export const formatPrice = (price: string) => {
   if (!price || price === "" || price === "0" || price === "#VALUE!" || price === "準備中" || price.includes("準備中") || price.includes("計算中")) {
     return "準備中";
   }
+  if (price === "サブスク限定") {
+    return "サブスク限定";
+  }
   const numPrice = parseInt(price.replace(/[^\d]/g, ''));
   if (isNaN(numPrice) || numPrice === 0) return "準備中";
   return `¥${numPrice.toLocaleString()}`;
@@ -31,6 +34,19 @@ export const formatPrice = (price: string) => {
 
 // 悩み別カテゴリのデータ
 export const concernsData: Record<string, Category> = {
+  "dental": {
+    title: "デンタル",
+    description: "サブスク限定で歯科ホワイトニング",
+    treatments: [
+      {
+        name: "歯科ホワイトニング",
+        equipment: "ホワイトニング",
+        description: "",
+        memberPrice: "",
+        regularPrice: "サブスク限定"
+      }
+    ]
+  },
   "skin-diagnosis": {
     title: "肌診断",
     description: "最新の肌診断機器で肌の状態を詳細に分析",
@@ -945,6 +961,19 @@ export const concernsData: Record<string, Category> = {
 
 // 機械別カテゴリのデータ
 export const equipmentData: Record<string, Category> = {
+  "whitening": {
+    title: "ホワイトニング",
+    description: "サブスク限定で歯科ホワイトニング",
+    treatments: [
+      {
+        name: "歯科ホワイトニング",
+        equipment: "ホワイトニング",
+        description: "",
+        memberPrice: "",
+        regularPrice: "サブスク限定"
+      }
+    ]
+  },
   "skin-diagnosis": {
     title: "肌診断機",
     description: "最新のカメラを用いた肌診断システム",
@@ -1830,6 +1859,7 @@ export const equipmentData: Record<string, Category> = {
 // カテゴリの表示順序設定
 // 配列の順番を変更することで、表示順序を簡単に制御できます
 export const concernsCategoryOrder = [
+  "dental",      // デンタル
   "skin-diagnosis",      // 肌診断
   "acne-inflammation",   // 肌荒れ
   "pores-acne-scars",    // 毛穴・ニキビ跡
@@ -1846,6 +1876,7 @@ export const concernsCategoryOrder = [
 ];
 
 export const equipmentCategoryOrder = [
+  "whitening",           // ホワイトニング
   "skin-diagnosis",      // 肌診断
   "customize-hifu",      // カスタマイズHIFU
   "ultraformer",         // ウルトラフォーマー
