@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import PickupSection from "@/components/PickupSection";
+import DentalTreatmentSection from "@/components/DentalTreatmentSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import KodawariSection from "@/components/KodawariSection";
 import MenuSection from "@/components/MenuSection";
@@ -24,6 +25,9 @@ export default function Home() {
       </div>
       <div className="lazy-load">
         <PickupSection />
+      </div>
+      <div className="lazy-load">
+        <DentalTreatmentSection />
       </div>
       <div className="lazy-load">
         <InstagramSection />
