@@ -43,7 +43,8 @@ const pickupItems = [
     thumbnail: "/images/pickup/subscription01.jpg",
     images: [
       "/images/pickup/subscription02.jpg",
-      "/images/pickup/subscription03.jpg"
+      "/images/pickup/subscription03.jpg",
+      "/images/pickup/subscription04.jpg",
     ],
     description: "お得な定額プラン"
   }
