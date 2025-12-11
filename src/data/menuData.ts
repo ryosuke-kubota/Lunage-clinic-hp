@@ -728,7 +728,14 @@ export const concernsData: Record<string, Category> = {
     description: "各種点滴・注射メニュー",
     treatments: [
       {
-        name: "超高濃度ビタミンC",
+        name: "倍量グルタチオン点滴",
+        equipment: "点滴",
+        description: "高濃度のグルタチオンを配合した点滴です。グルタチオンの濃度が倍の1200mgです。",
+        contents: "生食100ml, ルチオン",
+        regularPrice: "8000"
+      },
+      {
+        name: "超高濃度25gビタミンC",
         equipment: "点滴",
         description: "国産の超高濃度製剤を使用。強力な抗酸化作用が期待でき、アンチエイジングや美白へのアプローチとして注目されています。酸化剤不使用の国産ビタミンCを採用しています。",
         contents: "VC25g, 生食250ml",
@@ -756,21 +763,14 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "5000"
       },
       {
-        name: "倍量グルタチオン点滴",
-        equipment: "点滴",
-        description: "高濃度のグルタチオンを配合した点滴です。グルタチオンの濃度が倍の1200mgです。",
-        contents: "生食100ml, ルチオン",
-        regularPrice: "8000"
-      },
-      {
-        name: "ルナージュオリジナル美肌カクテル",
+        name: "最強ルナージュ爆美カクテル",
         equipment: "点滴",
         description: "ルナージュこだわりのオリジナルカクテルです。美白、美肌、美髪など、複数の美容効果が期待できる成分を配合したオリジナルカクテル点滴です。ビタミンやグルタチオンなどをバランス良く配合しています。",
         contents: "生食100ml, アスコルビン酸, トランサミン, ルチオン, クリストファン, ビタメジン, ビオチン",
         regularPrice: "10000"
       },
       {
-        name: "美白カクテル",
+        name: "超美白カクテル",
         equipment: "点滴",
         description: "ビタミンCに加え、メラニンを抑えるトラネキサム酸やLシステインを配合。",
         contents: "生食100ml, トランサミン, クリストファン, アスコルビン酸",
@@ -798,7 +798,7 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "3000"
       },
       {
-        name: "高濃度ビタミン点滴",
+        name: "ビタミン増し増し点滴",
         equipment: "点滴",
         description: "にんにく注射の匂いが苦手な方にもおすすめのビタミンBとCが入った点滴です。",
         contents: "生食100ml,  アスコルビン酸, ビタメジン",
@@ -833,7 +833,7 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "3000"
       },
       {
-        name: "二日酔い回復点滴",
+        name: "二日酔い爆速回復点滴",
         equipment: "点滴",
         description: "二日酔いへの有効成分を詰め込んだ点滴です。オプションで吐き気どめも追加できます。",
         contents: "ソルラクト, 強ミノ, ファモチジン",
@@ -861,7 +861,7 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "5000"
       },
       {
-        name: "ダイエットサポート注射",
+        name: "痩せる注射",
         equipment: "点滴",
         description: "時間がない方におすすめです。ダイエット・筋トレ点滴と同様の有効成分を配合した注射です。",
         contents: "チオクト酸, エルカルニチン",
@@ -917,7 +917,7 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "8000"
       },
       {
-        name: "エクソソーム点滴",
+        name: "エクソソーム点滴1cc",
         equipment: "点滴",
         description: "エクソソームを高濃度に配合した、再生医療由来の美容点滴です。肌のコンディションを整え、ニキビ跡、赤み、加齢による肌力低下など複合的なお悩みの改善、および手術や施術後のダウンタイムの軽減が期待できます。",
         contents: "生食100ml, エクソソーム",
@@ -931,10 +931,9 @@ export const concernsData: Record<string, Category> = {
         regularPrice: "5000"
       },
       {
-        name: "静脈麻酔",
+        name: "睡眠点滴",
         equipment: "点滴",
-        description: "痛みを伴う施術のオプションです。当日中の車の運転はお控えください。",
-        contents: "アタラックスP, 生食100ml",
+        description: "睡眠の質改善をサポートする点滴です。",
         regularPrice: "3000"
       }
     ]
@@ -1625,7 +1624,14 @@ export const equipmentData: Record<string, Category> = {
     description: "各種点滴・注射メニュー",
     treatments: [
       {
-        name: "超高濃度ビタミンC",
+        name: "倍量グルタチオン点滴",
+        equipment: "点滴",
+        description: "高濃度のグルタチオンを配合した点滴です。グルタチオンの濃度が倍の1200mgです。",
+        contents: "生食100ml, ルチオン",
+        regularPrice: "8000"
+      },
+      {
+        name: "超高濃度25gビタミンC",
         equipment: "点滴",
         description: "国産の超高濃度製剤を使用。強力な抗酸化作用が期待でき、アンチエイジングや美白へのアプローチとして注目されています。酸化剤不使用の国産ビタミンCを採用しています。",
         contents: "VC25g, 生食250ml",
@@ -1650,24 +1656,17 @@ export const equipmentData: Record<string, Category> = {
         equipment: "点滴",
         description: "グルタチオン600mgt点滴。抗酸化作用と肝臓保護作用により、黄ぐすみの軽減や美白効果が期待できます。",
         contents: "生食100ml, ルチオン",
-        regularPrice: "3000"
-      },
-      {
-        name: "倍量グルタチオン点滴",
-        equipment: "点滴",
-        description: "高濃度のグルタチオンを配合した点滴です。グルタチオンの濃度が倍の1200mgです。",
-        contents: "生食100ml, ルチオン",
         regularPrice: "5000"
       },
       {
-        name: "ルナージュオリジナル美肌カクテル",
+        name: "最強ルナージュ爆美カクテル",
         equipment: "点滴",
         description: "ルナージュこだわりのオリジナルカクテルです。美白、美肌、美髪など、複数の美容効果が期待できる成分を配合したオリジナルカクテル点滴です。ビタミンやグルタチオンなどをバランス良く配合しています。",
         contents: "生食100ml, アスコルビン酸, トランサミン, ルチオン, クリストファン, ビタメジン, ビオチン",
         regularPrice: "10000"
       },
       {
-        name: "美白カクテル",
+        name: "超美白カクテル",
         equipment: "点滴",
         description: "ビタミンCに加え、メラニンを抑えるトラネキサム酸やLシステインを配合。",
         contents: "生食100ml, トランサミン, クリストファン, アスコルビン酸",
@@ -1695,7 +1694,7 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "3000"
       },
       {
-        name: "高濃度ビタミン点滴",
+        name: "ビタミン増し増し点滴",
         equipment: "点滴",
         description: "にんにく注射の匂いが苦手な方にもおすすめのビタミンBとCが入った点滴です。",
         contents: "生食100ml,  アスコルビン酸, ビタメジン",
@@ -1730,7 +1729,7 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "3000"
       },
       {
-        name: "二日酔い回復点滴",
+        name: "二日酔い爆速回復点滴",
         equipment: "点滴",
         description: "二日酔いへの有効成分を詰め込んだ点滴です。オプションで吐き気どめも追加できます。",
         contents: "ソルラクト, 強ミノ, ファモチジン",
@@ -1758,7 +1757,7 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "5000"
       },
       {
-        name: "ダイエットサポート注射",
+        name: "痩せる注射",
         equipment: "点滴",
         description: "時間がない方におすすめです。ダイエット・筋トレ点滴と同様の有効成分を配合した注射です。",
         contents: "チオクト酸, エルカルニチン",
@@ -1814,7 +1813,7 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "8000"
       },
       {
-        name: "エクソソーム点滴",
+        name: "エクソソーム点滴1cc",
         equipment: "点滴",
         description: "エクソソームを高濃度に配合した、再生医療由来の美容点滴です。肌のコンディションを整え、ニキビ跡、赤み、加齢による肌力低下など複合的なお悩みの改善、および手術や施術後のダウンタイムの軽減が期待できます。",
         contents: "生食100ml, エクソソーム",
@@ -1828,10 +1827,9 @@ export const equipmentData: Record<string, Category> = {
         regularPrice: "5000"
       },
       {
-        name: "静脈麻酔",
+        name: "睡眠点滴",
         equipment: "点滴",
-        description: "痛みを伴う施術のオプションです。当日中の車の運転はお控えください。",
-        contents: "アタラックスP, 生食100ml",
+        description: "睡眠の質改善をサポートする点滴です。",
         regularPrice: "3000"
       }
     ]
