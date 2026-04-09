@@ -80,9 +80,9 @@ export default function Header() {
             {/* <Link href="/#doctor" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Doctor
             </Link> */}
-            <Link href="/company" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
+            {/* <Link href="/company" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               Company
-            </Link>
+            </Link> */}
             {/* <Link href="/#faq" className="text-[#54585f] hover:text-[#DDCDB9] transition-colors font-shippori text-sm">
               FAQ
             </Link> */}
@@ -191,7 +191,7 @@ export default function Header() {
                     Doctor
                   </Link>
                 </motion.div> */}
-                <motion.div variants={menuItemVariants}>
+                {/* <motion.div variants={menuItemVariants}>
                   <Link
                     href="/company"
                     className="block px-4 py-3 text-[#54585f] hover:text-[#DDCDB9] hover:bg-[#faf3ef] rounded-lg font-shippori transition-all"
@@ -199,7 +199,7 @@ export default function Header() {
                   >
                     Company
                   </Link>
-                </motion.div>
+                </motion.div> */}
                 {/* <motion.div variants={menuItemVariants}>
                   <Link
                     href="/#faq"
