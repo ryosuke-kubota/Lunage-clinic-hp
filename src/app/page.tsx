@@ -35,9 +35,9 @@ export default function Home() {
       {/* <div className="lazy-load">
         <PhilosophySection />
       </div> */}
-      <div className="lazy-load">
+      {/* <div className="lazy-load">
         <KodawariSection />
-      </div>
+      </div> */}
       <div className="lazy-load">
         <MenuSection />
       </div>
