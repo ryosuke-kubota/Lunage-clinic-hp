@@ -58,9 +58,12 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <Link href="/" className="text-xl md:text-2xl font-bold text-[#54585f] font-shippori">
-              LUNAGE CLINIC
-            </Link>
+            <div>
+              <Link href="/" className="text-xl md:text-2xl font-bold text-[#54585f] font-shippori flex flex-col items-center">
+                <span className="text-[10px] leading-[1]">medical and dental</span>
+                LUNAGE CLINIC
+              </Link>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}

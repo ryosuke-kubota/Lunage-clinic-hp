@@ -79,7 +79,8 @@ export default function HeroSection() {
             大人のコンプレックス解消を切らずにお手伝い
             </p>
             
-            <h1 className="text-[#54585f] font-shippori font-medium text-base sm:text-4xl lg:text-5xl">
+            <h1 className="text-[#54585f] font-shippori font-medium text-base sm:text-4xl lg:text-5xl flex flex-col items-center">
+              <span className="text-[10px] leading-[1]">medical and dental</span>
               LUNAGE CLINIC
             </h1>
           </div>

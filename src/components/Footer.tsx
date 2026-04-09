@@ -10,7 +10,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Clinic Logo and Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-3xl font-shippori font-bold mb-6">
+            <h3 className="text-3xl font-shippori font-bold mb-6 w-fit flex flex-col items-center">
+              <span className="text-[14px] leading-[1]">medical and dental</span>
               LUNAGE CLINIC
             </h3>
             <div className="space-y-2 text-[#dacacf] font-shippori">
@@ -31,9 +32,6 @@ export default function Footer() {
               </Link>
               <Link href="#about" className="block text-[#dacacf] hover:text-white transition-colors font-shippori">
                 About
-              </Link>
-              <Link href="#doctor" className="block text-[#dacacf] hover:text-white transition-colors font-shippori">
-                Doctor
               </Link>
               <Link href="#menu" className="block text-[#dacacf] hover:text-white transition-colors font-shippori">
                 Menu
@@ -89,7 +87,7 @@ export default function Footer() {
         <div className="border-t border-[#8a6d62] mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-[#dacacf] font-shippori text-sm">
-              © 2025 LUNAGE CLINIC All Rights Reserved.
+              © 2026 medical and dental LUNAGE CLINIC All Rights Reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {/* <Link href="#" className="text-[#dacacf] hover:text-white transition-colors font-shippori text-sm">
