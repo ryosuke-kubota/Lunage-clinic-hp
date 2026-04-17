@@ -56,7 +56,7 @@ export default function ContactSection() {
               03-4400-9519
             </a>
             <p className="text-[#8a6d62] font-shippori text-sm">
-              平日・土日：11:00〜21:00
+              年中無休：11:00〜22:00
             </p>
           </div>
 

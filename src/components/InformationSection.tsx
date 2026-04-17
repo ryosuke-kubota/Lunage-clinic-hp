@@ -47,7 +47,7 @@ export default function InformationSection() {
                   <div className="flex items-start">
                     <span className="w-20 text-[#8a6d62] font-medium">診療時間</span>
                     <div>
-                      <p>11:00〜21:00</p>
+                      <p>11:00〜22:00</p>
                       <p className="text-sm text-[#8a6d62]">（年中無休）</p>
                     </div>
                   </div>

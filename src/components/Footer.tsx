@@ -76,7 +76,7 @@ export default function Footer() {
               </Link>
             </div>
             <p className="text-[#dacacf] font-shippori text-sm">
-              診療時間: 11:00〜21:00
+              診療時間: 11:00〜22:00
               <br />
               年中無休
             </p>
