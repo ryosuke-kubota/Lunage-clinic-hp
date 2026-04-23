@@ -36,17 +36,6 @@ const pickupItems = [
       "/images/pickup/exosome06.jpg"
     ],
     description: "最先端の再生医療"
-  },
-  {
-    id: "subscription",
-    title: "サブスクリプション",
-    thumbnail: "/images/pickup/subscription01.jpg",
-    images: [
-      "/images/pickup/subscription02.jpg",
-      "/images/pickup/subscription03.jpg",
-      "/images/pickup/subscription04.jpg",
-    ],
-    description: "お得な定額プラン"
   }
 ];
 
