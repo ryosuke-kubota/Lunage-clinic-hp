@@ -173,7 +173,7 @@ export const concernsData: Record<string, Category> = {
       //   regularPrice: "準備中"
       // },
       {
-        name: "顔/首",
+        name: "顔",
         equipment: "ソフウェーブ",
         image: "/images/testimonials/sofwave.JPG",
         description: "7MHzの超音波を皮膚真皮中層に照射し、熱刺激によりコラーゲンの生成を促す非侵襲的な施術です。皮膚表面を傷つけずに、目元やフェイスラインなどの変化にアプローチでき、エイジングケアを意識する方に選ばれています。",
@@ -185,8 +185,8 @@ export const concernsData: Record<string, Category> = {
         equipment: "ソフウェーブ",
         image: "/images/testimonials/sofwave.JPG",
         description: "7MHzの超音波を皮膚真皮中層に照射し、熱刺激によりコラーゲンの生成を促す非侵襲的な施術です。皮膚表面を傷つけずに、目元やフェイスラインなどの変化にアプローチでき、エイジングケアを意識する方に選ばれています。",
-        memberPrice: "130000",
-        regularPrice: "143000"
+        memberPrice: "140400",
+        regularPrice: "156000"
       },
       // {
       //   name: "額・目の下・頬・あご下から2エリア",
@@ -1566,7 +1566,7 @@ export const equipmentData: Record<string, Category> = {
     description: "7MHzの超音波による非侵襲的なコラーゲン生成促進",
     treatments: [
       {
-        name: "顔/首",
+        name: "顔",
         equipment: "ソフウェーブ",
         image: "/images/testimonials/sofwave.JPG",
         description: "7MHzの超音波を皮膚真皮中層に照射し、熱刺激によりコラーゲンの生成を促す非侵襲的な施術です。皮膚表面を傷つけずに、目元やフェイスラインなどの変化にアプローチでき、エイジングケアを意識する方に選ばれています。",
@@ -1578,8 +1578,8 @@ export const equipmentData: Record<string, Category> = {
         equipment: "ソフウェーブ",
         image: "/images/testimonials/sofwave.JPG",
         description: "7MHzの超音波を皮膚真皮中層に照射し、熱刺激によりコラーゲンの生成を促す非侵襲的な施術です。皮膚表面を傷つけずに、目元やフェイスラインなどの変化にアプローチでき、エイジングケアを意識する方に選ばれています。",
-        memberPrice: "130000",
-        regularPrice: "143000"
+        memberPrice: "140400",
+        regularPrice: "156000"
       }
     ]
   },
