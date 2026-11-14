@@ -71,21 +71,11 @@ const TreatmentCard = ({
               </div>
             ) : (
               <div className="space-y-1">
-                {treatment.memberPrice && (
-                  <div className="flex justify-between items-center flex-col md:flex-row">
-                    <span className="text-xs text-[#8a6d62] font-shippori">
-                      会員価格
-                    </span>
-                    <span className="text-sm font-bold text-[#8b4513] font-shippori">
-                      {formatPrice(treatment.memberPrice)}
-                    </span>
-                  </div>
-                )}
                 <div className="flex justify-between items-center flex-col md:flex-row">
                   <span className="text-xs text-[#8a6d62] font-shippori">
-                    通常価格
+                    料金
                   </span>
-                  <span className={`font-bold font-shippori ${treatment.memberPrice ? 'text-sm text-[#8a6d62]' : 'text-lg text-[#8b4513]'}`}>
+                  <span className="text-lg font-bold font-shippori text-[#8b4513]">
                     {treatment.regularPrice.includes('+') && '+'} 
                     {formatPrice(treatment.regularPrice)}
                   </span>

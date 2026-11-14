@@ -8,7 +8,6 @@ interface Treatment {
   equipment: string;
   branch?: string;
   description: string;
-  memberPrice?: string;
   regularPrice: string;
   contents?: string;
   treatmentTime?: string;
@@ -155,28 +154,13 @@ export default function MenuModal({ treatment, isOpen, onClose }: MenuModalProps
                       </div>
                     ) : (
                       <div className="space-y-3">
-                        {treatment.memberPrice && (
-                          <div className="flex justify-between items-center p-3 bg-[#8b4513]/5 rounded-lg">
-                            <span className="text-[#8b4513]/70 font-medium">会員価格</span>
-                            <span className="text-xl font-bold text-[#8b4513]">
-                              {formatPrice(treatment.memberPrice)}
-                            </span>
-                          </div>
-                        )}
                         <div className="flex justify-between items-center p-3 bg-white/50 rounded-lg">
-                          <span className="text-[#8b4513]/70 font-medium">通常価格</span>
-                          <span className={`text-xl font-bold ${treatment.memberPrice ? 'text-[#8b4513]/60' : 'text-[#8b4513]'}`}>
-                            {treatment.regularPrice.includes('+') && '+'} 
+                          <span className="text-[#8b4513]/70 font-medium">料金</span>
+                          <span className="text-xl font-bold text-[#8b4513]">
+                            {treatment.regularPrice.includes('+') && '+'}
                             {formatPrice(treatment.regularPrice)}
                           </span>
                         </div>
-                        {treatment.memberPrice && (
-                          <div className="text-center pt-2">
-                            <p className="text-sm text-[#8b4513]/60">
-                              会員価格は通常価格から約10%お得です
-                            </p>
-                          </div>
-                        )}
                       </div>
                     )
                   )}

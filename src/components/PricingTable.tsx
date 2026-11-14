@@ -63,19 +63,10 @@ export default function PricingTable() {
                                 {treatment.specialPriceName}
                               </div>
                             ) : (
-                              <>
-                                {treatment.memberPrice && (
-                                  <div className="text-xs md:text-sm font-medium text-[#c2ac94]">
-                                    <span className="text-xs md:text-sm text-[#8a6d62] mr-1">会員:</span>
-                                    {formatPrice(treatment.memberPrice)}
-                                  </div>
-                                )}
-                                <div className="text-xs md:text-sm font-medium text-[#54585f]">
-                                  <span className="text-xs md:text-sm text-[#8a6d62] mr-1">通常:</span>
-                                  {treatment.regularPrice.includes('+') && '+'} 
-                                  {formatPrice(treatment.regularPrice)}
-                                </div>
-                              </>
+                              <div className="text-xs md:text-sm font-medium text-[#54585f]">
+                                {treatment.regularPrice.includes('+') && '+'}
+                                {formatPrice(treatment.regularPrice)}
+                              </div>
                             )}
                           </div>
                         </td>
@@ -97,7 +88,6 @@ export default function PricingTable() {
           </h3>
           <div className="space-y-2 text-sm text-[#54585f]">
             <p>• 表示価格は全て税込価格です</p>
-            <p>• 会員価格は当院の会員様向けの特別価格です</p>
             <p>• 施術内容や料金は予告なく変更される場合があります</p>
             <p>• 詳細な料金やコース内容については、お気軽にお問い合わせください</p>
           </div>
