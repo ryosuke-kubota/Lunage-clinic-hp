@@ -79,17 +79,17 @@ export default function MenuNavigation() {
   const currentCategories = viewMode === 'concerns' ? concernCategories : equipmentCategories;
 
   return (
-    <section className="py-8 bg-white lg:sticky lg:top-16 z-40 border-b border-[#dacacf]/20">
+    <section className="py-5 bg-white lg:sticky lg:top-16 z-40 border-b border-lunage-line">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 表示切り替えボタン */}
         <div className="flex justify-center">
-          <div className="bg-[#faf3ef] rounded-full p-1 shadow-lg border border-[#dacacf]/20">
+          <div className="bg-lunage-sand rounded-full p-1 border border-lunage-line">
             <button
               onClick={() => handleViewModeChange('concerns')}
               className={`px-4 py-2 rounded-full font-shippori text-sm transition-all duration-300 ${
                 viewMode === 'concerns'
-                  ? 'bg-[#DDCDB9] text-white shadow-md'
-                  : 'text-[#8a6d62] hover:text-[#54585f]'
+                  ? 'bg-lunage-ink text-white'
+                  : 'text-lunage-goldDark hover:text-lunage-ink'
               }`}
             >
               悩み別
@@ -98,8 +98,8 @@ export default function MenuNavigation() {
               onClick={() => handleViewModeChange('equipment')}
               className={`px-4 py-2 rounded-full font-shippori text-sm transition-all duration-300 ${
                 viewMode === 'equipment'
-                  ? 'bg-[#DDCDB9] text-white shadow-md'
-                  : 'text-[#8a6d62] hover:text-[#54585f]'
+                  ? 'bg-lunage-ink text-white'
+                  : 'text-lunage-goldDark hover:text-lunage-ink'
               }`}
             >
               機械別
