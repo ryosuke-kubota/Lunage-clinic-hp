@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import ClinicIntroSection from "@/components/ClinicIntroSection";
 import DentalTreatmentSection from "@/components/DentalTreatmentSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import KodawariSection from "@/components/KodawariSection";
@@ -22,12 +23,10 @@ export default function Home() {
       <div className="critical-content">
         <HeroSection />
       </div>
+      <ClinicIntroSection />
       {/* <div className="lazy-load">
         <DentalTreatmentSection />
       </div> */}
-      <div className="lazy-load">
-        <InstagramSection />
-      </div>
       {/* <div className="lazy-load">
         <PhilosophySection />
       </div> */}
@@ -47,6 +46,9 @@ export default function Home() {
       {/* <FAQSection /> */}
       <div className="lazy-load">
         <InformationSection />
+      </div>
+      <div className="lazy-load">
+        <InstagramSection />
       </div>
       <div className="lazy-load">
         <ContactSection />

@@ -10,6 +10,8 @@ import { concernsData, getOrderedCategories, concernsCategoryOrder } from "../da
 const orderedCategories = getOrderedCategories(concernsData, concernsCategoryOrder);
 const menuItems = orderedCategories.map(([key, category]) => ({
   name: category.title,
+  description: category.description,
+  count: category.treatments.length,
   href: `/menu#${key}`
 }));
 
@@ -46,21 +48,22 @@ export default function MenuSection() {
   };
 
   return (
-    <section className="py-20 bg-white relative" id="menu">
+    <section className="py-14 md:py-20 bg-white relative" id="menu">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-12"
         >
           <div className="flex items-center justify-center mb-1">
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">施術・料金案内</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-8">
+          <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-3">
             Menu
           </h2>
+          <p className="text-sm text-[#8a6d62] font-shippori">気になるお悩みを選ぶと、施術と料金をご覧いただけます</p>
         </motion.div>
 
         {/* Simple Menu List */}
@@ -71,7 +74,7 @@ export default function MenuSection() {
           animate={inView ? "visible" : "hidden"}
           className="max-w-4xl mx-auto"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-10">
             {menuItems.map((item) => (
               <motion.div
                 key={item.name}
@@ -88,15 +91,19 @@ export default function MenuSection() {
                     }
                   }}
                 >
-                  <div className="bg-[#faf3ef] hover:bg-white border border-transparent hover:border-[#DDCDB9]/20 rounded-lg p-4 transition-all duration-300 hover:shadow-lg">
-                    <div className="flex items-center justify-between">
-                      <span className="font-shippori text-[#54585f] group-hover:text-[#DDCDB9] transition-colors">
+                  <div className="h-full bg-[#faf3ef] hover:bg-white border border-transparent hover:border-[#DDCDB9]/40 rounded-xl p-3 sm:p-5 transition-all duration-300 hover:shadow-lg">
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="font-shippori font-medium text-[#54585f] text-sm sm:text-base leading-snug group-hover:text-[#8a6d62] transition-colors">
                         {item.name}
                       </span>
-                      <div className="text-[#DDCDB9] opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300">
-                        →
-                      </div>
+                      <span className="text-[#c2ac94] text-sm shrink-0">→</span>
                     </div>
+                    <p className="mt-2 font-shippori text-[11px] sm:text-xs leading-relaxed text-[#8a6d62] line-clamp-2">
+                      {item.description}
+                    </p>
+                    {item.count > 1 && (
+                      <p className="mt-2 font-shippori text-[11px] text-[#c2ac94]">{item.count}メニュー</p>
+                    )}
                   </div>
                 </Link>
               </motion.div>
@@ -112,9 +119,9 @@ export default function MenuSection() {
           >
             <Link
               href="/menu"
-              className="inline-block bg-[#c2ac94] hover:bg-[#8a6d62] text-white font-shippori px-8 py-4 rounded-full text-lg transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+              className="inline-block bg-[#c2ac94] hover:bg-[#8a6d62] text-white font-shippori px-8 py-4 rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-lg transform hover:scale-105"
             >
-              View more
+              すべてのメニュー・料金を見る
             </Link>
           </motion.div>
         </motion.div>

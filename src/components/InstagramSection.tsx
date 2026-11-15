@@ -15,9 +15,18 @@ export default function InstagramSection() {
           <h2 className="text-3xl md:text-4xl font-shippori font-light text-[#54585f] mb-2">
             Instagram
           </h2>
-          <p className="text-sm text-[#8b4513]/70 mb-8">
+          <p className="text-sm text-[#8b4513]/70 mb-6">
             最新の施術情報やキャンペーンをお届け
           </p>
+
+          <div className="mx-auto mb-8 max-w-md rounded-xl bg-[#faf3ef] px-5 py-4 text-left">
+            <p className="font-shippori text-sm font-medium text-[#54585f] mb-1">
+              クリニックまでの行き方も、Instagramでご案内しています
+            </p>
+            <p className="font-shippori text-xs leading-relaxed text-[#8a6d62]">
+              初めての方も迷わないよう、駅からの道順を写真つきで紹介しています。来院前にぜひご覧ください。
+            </p>
+          </div>
 
           <div className="mx-auto mb-8 w-full max-w-[540px] overflow-hidden rounded-xl bg-white shadow-md">
             <iframe

@@ -68,7 +68,7 @@ export default function HeroSection() {
 
       {/* 下部のグラデーション背景（スマホのみ） - hydration後に表示 */}
       {isLoaded && isMobile && (
-        <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-white/80 via-white/60 to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-44 bg-gradient-to-t from-white via-white/80 to-transparent z-10" />
       )}
 
       {/* 下部のテキスト（スマホのみ） - hydration後に表示 */}

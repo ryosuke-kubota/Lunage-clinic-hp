@@ -1,9 +1,9 @@
 export default function InformationSection() {
   return (
-    <section className="py-20 bg-white" id="access">
+    <section className="py-14 md:py-20 bg-white" id="access">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-16">
+        <div className="mb-8 md:mb-12">
           <div className="flex items-center mb-1">
             <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">クリニック概要</span>
           </div>
@@ -12,7 +12,7 @@ export default function InformationSection() {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left Side - Clinic Information */}
           <div>
             <div className="space-y-8">
@@ -23,7 +23,7 @@ export default function InformationSection() {
                 </h3>
                 <div className="space-y-4 text-[#54585f] font-shippori">
                   <div className="flex items-start">
-                    <span className="w-20 text-[#8a6d62] font-medium">住所</span>
+                    <span className="w-24 shrink-0 text-[#8a6d62] font-medium whitespace-nowrap">住所</span>
                     <div>
                       <p>〒150-0001</p>
                       <p>東京都渋谷区神宮前3-2-17 上田ビル202</p>
@@ -31,21 +31,29 @@ export default function InformationSection() {
                   </div>
 
                   <div className="flex items-center">
-                    <span className="w-20 text-[#8a6d62] font-medium">TEL</span>
-                    <a href="tel:03-4400-9519" className="text-[#DDCDB9] hover:text-[#8a6d62] transition-colors">
+                    <span className="w-24 shrink-0 text-[#8a6d62] font-medium whitespace-nowrap">TEL</span>
+                    <a href="tel:03-4400-9519" className="text-[#8a6d62] underline underline-offset-4 hover:text-[#54585f] transition-colors">
                       03-4400-9519
                     </a>
                   </div>
 
                   <div className="flex items-start">
-                    <span className="w-20 text-[#8a6d62] font-medium">アクセス</span>
+                    <span className="w-24 shrink-0 text-[#8a6d62] font-medium whitespace-nowrap">アクセス</span>
                     <div>
                       <p>表参道駅・外苑前駅から徒歩5分</p>
+                      <a
+                        href="https://www.instagram.com/lunage_clinic"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1 inline-block text-sm text-[#8a6d62] underline underline-offset-4 hover:text-[#54585f]"
+                      >
+                        道に迷ったら：Instagramで行き方を写真つきで案内しています
+                      </a>
                     </div>
                   </div>
 
                   <div className="flex items-start">
-                    <span className="w-20 text-[#8a6d62] font-medium">診療時間</span>
+                    <span className="w-24 shrink-0 text-[#8a6d62] font-medium whitespace-nowrap">診療時間</span>
                     <div>
                       <p>11:00〜22:00</p>
                       <p className="text-sm text-[#8a6d62]">（年中無休）</p>

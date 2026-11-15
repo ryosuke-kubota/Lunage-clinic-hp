@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Shippori_Mincho_B1 } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
+import StickyCta from "@/components/StickyCta";
 
 const shippioriMincho = Shippori_Mincho_B1({
   subsets: ["latin"],
@@ -375,7 +376,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <ClientBody>{children}</ClientBody>
+      <ClientBody>
+        {children}
+        <StickyCta />
+      </ClientBody>
     </html>
   );
 }
