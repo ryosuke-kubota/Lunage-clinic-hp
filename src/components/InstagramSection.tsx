@@ -18,7 +18,19 @@ export default function InstagramSection() {
           <p className="text-sm text-[#8b4513]/70 mb-8">
             最新の施術情報やキャンペーンをお届け
           </p>
-          
+
+          <div className="mx-auto mb-8 w-full max-w-[540px] overflow-hidden rounded-xl bg-white shadow-md">
+            <iframe
+              src="https://www.instagram.com/lunage_clinic/embed"
+              title="LUNAGE CLINIC Instagram"
+              className="block w-full border-0"
+              style={{ height: "min(490px, calc(125px + (100vw - 32px) * 0.667))" }}
+              loading="lazy"
+              scrolling="no"
+              allowTransparency
+            />
+          </div>
+
           <Link
             href="https://www.instagram.com/lunage_clinic"
             target="_blank"
