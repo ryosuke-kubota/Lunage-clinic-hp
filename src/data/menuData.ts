@@ -916,6 +916,12 @@ export const concernsData: Record<string, Category> = {
     description: "その他の特殊な施術",
     treatments: [
       {
+        name: "表面麻酔クリーム",
+        equipment: "表面麻酔",
+        description: "施術の前に肌へ塗り、施術時の痛みをやわらげる表面麻酔のクリームです。",
+        regularPrice: "3300"
+      },
+      {
         name: "ワキガレーザー",
         equipment: "ワキガレーザー",
         description: "ワキガ治療のためのレーザー施術です。詳細は準備中です。",
@@ -1798,6 +1804,12 @@ export const equipmentData: Record<string, Category> = {
     title: "その他の機器",
     description: "その他の特殊な治療機器",
     treatments: [
+      {
+        name: "表面麻酔クリーム",
+        equipment: "表面麻酔",
+        description: "施術の前に肌へ塗り、施術時の痛みをやわらげる表面麻酔のクリームです。",
+        regularPrice: "3300"
+      },
       {
         name: "ワキガレーザー",
         equipment: "ワキガレーザー",
