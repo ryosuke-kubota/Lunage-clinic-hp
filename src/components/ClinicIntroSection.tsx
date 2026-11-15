@@ -16,7 +16,7 @@ const FEATURES = [
   {
     no: "03",
     title: "完全予約制の\n落ち着いた空間",
-    text: "表参道駅・外苑前駅から徒歩5分。年中無休、11:00〜22:00で通いやすいクリニックです。",
+    text: "表参道駅から徒歩5分。年中無休、11:00〜22:00で通いやすいクリニックです。",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function ClinicIntroSection() {
           </h2>
           <div className="mx-auto mt-6 h-px w-10 bg-lunage-gold" />
           <div className="mx-auto mt-6 max-w-xl space-y-3 font-shippori text-sm md:text-base leading-[2] text-lunage-ink">
-            <p>ルナージュクリニックは、表参道・外苑前から徒歩5分の、美容医療と歯科のクリニックです。</p>
+            <p>ルナージュクリニックは、表参道駅から徒歩5分の、美容医療と歯科のクリニックです。</p>
             <p>忙しさの中で忘れてしまいがちな「本来の自分らしさ」を、美容医療を通じて静かに呼び起こします。</p>
           </div>
         </motion.div>

@@ -34,15 +34,28 @@ export default function InformationSection() {
                   <div className="flex items-start">
                     <span className="w-24 shrink-0 text-[#8a6d62] font-medium whitespace-nowrap">アクセス</span>
                     <div>
-                      <p>表参道駅・外苑前駅から徒歩5分</p>
-                      <a
-                        href="https://www.instagram.com/lunage_clinic"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-1 inline-block text-sm text-[#8a6d62] underline underline-offset-4 hover:text-[#54585f]"
-                      >
-                        道に迷ったら：Instagramで行き方を写真つきで案内しています
-                      </a>
+                      <p>表参道駅から徒歩5分</p>
+                      <p className="mt-2 text-sm leading-relaxed text-lunage-goldDark">
+                        道順は、
+                        <a
+                          href="https://www.instagram.com/lunage_clinic"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline underline-offset-4 hover:text-lunage-ink"
+                        >
+                          Instagramのハイライト
+                        </a>
+                        と
+                        <a
+                          href="https://maps.app.goo.gl/mchA5zYJcx22ZCc87"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline underline-offset-4 hover:text-lunage-ink"
+                        >
+                          Googleマップ
+                        </a>
+                        に載せています。
+                      </p>
                     </div>
                   </div>
 

@@ -17,10 +17,10 @@ export default function InstagramSection() {
 
           <div className="mx-auto mb-8 max-w-md border-l-2 border-lunage-gold bg-lunage-sand px-5 py-4 text-left">
             <p className="font-shippori text-sm font-medium text-[#54585f] mb-1">
-              クリニックまでの行き方も、Instagramでご案内しています
+              クリニックまでの道順は、Instagramのハイライトに載せています
             </p>
             <p className="font-shippori text-xs leading-relaxed text-[#8a6d62]">
-              初めての方も迷わないよう、駅からの道順を写真つきで紹介しています。来院前にぜひご覧ください。
+              初めての方も迷わないよう、プロフィールの「ハイライト」で駅からの道順を紹介しています。Googleマップにも道順を載せています。来院前にぜひご覧ください。
             </p>
           </div>
 
