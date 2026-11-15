@@ -9,13 +9,13 @@ export default function StickyCta() {
           href="https://lin.ee/teAI9dY"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 text-center bg-[#c2ac94] text-white font-shippori py-3 rounded-full text-sm"
+          className="flex-1 text-center bg-lunage-ink text-white font-shippori py-3 rounded-full text-sm tracking-[0.1em]"
         >
           LINEで予約
         </a>
         <a
           href="tel:03-4400-9519"
-          className="flex-1 text-center border border-[#c2ac94] text-[#8a6d62] font-shippori py-3 rounded-full text-sm"
+          className="flex-1 text-center border border-lunage-ink text-lunage-ink font-shippori py-3 rounded-full text-sm"
         >
           電話する
         </a>

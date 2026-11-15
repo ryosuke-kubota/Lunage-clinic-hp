@@ -1,10 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import SectionHeading from "./SectionHeading";
 
 export default function InstagramSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,14 +13,9 @@ export default function InstagramSection() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-shippori font-light text-[#54585f] mb-2">
-            Instagram
-          </h2>
-          <p className="text-sm text-[#8b4513]/70 mb-6">
-            最新の施術情報やキャンペーンをお届け
-          </p>
+          <SectionHeading label="最新の施術情報やキャンペーン" title="Instagram" />
 
-          <div className="mx-auto mb-8 max-w-md rounded-xl bg-[#faf3ef] px-5 py-4 text-left">
+          <div className="mx-auto mb-8 max-w-md border-l-2 border-lunage-gold bg-lunage-sand px-5 py-4 text-left">
             <p className="font-shippori text-sm font-medium text-[#54585f] mb-1">
               クリニックまでの行き方も、Instagramでご案内しています
             </p>
@@ -28,7 +24,7 @@ export default function InstagramSection() {
             </p>
           </div>
 
-          <div className="mx-auto mb-8 w-full max-w-[540px] overflow-hidden rounded-xl bg-white shadow-md">
+          <div className="mx-auto mb-8 w-full max-w-[540px] overflow-hidden rounded-xl bg-white border border-lunage-line">
             <iframe
               src="https://www.instagram.com/lunage_clinic/embed"
               title="LUNAGE CLINIC Instagram"
@@ -44,7 +40,7 @@ export default function InstagramSection() {
             href="https://www.instagram.com/lunage_clinic"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-8 py-3 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-3 border border-lunage-ink text-lunage-ink px-8 py-3 rounded-full hover:bg-lunage-ink hover:text-white transition-colors duration-300"
           >
             <svg
               className="w-5 h-5"
@@ -57,7 +53,7 @@ export default function InstagramSection() {
             <span className="font-medium">@lunage_clinic</span>
           </Link>
 
-          <div className="mt-8 text-sm text-gray-600">
+          <div className="mt-6 text-sm text-lunage-goldDark">
             <p>フォロー&いいねで最新情報をチェック！</p>
           </div>
         </motion.div>

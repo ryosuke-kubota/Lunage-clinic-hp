@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
-import { easeOut } from "framer-motion";
 import { concernsData, getOrderedCategories, concernsCategoryOrder } from "../data/menuData";
+import SectionHeading from "./SectionHeading";
 
 // メニューアイテムを共通データから生成（順序を制御）
 const orderedCategories = getOrderedCategories(concernsData, concernsCategoryOrder);
@@ -12,147 +12,71 @@ const menuItems = orderedCategories.map(([key, category]) => ({
   name: category.title,
   description: category.description,
   count: category.treatments.length,
-  href: `/menu#${key}`
+  href: `/menu#${key}`,
 }));
 
 export default function MenuSection() {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true
-  });
+  const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true });
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.05
-      }
-    }
+    visible: { opacity: 1, transition: { duration: 0.6, staggerChildren: 0.04 } },
   };
-
   const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: easeOut
-      }
-    }
+    hidden: { opacity: 0, y: 12 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } },
   };
 
   return (
-    <section className="py-14 md:py-20 bg-white relative" id="menu">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-8 md:mb-12"
-        >
-          <div className="flex items-center justify-center mb-1">
-            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">施術・料金案内</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-3">
-            Menu
-          </h2>
-          <p className="text-sm text-[#8a6d62] font-shippori">気になるお悩みを選ぶと、施術と料金をご覧いただけます</p>
-        </motion.div>
+    <section className="py-16 md:py-24 bg-white" id="menu">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <SectionHeading
+          label="施術・料金案内"
+          title="Menu"
+          lead="気になるお悩みを選ぶと、施術と料金をご覧いただけます"
+        />
 
-        {/* Simple Menu List */}
-        <motion.div
+        <motion.ul
           ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="max-w-4xl mx-auto"
+          className="grid grid-cols-2 gap-x-5 gap-y-1 md:gap-x-12 lg:grid-cols-3"
         >
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-10">
-            {menuItems.map((item) => (
-              <motion.div
-                key={item.name}
-                variants={itemVariants}
+          {menuItems.map((item) => (
+            <motion.li key={item.name} variants={itemVariants}>
+              <Link
+                href={item.href}
+                className="group block border-b border-lunage-line py-4 md:py-5 transition-colors hover:border-lunage-gold"
+                onClick={() => {
+                  // セッションストレージに情報を保存
+                  const hash = item.href.split("#")[1];
+                  if (hash) {
+                    sessionStorage.setItem("openAccordion", hash);
+                  }
+                }}
               >
-                <Link
-                  href={item.href}
-                  className="block group"
-                  onClick={() => {
-                    // セッションストレージに情報を保存
-                    const hash = item.href.split('#')[1];
-                    if (hash) {
-                      sessionStorage.setItem('openAccordion', hash);
-                    }
-                  }}
-                >
-                  <div className="h-full bg-[#faf3ef] hover:bg-white border border-transparent hover:border-[#DDCDB9]/40 rounded-xl p-3 sm:p-5 transition-all duration-300 hover:shadow-lg">
-                    <div className="flex items-start justify-between gap-2">
-                      <span className="font-shippori font-medium text-[#54585f] text-sm sm:text-base leading-snug group-hover:text-[#8a6d62] transition-colors">
-                        {item.name}
-                      </span>
-                      <span className="text-[#c2ac94] text-sm shrink-0">→</span>
-                    </div>
-                    <p className="mt-2 font-shippori text-[11px] sm:text-xs leading-relaxed text-[#8a6d62] line-clamp-2">
-                      {item.description}
-                    </p>
-                    {item.count > 1 && (
-                      <p className="mt-2 font-shippori text-[11px] text-[#c2ac94]">{item.count}メニュー</p>
-                    )}
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+                <div className="flex items-baseline justify-between gap-2">
+                  <span className="font-shippori text-[15px] md:text-base font-medium leading-snug text-lunage-ink transition-colors group-hover:text-lunage-goldDark">
+                    {item.name}
+                  </span>
+                  <span className="shrink-0 text-lunage-gold transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </div>
+                <p className="mt-1.5 line-clamp-2 font-shippori text-[11px] md:text-xs leading-relaxed text-lunage-goldDark/80">
+                  {item.description}
+                </p>
+              </Link>
+            </motion.li>
+          ))}
+        </motion.ul>
 
-          {/* View More Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-center"
+        <div className="mt-12 text-center">
+          <Link
+            href="/menu"
+            className="inline-block rounded-full bg-lunage-ink px-10 py-3.5 font-shippori text-sm tracking-[0.1em] text-white transition-colors hover:bg-lunage-goldDark"
           >
-            <Link
-              href="/menu"
-              className="inline-block bg-[#c2ac94] hover:bg-[#8a6d62] text-white font-shippori px-8 py-4 rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-lg transform hover:scale-105"
-            >
-              すべてのメニュー・料金を見る
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
-            animate={{
-              scale: [1, 1.1, 1],
-              rotate: [0, 5, 0]
-            }}
-            transition={{
-              duration: 10,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut"
-            }}
-            className="absolute top-20 right-20 w-32 h-32 rounded-full bg-gradient-to-br from-[#DDCDB9]/5 to-[#d6c6b5]/5 blur-xl"
-          />
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, -3, 0]
-            }}
-            transition={{
-              duration: 12,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-              delay: 2
-            }}
-            className="absolute bottom-20 left-20 w-40 h-40 rounded-full bg-gradient-to-br from-[#c2ac94]/5 to-[#dacacf]/5 blur-xl"
-          />
+            すべてのメニュー・料金を見る
+          </Link>
         </div>
       </div>
     </section>

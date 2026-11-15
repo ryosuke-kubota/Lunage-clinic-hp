@@ -1,16 +1,10 @@
+import SectionHeading from "./SectionHeading";
+
 export default function InformationSection() {
   return (
-    <section className="py-14 md:py-20 bg-white" id="access">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-8 md:mb-12">
-          <div className="flex items-center mb-1">
-            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">クリニック概要</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-8">
-            Information
-          </h2>
-        </div>
+    <section className="py-16 md:py-24 bg-lunage-sand" id="access">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <SectionHeading label="クリニック概要" title="Information" />
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left Side - Clinic Information */}
@@ -93,7 +87,7 @@ export default function InformationSection() {
                 href="https://maps.app.goo.gl/mchA5zYJcx22ZCc87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#DDCDB9] hover:text-[#8a6d62] font-shippori text-sm transition-colors underline"
+                className="text-lunage-goldDark hover:text-lunage-ink font-shippori text-sm transition-colors underline underline-offset-4"
               >
                 Google Mapで開く
               </a>

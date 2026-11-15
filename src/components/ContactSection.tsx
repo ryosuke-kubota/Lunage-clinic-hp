@@ -1,26 +1,16 @@
+import SectionHeading from "./SectionHeading";
 import { Button } from "@/components/ui/button";
 
 export default function ContactSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-[#faf3ef]">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-16 text-center">
-          <div className="flex items-center justify-center mb-1">
-            <span className="text-[#DDCDB9] font-shippori text-sm tracking-wide">ご予約・お問い合わせ</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-shippori font-normal text-[#54585f] mb-8">
-            Contact
-          </h2>
-          <p className="text-[#8a6d62] font-shippori text-lg">
-            初診の方は、下記からご予約ください。
-          </p>
-        </div>
+        <SectionHeading label="ご予約・お問い合わせ" title="Contact" lead="初診の方は、下記からご予約ください。" />
 
         {/* Reservation Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-16">
+        <div className="bg-lunage-sand rounded-2xl p-8 md:p-12 mb-8">
           <div className="text-center">
-            <h3 className="text-3xl md:text-8xl font-shippori font-normal text-[#DDCDB9] mb-8">
+            <h3 className="text-3xl md:text-5xl font-shippori font-normal text-lunage-gold mb-6">
               Reservation
             </h3>
             <p className="text-[#54585f] font-shippori text-base mb-8">
@@ -31,7 +21,7 @@ export default function ContactSection() {
               href="https://lin.ee/teAI9dY"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#DDCDB9] hover:bg-[#c2ac94] text-white font-shippori px-12 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg mb-8 block w-fit mx-auto"
+              className="bg-lunage-ink hover:bg-lunage-goldDark text-white font-shippori px-12 py-4 rounded-full text-base tracking-[0.15em] transition-colors block w-fit mx-auto"
             >
               LINEで予約
             </a>
@@ -45,13 +35,13 @@ export default function ContactSection() {
         {/* Contact Options */}
         <div className="grid md:grid-cols-1 gap-8">
           {/* Phone Contact */}
-          <div className="bg-[#faf3ef] p-8 rounded-lg text-center">
+          <div className="border border-lunage-line p-8 rounded-2xl text-center">
             <h4 className="text-[#54585f] font-shippori text-lg mb-4">
               お電話でご予約
             </h4>
             <a
               href="tel:03-4400-9519"
-              className="text-4xl font-shippori font-medium text-[#DDCDB9] hover:text-[#8a6d62] transition-colors block mb-2"
+              className="text-3xl md:text-4xl font-shippori font-medium text-lunage-ink hover:text-lunage-goldDark transition-colors block mb-2"
             >
               03-4400-9519
             </a>
@@ -61,7 +51,7 @@ export default function ContactSection() {
           </div>
 
           {/* LINE Contact */}
-          {/* <div className="bg-[#faf3ef] p-8 rounded-lg text-center">
+          {/* <div className="border border-lunage-line p-8 rounded-2xl text-center">
             <h4 className="text-[#54585f] font-shippori text-lg mb-4">
               LINEからもご予約いただけます
             </h4>
