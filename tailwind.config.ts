@@ -15,7 +15,7 @@ export default {
       colors: {
         lunage: {
           ink: "#54585f",
-          gold: "#a58b70",
+          gold: "#8f7355",
           goldDark: "#8a6d62",
           sand: "#faf3ef",
           line: "#e6dccf",

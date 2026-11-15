@@ -34,18 +34,18 @@ const TreatmentRow = ({ treatment, onClick }: { treatment: Treatment; onClick: (
       className="flex w-full items-start justify-between gap-4 border-b border-lunage-line px-1 py-4 text-left transition-colors hover:bg-lunage-sand/70"
     >
       <div className="min-w-0">
-        <p className="font-shippori text-[15px] md:text-base leading-snug text-lunage-ink">{treatment.name}</p>
+        <p className="font-shippori text-base md:text-[17px] leading-snug text-lunage-ink">{treatment.name}</p>
         {treatment.branch && (
-          <p className="mt-1 font-shippori text-xs leading-snug text-lunage-goldDark">{treatment.branch}</p>
+          <p className="mt-1 font-shippori text-[13px] leading-snug text-lunage-ink/70">{treatment.branch}</p>
         )}
         {treatment.contents && (
-          <p className="mt-1 font-shippori text-xs leading-snug text-lunage-goldDark">{treatment.contents}</p>
+          <p className="mt-1 font-shippori text-[13px] leading-snug text-lunage-ink/70">{treatment.contents}</p>
         )}
       </div>
       <div className="flex shrink-0 items-start gap-2">
         <span
           className={`font-shippori ${
-            isText ? "text-sm leading-snug text-lunage-goldDark" : "text-base md:text-[17px] leading-snug font-medium text-lunage-ink"
+            isText ? "text-[15px] leading-snug text-lunage-goldDark" : "text-[17px] md:text-lg leading-snug font-medium text-lunage-ink"
           }`}
         >
           {price}
@@ -119,11 +119,11 @@ const CategoryAccordion = ({
         className="flex w-full items-center justify-between gap-4 px-1 py-5 text-left"
       >
         <div>
-          <h3 className="font-shippori text-lg md:text-xl font-medium text-lunage-ink">{category.title}</h3>
-          <p className="mt-1 font-shippori text-xs md:text-sm text-lunage-goldDark">{category.description}</p>
+          <h3 className="font-shippori text-xl font-medium text-lunage-ink">{category.title}</h3>
+          <p className="mt-1 font-shippori text-[13px] md:text-sm text-lunage-ink/70">{category.description}</p>
         </div>
         <div className="flex shrink-0 items-center gap-3">
-          <span className="font-shippori text-xs text-lunage-gold">{category.treatments.length}</span>
+          <span className="font-shippori text-sm text-lunage-gold">{category.treatments.length}件</span>
           <ChevronDownIcon
             className={`h-5 w-5 text-lunage-gold transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           />
@@ -143,7 +143,7 @@ const CategoryAccordion = ({
               {groups.map((g) => (
                 <div key={g.label || "all"} className="mt-2 first:mt-0">
                   {g.label && (
-                    <p className="px-1 pb-1 pt-4 font-shippori text-xs tracking-[0.15em] text-lunage-gold">{g.label}</p>
+                    <p className="px-1 pb-1 pt-4 font-shippori text-[13px] tracking-[0.12em] text-lunage-gold">{g.label}</p>
                   )}
                   <div className="border-t border-lunage-line">
                     {g.items.map((treatment, i) => (
@@ -194,7 +194,7 @@ export default function MenuSection() {
   return (
     <section className="bg-white py-10 md:py-16">
       <div className="mx-auto max-w-3xl px-5 sm:px-6">
-        <p className="mb-6 text-center font-shippori text-xs md:text-sm leading-relaxed text-lunage-goldDark">
+        <p className="mb-6 text-center font-shippori text-[13px] md:text-sm leading-relaxed text-lunage-ink/80">
           表示価格は税込です。気になる施術をタップすると、詳しい内容をご覧いただけます。
         </p>
 

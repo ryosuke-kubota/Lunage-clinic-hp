@@ -35,7 +35,7 @@ export default function InformationSection() {
                     <span className="w-24 shrink-0 text-[#8a6d62] font-medium whitespace-nowrap">アクセス</span>
                     <div>
                       <p>表参道駅から徒歩5分</p>
-                      <p className="mt-2 text-sm leading-relaxed text-lunage-goldDark">
+                      <p className="mt-2 text-[15px] leading-relaxed text-lunage-ink/80">
                         道順は、
                         <a
                           href="https://www.instagram.com/lunage_clinic"
