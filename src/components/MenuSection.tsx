@@ -7,7 +7,7 @@ import { concernsData, getOrderedCategories, concernsCategoryOrder } from "../da
 import SectionHeading from "./SectionHeading";
 
 // お悩みではなく「メニュー名」で探すカテゴリは、下のグループにまとめる
-const OTHER_KEYS = ["dental", "skin-diagnosis", "tenteki", "others"];
+const OTHER_KEYS = ["skin-diagnosis", "tenteki", "others"];
 
 // メニューアイテムを共通データから生成（順序を制御）
 const orderedCategories = getOrderedCategories(concernsData, concernsCategoryOrder);

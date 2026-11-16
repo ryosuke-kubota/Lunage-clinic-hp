@@ -37,7 +37,7 @@ export default function ClinicIntroSection() {
           </h2>
           <div className="mx-auto mt-6 h-px w-10 bg-lunage-gold" />
           <div className="mx-auto mt-6 max-w-xl space-y-3 font-shippori text-[15px] md:text-base leading-[2] text-lunage-ink">
-            <p>ルナージュクリニックは、表参道駅から徒歩5分の、美容医療と歯科のクリニックです。</p>
+            <p>ルナージュクリニックは、表参道駅から徒歩5分の、美容医療のクリニックです。</p>
             <p>忙しさの中で忘れてしまいがちな「本来の自分らしさ」を、美容医療を通じて静かに呼び起こします。</p>
           </div>
         </motion.div>
