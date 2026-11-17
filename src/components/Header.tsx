@@ -60,7 +60,7 @@ export default function Header() {
           >
             <div>
               <Link href="/" className="text-xl md:text-2xl font-bold text-[#54585f] font-shippori flex flex-col items-center">
-                <span className="text-[10px] leading-[1]">medical and dental</span>
+                <span className="text-[10px] leading-[1]">medical</span>
                 LUNAGE CLINIC
               </Link>
             </div>

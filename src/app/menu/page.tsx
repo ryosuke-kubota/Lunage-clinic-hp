@@ -7,15 +7,14 @@ import MenuSection from "@/components/menu/MenuSection";
 import ContactSection from "@/components/ContactSection";
 
 export const metadata: Metadata = {
-  title: "施術・料金案内 | 大人のコンプレックス解消を切らずにお手伝い ルナージュクリニック",
-  description: "ルナージュクリニックの施術メニューと料金をご案内します。二重・目元施術、輪郭形成、スキンケアなど、豊富なメニューをご用意しております。",
-  keywords: "美容施術, 料金案内, 二重, 目元, 輪郭形成, スキンケア, 表参道, ルナージュクリニック",
+  title: "施術・料金案内｜表参道の美容医療",
+  description: "ルナージュクリニック（表参道）の施術メニューと料金をご案内します。たるみ・シミ・毛穴・ニキビ跡・薄毛・脱毛・点滴など、お悩みから施術と税込料金をお探しいただけます。",
   alternates: {
     canonical: "/menu",
   },
   openGraph: {
-    title: "施術・料金案内 | ルナージュクリニック",
-    description: "ルナージュクリニックの施術メニューと料金をご案内します。二重・目元施術、輪郭形成、スキンケアなど、豊富なメニューをご用意しております。",
+    title: "施術・料金案内｜表参道の美容医療 | ルナージュクリニック",
+    description: "ルナージュクリニック（表参道）の施術メニューと料金をご案内します。たるみ・シミ・毛穴・ニキビ跡・薄毛・脱毛・点滴など、お悩みから施術と税込料金をお探しいただけます。",
     url: "https://lunage-clinic.com/menu",
     siteName: "ルナージュクリニック",
     images: [
@@ -31,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "施術・料金案内 | ルナージュクリニック",
-    description: "ルナージュクリニックの施術メニューと料金をご案内します。二重・目元施術、輪郭形成、スキンケアなど、豊富なメニューをご用意しております。",
+    title: "施術・料金案内｜表参道の美容医療 | ルナージュクリニック",
+    description: "ルナージュクリニック（表参道）の施術メニューと料金をご案内します。たるみ・シミ・毛穴・ニキビ跡・薄毛・脱毛・点滴など、お悩みから施術と税込料金をお探しいただけます。",
     images: ["/images/ogp.png"],
   },
 };

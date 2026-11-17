@@ -33,12 +33,14 @@ export default function HeroSection() {
       className="relative overflow-hidden mt-16 md:mt-20"
       id="home"
     >
+      <h1 className="sr-only">ルナージュクリニック｜表参道の美容医療（切らない美容施術）</h1>
+
       {/* メイン画像 - アニメーションを削除してFCPを改善 */}
       <div className="inset-0 w-full h-auto">
         {/* デスクトップ用画像 */}
         <Image
           src={`${BASE_PATH}/images/hero/hero.webp`}
-          alt="LUNAGE CLINIC Hero"
+          alt="ルナージュクリニック 表参道の美容医療のイメージ"
           width={1920}
           height={1080}
           className="hidden md:block w-full h-auto object-cover"
@@ -53,7 +55,7 @@ export default function HeroSection() {
         {/* スマホ用画像 */}
         <Image
           src={`${BASE_PATH}/images/hero/hero_sp.webp`}
-          alt="LUNAGE CLINIC Hero Mobile"
+          alt="ルナージュクリニック 表参道の美容医療のイメージ"
           width={750}
           height={1334}
           className="block md:hidden w-full h-auto object-cover"
@@ -79,10 +81,10 @@ export default function HeroSection() {
             大人のコンプレックス解消を切らずにお手伝い
             </p>
             
-            <h1 className="text-[#54585f] font-shippori font-medium text-base sm:text-4xl lg:text-5xl flex flex-col items-center">
-              <span className="text-[10px] leading-[1]">medical and dental</span>
+            <div className="text-[#54585f] font-shippori font-medium text-base sm:text-4xl lg:text-5xl flex flex-col items-center">
+              <span className="text-[10px] leading-[1]">medical</span>
               LUNAGE CLINIC
-            </h1>
+            </div>
           </div>
         </div>
       )}

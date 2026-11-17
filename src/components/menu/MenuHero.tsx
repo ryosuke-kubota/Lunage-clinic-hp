@@ -12,7 +12,7 @@ export default function MenuHero() {
           transition={{ duration: 0.6 }}
         >
           <p className="font-shippori text-sm tracking-[0.2em] text-lunage-gold">施術・料金案内</p>
-          <h1 className="mt-2 font-shippori font-normal text-4xl md:text-5xl tracking-wide text-lunage-ink">Menu</h1>
+          <h1 className="mt-2 font-shippori font-normal text-4xl md:text-5xl tracking-wide text-lunage-ink">Menu<span className="sr-only">｜施術・料金案内（ルナージュクリニック 表参道）</span></h1>
           <div className="mx-auto mt-5 h-px w-10 bg-lunage-gold" />
           <p className="mt-5 font-shippori text-[15px] md:text-base leading-relaxed text-lunage-ink/80">
             美容医療をもっと身近に。一人ひとりのお悩みに合わせた

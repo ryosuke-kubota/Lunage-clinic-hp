@@ -12,7 +12,7 @@ export default function InformationSection() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-shippori font-medium text-[#54585f] mb-6 w-fit flex flex-col items-center">
-                  <span className="text-[14px] leading-[1]">medical and dental</span>
+                  <span className="text-[14px] leading-[1]">medical</span>
                   LUNAGE CLINIC
                 </h3>
                 <div className="space-y-4 text-[#54585f] font-shippori">

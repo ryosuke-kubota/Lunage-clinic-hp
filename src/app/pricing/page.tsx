@@ -5,15 +5,14 @@ import PricingTable from "@/components/PricingTable";
 import PaymentSection from "@/components/PaymentSection";
 
 export const metadata: Metadata = {
-  title: "料金一覧表 | 大人のコンプレックス解消を切らずにお手伝い ルナージュクリニック",
-  description: "ルナージュクリニックの機械別施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
-  keywords: "機械別料金一覧, 美容機器, 施術料金, メンバー価格, 表参道, ルナージュクリニック",
+  title: "料金一覧（機械別）｜表参道の美容医療",
+  description: "ルナージュクリニック（表参道）の機械別の施術料金を一覧でご確認いただけます。表示はすべて税込価格です。",
   alternates: {
     canonical: "/pricing",
   },
   openGraph: {
-    title: "料金一覧表 | ルナージュクリニック",
-    description: "ルナージュクリニックの機械別施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
+    title: "料金一覧（機械別）｜表参道の美容医療 | ルナージュクリニック",
+    description: "ルナージュクリニック（表参道）の機械別の施術料金を一覧でご確認いただけます。表示はすべて税込価格です。",
     url: "https://lunage-clinic.com/pricing",
     siteName: "ルナージュクリニック",
     images: [
@@ -29,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "料金一覧表 | ルナージュクリニック",
-    description: "ルナージュクリニックの機械別施術料金を一覧でご確認いただけます。メンバー価格と通常価格を分かりやすく表示しています。",
+    title: "料金一覧（機械別）｜表参道の美容医療 | ルナージュクリニック",
+    description: "ルナージュクリニック（表参道）の機械別の施術料金を一覧でご確認いただけます。表示はすべて税込価格です。",
     images: ["/images/ogp.png"],
   },
 };
@@ -48,6 +47,7 @@ export default function PricingPage() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-shippori font-normal text-[#54585f] mb-4">
               Pricing
+              <span className="sr-only">｜料金一覧（機械別・ルナージュクリニック 表参道）</span>
             </h1>
             <p className="text-[#54585f] text-sm max-w-2xl mx-auto">
               機械別に全施術の料金を一覧でご確認いただけます

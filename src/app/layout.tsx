@@ -14,10 +14,17 @@ const shippioriMincho = Shippori_Mincho_B1({
   adjustFontFallback: false,
 });
 
+const SITE_URL = "https://lunage-clinic.com";
+const SITE_TITLE = "ルナージュクリニック｜表参道の美容医療（切らない美容施術）";
+const SITE_DESCRIPTION =
+  "表参道駅から徒歩5分の美容医療クリニック。シミ・毛穴・たるみ・薄毛・脱毛など大人の肌のお悩みに、美容経験豊富な看護師が医師の指示のもと丁寧に施術します。完全予約制・年中無休（11:00〜22:00）、LINEで24時間予約受付。";
+
 export const metadata: Metadata = {
-  title: "大人のコンプレックス解消を切らずにお手伝い｜ルナージュクリニック",
-  description: "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
-  keywords: "美容クリニック, 表参道, 美肌治療, シミ, しわ, たるみ, ニキビ, ルナージュクリニック",
+  title: {
+    default: SITE_TITLE,
+    template: "%s | ルナージュクリニック",
+  },
+  description: SITE_DESCRIPTION,
   authors: [{ name: "ルナージュクリニック" }],
   creator: "ルナージュクリニック",
   publisher: "ルナージュクリニック",
@@ -26,7 +33,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://lunage-clinic.com"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
   },
@@ -36,16 +43,16 @@ export const metadata: Metadata = {
     apple: "/images/favicon.ico",
   },
   openGraph: {
-    title: "大人のコンプレックス解消を切らずにお手伝い｜ルナージュクリニック",
-    description: "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
-    url: "https://lunage-clinic.com",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
     siteName: "ルナージュクリニック",
     images: [
       {
         url: "/images/ogp.png",
         width: 1200,
         height: 630,
-        alt: "ルナージュクリニック - 大人のコンプレックス解消を切らずにお手伝い",
+        alt: "ルナージュクリニック｜表参道の美容医療",
       },
     ],
     locale: "ja_JP",
@@ -53,8 +60,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "大人のコンプレックス解消を切らずにお手伝い｜ルナージュクリニック",
-    description: "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: ["/images/ogp.png"],
   },
   robots: {
@@ -69,7 +76,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Google Search Console verification (必要に応じて追加)
+    // Google Search Console の確認コードを受け取ったらここに追加する
     // google: "your-google-verification-code",
   },
 };
@@ -336,42 +343,36 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "MedicalBusiness",
+              "@type": "MedicalClinic",
               "name": "ルナージュクリニック",
-              "description": "表参道にあるルナージュクリニックは、シミ・しわ・たるみ・ニキビなど肌悩みに特化。経験豊富なナースが医師指示のもと丁寧に施術し、完全予約制の落ち着いた院内で最適な美肌ケアを提供します。",
-              "url": "https://lunage-clinic.com",
-              "logo": "https://lunage-clinic.com/images/ogp.png",
-              "image": "https://lunage-clinic.com/images/ogp.png",
+              "alternateName": "LUNAGE CLINIC",
+              "description": SITE_DESCRIPTION,
+              "url": SITE_URL,
+              "image": `${SITE_URL}/images/ogp.png`,
+              "telephone": "+81-3-4400-9519",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "神宮前3丁目2番17号 上田ビル2階",
-                "addressLocality": "渋谷区",
+                "postalCode": "150-0001",
+                "addressCountry": "JP",
                 "addressRegion": "東京都",
-                "addressCountry": "JP"
+                "addressLocality": "渋谷区",
+                "streetAddress": "神宮前3-2-17 上田ビル202"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "35.6704",
-                "longitude": "139.7085"
+                "latitude": 35.6690153,
+                "longitude": 139.7134406
               },
-              "medicalSpecialty": [
-                "美容皮膚科",
-                "美容外科"
+              "hasMap": "https://maps.app.goo.gl/mchA5zYJcx22ZCc87",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                  "opens": "11:00",
+                  "closes": "22:00"
+                }
               ],
-              "serviceType": [
-                "シミ治療",
-                "しわ治療",
-                "たるみ治療",
-                "ニキビ治療",
-                "美肌治療"
-              ],
-              "priceRange": "$$",
-              "openingHours": [
-                "Mo-Su 10:00-19:00"
-              ],
-              "sameAs": [
-                "https://lunage-clinic.com"
-              ]
+              "sameAs": ["https://www.instagram.com/lunage_clinic"]
             })
           }}
         />
