@@ -2,7 +2,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function InformationSection() {
   return (
-    <section className="py-16 md:py-24 bg-lunage-sand" id="access">
+    <section className="scroll-mt-16 py-12 md:py-24 bg-lunage-sand" id="access">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <SectionHeading label="クリニック概要" title="Information" />
 
@@ -81,7 +81,7 @@ export default function InformationSection() {
 
           {/* Right Side - Google Map */}
           <div>
-            <div className="relative rounded-lg overflow-hidden shadow-lg h-96">
+            <div className="relative rounded-lg overflow-hidden shadow-lg h-72 md:h-96">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3243277804618!2d139.71344059999998!3d35.6690153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d878426ebf9%3A0x6f445a5ada639d42!2z44Or44OK44O844K444Ol44Kv44Oq44OL44OD44Kv!5e0!3m2!1sen!2sjp!4v1751445044095!5m2!1sen!2sjp"
                 width="100%"

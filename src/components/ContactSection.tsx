@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactSection() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="scroll-mt-16 py-12 md:py-24 bg-white" id="contact">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading label="ご予約・お問い合わせ" title="Contact" lead="初診の方は、下記からご予約ください。" />
 

@@ -22,7 +22,7 @@ const FEATURES = [
 
 export default function ClinicIntroSection() {
   return (
-    <section className="py-16 md:py-24 bg-lunage-sand" id="about">
+    <section className="scroll-mt-16 py-12 md:py-24 bg-lunage-sand" id="about">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

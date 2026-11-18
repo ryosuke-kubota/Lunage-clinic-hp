@@ -74,12 +74,23 @@ const CategoryAccordion = ({
   categoryKey,
   category,
   onTreatmentClick,
+  forceOpen = false,
+  openAllSignal,
 }: {
   categoryKey: string;
   category: Category;
   onTreatmentClick: (treatment: Treatment) => void;
+  forceOpen?: boolean;
+  openAllSignal: { open: boolean; n: number };
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [openState, setOpenState] = useState(false);
+  const isOpen = forceOpen || openState;
+  const setIsOpen = setOpenState;
+
+  // 「すべて開く／閉じる」ボタンに合わせる
+  useEffect(() => {
+    if (openAllSignal.n > 0) setOpenState(openAllSignal.open);
+  }, [openAllSignal]);
 
   useEffect(() => {
     // トップのメニュー一覧、またはURLの #カテゴリ から来た場合は開く
@@ -168,6 +179,8 @@ export default function MenuSection() {
   const [viewMode, setViewMode] = useState<"concerns" | "equipment">("concerns");
   const [selectedTreatment, setSelectedTreatment] = useState<Treatment | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const [openAllSignal, setOpenAllSignal] = useState({ open: false, n: 0 });
 
   useEffect(() => {
     const handleViewModeChange = (event: CustomEvent) => {
@@ -179,7 +192,25 @@ export default function MenuSection() {
 
   const currentData = viewMode === "concerns" ? menuData.concerns : menuData.equipment;
   const currentOrder = viewMode === "concerns" ? concernsCategoryOrder : equipmentCategoryOrder;
-  const orderedCategories = getOrderedCategories(currentData, currentOrder);
+  const allCategories = getOrderedCategories(currentData, currentOrder);
+
+  // 施術名・オプション・機械名・内容で絞り込む（全角半角・大文字小文字は区別しない）
+  const normalize = (v: string) => v.normalize("NFKC").toLowerCase().replace(/\s+/g, "");
+  const q = normalize(query);
+  const orderedCategories: [string, Category][] = q
+    ? allCategories
+        .map(([key, category]): [string, Category] => [
+          key,
+          {
+            ...category,
+            treatments: category.treatments.filter((t) =>
+              normalize([t.name, t.branch ?? "", t.equipment, t.contents ?? ""].join(" ")).includes(q)
+            ),
+          },
+        ])
+        .filter(([, category]) => category.treatments.length > 0)
+    : allCategories;
+  const hitCount = orderedCategories.reduce((n, [, c]) => n + c.treatments.length, 0);
 
   const handleTreatmentClick = (treatment: Treatment) => {
     setSelectedTreatment(treatment);
@@ -198,6 +229,33 @@ export default function MenuSection() {
           表示価格は税込です。気になる施術をタップすると、詳しい内容をご覧いただけます。
         </p>
 
+        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <label className="relative block flex-1">
+            <span className="sr-only">施術名で探す</span>
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="施術名で探す（例：ハイフ、ピコ、点滴）"
+              className="w-full rounded-full border border-lunage-line bg-white px-5 py-3 font-shippori text-base text-lunage-ink placeholder:text-lunage-ink/40 focus:border-lunage-gold focus:outline-none"
+            />
+          </label>
+          {!q && (
+            <button
+              type="button"
+              onClick={() => setOpenAllSignal((p) => ({ open: !p.open, n: p.n + 1 }))}
+              className="shrink-0 rounded-full border border-lunage-ink px-6 py-3 font-shippori text-sm text-lunage-ink transition-colors hover:bg-lunage-ink hover:text-white"
+            >
+              {openAllSignal.open ? "すべて閉じる" : "すべて開く"}
+            </button>
+          )}
+        </div>
+        {q && (
+          <p className="mb-4 font-shippori text-sm text-lunage-ink/80">
+            {hitCount > 0 ? `「${query}」の検索結果：${hitCount}件` : `「${query}」に当てはまる施術は見つかりませんでした。`}
+          </p>
+        )}
+
         <div className="border-t border-lunage-line">
           {orderedCategories.map(([key, category]) => (
             <CategoryAccordion
@@ -205,6 +263,8 @@ export default function MenuSection() {
               categoryKey={key}
               category={category}
               onTreatmentClick={handleTreatmentClick}
+              forceOpen={!!q}
+              openAllSignal={openAllSignal}
             />
           ))}
         </div>

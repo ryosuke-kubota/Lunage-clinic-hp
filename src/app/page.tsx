@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ClinicIntroSection from "@/components/ClinicIntroSection";
+import PageNav from "@/components/PageNav";
 import PhilosophySection from "@/components/PhilosophySection";
 import KodawariSection from "@/components/KodawariSection";
 import MenuSection from "@/components/MenuSection";
@@ -22,6 +23,7 @@ export default function Home() {
       <div className="critical-content">
         <HeroSection />
       </div>
+      <PageNav />
       <ClinicIntroSection />
       {/* <div className="lazy-load">
         <PhilosophySection />

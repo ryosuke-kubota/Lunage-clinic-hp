@@ -69,7 +69,7 @@ export default function MenuSection() {
   const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true });
 
   return (
-    <section className="py-16 md:py-24 bg-white" id="menu">
+    <section className="scroll-mt-16 py-12 md:py-24 bg-white" id="menu">
       <div className="max-w-5xl mx-auto px-6 lg:px-8" ref={ref}>
         <SectionHeading
           label="施術・料金案内"
