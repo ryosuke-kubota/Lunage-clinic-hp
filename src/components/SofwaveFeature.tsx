@@ -6,8 +6,8 @@ import { equipmentData, formatPrice } from "../data/menuData";
 
 // 人気のソフウェーブをトップで大きく見せる特集。価格はメニューデータから取得する
 const POINTS = [
-  "超音波を真皮中層に照射し、コラーゲンの生成を促します",
-  "皮膚表面を傷つけない、非侵襲的な施術です",
+  "超音波の熱刺激で、真皮中層のコラーゲン生成を促します",
+  "皮膚表面を傷つけない、切らない施術です",
   "目元・フェイスライン・首まで、気になる部位に合わせて選べます",
 ];
 
@@ -15,28 +15,28 @@ export default function SofwaveFeature() {
   const treatments = equipmentData["sofwave"].treatments;
 
   return (
-    <section id="sofwave" className="scroll-mt-16 bg-white py-14 md:py-24">
+    <section id="sofwave" className="scroll-mt-16 bg-lunage-ink py-14 md:py-24">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="rounded-2xl border border-lunage-line bg-lunage-sand px-5 py-10 md:px-14 md:py-16"
+          className="rounded-2xl border-2 border-lunage-gold bg-lunage-sand px-5 py-10 shadow-2xl md:px-14 md:py-16"
         >
           <div className="text-center">
-            <p className="inline-block rounded-full border border-lunage-gold px-4 py-1 font-shippori text-sm tracking-[0.15em] text-lunage-goldDark">
+            <p className="inline-block rounded-full bg-lunage-gold px-5 py-1.5 font-shippori text-sm tracking-[0.15em] text-white">
               人気の施術
             </p>
-            <h2 className="mt-5 font-shippori text-4xl font-normal tracking-wide text-lunage-ink md:text-5xl">
+            <h2 className="mt-5 font-shippori text-5xl font-medium tracking-wide text-lunage-ink md:text-6xl">
               ソフウェーブ
             </h2>
             <p className="mt-2 font-shippori text-sm tracking-[0.2em] text-lunage-gold">SOFWAVE</p>
             <div className="mx-auto mt-5 h-px w-10 bg-lunage-gold" />
             <p className="mx-auto mt-6 max-w-xl font-shippori text-base leading-[2] text-lunage-ink md:text-lg">
-              切らずに、ハリのある印象へ。
+              たるみ・ハリ不足が気になる方へ。
               <br />
-              エイジングケアを意識する方に選ばれている、超音波の施術です。
+              <span className="font-medium text-lunage-goldDark">切らずに、ハリのある印象を目指す</span>超音波の施術です。
             </p>
           </div>
 

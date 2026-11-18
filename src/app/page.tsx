@@ -25,8 +25,8 @@ export default function Home() {
         <HeroSection />
       </div>
       <PageNav />
-      <ClinicIntroSection />
       <SofwaveFeature />
+      <ClinicIntroSection />
       {/* <div className="lazy-load">
         <PhilosophySection />
       </div> */}
