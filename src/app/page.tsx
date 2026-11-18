@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ClinicIntroSection from "@/components/ClinicIntroSection";
 import PageNav from "@/components/PageNav";
+import SofwaveFeature from "@/components/SofwaveFeature";
 import PhilosophySection from "@/components/PhilosophySection";
 import KodawariSection from "@/components/KodawariSection";
 import MenuSection from "@/components/MenuSection";
@@ -25,6 +26,7 @@ export default function Home() {
       </div>
       <PageNav />
       <ClinicIntroSection />
+      <SofwaveFeature />
       {/* <div className="lazy-load">
         <PhilosophySection />
       </div> */}

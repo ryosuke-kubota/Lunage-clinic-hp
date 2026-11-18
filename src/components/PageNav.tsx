@@ -1,6 +1,7 @@
 // トップのページ内ナビ（長いページの目次）。スマホでは2段に折り返す
 const LINKS = [
   { href: "#about", label: "クリニックについて" },
+  { href: "#sofwave", label: "ソフウェーブ" },
   { href: "#menu", label: "メニュー・料金" },
   { href: "#access", label: "アクセス" },
   { href: "#instagram", label: "Instagram" },
